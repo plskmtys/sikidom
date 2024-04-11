@@ -1,0 +1,27 @@
+sikidom beolvasando.txt
+
+"beolvasando.txt" fajl beolvasasa...
+{Kor, (0,0), (5,5)}: nincs eltarolva.
+{Kor, (5,0), (5,5)}: nincs eltarolva.
+{Kor, (0,5), (0,2)}: eltarolva.
+{Negyzet, (3,3), (4,4)}: eltarolva.
+{Haromszog, (-8,-3), (-8,-4)}: eltarolva.
+{Negyzet, (-1,1), (3,-2)}: nincs eltarolva.
+fajl vege.
+
+Adjon meg koordinatakat! (formatum: "x,y")
+0 23
+
+Formatum hiba! 
+Adjon meg koordinatakat! (formatum: "x,y")
+0,23
+
+A (0,23) pontot nem tartalmazza egyetlen eltarolt sikidom sem.
+
+Adjon meg koordinatakat! (formatum: "x,y")
+3,3
+
+A (3,3) pontot tartalmazza:
+Negyzet, (3,3), (4,4)
+Adjon meg koordinatakat! (formatum: "x,y")
+^D
