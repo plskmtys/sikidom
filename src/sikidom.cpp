@@ -55,7 +55,7 @@ std::ostream& operator<<(std::ostream& os, const Kor& k){
 }
 
 std::istream& operator>>(std::istream& is, const Kor& k){
-
+  return is;
 }
 
 //Haromszog tagfuggvenyei
@@ -93,8 +93,8 @@ std::ostream& operator<<(std::ostream& os, const Haromszog& h) {
   return os;
 }
 
-std::istream& operator>>(std::istream&, Haromszog&){
-
+std::istream& operator>>(std::istream& is, Haromszog& h){
+   return is;
 }
 
 //Negyzet tagfuggvenyei
@@ -120,6 +120,6 @@ std::ostream& operator<<(std::ostream& os, const Negyzet& n) {
   return os;
 }
  
-std::istream& operator>>(std::istream&, Negyzet&) {
-
+std::istream& operator>>(std::istream& is, Negyzet& n) {
+  return is;
 }

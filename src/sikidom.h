@@ -56,13 +56,15 @@ public:
   /** @brief Megadja, hogy két sokszög milyen arányban fedi egymást. 0 és 1 közötti értékkel tér vissza.
    * @param masik A másik sokszög, amivel összehasonlítjuk.
    */
-  virtual double Fedi(const Sikidom&) const;
+  //virtual double Fedi(const Sikidom&) const;
 
   virtual bool Rajtavan(const Pont&) const;
 
   friend std::ostream& operator<<(std::ostream&, const Sikidom&);
 
   friend std::istream& operator>>(std::istream&, Sikidom&);
+
+  virtual ~Sikidom() = 0;
 };
 
 class Kor: public Sikidom{
@@ -76,6 +78,8 @@ public:
   friend std::ostream& operator<<(std::ostream&, const Kor&);
 
   friend std::istream& operator>>(std::istream&, Kor&);
+
+  ~Kor() override {}
 };
 
 class Haromszog: public Sikidom{
@@ -89,6 +93,8 @@ public:
   friend std::ostream& operator<<(std::ostream&, const Haromszog&);
   
   friend std::istream& operator>>(std::istream&, Haromszog&);
+
+  ~Haromszog() override {}
 };
 
 class Negyzet: public Sikidom{
@@ -102,6 +108,8 @@ public:
   friend std::ostream& operator<<(std::ostream&, const Negyzet&);
   
   friend std::istream& operator>>(std::istream&, Negyzet&);
+
+  ~Negyzet() override {}
 };
 
 #endif // !SIKIDOM_SIKIDOM_H
