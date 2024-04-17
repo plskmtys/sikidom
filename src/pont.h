@@ -9,8 +9,6 @@ private:
 public:
   Pont(const double _x = 0, const double _y = 0): x(_x), y(_y){}
 
-  ~Pont();
-
   Pont(const Pont&);
 
   Pont& operator=(const Pont&);
