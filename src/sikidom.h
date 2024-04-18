@@ -16,15 +16,14 @@ protected:
    */
   Pont p;
 
-  //enum Type{kor, haromszog, negyzet};
-public:
-  /** @brief konstruktor.
-   */
+  //enum Type{kor, haromszog, negyzet};/** @brief konstruktor.
+
   Sikidom(Pont _kp = Pont(0, 0), Pont _p = Pont(0, 0)): kp(_kp), p(_p) {}
 
+public:
   /** @brief Másoló konstruktor.
-   * @param masik Sokszög, amiből átmásoljuk a pontokat.
-   */
+  * @param masik Sokszög, amiből átmásoljuk a pontokat.
+  */
   Sikidom(const Sikidom&);
 
   /** @brief Értékadó operátor.
@@ -51,14 +50,14 @@ public:
 
   /** @brief A sokszög területét adja vissza.
    */
-  virtual double Terulet() const;
+  virtual double Terulet() const = 0;
   
   /** @brief Megadja, hogy két sokszög milyen arányban fedi egymást. 0 és 1 közötti értékkel tér vissza.
    * @param masik A másik sokszög, amivel összehasonlítjuk.
    */
   //virtual double Fedi(const Sikidom&) const;
 
-  virtual bool Rajtavan(const Pont&) const;
+  virtual bool Rajtavan(const Pont&) const = 0;
 
   friend std::ostream& operator<<(std::ostream&, const Sikidom&);
 
@@ -70,6 +69,8 @@ public:
 class Kor: public Sikidom{
 public:
   Kor(Pont _kp, Pont _p): Sikidom(_kp, _p) {}
+
+  Kor(Kor& _k): Sikidom(_k) {}
   
   double Terulet() const override;
 
@@ -86,6 +87,8 @@ class Haromszog: public Sikidom{
 public:
   Haromszog(Pont _kp, Pont _p): Sikidom(_kp, _p) {}
 
+  Haromszog(Haromszog& _h): Sikidom(_h) {}
+
   double Terulet() const override;
   
   bool Rajtavan(const Pont&) const override;
@@ -100,6 +103,8 @@ public:
 class Negyzet: public Sikidom{
 public:
   Negyzet(Pont _kp, Pont _p): Sikidom(_kp, _p) {}
+
+  Negyzet(Negyzet& _n): Sikidom(_n) {}
   
   double Terulet() const override;
   
