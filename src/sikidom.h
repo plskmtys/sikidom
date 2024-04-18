@@ -69,6 +69,8 @@ public:
 class Kor: public Sikidom{
 public:
   Kor(Pont _kp, Pont _p): Sikidom(_kp, _p) {}
+
+  Kor(Kor& _k): Sikidom(_k) {}
   
   double Terulet() const override;
 
@@ -85,6 +87,8 @@ class Haromszog: public Sikidom{
 public:
   Haromszog(Pont _kp, Pont _p): Sikidom(_kp, _p) {}
 
+  Haromszog(Haromszog& _h): Sikidom(_h) {}
+
   double Terulet() const override;
   
   bool Rajtavan(const Pont&) const override;
@@ -99,6 +103,8 @@ public:
 class Negyzet: public Sikidom{
 public:
   Negyzet(Pont _kp, Pont _p): Sikidom(_kp, _p) {}
+
+  Negyzet(Negyzet& _n): Sikidom(_n) {}
   
   double Terulet() const override;
   
