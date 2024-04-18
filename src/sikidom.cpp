@@ -1,5 +1,4 @@
 #include <cmath>
-#include <cstdlib>
 #include <istream>
 
 #include "sikidom.h"
