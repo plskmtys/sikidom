@@ -1,7 +1,7 @@
 #include <iostream>
 
-#ifndef SOKSZOG_PONT_H
-#define SOKSZOG_PONT_H
+#ifndef SIKIDOM_PONT_H
+#define SIKIDOM_PONT_H
 
 class Pont{
 private:

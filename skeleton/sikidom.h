@@ -16,8 +16,9 @@ protected:
    */
   Pont p;
 
-  //enum Type{kor, haromszog, negyzet};/** @brief konstruktor.
-
+  /** @brief konstruktor.
+   * Nem publikus, mert nem szeretnénk, hogy valaki olyan síkidomot hozzon létre, amelyről nem tudjuk, hogy milyen típusú.
+   */
   Sikidom(Pont _kp = Pont(0, 0), Pont _p = Pont(0, 0)): kp(_kp), p(_p) {}
 
 public:
@@ -52,11 +53,6 @@ public:
    */
   virtual double Terulet() const = 0;
   
-  /** @brief Megadja, hogy két sokszög milyen arányban fedi egymást. 0 és 1 közötti értékkel tér vissza.
-   * @param masik A másik sokszög, amivel összehasonlítjuk.
-   */
-  //virtual double Fedi(const Sikidom&) const;
-
   virtual bool Rajtavan(const Pont&) const = 0;
 
   friend std::ostream& operator<<(std::ostream&, const Sikidom&);

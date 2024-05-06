@@ -3,7 +3,6 @@
 
 #include "sikidom.h"
 #include "pont.h"
-#include "matek.h"
 
 //Sikidom tagfuggvenyei
 
@@ -49,7 +48,7 @@ bool Kor::Rajtavan(const Pont& _p) const {
 }
 
 std::ostream& operator<<(std::ostream& os, const Kor& k){
-  os << "kör, kp: " << k.kp << " egy pontja: " << k.p;
+  os << "kor, kp: " << k.kp << " egy pontja: " << k.p;
   return os;
 }
 
@@ -88,7 +87,7 @@ bool Haromszog::Rajtavan(const Pont& P) const {
 }
  
 std::ostream& operator<<(std::ostream& os, const Haromszog& h) {
-  os << "háromszög, kp: " << h.kp << "egy pontja: " << h.p;
+  os << "haromszog, kp: " << h.kp << "egy pontja: " << h.p;
   return os;
 }
 
@@ -115,7 +114,7 @@ bool Negyzet::Rajtavan(const Pont& P) const {
 }
 
 std::ostream& operator<<(std::ostream& os, const Negyzet& n) {
-  os << "négyzet, kp: " << n.kp << "egy pontja: " << n.p;
+  os << "negyzet, kp: " << n.kp << "egy pontja: " << n.p;
   return os;
 }
  
