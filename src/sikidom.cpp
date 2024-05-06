@@ -3,7 +3,6 @@
 
 #include "sikidom.h"
 #include "pont.h"
-#include "matek.h"
 
 //Sikidom tagfuggvenyei
 
