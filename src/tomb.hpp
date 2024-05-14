@@ -62,6 +62,8 @@ public:
     currentSize = newSize;
   }
 
+  void push_back(const T &) {}
+
   class iterator {
     Tomb *p;
     size_t idx;

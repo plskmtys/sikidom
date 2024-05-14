@@ -36,9 +36,8 @@ bool Sikidom::Tartalmazza(const int r) const {
   return (kp.dst(origo) + kp.dst(p) <= r);
 }
 
-/** @brief formatum: "{Tipus, (kpX;kpY), (pX,pY)}\n"
- */
-std::istream &operator>>(std::istream &is, Sikidom &s) {
+/*
+std::istream &operator>>(std::istream &is, Sikidom *s) {
   std::string tmp;
   is >> tmp;
   if (tmp[0] == '{') {
@@ -46,16 +45,17 @@ std::istream &operator>>(std::istream &is, Sikidom &s) {
   }
 
   if (tmp == "kor,") {
-    Kor k;
-    is >> k;
+    Kor *k = new Kor;
+    //is >> *k;
+    
     s = k;
   } else if (tmp == "haromszog,") {
-    Haromszog h;
-    is >> h;
+    Haromszog *h = new Haromszog;
+    //is >> *h;
     s = h;
   } else if (tmp == "negyzet,") {
-    Negyzet n;
-    is >> n;
+    Negyzet *n = new Negyzet;
+    //is >> *n;
     s = n;
   } else {
     throw "Nem lehet eldonteni, hogy milyen fajta sikidomot olvasunk be.";
@@ -63,6 +63,7 @@ std::istream &operator>>(std::istream &is, Sikidom &s) {
 
   return is;
 }
+*/
 
 Sikidom::~Sikidom() {}
 
@@ -75,16 +76,43 @@ double Kor::Terulet() const {
 
 bool Kor::Rajtavan(const Pont &_p) const { return (kp.dst(_p) <= kp.dst(p)); }
 
+void Kor::Write(std::ostream &os) const {
+  os << "{kor, " << kp << ", " << p << "}\n";
+}
+
+void Kor::Read(std::istream &is) {
+  char ch;
+  is >> kp >> ch >> p >> ch;
+}
+
+Sikidom* Sikidom::createSikidom(const std::string& type) {
+  Sikidom* sikidom;
+  if (type == "Kor,") {
+    sikidom = new Kor;
+  } else if (type == "Haromszog,") {
+    sikidom = new Haromszog;
+  } else if (type == "Negyzet,") {
+    sikidom = new Negyzet;
+  } else {
+    throw "Unknown object type";
+  }
+  return sikidom;
+}
+
+/*
 std::ostream &operator<<(std::ostream &os, const Kor &k) {
   os << "kor, " << k.kp << ", " << k.p << '}';
   return os;
 }
+*/
 
+/*
 std::istream &operator>>(std::istream &is, Kor &k) {
   char ch;
   is >> k.kp >> ch >> k.p >> ch;
   return is;
 }
+*/
 
 // Haromszog tagfuggvenyei
 
@@ -116,16 +144,20 @@ bool Haromszog::Rajtavan(const Pont &P) const {
   return (a >= 0 && b >= 0 && c >= 0);
 }
 
+/*
 std::ostream &operator<<(std::ostream &os, const Haromszog &h) {
   os << "{haromszog, " << h.kp << ", " << h.p << '}';
   return os;
 }
+*/
 
+/*
 std::istream &operator>>(std::istream &is, Haromszog &h) {
   char ch;
   is >> h.kp >> ch >> h.p >> ch;
   return is;
 }
+*/
 
 // Negyzet tagfuggvenyei
 
@@ -146,13 +178,17 @@ bool Negyzet::Rajtavan(const Pont &P) const {
           fabs(n_tmp.kp.gety()) >= fabs(P.gety()));
 }
 
+/*
 std::ostream &operator<<(std::ostream &os, const Negyzet &n) {
   os << "{negyzet, " << n.kp << ", " << n.p << '}';
   return os;
 }
+*/
 
+/*
 std::istream &operator>>(std::istream &is, Negyzet &n) {
   char ch;
   is >> n.kp >> ch >> n.p >> ch;
   return is;
 }
+*/

@@ -53,9 +53,17 @@ public:
 
   virtual bool Rajtavan(const Pont &) const = 0;
 
-  // friend std::ostream &operator<<(std::ostream &, const Sikidom &);
+  virtual void Write(std::ostream& os) const = 0;
 
-  friend std::istream &operator>>(std::istream &, Sikidom &);
+  virtual void Read(std::istream& is) = 0;
+
+  static Sikidom* createSikidom(const std::string& type);
+
+
+  //virtual std::ostream &operator<<(const Sikidom &) = 0;
+
+
+  //friend std::istream &operator>>(std::istream &, Sikidom *);
 
   virtual ~Sikidom() = 0;
 };
@@ -70,9 +78,14 @@ public:
 
   bool Rajtavan(const Pont &) const override;
 
-  friend std::ostream &operator<<(std::ostream &, const Kor &);
+  void Write(std::ostream& os) const override;
 
-  friend std::istream &operator>>(std::istream &, Kor &);
+  void Read(std::istream& is) override;
+  
+  //std::ostream &operator<<( const Kor &);
+
+
+  //friend std::istream &operator>>(std::istream &, Kor &);
 
   ~Kor() override {}
 };
@@ -87,9 +100,14 @@ public:
 
   bool Rajtavan(const Pont &) const override;
 
-  friend std::ostream &operator<<(std::ostream &, const Haromszog &);
+  void Write(std::ostream& os) const override;
 
-  friend std::istream &operator>>(std::istream &, Haromszog &);
+  void Read(std::istream& is) override;
+
+  //friend std::ostream &operator<<(std::ostream &, const Haromszog &);
+
+
+  //friend std::istream &operator>>(std::istream &, Haromszog &);
 
   ~Haromszog() override {}
 };
@@ -104,9 +122,14 @@ public:
 
   bool Rajtavan(const Pont &) const override;
 
-  friend std::ostream &operator<<(std::ostream &, const Negyzet &);
+  void Write(std::ostream& os) const override;
 
-  friend std::istream &operator>>(std::istream &, Negyzet &);
+  void Read(std::istream& is) override;
+
+  //friend std::ostream &operator<<(std::ostream &, const Negyzet &);
+
+
+  //friend std::istream &operator>>(std::istream &, Negyzet &);
 
   ~Negyzet() override {}
 };
