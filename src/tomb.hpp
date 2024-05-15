@@ -12,106 +12,93 @@ public:
   class iterator;
   class const_iterator;
 
-  explicit Tomb(size_t n = 0, const T &value = T())
-      : t(nullptr), currentSize(0), currentCapacity(0) {
-    resize(n, value);
-  }
+  Tomb() : t(new T[1]), currentSize(0), currentCapacity(1) {}
 
-  iterator begin() { return iterator(*this); }
+  iterator begin() { return iterator(t, 0); }
+  iterator end() { return iterator(t, currentSize); }
 
-  iterator end() { return iterator(*this, currentSize); }
-
-  const_iterator begin() const { return const_iterator(*this); }
-
-  const_iterator end() const { return const_iterator(*this, currentSize); }
+  const_iterator begin() const { return const_iterator(t, 0); }
+  const_iterator end() const { return const_iterator(t, currentSize); }
 
   size_t size() const { return currentSize; }
 
   size_t capacity() const { return currentCapacity; }
 
-  T &at(size_t i) {
+  T &at(const size_t i) {
     if (i >= currentSize)
       throw std::out_of_range("Array.at(): invalid index");
     return t[i];
   }
 
-  const T &at(size_t i) const {
+  T &operator[](const size_t i) { return at(i); }
+
+  const T &at(const size_t i) const {
     if (i >= currentSize)
       throw std::out_of_range("Array.at(): invalid index");
     return t[i];
   }
 
-  void resize(size_t newSize, const T &value = T()) {
+  const T &operator[](const size_t i) const { return at(i); }
+
+  void resize(size_t newSize) {
     if (newSize > currentCapacity) {
-      size_t newCapacity = newSize * 2; // Double the capacity
-      T *newT = new T[newCapacity];
+      T* newT = new T[newSize * 2];
       for (size_t i = 0; i < currentSize; ++i) {
-        newT[i] = t[i];
+        newT[i] = t[i];  // Copy the pointers
       }
       delete[] t;
       t = newT;
-      currentCapacity = newCapacity;
-    } else if (newSize < currentSize) {
-      for (size_t i = newSize; i < currentSize; ++i) {
-        t[i].~T(); // Call the destructor for the removed elements
-      }
+      currentCapacity = newSize * 2;
     }
-    for (size_t i = currentSize; i < newSize; ++i) {
-      new (&t[i]) T(value); // Placement new to construct new elements
-    }
-    currentSize = newSize;
   }
 
-  void push_back(const T &) {}
+    void push_back(T value) {
+        if (currentSize == currentCapacity) {
+            resize(currentSize * 2);
+        }
+        t[currentSize++] = value;
+    }
 
   class iterator {
-    Tomb *p;
+    T *p;
     size_t idx;
 
   public:
-    iterator() : p(nullptr), idx(0) {}
+    iterator(T *p = nullptr, size_t idx = 0) : p(p), idx(idx) {}
 
-    iterator(Tomb &a, size_t ix = 0) : p(&a), idx(ix) {}
+    T &operator*() { return p[idx]; }
 
     iterator &operator++() {
-      if (idx != p->currentSize)
-        ++idx;
+      ++idx;
       return *this;
     }
 
-    iterator operator++(int) {
-      iterator tmp(*this);
-      ++(*this);
-      return tmp;
-    }
-
-    bool operator!=(const iterator &i) const { return idx != i.idx; }
-
-    bool operator==(const iterator &i) const { return !operator!=(i); }
-
-    T &operator*() const {
-      if (idx != p->currentSize)
-        return p->t[idx];
-      else
-        throw std::runtime_error("Invalid dereference");
-    }
-
-    T *operator->() const { return &operator*(); }
+    bool operator!=(const iterator &other) const { return idx != other.idx; }
   };
 
-  class const_iterator : public iterator {
+  class const_iterator {
+    const T *p;
+    size_t idx;
+
   public:
-    const_iterator() {}
+    const_iterator(const T *p = nullptr, size_t idx = 0) : p(p), idx(idx) {}
 
-    const_iterator(const Tomb &a, size_t ix = 0)
-        : iterator(const_cast<Tomb &>(a), ix) {}
+    const T &operator*() const { return p[idx]; }
 
-    const T &operator*() const { return iterator::operator*(); }
+    const_iterator &operator++() {
+      ++idx;
+      return *this;
+    }
 
-    const T *operator->() const { return &operator*(); }
+    bool operator!=(const const_iterator &other) const { return idx != other.idx; }
   };
 
-  virtual ~Tomb() { delete[] t; }
+  virtual ~Tomb() {
+    for (size_t i = 0; i < currentSize; ++i) {
+      delete t[i];  // Delete the objects
+    }
+    delete[] t;  // Delete the array
+  }
 };
 
 #endif

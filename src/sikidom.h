@@ -1,6 +1,7 @@
 #include "pont.h"
 #include <cstddef>
 #include <iostream>
+#include <memory>
 
 #ifndef SIKIDOM_SIKIDOM_H
 #define SIKIDOM_SIKIDOM_H
@@ -59,11 +60,11 @@ public:
 
   static Sikidom* createSikidom(const std::string& type);
 
+  virtual bool Kivul(const std::size_t r) const = 0;
 
-  //virtual std::ostream &operator<<(const Sikidom &) = 0;
+  friend std::ostream &operator<<(std::ostream&, const Sikidom * const);
 
-
-  //friend std::istream &operator>>(std::istream &, Sikidom *);
+  friend std::istream& operator>>(std::istream& is, Sikidom* sikidom);
 
   virtual ~Sikidom() = 0;
 };
@@ -81,11 +82,12 @@ public:
   void Write(std::ostream& os) const override;
 
   void Read(std::istream& is) override;
+
+  bool Kivul(const std::size_t r) const override;
   
-  //std::ostream &operator<<( const Kor &);
+  friend std::ostream &operator<<(std::ostream &, const Kor &);
 
-
-  //friend std::istream &operator>>(std::istream &, Kor &);
+  friend std::istream &operator>>(std::istream &, Kor &);
 
   ~Kor() override {}
 };
@@ -104,10 +106,11 @@ public:
 
   void Read(std::istream& is) override;
 
-  //friend std::ostream &operator<<(std::ostream &, const Haromszog &);
+  bool Kivul(const std::size_t r) const override;
 
+  friend std::ostream &operator<<(std::ostream &, const Haromszog &);
 
-  //friend std::istream &operator>>(std::istream &, Haromszog &);
+  friend std::istream &operator>>(std::istream &, Haromszog &);
 
   ~Haromszog() override {}
 };
@@ -126,12 +129,15 @@ public:
 
   void Read(std::istream& is) override;
 
-  //friend std::ostream &operator<<(std::ostream &, const Negyzet &);
+  bool Kivul(const std::size_t r) const override;
 
+  friend std::ostream &operator<<(std::ostream &, const Negyzet &);
 
-  //friend std::istream &operator>>(std::istream &, Negyzet &);
+  friend std::istream &operator>>(std::istream &, Negyzet &);
 
   ~Negyzet() override {}
 };
+
+bool IsOnTriangle(const Pont&, const Pont&, const Pont&, const Pont&);
 
 #endif // !SIKIDOM_SIKIDOM_H
