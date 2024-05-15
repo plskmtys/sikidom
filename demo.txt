@@ -25,3 +25,4 @@ A (3,3) pontot tartalmazza:
 Negyzet, (3,3), (4,4)
 Adjon meg koordinatakat! (formatum: "x,y")
 ^D
+

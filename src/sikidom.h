@@ -1,6 +1,7 @@
 #include "pont.h"
 #include <cstddef>
 #include <iostream>
+#include <memory>
 
 #ifndef SIKIDOM_SIKIDOM_H
 #define SIKIDOM_SIKIDOM_H
@@ -53,9 +54,17 @@ public:
 
   virtual bool Rajtavan(const Pont &) const = 0;
 
-  // friend std::ostream &operator<<(std::ostream &, const Sikidom &);
+  virtual void Write(std::ostream& os) const = 0;
 
-  friend std::istream &operator>>(std::istream &, Sikidom &);
+  virtual void Read(std::istream& is) = 0;
+
+  static Sikidom* createSikidom(const std::string& type);
+
+  virtual bool Kivul(const std::size_t r) const = 0;
+
+  friend std::ostream &operator<<(std::ostream&, const Sikidom * const);
+
+  friend std::istream& operator>>(std::istream& is, Sikidom* sikidom);
 
   virtual ~Sikidom() = 0;
 };
@@ -70,6 +79,12 @@ public:
 
   bool Rajtavan(const Pont &) const override;
 
+  void Write(std::ostream& os) const override;
+
+  void Read(std::istream& is) override;
+
+  bool Kivul(const std::size_t r) const override;
+  
   friend std::ostream &operator<<(std::ostream &, const Kor &);
 
   friend std::istream &operator>>(std::istream &, Kor &);
@@ -86,6 +101,12 @@ public:
   double Terulet() const override;
 
   bool Rajtavan(const Pont &) const override;
+
+  void Write(std::ostream& os) const override;
+
+  void Read(std::istream& is) override;
+
+  bool Kivul(const std::size_t r) const override;
 
   friend std::ostream &operator<<(std::ostream &, const Haromszog &);
 
@@ -104,11 +125,19 @@ public:
 
   bool Rajtavan(const Pont &) const override;
 
+  void Write(std::ostream& os) const override;
+
+  void Read(std::istream& is) override;
+
+  bool Kivul(const std::size_t r) const override;
+
   friend std::ostream &operator<<(std::ostream &, const Negyzet &);
 
   friend std::istream &operator>>(std::istream &, Negyzet &);
 
   ~Negyzet() override {}
 };
+
+bool IsOnTriangle(const Pont&, const Pont&, const Pont&, const Pont&);
 
 #endif // !SIKIDOM_SIKIDOM_H

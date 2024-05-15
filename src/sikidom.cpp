@@ -36,32 +36,33 @@ bool Sikidom::Tartalmazza(const int r) const {
   return (kp.dst(origo) + kp.dst(p) <= r);
 }
 
-/** @brief formatum: "{Tipus, (kpX;kpY), (pX,pY)}\n"
- */
-std::istream &operator>>(std::istream &is, Sikidom &s) {
-  std::string tmp;
-  is >> tmp;
-  if (tmp[0] == '{') {
-    tmp.erase(0, 1);
-  }
 
-  if (tmp == "kor,") {
-    Kor k;
-    is >> k;
-    s = k;
-  } else if (tmp == "haromszog,") {
-    Haromszog h;
-    is >> h;
-    s = h;
-  } else if (tmp == "negyzet,") {
-    Negyzet n;
-    is >> n;
-    s = n;
+Sikidom* Sikidom::createSikidom(const std::string& s) {
+  std::string type(s);
+  if(type[0] == '{') {
+      type.erase(0, 1);
+  }
+  Sikidom* sikidom;
+  if (type == "Kor,") {
+    sikidom = new Kor;
+  } else if (type == "Haromszog,") {
+    sikidom = new Haromszog;
+  } else if (type == "Negyzet,") {
+    sikidom = new Negyzet;
   } else {
-    throw "Nem lehet eldonteni, hogy milyen fajta sikidomot olvasunk be.";
+    throw "Unknown object type";
   }
+  return sikidom;
+}
 
+std::istream& operator>>(std::istream& is, Sikidom* sikidom){
+  sikidom->Read(is);
   return is;
+}
+
+std::ostream& operator<<(std::ostream& os, const Sikidom * const sikidom){
+  sikidom->Write(os);
+  return os;
 }
 
 Sikidom::~Sikidom() {}
@@ -75,14 +76,26 @@ double Kor::Terulet() const {
 
 bool Kor::Rajtavan(const Pont &_p) const { return (kp.dst(_p) <= kp.dst(p)); }
 
+void Kor::Write(std::ostream &os) const {
+  os << "{Kor, " << kp << ", " << p << "}\n";
+}
+
+void Kor::Read(std::istream &is) {
+  char ch;
+  is >> kp >> ch >> p >> ch;
+}
+
+bool Kor::Kivul(const std::size_t r) const  {
+  return (kp.dst(p) + kp.dst(Pont(0,0)) > r);
+}
+
 std::ostream &operator<<(std::ostream &os, const Kor &k) {
-  os << "kor, " << k.kp << ", " << k.p << '}';
+  k.Write(os);
   return os;
 }
 
 std::istream &operator>>(std::istream &is, Kor &k) {
-  char ch;
-  is >> k.kp >> ch >> k.p >> ch;
+  k.Read(is);
   return is;
 }
 
@@ -94,15 +107,6 @@ double Haromszog::Terulet() const {
 }
 
 bool Haromszog::Rajtavan(const Pont &P) const {
-  // https://en.wikipedia.org/wiki/Barycentric_coordinate_system
-
-  // t = terulet
-  // a = |PB x PA| / 2t
-  // b = |PC x PA| / 2t
-  // c = |PA x PB| / 2t
-  // return ( a >= 0 && b >= 0 && c >= 0)
-
-  const double t = Terulet();
   const Pont A = p;
   Haromszog temp(*this);
   temp.Forgat(120, temp.kp);
@@ -110,20 +114,29 @@ bool Haromszog::Rajtavan(const Pont &P) const {
   temp.Forgat(120, temp.kp);
   const Pont C = temp.p;
 
-  const double a = AbsCrossProd(P, B, P, A) / (2 * t);
-  const double b = AbsCrossProd(P, C, P, A) / (2 * t);
-  const double c = AbsCrossProd(P, A, P, B) / (2 * t);
-  return (a >= 0 && b >= 0 && c >= 0);
+  return IsOnTriangle(P, A, B, C);
+}
+
+void Haromszog::Write(std::ostream &os) const {
+  os << "{Haromszog, " << kp << ", " << p << "}\n";
+}
+
+void Haromszog::Read(std::istream &is) {
+  char ch;
+  is >> kp >> ch >> p >> ch;
+}
+
+bool Haromszog::Kivul(const std::size_t r) const {
+  return true;
 }
 
 std::ostream &operator<<(std::ostream &os, const Haromszog &h) {
-  os << "{haromszog, " << h.kp << ", " << h.p << '}';
+  h.Write(os);
   return os;
 }
 
 std::istream &operator>>(std::istream &is, Haromszog &h) {
-  char ch;
-  is >> h.kp >> ch >> h.p >> ch;
+  h.Read(is);
   return is;
 }
 
@@ -146,13 +159,44 @@ bool Negyzet::Rajtavan(const Pont &P) const {
           fabs(n_tmp.kp.gety()) >= fabs(P.gety()));
 }
 
+void Negyzet::Write(std::ostream &os) const {
+  os << "{Negyzet, " << kp << ", " << p << "}\n";
+}
+
+void Negyzet::Read(std::istream &is) {
+  char ch;
+  is >> kp >> ch >> p >> ch;
+}
+
+bool Negyzet::Kivul(const std::size_t r) const {
+  return true;
+}
+
 std::ostream &operator<<(std::ostream &os, const Negyzet &n) {
-  os << "{negyzet, " << n.kp << ", " << n.p << '}';
+  n.Write(os);
   return os;
 }
 
 std::istream &operator>>(std::istream &is, Negyzet &n) {
-  char ch;
-  is >> n.kp >> ch >> n.p >> ch;
+  n.Read(is);
   return is;
+}
+
+bool IsOnTriangle(const Pont& P, const Pont& A, const Pont& B, const Pont& C){
+  // https://en.wikipedia.org/wiki/Barycentric_coordinate_system
+
+  // t = terulet
+  // a = |PB x PA| / 2t
+  // b = |PC x PA| / 2t
+  // c = |PA x PB| / 2t
+  // return ( a >= 0 && b >= 0 && c >= 0)
+
+  const double terulet = 0.5 * std::abs((A.getx()*(B.gety()-C.gety()) 
+                                        + B.getx()*(C.gety()-A.gety())
+                                        + C.getx()*(A.gety()-B.gety())));
+
+  const double a = AbsCrossProd(P, B, P, A) / (2 * terulet);
+  const double b = AbsCrossProd(P, C, P, A) / (2 * terulet);
+  const double c = AbsCrossProd(P, A, P, B) / (2 * terulet);
+  return (a >= 0 && b >= 0 && c >= 0);
 }
