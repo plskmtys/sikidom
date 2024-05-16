@@ -56,10 +56,21 @@ Sikidom* Sikidom::createSikidom(const std::string& s) {
   return sikidom;
 }
 
+std::istream& operator>>(std::istream& is, Sikidom** sikidom){
+  std::string type;
+  is >> type;
+  delete *sikidom;
+  *sikidom = Sikidom::createSikidom(type);
+  (*sikidom)->Read(is);
+  return is;
+}
+
+/*
 std::istream& operator>>(std::istream& is, Sikidom* sikidom){
   sikidom->Read(is);
   return is;
 }
+*/
 
 std::ostream& operator<<(std::ostream& os, const Sikidom * const sikidom){
   sikidom->Write(os);
@@ -95,10 +106,12 @@ std::ostream &operator<<(std::ostream &os, const Kor &k) {
   return os;
 }
 
+/*
 std::istream &operator>>(std::istream &is, Kor &k) {
   k.Read(is);
   return is;
 }
+*/
 
 // Haromszog tagfuggvenyei
 
@@ -141,10 +154,12 @@ std::ostream &operator<<(std::ostream &os, const Haromszog &h) {
   return os;
 }
 
+/*
 std::istream &operator>>(std::istream &is, Haromszog &h) {
   h.Read(is);
   return is;
 }
+*/
 
 // Negyzet tagfuggvenyei
 
@@ -191,16 +206,17 @@ void Negyzet::Read(std::istream &is) {
   is >> kp >> ch >> p >> ch;
 }
 
-
 std::ostream &operator<<(std::ostream &os, const Negyzet &n) {
   n.Write(os);
   return os;
 }
 
+/*
 std::istream &operator>>(std::istream &is, Negyzet &n) {
   n.Read(is);
   return is;
 }
+*/
 
 bool IsOnTriangle1(const Pont& P, const Pont& A, const Pont& B, const Pont& C){
   // https://en.wikipedia.org/wiki/Barycentric_coordinate_system

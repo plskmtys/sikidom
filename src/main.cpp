@@ -6,15 +6,7 @@
 #include "sikidom.h"
 #include "tomb.hpp"
 
-int main() {
-
-  /*
-  TEST(Kor, 0) {
-    Kor k1(Pont(0, 0), Pont(1, 0));
-    EXPECT_EQ(Pont(0, 0), k1.getkp());
-    END
-  }
-  */
+int main(int argc, char** argv) {
 
   std::ifstream inputFile("inputfile.txt");
   Tomb<Sikidom*> beolvasott_sikidomok;
@@ -22,21 +14,15 @@ int main() {
   std::string line;
   while (std::getline(inputFile, line)) {
     std::istringstream iss(line);
-    std::string type;
-    iss >> type;
-    
-    Sikidom* sikidom = Sikidom::createSikidom(type);
-    iss >> sikidom;
 
-    //eltaroljuk, ha 
+    Sikidom* sikidom = nullptr;
+    iss >> &sikidom;
+
+    //assert(sikidom != nullptr);
+
+    //eltaroljuk, ha az egysegkoron kivul van
     if(sikidom->Kivul(1)){
       beolvasott_sikidomok.push_back(sikidom);
-    }
-
-    //kiirjuk, ha nincs rajta a (0,0) pont
-    if(!sikidom->Rajtavan(Pont(0,0))){
-      std::cout << "nincs rajta az origo:\n";
-      std::cout << sikidom;
     }
   }
  

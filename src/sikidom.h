@@ -62,7 +62,7 @@ public:
 
   friend std::ostream &operator<<(std::ostream&, const Sikidom * const);
 
-  friend std::istream& operator>>(std::istream& is, Sikidom* sikidom);
+  friend std::istream& operator>>(std::istream& is, Sikidom** sikidom);
 
   virtual ~Sikidom() = 0;
 };
