@@ -16,8 +16,6 @@ protected:
    */
   Pont p;
 
-  // enum Type{kor, haromszog, negyzet};/** @brief konstruktor.
-
   Sikidom(Pont _kp = Pont(0, 0), Pont _p = Pont(0, 0)) : kp(_kp), p(_p) {}
 
 public:

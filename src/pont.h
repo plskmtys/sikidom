@@ -21,6 +21,10 @@ public:
 
   double gety() const;
 
+  Pont operator+(const Pont&) const;
+
+  Pont operator-(const Pont&) const;
+
   bool operator==(const Pont&) const;
 
   bool operator!=(const Pont&) const;
@@ -37,5 +41,7 @@ public:
 };
 
 double AbsCrossProd(const Pont& Vec1A, const Pont& Vec1B, const Pont& Vec2A, const Pont& Vec2B);
+
+double dst(const Pont& a, const Pont& b);
 
 #endif
