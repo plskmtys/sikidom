@@ -1,5 +1,6 @@
 #include "pont.h"
 #include <cmath>
+#include <stdexcept>
 
 Pont::Pont(const Pont &p) {
   x = p.x;
@@ -59,16 +60,31 @@ std::ostream &operator<<(std::ostream &os, const Pont &p) {
   return os;
 }
 
-/** @brief formatum: (x,y)
+/** @brief formatum: (x,y) vagy x,y
  */
 std::istream &operator>>(std::istream &is, Pont &p) {
   char ch;
-  if (is >> ch && ch == '(') {
-    is >> p.x >> ch >> p.y >> ch;
+  is >> std::ws >> ch;
+  if (ch == '(') {
+    is >> p.x;
+    is >> std::ws >> ch;
+    if (ch == ',') {
+      is >> p.y;
+      is >> std::ws >> ch;
+      if (ch == ')') {
+        return is;
+      }
+    }
   } else {
-    is >> p.x >> ch >> p.y;
+    is.putback(ch);
+    is >> p.x >> ch;
+    if (ch == ',') {
+        is >> p.y;
+        return is;
+    }
   }
-  return is;
+
+  throw(std::runtime_error("nem (x,y) vagy x,y formaban adta meg a koordinatakat."));
 }
 
 double Pont::dst(const Pont &p) const {
@@ -77,10 +93,4 @@ double Pont::dst(const Pont &p) const {
 
 double dst(const Pont& a, const Pont& b){
   return sqrt((a.getx() - b.getx()) * (a.getx() - b.getx()) + (a.gety() - b.gety()) * (a.gety() - b.gety()));
-}
-
-double AbsCrossProd(const Pont &A1, const Pont &A2, const Pont &B1,
-                    const Pont &B2) {
-  return std::abs((A2.getx() - A1.getx()) * (B2.gety() - B1.gety()) -
-              (A2.gety() - A1.gety()) * (B2.getx() - B1.getx()));
 }

@@ -2,6 +2,7 @@
 #define MYTOMB
 
 #include <stdexcept>
+#include <type_traits>
 
 template <class T> class Tomb {
   T *t;                   // dynamic array to store elements
@@ -52,12 +53,21 @@ public:
     }
   }
 
-    void push_back(T value) {
-        if (currentSize == currentCapacity) {
-            resize(currentSize * 2);
-        }
-        t[currentSize++] = value;
+  void push_back(T value) {
+    if (currentSize == currentCapacity) {
+      resize(currentSize * 2);
     }
+    t[currentSize++] = value;
+  }
+
+  int find(const T& value) const {
+    for (size_t i = 0; i < currentSize; ++i) {
+      if (t[i] == value) {
+        return i;
+      }
+    }
+    return -1;
+}
 
   class iterator {
     T *p;
@@ -94,10 +104,10 @@ public:
   };
 
   virtual ~Tomb() {
-    for (size_t i = 0; i < currentSize; ++i) {
-      delete t[i];  // Delete the objects
-    }
-    delete[] t;  // Delete the array
+    //for (size_t i = 0; i < currentSize; ++i) {
+    //  delete t[i];
+    //}
+    delete[] t;
   }
 };
 

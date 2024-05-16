@@ -85,8 +85,6 @@ public:
   
   friend std::ostream &operator<<(std::ostream &, const Kor &);
 
-  friend std::istream &operator>>(std::istream &, Kor &);
-
   ~Kor() override {}
 };
 
@@ -108,8 +106,6 @@ public:
 
   friend std::ostream &operator<<(std::ostream &, const Haromszog &);
 
-  friend std::istream &operator>>(std::istream &, Haromszog &);
-
   ~Haromszog() override {}
 };
 
@@ -130,8 +126,6 @@ public:
   bool Kivul(const std::size_t r) const override;
 
   friend std::ostream &operator<<(std::ostream &, const Negyzet &);
-
-  friend std::istream &operator>>(std::istream &, Negyzet &);
 
   ~Negyzet() override {}
 };

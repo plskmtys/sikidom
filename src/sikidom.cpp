@@ -21,7 +21,7 @@ Sikidom &Sikidom::operator=(const Sikidom &s) {
 Sikidom &Sikidom::Mozgat(const int _x, const int _y) {
   kp.setx(kp.getx() + _x);
   kp.sety(kp.gety() + _y);
-  p.setx(kp.getx() + _x);
+  p.setx(p.getx() + _x);
   p.sety(p.gety() + _y);
   return *this;
 }
@@ -31,12 +31,6 @@ Sikidom &Sikidom::Forgat(const double rad, const Pont &center = Pont(0, 0)) {
   if(kp != center) kp.Forgat(rad, center);
   return *this;
 }
-
-bool Sikidom::Tartalmazza(const int r) const {
-  const Pont origo(0, 0);
-  return (kp.dst(origo) + kp.dst(p) <= r);
-}
-
 
 Sikidom* Sikidom::createSikidom(const std::string& s) {
   std::string type(s);
@@ -64,13 +58,6 @@ std::istream& operator>>(std::istream& is, Sikidom** sikidom){
   (*sikidom)->Read(is);
   return is;
 }
-
-/*
-std::istream& operator>>(std::istream& is, Sikidom* sikidom){
-  sikidom->Read(is);
-  return is;
-}
-*/
 
 std::ostream& operator<<(std::ostream& os, const Sikidom * const sikidom){
   sikidom->Write(os);
@@ -105,13 +92,6 @@ std::ostream &operator<<(std::ostream &os, const Kor &k) {
   k.Write(os);
   return os;
 }
-
-/*
-std::istream &operator>>(std::istream &is, Kor &k) {
-  k.Read(is);
-  return is;
-}
-*/
 
 // Haromszog tagfuggvenyei
 
@@ -148,18 +128,10 @@ void Haromszog::Read(std::istream &is) {
   is >> kp >> ch >> p >> ch;
 }
 
-
 std::ostream &operator<<(std::ostream &os, const Haromszog &h) {
   h.Write(os);
   return os;
 }
-
-/*
-std::istream &operator>>(std::istream &is, Haromszog &h) {
-  h.Read(is);
-  return is;
-}
-*/
 
 // Negyzet tagfuggvenyei
 
@@ -209,33 +181,6 @@ void Negyzet::Read(std::istream &is) {
 std::ostream &operator<<(std::ostream &os, const Negyzet &n) {
   n.Write(os);
   return os;
-}
-
-/*
-std::istream &operator>>(std::istream &is, Negyzet &n) {
-  n.Read(is);
-  return is;
-}
-*/
-
-bool IsOnTriangle1(const Pont& P, const Pont& A, const Pont& B, const Pont& C){
-  // https://en.wikipedia.org/wiki/Barycentric_coordinate_system
-
-  // t = terulet
-  // a = |PB x PA| / 2t
-  // b = |PC x PA| / 2t
-  // c = |PA x PB| / 2t
-  // return ( a >= 0 && b >= 0 && c >= 0)
-
-  const double terulet = 0.5 * std::abs((A.getx()*(B.gety()-C.gety()) 
-                                        + B.getx()*(C.gety()-A.gety())
-                                        + C.getx()*(A.gety()-B.gety())));
-
-  const double a = AbsCrossProd(P, B, P, A) / (2 * terulet);
-  const double b = AbsCrossProd(P, C, P, A) / (2 * terulet);
-  const double c = AbsCrossProd(P, A, P, B) / (2 * terulet);
-  const double epsilon = 0.00001;
-  return (/*a >= 0 && b >= 0 && c >= 0 &&*/ (std::abs(a + b + c - 1) <= epsilon));
 }
 
 bool IsOnTriangle(const Pont& P, const Pont& A, const Pont& B, const Pont& C) {
