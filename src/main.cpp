@@ -49,6 +49,11 @@ int main(int argc, char** argv) {
   } ENDM
 
   std::cout << "\nHAROMSZOG TESZT\n";
+  TEST(Haromszog, terulet){
+    Haromszog h1(Pont(0,0), Pont(1,0));
+    EXPECT_DOUBLE_EQ(sqrt(3) * 3.0 / 4.0, h1.Terulet()) << "terulet nem jo" ;
+  } ENDM
+
   TEST(Haromszog, rajtavan) {
     Haromszog h1(Pont(0,0), Pont(0,1));
     EXPECT_TRUE(h1.Rajtavan(Pont(0,0)));

@@ -88,16 +88,18 @@ bool Kor::Kivul(const std::size_t r) const  {
   return ((kp.dst(Pont(0,0)) - kp.dst(p)) > r);
 }
 
+/*
 std::ostream &operator<<(std::ostream &os, const Kor &k) {
   k.Write(os);
   return os;
 }
+*/
 
 // Haromszog tagfuggvenyei
 
 double Haromszog::Terulet() const {
   const double R = kp.dst(p); // köréírt kör sugara (a háromszög szabályos)
-  return (R * R * sqrt(3.0) / 4.0);
+  return (R * R * 3.0 * sqrt(3.0) / 4.0);
 }
 
 bool Haromszog::Rajtavan(const Pont &P) const {
@@ -128,10 +130,12 @@ void Haromszog::Read(std::istream &is) {
   is >> kp >> ch >> p >> ch;
 }
 
+/*
 std::ostream &operator<<(std::ostream &os, const Haromszog &h) {
   h.Write(os);
   return os;
 }
+*/
 
 // Negyzet tagfuggvenyei
 
@@ -178,10 +182,12 @@ void Negyzet::Read(std::istream &is) {
   is >> kp >> ch >> p >> ch;
 }
 
+/*
 std::ostream &operator<<(std::ostream &os, const Negyzet &n) {
   n.Write(os);
   return os;
 }
+*/
 
 bool IsOnTriangle(const Pont& P, const Pont& A, const Pont& B, const Pont& C) {
     // vektorok kiszamitasa
