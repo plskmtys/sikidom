@@ -7,17 +7,32 @@
 
 // Sikidom tagfuggvenyei
 
+/**
+ * Sikidom osztaly Copy konstruktora.
+ *
+ * @param s Referencia a lemasolando Sikidomra
+ */
 Sikidom::Sikidom(const Sikidom &s) {
   kp = s.kp;
   p = s.p;
 }
 
+/// @brief Sikidom osztaly egyenloseg operatora.
+/// @param s 
+/// @return Az egymásután fűzhető műveletek miatt Sikidom referencia.
 Sikidom &Sikidom::operator=(const Sikidom &s) {
   kp = s.kp;
   p = s.p;
   return *this;
 }
 
+/** @brief Sikidom osztály mozgató függvénye.
+ * A függvény elmozgatja a síkidomot az x és y értékekkel.
+ * @param _x x tengely irányú mozgatás mértéke.
+ * @param _y y tengely irányú mozgatás mértéke.
+ * @return Referencia a mozgatott síkidomra.
+ * 
+*/
 Sikidom &Sikidom::Mozgat(const int _x, const int _y) {
   kp.setx(kp.getx() + _x);
   kp.sety(kp.gety() + _y);
@@ -26,12 +41,23 @@ Sikidom &Sikidom::Mozgat(const int _x, const int _y) {
   return *this;
 }
 
+/** @brief Sikidom osztály forgató függvénye.
+ * A függvény elforgatja a síkidomot <rad> radiánnal.
+ * @param rad forgatás mértéke, radiánban.
+ * @param center a forgatás középpontja.
+ * @return Referencia a forgatott síkidomra.
+*/
 Sikidom &Sikidom::Forgat(const double rad, const Pont &center = Pont(0, 0)) {
   p.Forgat(rad, center);
   if(kp != center) kp.Forgat(rad, center);
   return *this;
 }
 
+/** @brief Sikidom osztály statikus factory függvénye.
+ * A függvény létrehoz egy új síkidomot a megadott típus alapján.
+ * @param s a létrehozandó síkidom típusa szöveg formátumban.
+ * @return A létrehozott síkidomra mutató pointer.
+*/
 Sikidom* Sikidom::createSikidom(const std::string& s) {
   std::string type(s);
   if(type[0] == '{') {
@@ -50,6 +76,13 @@ Sikidom* Sikidom::createSikidom(const std::string& s) {
   return sikidom;
 }
 
+/** @brief Sikidom osztály beolvasó operátora.
+ * A függvény beolvassa a síkidomot a megadott input streamből.
+ * @param is a bemeneti stream.
+ * @param sikidom a beolvasott síkidomra mutató pointer.
+ * @return A bemeneti stream referenciája.
+ * 
+*/
 std::istream& operator>>(std::istream& is, Sikidom** sikidom){
   std::string type;
   is >> type;
@@ -59,49 +92,88 @@ std::istream& operator>>(std::istream& is, Sikidom** sikidom){
   return is;
 }
 
+/** @brief Sikidom osztály kiíró operátora.
+ * A függvény kiírja a síkidomot a megadott output streambe.
+ * @param os a kimeneti stream.
+ * @param sikidom a kiírandó síkidomra mutató pointer.
+ * @return A kimeneti stream referenciája.
+ * 
+*/
 std::ostream& operator<<(std::ostream& os, const Sikidom * const sikidom){
   sikidom->Write(os);
   return os;
 }
 
+/** @brief Sikidom osztály destruktora.
+ * nincs dinamikusan foglalt adattag, tehát nem kell semmit felszabadítani.
+*/
 Sikidom::~Sikidom() {}
 
 // Kor tagfuggvenyei
 
+/** @brief Kor területét számoló függvény.
+ * A kiszamitas modja: r^2 * pi
+ * @return A kör területe.
+ * 
+*/
 double Kor::Terulet() const {
   double r = kp.dst(p);
   return (r * r * M_PI);
 }
 
+/** @brief Kor Rajtavan függvény.
+ * A függvény eldönti, hogy egy pont rajta van-e a körön.
+ * @param _p a vizsgált pont.
+ * @return true, ha a pont rajta van a körön, egyébként false.
+ * 
+*/
 bool Kor::Rajtavan(const Pont &_p) const { return (kp.dst(_p) <= kp.dst(p)); }
 
+/** @brief Kor kiíró függvény.
+ * A függvény kiírja a kör adatait a megadott output streambe.
+ * @param os a kimeneti stream.
+ * 
+*/
 void Kor::Write(std::ostream &os) const {
   os << "{Kor, " << kp << ", " << p << "}\n";
 }
 
+/** @brief Kor beolvasó függvény.
+ * A függvény beolvassa a kör adatait a megadott input streamből.
+ * @param is a bemeneti stream.
+ * 
+*/
 void Kor::Read(std::istream &is) {
   char ch;
   is >> kp >> ch >> p >> ch;
 }
 
+/** @brief Kor kivül függvény.
+ * Eldönti, hogy a kör kívül van-e egy adott sugarú, origo középpontú körön.
+ * @param r a kör sugara.
+*/
 bool Kor::Kivul(const std::size_t r) const  {
   return ((kp.dst(Pont(0,0)) - kp.dst(p)) > r);
 }
 
-/*
-std::ostream &operator<<(std::ostream &os, const Kor &k) {
-  k.Write(os);
-  return os;
-}
-*/
-
 // Haromszog tagfuggvenyei
 
+/** @brief Haromszog területét számoló függvény.
+ * A kiszamitas modja: R^2 * 3 * sqrt(3) / 4
+ * @return A háromszög területe.
+ * 
+*/
 double Haromszog::Terulet() const {
   const double R = kp.dst(p); // köréírt kör sugara (a háromszög szabályos)
   return (R * R * 3.0 * sqrt(3.0) / 4.0);
 }
 
+/** @brief Haromszog Rajtavan függvény.
+ * A függvény eldönti, hogy egy pont rajta van-e a háromszögön.
+ * @param P a vizsgált pont.
+ * @return true, ha a pont rajta van a háromszögön, egyébként false.
+ * 
+*/
 bool Haromszog::Rajtavan(const Pont &P) const {
   const Pont A = p;
   Pont B = p;
@@ -112,6 +184,12 @@ bool Haromszog::Rajtavan(const Pont &P) const {
   return IsOnTriangle(P, A, B, C);
 }
 
+/** @brief Haromszog Kivul függvény.
+ * Eldönti, hogy a háromszög kívül van-e egy adott sugarú, origo középpontú körön.
+ * @param r a kör sugara.
+ * @return true, ha a háromszög kívül van a körön, egyébként false.
+ * 
+*/
 bool Haromszog::Kivul(const std::size_t r = 1) const {
   if(r >= dst(kp, Pont(0,0))) return false;
   Pont circle_closest;
@@ -121,29 +199,43 @@ bool Haromszog::Kivul(const std::size_t r = 1) const {
   return !Rajtavan(circle_closest);
 }
 
+/** @brief Haromszog kiíró függvény.
+ * A függvény kiírja a háromszög adatait a megadott output streambe.
+ * @param os a kimeneti stream.
+ * 
+*/
 void Haromszog::Write(std::ostream &os) const {
   os << "{Haromszog, " << kp << ", " << p << "}\n";
 }
 
+/** @brief Haromszog beolvasó függvény.
+ * A függvény beolvassa a háromszög adatait a megadott input streamből.
+ * @param is a bemeneti stream.
+ * 
+*/
 void Haromszog::Read(std::istream &is) {
   char ch;
   is >> kp >> ch >> p >> ch;
 }
 
-/*
-std::ostream &operator<<(std::ostream &os, const Haromszog &h) {
-  h.Write(os);
-  return os;
-}
-*/
-
 // Negyzet tagfuggvenyei
 
+/** @brief Negyzet területét számoló függvény.
+ * A kiszamitas modja: R^2 * 2
+ * @return A négyzet területe.
+ * 
+*/
 double Negyzet::Terulet() const {
   const double R = kp.dst(p);
   return (R * R * 2);
 }
 
+/** @brief Negyzet Rajtavan függvény.
+ * A függvény eldönti, hogy egy pont rajta van-e a négyzeten.
+ * @param P a vizsgált pont.
+ * @return true, ha a pont rajta van a négyzeten, egyébként false.
+ * 
+*/
 bool Negyzet::Rajtavan(const Pont &P) const {
   if(P == kp || P == p) return true;
   Pont a = p - kp;
@@ -163,9 +255,18 @@ bool Negyzet::Rajtavan(const Pont &P) const {
           fabs(p_tmp.gety()) <= side_len / 2.0);
 }
 
+/** @brief Negyzet Kivul függvény.
+ * Eldönti, hogy a négyzet kívül van-e egy adott sugarú, origo középpontú körön.
+ * @param r a kör sugara.
+ * @return true, ha a négyzet kívül van a körön, egyébként false.
+ * 
+*/
 bool Negyzet::Kivul(const std::size_t r) const {
   const Kor egysegkor(Pont(0,0), Pont(r,0));
-  if(Rajtavan(Pont(0,0)) || egysegkor.Rajtavan(kp) || egysegkor.Rajtavan(p)) return false;
+  if(Rajtavan(Pont(0,0))
+    || egysegkor.Rajtavan(kp)
+    || egysegkor.Rajtavan(p))
+    {  return false; }
   Pont circle_closest;
   const double alpha = atan2(kp.gety(), kp.getx());
   circle_closest = Pont(r * cos(alpha), r * sin(alpha));
@@ -173,22 +274,35 @@ bool Negyzet::Kivul(const std::size_t r) const {
   return !Rajtavan(circle_closest);
 }
 
+/** @brief Negyzet kiíró függvény.
+ * A függvény kiírja a négyzet adatait a megadott output streambe.
+ * @param os a kimeneti stream.
+ * 
+*/
 void Negyzet::Write(std::ostream &os) const {
   os << "{Negyzet, " << kp << ", " << p << "}\n";
 }
 
+/** @brief Negyzet beolvasó függvény.
+ * A függvény beolvassa a négyzet adatait a megadott input streamből.
+ * @param is a bemeneti stream.
+ * 
+*/
 void Negyzet::Read(std::istream &is) {
   char ch;
   is >> kp >> ch >> p >> ch;
 }
 
-/*
-std::ostream &operator<<(std::ostream &os, const Negyzet &n) {
-  n.Write(os);
-  return os;
-}
+/** @brief IsOnTriangle függvény.
+ * A függvény eldönti, hogy egy pont rajta van-e egy háromszögön.
+ * @param P a vizsgált pont.
+ * @param A háromszög egyik csúcsa.
+ * @param B háromszög másik csúcsa.
+ * @param C háromszög harmadik csúcsa.
+ * @return true, ha a pont rajta van a háromszögön, egyébként false.
+ * @details A kiszamitas modja:
+ * https://en.wikipedia.org/wiki/Barycentric_coordinate_system#Determining_location_with_respect_to_a_triangle
 */
-
 bool IsOnTriangle(const Pont& P, const Pont& A, const Pont& B, const Pont& C) {
     // vektorok kiszamitasa
     Pont v0 = { C.getx() - A.getx(), C.gety() - A.gety() };
@@ -207,7 +321,7 @@ bool IsOnTriangle(const Pont& P, const Pont& A, const Pont& B, const Pont& C) {
     double u = (dot11 * dot02 - dot01 * dot12) * invDenom;
     double v = (dot00 * dot12 - dot01 * dot02) * invDenom;
 
-    // Check if point is in or on triangle
+    // pont a haromszogon belul van, ha a feltetelek teljesulnek
     return (u >= 0) && (v >= 0) && (u + v <= 1);
 }
 

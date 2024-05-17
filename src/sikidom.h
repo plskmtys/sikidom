@@ -6,6 +6,12 @@
 #ifndef SIKIDOM_SIKIDOM_H
 #define SIKIDOM_SIKIDOM_H
 
+
+/** @brief Sikidom osztály.
+ * A sikidom osztály egy absztrakt osztály,
+ * melynek leszármazottai a különböző (szabályos) síkidomokat reprezentálják,
+ * középpontjukkal és egy csúcsukkal.
+*/
 class Sikidom {
 protected:
   /** @brief Középpont.
@@ -16,17 +22,15 @@ protected:
    */
   Pont p;
 
+  /** @brief Sikidom konstruktor.
+   * @param _kp középpont.
+   * @param _p egy csúcs.
+  */
   Sikidom(Pont _kp = Pont(0, 0), Pont _p = Pont(0, 0)) : kp(_kp), p(_p) {}
 
 public:
-  /** @brief Másoló konstruktor.
-   * @param masik Sokszög, amiből átmásoljuk a pontokat.
-   */
   Sikidom(const Sikidom &);
 
-  /** @brief Értékadó operátor.
-   * @param rhs Az = jobb oldalán álló sokszög.
-   */
   Sikidom &operator=(const Sikidom &);
 
   Pont getkp() const { return kp; }
@@ -67,6 +71,11 @@ public:
   virtual ~Sikidom() = 0;
 };
 
+/** @brief Kor osztály.
+ * A Kor osztály a Sikidom leszármazottja,
+ * mely egy kör síkidomot reprezentál,
+ * középpontjával és egy csúcsával.
+*/
 class Kor : public Sikidom {
 public:
   Kor(Pont _kp = Pont(0, 0), Pont _p = Pont(0, 0)) : Sikidom(_kp, _p) {}
@@ -88,6 +97,11 @@ public:
   ~Kor() override {}
 };
 
+/** @brief Haromszog osztály.
+ * A Haromszog osztály a Sikidom leszármazottja,
+ * mely egy háromszög síkidomot reprezentál,
+ * középpontjával és egy csúcsával.
+*/
 class Haromszog : public Sikidom {
 public:
   Haromszog(Pont _kp = Pont(0, 0), Pont _p = Pont(0, 0)) : Sikidom(_kp, _p) {}
@@ -109,6 +123,11 @@ public:
   ~Haromszog() override {}
 };
 
+/** @param Negyzet osztály.
+ * A Negyzet osztály a Sikidom leszármazottja,
+ * mely egy négyzet síkidomot reprezentál,
+ * középpontjával és egy csúcsával.
+*/
 class Negyzet : public Sikidom {
 public:
   Negyzet(Pont _kp = Pont(0, 0), Pont _p = Pont(0, 0)) : Sikidom(_kp, _p) {}
