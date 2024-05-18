@@ -3,9 +3,21 @@
 #ifndef SOKSZOG_PONT_H
 #define SOKSZOG_PONT_H
 
+/** @brief Pont osztály
+ *  A pontokat a síkon tárolja, x és y koordinátákkal.
+ * 
+ */
 class Pont{
 private:
-  double x, y;
+  /** @brief Pont x koordinátája
+   * 
+  */
+  double x;
+
+  /** @brief Pont y koordinátája
+   * 
+  */
+  double y;
 public:
   Pont(const double _x = 0, const double _y = 0): x(_x), y(_y){}
 
