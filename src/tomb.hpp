@@ -3,18 +3,18 @@
 
 #include <stdexcept>
 
-/** @brief Generikus Dinamikus tomb osztaly.
- * A Tomb osztaly egy dinamikus tombot reprezental, melynek merete a felhasznalo altal nem korlatozott.
+/** @brief Generikus Dinamikus tömb osztály.
+ * A Tomb osztály egy dinamikus tömböt reprezentál, melynek mérete a felhasználó által nem korlátozott.
  * 
 */
 template <class T> class Tomb {
-  /** @brief A tomb dinamikus tomb.
+  /** @brief A dinamikusan foglalt tömb elejére mutató pointer.
   */
   T *t;
-  /** @brief A tomb aktualis merete.
+  /** @brief A tömb aktuális mérete.
   */
   size_t currentSize;
-  /** @brief A tomb aktualis kapacitasa.
+  /** @brief A tömb aktuális kapacitása.
   */
   size_t currentCapacity;
 
@@ -22,47 +22,47 @@ public:
   class iterator;
   class const_iterator;
 
-  /** @brief Tomb osztaly konstruktora.
-   * A konstruktor letrehoz egy ures tombot, 1 kapacitassal.
+  /** @brief Tomb osztály konstruktora.
+   * A konstruktor létrehoz egy üres tömböt, 1 kapacitással.
   */
   Tomb() : t(new T[1]), currentSize(0), currentCapacity(1) {}
 
   /** @brief begin iterator.
-   * @return Az elso elemre mutato iterator.
+   * @return Az első elemre mutató iterator.
    * 
   */
   iterator begin() { return iterator(t, 0); }
 
   /** @brief end iterator.
-   * @return Az utolso elem utan mutato iterator.
+   * @return Az utolsó elem után mutató iterator.
    * 
   */
   iterator end() { return iterator(t, currentSize); }
 
   /** @brief begin const_iterator.
-   * @return Az elso elemre mutato const_iterator.
+   * @return Az első elemre mutató const_iterator.
    * 
   */
   const_iterator begin() const { return const_iterator(t, 0); }
 
   /** @brief end const_iterator.
-   * @return Az utolso elem utan mutato const_iterator.
+   * @return Az utolsó elem után mutató const_iterator.
    * 
   */
   const_iterator end() const { return const_iterator(t, currentSize); }
 
-  /** @brief Tomb meretet visszaado fuggveny.
-   * @return A tomb merete.
+  /** @brief Tomb méretét visszaado függvény.
+   * @return A tömb mérete.
   */
   size_t size() const { return currentSize; }
 
-  /** @brief Tomb kapacitasat visszaado fuggveny.
-   * @return A tomb kapacitasa.
+  /** @brief Tomb kapacitásat visszaado függvény.
+   * @return A tömb kapacitása.
   */
   size_t capacity() const { return currentCapacity; }
 
-  /** @brief Tomb at fuggvenye.
-   * @param i Az index, melyre az elemet szeretnenk elerni.
+  /** @brief Tomb at függvénye.
+   * @param i Az index, ahol lévő az elemet szeretnénk elérni.
    * @return Az i-edik elem.
   */
   T &at(const size_t i) {
@@ -71,14 +71,14 @@ public:
     return t[i];
   }
 
-  /** @brief Tomb operator[] fuggvenye.
-   * @param i Az index, melyre az elemet szeretnenk elerni.
+  /** @brief Tomb operator[] függvénye.
+   * @param i Az index, ahol lévő elemet szeretnénk elérni.
    * @return Az i-edik elem.
   */
   T &operator[](const size_t i) { return at(i); }
 
-  /** @brief Tomb const at fuggvenye.
-   * @param i Az index, melyre az elemet szeretnenk elerni.
+  /** @brief Tomb const at függvénye.
+   * @param i Az index, ahol lévő elemet szeretnénk elérni.
    * @return const referencia az i-edik elemre.
   */
   const T &at(const size_t i) const {
@@ -87,21 +87,21 @@ public:
     return t[i];
   }
 
-  /** @brief Tomb const operator[] fuggvenye.
-   * @param i Az index, melyre az elemet szeretnenk elerni.
+  /** @brief Tomb const operator[] függvénye.
+   * @param i Az index, ahol lévő elemet szeretnénk elérni.
    * @return const referencia az i-edik elemre.
   */
   const T &operator[](const size_t i) const { return at(i); }
 
-  /** @brief Tomb resize fuggvenye.
-   * A fuggveny a tomb meretet noveli a megadott ertekkel.
+  /** @brief Tomb resize függvénye.
+   * A függvény a tömb méretét növeli a megadott értékkel.
    * @param newSize A novelendo meret.
   */
   void resize(size_t newSize) {
     if (newSize > currentCapacity) {
       T* newT = new T[newSize * 2];
       for (size_t i = 0; i < currentSize; ++i) {
-        newT[i] = t[i];  // Copy the pointers
+        newT[i] = t[i];
       }
       delete[] t;
       t = newT;
@@ -109,9 +109,9 @@ public:
     }
   }
 
-  /** @brief Tomb push_back fuggvenye.
-   * A fuggveny a tomb vegere fuz egy elemet.
-   * @param value Az ertek, melyet a tomb vegere fuzunk.
+  /** @brief Tomb push_back függvénye.
+   * A függvény a tömb végére fűz egy elemet.
+   * @param value Az érték, melyet a tömb végére fűzünk.
   */
   void push_back(T value) {
     if (currentSize == currentCapacity) {
@@ -120,10 +120,10 @@ public:
     t[currentSize++] = value;
   }
 
-  /** @brief Tomb find fuggvenye.
-   * A fuggveny megkeresi az elso olyan elemet, mely megegyezik az ertekkel.
-   * @param value Az ertek, melyet keresunk.
-   * @return Az elso olyan elem indexe, mely megegyezik az ertekkel, ha nincs ilyen, akkor -1.
+  /** @brief Tomb find függvénye.
+   * A függvény megkeresi az első olyan elemet, mely megegyezik az értékkel.
+   * @param value Az érték, melyet keresünk.
+   * @return Az első olyan elem indexe, mely megegyezik az értékkel, ha nincs ilyen, akkor -1.
   */
   int find(const T& value) const {
     for (size_t i = 0; i < currentSize; ++i) {
@@ -134,92 +134,92 @@ public:
     return -1;
   }
 
-  /** @brief iterator osztaly.
-   * Az iterator osztaly a Tomb osztaly iteratora.
+  /** @brief iterator osztály.
+   * Az iterator osztály a Tomb osztály iteratora.
    * 
   */
   class iterator {
-    /** @brief Az iterator aktualis elemre mutato pointere.
+    /** @brief Az iterator aktuális elemre mutató pointere.
      * 
     */
     T *p;
 
-    /** @brief Az iterator aktualis indexe.
+    /** @brief Az iterator aktuális indexe.
      * 
     */
     size_t idx;
 
   public:
     /** @brief iterator konstruktora.
-     * @param p Az iterator aktualis elemre mutato pointere.
-     * @param idx Az iterator aktualis indexe.
+     * @param p Az iterator aktuális elemre mutató pointere.
+     * @param idx Az iterator aktuális indexe.
     */
     iterator(T *p = nullptr, size_t idx = 0) : p(p), idx(idx) {}
 
-    /** @brief operator* fuggveny.
-     * @return Az iterator aktualis elemre mutato referencia.
+    /** @brief operator* függvény.
+     * @return Az iterator aktuális elemre mutató referencia.
     */
     T &operator*() { return p[idx]; }
 
-    /** @brief operator++ fuggveny.
-     * @return Az iterator az aktualis elem utan mutato referencia.
+    /** @brief operator++ függvény.
+     * @return Az iterator az aktuális elem után mutató referencia.
     */
     iterator &operator++() {
       ++idx;
       return *this;
     }
 
-    /** @brief operator!= fuggveny.
-     * @param other A masik iterator.
-     * @return Igaz, ha a ket iterator nem egyezik meg, egyebkent hamis.
+    /** @brief operator!= függvény.
+     * @param other A másik iterator.
+     * @return Igaz, ha a két iterator nem egyezik meg, egyébként hamis.
     */
     bool operator!=(const iterator &other) const { return idx != other.idx; }
   };
 
-  /** @brief const_iterator osztaly.
-   * Az const_iterator osztaly a Tomb osztaly const_iteratora.
+  /** @brief const_iterator osztály.
+   * Az const_iterator osztály a Tomb osztály const_iteratora.
    * 
   */
   class const_iterator {
-    /** @brief Az const_iterator aktualis elemre mutato pointere.
+    /** @brief Az const_iterator aktuális elemre mutató pointere.
      * 
     */
     const T *p;
 
-    /** @brief Az const_iterator aktualis indexe.
+    /** @brief Az const_iterator aktuális indexe.
      * 
     */
     size_t idx;
 
   public:
     /** @brief const_iterator konstruktora.
-     * @param p Az const_iterator aktualis elemre mutato pointere.
-     * @param idx Az const_iterator aktualis indexe.
+     * @param p Az const_iterator aktuális elemre mutató pointere.
+     * @param idx Az const_iterator aktuális indexe.
     */
     const_iterator(const T *p = nullptr, size_t idx = 0) : p(p), idx(idx) {}
 
-    /** @brief operator* fuggveny.
-     * @return Az const_iterator aktualis elemre mutato referencia.
+    /** @brief operator* függvény.
+     * @return Az const_iterator aktuális elemre mutató referencia.
     */
     const T &operator*() const { return p[idx]; }
 
-    /** @brief operator++ fuggveny.
-     * @return Az const_iterator az aktualis elem utan mutato referencia.
+    /** @brief operator++ függvény.
+     * @return Az const_iterator az aktuális elem után mutató referencia.
     */
     const_iterator &operator++() {
       ++idx;
       return *this;
     }
 
-    /** @brief operator!= fuggveny.
-     * @param other A masik const_iterator.
-     * @return Igaz, ha a ket const_iterator nem egyezik meg, egyebkent hamis.
+    /** @brief operator!= függvény.
+     * @param other A másik const_iterator.
+     * @return Igaz, ha a ket const_iterator nem egyezik meg, egyébként hamis.
     */
     bool operator!=(const const_iterator &other) const { return idx != other.idx; }
   };
 
   /** @brief Tomb destruktora.
-   * A destruktor felszabaditja a tombot.
+   * A destruktor felszabadítja a tömbot.
   */
   virtual ~Tomb() {
     delete[] t;
