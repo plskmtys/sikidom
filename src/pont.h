@@ -1,7 +1,7 @@
 #include <iostream>
 
-#ifndef SOKSZOG_PONT_H
-#define SOKSZOG_PONT_H
+#ifndef SIKIDOM_PONT_H
+#define SIKIDOM_PONT_H
 
 /** @brief Pont osztály
  *  A pontokat a síkon tárolja, x és y koordinátákkal.
@@ -52,8 +52,6 @@ public:
   friend std::istream& operator>>(std::istream&, Pont&);
 };
 
-double AbsCrossProd(const Pont& Vec1A, const Pont& Vec1B, const Pont& Vec2A, const Pont& Vec2B);
-
 double dst(const Pont& a, const Pont& b);
 
-#endif
+#endif //SIKIDOM_PONT_H
