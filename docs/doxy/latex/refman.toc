@@ -1,0 +1,166 @@
+\select@language {magyar} \@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\select@language {magyar} \contentsline {chapter}{\numberline {1}Hierarchikus mutató}{1}{chapter.1}%
+\select@language {magyar} \contentsline {section}{\numberline {1.1}Osztályhierarchia}{1}{section.1.1}%
+\select@language {magyar} \contentsline {chapter}{\numberline {2}Osztálymutató}{3}{chapter.2}%
+\select@language {magyar} \contentsline {section}{\numberline {2.1}Osztálylista}{3}{section.2.1}%
+\select@language {magyar} \contentsline {chapter}{\numberline {3}Fájlmutató}{5}{chapter.3}%
+\select@language {magyar} \contentsline {section}{\numberline {3.1}Fájllista}{5}{section.3.1}%
+\select@language {magyar} \contentsline {chapter}{\numberline {4}Osztályok dokumentációja}{7}{chapter.4}%
+\select@language {magyar} \contentsline {section}{\numberline {4.1}Tomb$<$ T $>$\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::const\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}iterator osztályreferencia}{7}{section.4.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.1.1}Részletes leírás}{7}{subsection.4.1.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.1.2}Konstruktorok és destruktorok dokumentációja}{8}{subsection.4.1.2}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.1.2.1}const\_iterator()}{8}{subsubsection.4.1.2.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.1.3}Tagfüggvények dokumentációja}{9}{subsection.4.1.3}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.1.3.1}operator"!=()}{9}{subsubsection.4.1.3.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.1.3.2}operator$\ast $()}{9}{subsubsection.4.1.3.2}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.1.3.3}operator++()}{9}{subsubsection.4.1.3.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.1.4}Adattagok dokumentációja}{10}{subsection.4.1.4}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.1.4.1}idx}{10}{subsubsection.4.1.4.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.1.4.2}p}{10}{subsubsection.4.1.4.2}%
+\select@language {magyar} \contentsline {section}{\numberline {4.2}Haromszog osztályreferencia}{10}{section.4.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.2.1}Részletes leírás}{11}{subsection.4.2.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.2.2}Konstruktorok és destruktorok dokumentációja}{12}{subsection.4.2.2}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.2.2.1}Haromszog()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{12}{subsubsection.4.2.2.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.2.2.2}Haromszog()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{12}{subsubsection.4.2.2.2}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.2.2.3}$\sim $Haromszog()}{12}{subsubsection.4.2.2.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.2.3}Tagfüggvények dokumentációja}{12}{subsection.4.2.3}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.2.3.1}Kivul()}{12}{subsubsection.4.2.3.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.2.3.2}Rajtavan()}{12}{subsubsection.4.2.3.2}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.2.3.3}Read()}{13}{subsubsection.4.2.3.3}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.2.3.4}Terulet()}{13}{subsubsection.4.2.3.4}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.2.3.5}Write()}{13}{subsubsection.4.2.3.5}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.2.4}Barát és kapcsolódó függvények dokumentációja}{14}{subsection.4.2.4}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.2.4.1}operator$<$$<$}{14}{subsubsection.4.2.4.1}%
+\select@language {magyar} \contentsline {section}{\numberline {4.3}Tomb$<$ T $>$\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::iterator osztályreferencia}{14}{section.4.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.3.1}Részletes leírás}{14}{subsection.4.3.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.3.2}Konstruktorok és destruktorok dokumentációja}{14}{subsection.4.3.2}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.3.2.1}iterator()}{14}{subsubsection.4.3.2.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.3.3}Tagfüggvények dokumentációja}{15}{subsection.4.3.3}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.3.3.1}operator"!=()}{15}{subsubsection.4.3.3.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.3.3.2}operator$\ast $()}{15}{subsubsection.4.3.3.2}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.3.3.3}operator++()}{15}{subsubsection.4.3.3.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.3.4}Adattagok dokumentációja}{16}{subsection.4.3.4}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.3.4.1}idx}{16}{subsubsection.4.3.4.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.3.4.2}p}{16}{subsubsection.4.3.4.2}%
+\select@language {magyar} \contentsline {section}{\numberline {4.4}Kor osztályreferencia}{16}{section.4.4}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.4.1}Részletes leírás}{17}{subsection.4.4.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.4.2}Konstruktorok és destruktorok dokumentációja}{18}{subsection.4.4.2}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.4.2.1}Kor()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{18}{subsubsection.4.4.2.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.4.2.2}Kor()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{18}{subsubsection.4.4.2.2}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.4.2.3}$\sim $Kor()}{18}{subsubsection.4.4.2.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.4.3}Tagfüggvények dokumentációja}{18}{subsection.4.4.3}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.4.3.1}Kivul()}{18}{subsubsection.4.4.3.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.4.3.2}Rajtavan()}{18}{subsubsection.4.4.3.2}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.4.3.3}Read()}{19}{subsubsection.4.4.3.3}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.4.3.4}Terulet()}{19}{subsubsection.4.4.3.4}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.4.3.5}Write()}{19}{subsubsection.4.4.3.5}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.4.4}Barát és kapcsolódó függvények dokumentációja}{20}{subsection.4.4.4}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.4.4.1}operator$<$$<$}{20}{subsubsection.4.4.4.1}%
+\select@language {magyar} \contentsline {section}{\numberline {4.5}Negyzet osztályreferencia}{20}{section.4.5}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.5.1}Részletes leírás}{21}{subsection.4.5.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.5.2}Konstruktorok és destruktorok dokumentációja}{21}{subsection.4.5.2}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.5.2.1}Negyzet()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{21}{subsubsection.4.5.2.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.5.2.2}Negyzet()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{21}{subsubsection.4.5.2.2}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.5.2.3}$\sim $Negyzet()}{21}{subsubsection.4.5.2.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.5.3}Tagfüggvények dokumentációja}{22}{subsection.4.5.3}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.5.3.1}Kivul()}{22}{subsubsection.4.5.3.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.5.3.2}Rajtavan()}{22}{subsubsection.4.5.3.2}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.5.3.3}Read()}{22}{subsubsection.4.5.3.3}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.5.3.4}Terulet()}{23}{subsubsection.4.5.3.4}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.5.3.5}Write()}{23}{subsubsection.4.5.3.5}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.5.4}Barát és kapcsolódó függvények dokumentációja}{23}{subsection.4.5.4}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.5.4.1}operator$<$$<$}{23}{subsubsection.4.5.4.1}%
+\select@language {magyar} \contentsline {section}{\numberline {4.6}Pont osztályreferencia}{23}{section.4.6}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.6.1}Részletes leírás}{24}{subsection.4.6.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.6.2}Konstruktorok és destruktorok dokumentációja}{25}{subsection.4.6.2}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.6.2.1}Pont()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{25}{subsubsection.4.6.2.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.6.2.2}Pont()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{25}{subsubsection.4.6.2.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.6.3}Tagfüggvények dokumentációja}{25}{subsection.4.6.3}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.6.3.1}dst()}{25}{subsubsection.4.6.3.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.6.3.2}Forgat()}{25}{subsubsection.4.6.3.2}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.6.3.3}getx()}{26}{subsubsection.4.6.3.3}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.6.3.4}gety()}{26}{subsubsection.4.6.3.4}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.6.3.5}Mozgat()}{26}{subsubsection.4.6.3.5}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.6.3.6}operator"!=()}{26}{subsubsection.4.6.3.6}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.6.3.7}operator+()}{27}{subsubsection.4.6.3.7}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.6.3.8}operator-\/()}{27}{subsubsection.4.6.3.8}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.6.3.9}operator=()}{27}{subsubsection.4.6.3.9}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.6.3.10}operator==()}{28}{subsubsection.4.6.3.10}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.6.3.11}setx()}{28}{subsubsection.4.6.3.11}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.6.3.12}sety()}{28}{subsubsection.4.6.3.12}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.6.4}Barát és kapcsolódó függvények dokumentációja}{29}{subsection.4.6.4}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.6.4.1}operator$<$$<$}{29}{subsubsection.4.6.4.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.6.4.2}operator$>$$>$}{29}{subsubsection.4.6.4.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.6.5}Adattagok dokumentációja}{30}{subsection.4.6.5}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.6.5.1}x}{30}{subsubsection.4.6.5.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.6.5.2}y}{30}{subsubsection.4.6.5.2}%
+\select@language {magyar} \contentsline {section}{\numberline {4.7}Sikidom osztályreferencia}{30}{section.4.7}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.7.1}Részletes leírás}{31}{subsection.4.7.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.7.2}Konstruktorok és destruktorok dokumentációja}{31}{subsection.4.7.2}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.7.2.1}Sikidom()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{31}{subsubsection.4.7.2.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.7.2.2}Sikidom()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{32}{subsubsection.4.7.2.2}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.7.2.3}$\sim $Sikidom()}{32}{subsubsection.4.7.2.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.7.3}Tagfüggvények dokumentációja}{32}{subsection.4.7.3}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.7.3.1}createSikidom()}{32}{subsubsection.4.7.3.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.7.3.2}Forgat()}{32}{subsubsection.4.7.3.2}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.7.3.3}getkp()}{33}{subsubsection.4.7.3.3}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.7.3.4}getp()}{33}{subsubsection.4.7.3.4}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.7.3.5}Kivul()}{33}{subsubsection.4.7.3.5}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.7.3.6}Mozgat()}{33}{subsubsection.4.7.3.6}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.7.3.7}operator=()}{34}{subsubsection.4.7.3.7}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.7.3.8}Rajtavan()}{34}{subsubsection.4.7.3.8}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.7.3.9}Read()}{34}{subsubsection.4.7.3.9}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.7.3.10}Tartalmazza()}{34}{subsubsection.4.7.3.10}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.7.3.11}Terulet()}{34}{subsubsection.4.7.3.11}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.7.3.12}Write()}{34}{subsubsection.4.7.3.12}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.7.4}Barát és kapcsolódó függvények dokumentációja}{35}{subsection.4.7.4}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.7.4.1}operator$<$$<$}{35}{subsubsection.4.7.4.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.7.4.2}operator$>$$>$}{36}{subsubsection.4.7.4.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.7.5}Adattagok dokumentációja}{36}{subsection.4.7.5}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.7.5.1}kp}{36}{subsubsection.4.7.5.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.7.5.2}p}{36}{subsubsection.4.7.5.2}%
+\select@language {magyar} \contentsline {section}{\numberline {4.8}Tomb$<$ T $>$ osztálysablon-\/referencia}{37}{section.4.8}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.8.1}Részletes leírás}{38}{subsection.4.8.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.8.2}Konstruktorok és destruktorok dokumentációja}{38}{subsection.4.8.2}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.8.2.1}Tomb()}{38}{subsubsection.4.8.2.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.8.2.2}$\sim $Tomb()}{38}{subsubsection.4.8.2.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.8.3}Tagfüggvények dokumentációja}{38}{subsection.4.8.3}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.8.3.1}at()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{38}{subsubsection.4.8.3.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.8.3.2}at()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{39}{subsubsection.4.8.3.2}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.8.3.3}begin()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{39}{subsubsection.4.8.3.3}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.8.3.4}begin()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{39}{subsubsection.4.8.3.4}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.8.3.5}capacity()}{39}{subsubsection.4.8.3.5}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.8.3.6}end()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{40}{subsubsection.4.8.3.6}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.8.3.7}end()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{40}{subsubsection.4.8.3.7}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.8.3.8}find()}{40}{subsubsection.4.8.3.8}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.8.3.9}operator[]()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{40}{subsubsection.4.8.3.9}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.8.3.10}operator[]()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{41}{subsubsection.4.8.3.10}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.8.3.11}push\_back()}{41}{subsubsection.4.8.3.11}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.8.3.12}resize()}{41}{subsubsection.4.8.3.12}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.8.3.13}size()}{42}{subsubsection.4.8.3.13}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.8.4}Adattagok dokumentációja}{42}{subsection.4.8.4}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.8.4.1}currentCapacity}{42}{subsubsection.4.8.4.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.8.4.2}currentSize}{42}{subsubsection.4.8.4.2}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.8.4.3}t}{42}{subsubsection.4.8.4.3}%
+\select@language {magyar} \contentsline {chapter}{\numberline {5}Fájlok dokumentációja}{43}{chapter.5}%
+\select@language {magyar} \contentsline {section}{\numberline {5.1}src/pont.cpp fájlreferencia}{43}{section.5.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {5.1.1}Függvények dokumentációja}{43}{subsection.5.1.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {5.1.1.1}dst()}{43}{subsubsection.5.1.1.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {5.1.1.2}operator$<$$<$()}{44}{subsubsection.5.1.1.2}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {5.1.1.3}operator$>$$>$()}{44}{subsubsection.5.1.1.3}%
+\select@language {magyar} \contentsline {section}{\numberline {5.2}src/pont.h fájlreferencia}{44}{section.5.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {5.2.1}Függvények dokumentációja}{45}{subsection.5.2.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {5.2.1.1}dst()}{45}{subsubsection.5.2.1.1}%
+\select@language {magyar} \contentsline {section}{\numberline {5.3}pont.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{45}{section.5.3}%
+\select@language {magyar} \contentsline {section}{\numberline {5.4}src/sikidom.cpp fájlreferencia}{46}{section.5.4}%
+\select@language {magyar} \contentsline {subsection}{\numberline {5.4.1}Függvények dokumentációja}{46}{subsection.5.4.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {5.4.1.1}IsOnTriangle()}{46}{subsubsection.5.4.1.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {5.4.1.2}operator$<$$<$()}{47}{subsubsection.5.4.1.2}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {5.4.1.3}operator$>$$>$()}{47}{subsubsection.5.4.1.3}%
+\select@language {magyar} \contentsline {section}{\numberline {5.5}src/sikidom.h fájlreferencia}{47}{section.5.5}%
+\select@language {magyar} \contentsline {subsection}{\numberline {5.5.1}Függvények dokumentációja}{48}{subsection.5.5.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {5.5.1.1}IsOnTriangle()}{48}{subsubsection.5.5.1.1}%
+\select@language {magyar} \contentsline {section}{\numberline {5.6}sikidom.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{48}{section.5.6}%
+\select@language {magyar} \contentsline {section}{\numberline {5.7}src/tomb.hpp fájlreferencia}{50}{section.5.7}%
+\select@language {magyar} \contentsline {section}{\numberline {5.8}tomb.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{50}{section.5.8}%
+\select@language {magyar} \contentsline {chapter}{T\'argymutat\'o}{53}{section*.51}%

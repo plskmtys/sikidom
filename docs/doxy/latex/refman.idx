@@ -1,0 +1,220 @@
+\indexentry{Tomb$<$ T $>$::const\_iterator@{Tomb$<$ T $>$::const\_iterator}|hyperpage}{7}
+\indexentry{Tomb$<$ T $>$::const\_iterator@{Tomb$<$ T $>$::const\_iterator}!const\_iterator@{const\_iterator}|hyperpage}{8}
+\indexentry{const\_iterator@{const\_iterator}!Tomb$<$ T $>$::const\_iterator@{Tomb$<$ T $>$::const\_iterator}|hyperpage}{8}
+\indexentry{Tomb$<$ T $>$::const\_iterator@{Tomb$<$ T $>$::const\_iterator}!operator"!=@{operator"!=}|hyperpage}{9}
+\indexentry{operator"!=@{operator"!=}!Tomb$<$ T $>$::const\_iterator@{Tomb$<$ T $>$::const\_iterator}|hyperpage}{9}
+\indexentry{Tomb$<$ T $>$::const\_iterator@{Tomb$<$ T $>$::const\_iterator}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}|hyperpage}{9}
+\indexentry{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!Tomb$<$ T $>$::const\_iterator@{Tomb$<$ T $>$::const\_iterator}|hyperpage}{9}
+\indexentry{Tomb$<$ T $>$::const\_iterator@{Tomb$<$ T $>$::const\_iterator}!operator++@{operator++}|hyperpage}{9}
+\indexentry{operator++@{operator++}!Tomb$<$ T $>$::const\_iterator@{Tomb$<$ T $>$::const\_iterator}|hyperpage}{9}
+\indexentry{Tomb$<$ T $>$::const\_iterator@{Tomb$<$ T $>$::const\_iterator}!idx@{idx}|hyperpage}{10}
+\indexentry{idx@{idx}!Tomb$<$ T $>$::const\_iterator@{Tomb$<$ T $>$::const\_iterator}|hyperpage}{10}
+\indexentry{Tomb$<$ T $>$::const\_iterator@{Tomb$<$ T $>$::const\_iterator}!p@{p}|hyperpage}{10}
+\indexentry{p@{p}!Tomb$<$ T $>$::const\_iterator@{Tomb$<$ T $>$::const\_iterator}|hyperpage}{10}
+\indexentry{Haromszog@{Haromszog}|hyperpage}{10}
+\indexentry{Haromszog@{Haromszog}!Haromszog@{Haromszog}|hyperpage}{12}
+\indexentry{Haromszog@{Haromszog}!Haromszog@{Haromszog}|hyperpage}{12}
+\indexentry{Haromszog@{Haromszog}!Haromszog@{Haromszog}|hyperpage}{12}
+\indexentry{Haromszog@{Haromszog}!Haromszog@{Haromszog}|hyperpage}{12}
+\indexentry{Haromszog@{Haromszog}!````~Haromszog@{\texorpdfstring{$\sim$}{\string~}Haromszog}|hyperpage}{12}
+\indexentry{````~Haromszog@{\texorpdfstring{$\sim$}{\string~}Haromszog}!Haromszog@{Haromszog}|hyperpage}{12}
+\indexentry{Haromszog@{Haromszog}!Kivul@{Kivul}|hyperpage}{12}
+\indexentry{Kivul@{Kivul}!Haromszog@{Haromszog}|hyperpage}{12}
+\indexentry{Haromszog@{Haromszog}!Rajtavan@{Rajtavan}|hyperpage}{12}
+\indexentry{Rajtavan@{Rajtavan}!Haromszog@{Haromszog}|hyperpage}{12}
+\indexentry{Haromszog@{Haromszog}!Read@{Read}|hyperpage}{13}
+\indexentry{Read@{Read}!Haromszog@{Haromszog}|hyperpage}{13}
+\indexentry{Haromszog@{Haromszog}!Terulet@{Terulet}|hyperpage}{13}
+\indexentry{Terulet@{Terulet}!Haromszog@{Haromszog}|hyperpage}{13}
+\indexentry{Haromszog@{Haromszog}!Write@{Write}|hyperpage}{13}
+\indexentry{Write@{Write}!Haromszog@{Haromszog}|hyperpage}{13}
+\indexentry{Haromszog@{Haromszog}!operator$<$$<$@{operator$<$$<$}|hyperpage}{14}
+\indexentry{operator$<$$<$@{operator$<$$<$}!Haromszog@{Haromszog}|hyperpage}{14}
+\indexentry{Tomb$<$ T $>$::iterator@{Tomb$<$ T $>$::iterator}|hyperpage}{14}
+\indexentry{Tomb$<$ T $>$::iterator@{Tomb$<$ T $>$::iterator}!iterator@{iterator}|hyperpage}{14}
+\indexentry{iterator@{iterator}!Tomb$<$ T $>$::iterator@{Tomb$<$ T $>$::iterator}|hyperpage}{14}
+\indexentry{Tomb$<$ T $>$::iterator@{Tomb$<$ T $>$::iterator}!operator"!=@{operator"!=}|hyperpage}{15}
+\indexentry{operator"!=@{operator"!=}!Tomb$<$ T $>$::iterator@{Tomb$<$ T $>$::iterator}|hyperpage}{15}
+\indexentry{Tomb$<$ T $>$::iterator@{Tomb$<$ T $>$::iterator}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}|hyperpage}{15}
+\indexentry{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!Tomb$<$ T $>$::iterator@{Tomb$<$ T $>$::iterator}|hyperpage}{15}
+\indexentry{Tomb$<$ T $>$::iterator@{Tomb$<$ T $>$::iterator}!operator++@{operator++}|hyperpage}{15}
+\indexentry{operator++@{operator++}!Tomb$<$ T $>$::iterator@{Tomb$<$ T $>$::iterator}|hyperpage}{15}
+\indexentry{Tomb$<$ T $>$::iterator@{Tomb$<$ T $>$::iterator}!idx@{idx}|hyperpage}{16}
+\indexentry{idx@{idx}!Tomb$<$ T $>$::iterator@{Tomb$<$ T $>$::iterator}|hyperpage}{16}
+\indexentry{Tomb$<$ T $>$::iterator@{Tomb$<$ T $>$::iterator}!p@{p}|hyperpage}{16}
+\indexentry{p@{p}!Tomb$<$ T $>$::iterator@{Tomb$<$ T $>$::iterator}|hyperpage}{16}
+\indexentry{Kor@{Kor}|hyperpage}{16}
+\indexentry{Kor@{Kor}!Kor@{Kor}|hyperpage}{18}
+\indexentry{Kor@{Kor}!Kor@{Kor}|hyperpage}{18}
+\indexentry{Kor@{Kor}!Kor@{Kor}|hyperpage}{18}
+\indexentry{Kor@{Kor}!Kor@{Kor}|hyperpage}{18}
+\indexentry{Kor@{Kor}!````~Kor@{\texorpdfstring{$\sim$}{\string~}Kor}|hyperpage}{18}
+\indexentry{````~Kor@{\texorpdfstring{$\sim$}{\string~}Kor}!Kor@{Kor}|hyperpage}{18}
+\indexentry{Kor@{Kor}!Kivul@{Kivul}|hyperpage}{18}
+\indexentry{Kivul@{Kivul}!Kor@{Kor}|hyperpage}{18}
+\indexentry{Kor@{Kor}!Rajtavan@{Rajtavan}|hyperpage}{18}
+\indexentry{Rajtavan@{Rajtavan}!Kor@{Kor}|hyperpage}{18}
+\indexentry{Kor@{Kor}!Read@{Read}|hyperpage}{19}
+\indexentry{Read@{Read}!Kor@{Kor}|hyperpage}{19}
+\indexentry{Kor@{Kor}!Terulet@{Terulet}|hyperpage}{19}
+\indexentry{Terulet@{Terulet}!Kor@{Kor}|hyperpage}{19}
+\indexentry{Kor@{Kor}!Write@{Write}|hyperpage}{19}
+\indexentry{Write@{Write}!Kor@{Kor}|hyperpage}{19}
+\indexentry{Kor@{Kor}!operator$<$$<$@{operator$<$$<$}|hyperpage}{20}
+\indexentry{operator$<$$<$@{operator$<$$<$}!Kor@{Kor}|hyperpage}{20}
+\indexentry{Negyzet@{Negyzet}|hyperpage}{20}
+\indexentry{Negyzet@{Negyzet}!Negyzet@{Negyzet}|hyperpage}{21}
+\indexentry{Negyzet@{Negyzet}!Negyzet@{Negyzet}|hyperpage}{21}
+\indexentry{Negyzet@{Negyzet}!Negyzet@{Negyzet}|hyperpage}{21}
+\indexentry{Negyzet@{Negyzet}!Negyzet@{Negyzet}|hyperpage}{21}
+\indexentry{Negyzet@{Negyzet}!````~Negyzet@{\texorpdfstring{$\sim$}{\string~}Negyzet}|hyperpage}{21}
+\indexentry{````~Negyzet@{\texorpdfstring{$\sim$}{\string~}Negyzet}!Negyzet@{Negyzet}|hyperpage}{21}
+\indexentry{Negyzet@{Negyzet}!Kivul@{Kivul}|hyperpage}{22}
+\indexentry{Kivul@{Kivul}!Negyzet@{Negyzet}|hyperpage}{22}
+\indexentry{Negyzet@{Negyzet}!Rajtavan@{Rajtavan}|hyperpage}{22}
+\indexentry{Rajtavan@{Rajtavan}!Negyzet@{Negyzet}|hyperpage}{22}
+\indexentry{Negyzet@{Negyzet}!Read@{Read}|hyperpage}{22}
+\indexentry{Read@{Read}!Negyzet@{Negyzet}|hyperpage}{22}
+\indexentry{Negyzet@{Negyzet}!Terulet@{Terulet}|hyperpage}{22}
+\indexentry{Terulet@{Terulet}!Negyzet@{Negyzet}|hyperpage}{22}
+\indexentry{Negyzet@{Negyzet}!Write@{Write}|hyperpage}{23}
+\indexentry{Write@{Write}!Negyzet@{Negyzet}|hyperpage}{23}
+\indexentry{Negyzet@{Negyzet}!operator$<$$<$@{operator$<$$<$}|hyperpage}{23}
+\indexentry{operator$<$$<$@{operator$<$$<$}!Negyzet@{Negyzet}|hyperpage}{23}
+\indexentry{Pont@{Pont}|hyperpage}{23}
+\indexentry{Pont@{Pont}!Pont@{Pont}|hyperpage}{25}
+\indexentry{Pont@{Pont}!Pont@{Pont}|hyperpage}{25}
+\indexentry{Pont@{Pont}!Pont@{Pont}|hyperpage}{25}
+\indexentry{Pont@{Pont}!Pont@{Pont}|hyperpage}{25}
+\indexentry{Pont@{Pont}!dst@{dst}|hyperpage}{25}
+\indexentry{dst@{dst}!Pont@{Pont}|hyperpage}{25}
+\indexentry{Pont@{Pont}!Forgat@{Forgat}|hyperpage}{25}
+\indexentry{Forgat@{Forgat}!Pont@{Pont}|hyperpage}{25}
+\indexentry{Pont@{Pont}!getx@{getx}|hyperpage}{26}
+\indexentry{getx@{getx}!Pont@{Pont}|hyperpage}{26}
+\indexentry{Pont@{Pont}!gety@{gety}|hyperpage}{26}
+\indexentry{gety@{gety}!Pont@{Pont}|hyperpage}{26}
+\indexentry{Pont@{Pont}!Mozgat@{Mozgat}|hyperpage}{26}
+\indexentry{Mozgat@{Mozgat}!Pont@{Pont}|hyperpage}{26}
+\indexentry{Pont@{Pont}!operator"!=@{operator"!=}|hyperpage}{26}
+\indexentry{operator"!=@{operator"!=}!Pont@{Pont}|hyperpage}{26}
+\indexentry{Pont@{Pont}!operator+@{operator+}|hyperpage}{27}
+\indexentry{operator+@{operator+}!Pont@{Pont}|hyperpage}{27}
+\indexentry{Pont@{Pont}!operator-\/@{operator-\/}|hyperpage}{27}
+\indexentry{operator-\/@{operator-\/}!Pont@{Pont}|hyperpage}{27}
+\indexentry{Pont@{Pont}!operator=@{operator=}|hyperpage}{27}
+\indexentry{operator=@{operator=}!Pont@{Pont}|hyperpage}{27}
+\indexentry{Pont@{Pont}!operator==@{operator==}|hyperpage}{28}
+\indexentry{operator==@{operator==}!Pont@{Pont}|hyperpage}{28}
+\indexentry{Pont@{Pont}!setx@{setx}|hyperpage}{28}
+\indexentry{setx@{setx}!Pont@{Pont}|hyperpage}{28}
+\indexentry{Pont@{Pont}!sety@{sety}|hyperpage}{28}
+\indexentry{sety@{sety}!Pont@{Pont}|hyperpage}{28}
+\indexentry{Pont@{Pont}!operator$<$$<$@{operator$<$$<$}|hyperpage}{29}
+\indexentry{operator$<$$<$@{operator$<$$<$}!Pont@{Pont}|hyperpage}{29}
+\indexentry{Pont@{Pont}!operator$>$$>$@{operator$>$$>$}|hyperpage}{29}
+\indexentry{operator$>$$>$@{operator$>$$>$}!Pont@{Pont}|hyperpage}{29}
+\indexentry{Pont@{Pont}!x@{x}|hyperpage}{30}
+\indexentry{x@{x}!Pont@{Pont}|hyperpage}{30}
+\indexentry{Pont@{Pont}!y@{y}|hyperpage}{30}
+\indexentry{y@{y}!Pont@{Pont}|hyperpage}{30}
+\indexentry{Sikidom@{Sikidom}|hyperpage}{30}
+\indexentry{Sikidom@{Sikidom}!Sikidom@{Sikidom}|hyperpage}{31}
+\indexentry{Sikidom@{Sikidom}!Sikidom@{Sikidom}|hyperpage}{31}
+\indexentry{Sikidom@{Sikidom}!Sikidom@{Sikidom}|hyperpage}{31}
+\indexentry{Sikidom@{Sikidom}!Sikidom@{Sikidom}|hyperpage}{31}
+\indexentry{Sikidom@{Sikidom}!````~Sikidom@{\texorpdfstring{$\sim$}{\string~}Sikidom}|hyperpage}{32}
+\indexentry{````~Sikidom@{\texorpdfstring{$\sim$}{\string~}Sikidom}!Sikidom@{Sikidom}|hyperpage}{32}
+\indexentry{Sikidom@{Sikidom}!createSikidom@{createSikidom}|hyperpage}{32}
+\indexentry{createSikidom@{createSikidom}!Sikidom@{Sikidom}|hyperpage}{32}
+\indexentry{Sikidom@{Sikidom}!Forgat@{Forgat}|hyperpage}{32}
+\indexentry{Forgat@{Forgat}!Sikidom@{Sikidom}|hyperpage}{32}
+\indexentry{Sikidom@{Sikidom}!getkp@{getkp}|hyperpage}{33}
+\indexentry{getkp@{getkp}!Sikidom@{Sikidom}|hyperpage}{33}
+\indexentry{Sikidom@{Sikidom}!getp@{getp}|hyperpage}{33}
+\indexentry{getp@{getp}!Sikidom@{Sikidom}|hyperpage}{33}
+\indexentry{Sikidom@{Sikidom}!Kivul@{Kivul}|hyperpage}{33}
+\indexentry{Kivul@{Kivul}!Sikidom@{Sikidom}|hyperpage}{33}
+\indexentry{Sikidom@{Sikidom}!Mozgat@{Mozgat}|hyperpage}{33}
+\indexentry{Mozgat@{Mozgat}!Sikidom@{Sikidom}|hyperpage}{33}
+\indexentry{Sikidom@{Sikidom}!operator=@{operator=}|hyperpage}{33}
+\indexentry{operator=@{operator=}!Sikidom@{Sikidom}|hyperpage}{33}
+\indexentry{Sikidom@{Sikidom}!Rajtavan@{Rajtavan}|hyperpage}{34}
+\indexentry{Rajtavan@{Rajtavan}!Sikidom@{Sikidom}|hyperpage}{34}
+\indexentry{Sikidom@{Sikidom}!Read@{Read}|hyperpage}{34}
+\indexentry{Read@{Read}!Sikidom@{Sikidom}|hyperpage}{34}
+\indexentry{Sikidom@{Sikidom}!Tartalmazza@{Tartalmazza}|hyperpage}{34}
+\indexentry{Tartalmazza@{Tartalmazza}!Sikidom@{Sikidom}|hyperpage}{34}
+\indexentry{Sikidom@{Sikidom}!Terulet@{Terulet}|hyperpage}{34}
+\indexentry{Terulet@{Terulet}!Sikidom@{Sikidom}|hyperpage}{34}
+\indexentry{Sikidom@{Sikidom}!Write@{Write}|hyperpage}{34}
+\indexentry{Write@{Write}!Sikidom@{Sikidom}|hyperpage}{34}
+\indexentry{Sikidom@{Sikidom}!operator$<$$<$@{operator$<$$<$}|hyperpage}{35}
+\indexentry{operator$<$$<$@{operator$<$$<$}!Sikidom@{Sikidom}|hyperpage}{35}
+\indexentry{Sikidom@{Sikidom}!operator$>$$>$@{operator$>$$>$}|hyperpage}{36}
+\indexentry{operator$>$$>$@{operator$>$$>$}!Sikidom@{Sikidom}|hyperpage}{36}
+\indexentry{Sikidom@{Sikidom}!kp@{kp}|hyperpage}{36}
+\indexentry{kp@{kp}!Sikidom@{Sikidom}|hyperpage}{36}
+\indexentry{Sikidom@{Sikidom}!p@{p}|hyperpage}{36}
+\indexentry{p@{p}!Sikidom@{Sikidom}|hyperpage}{36}
+\indexentry{Tomb$<$ T $>$@{Tomb$<$ T $>$}|hyperpage}{37}
+\indexentry{Tomb$<$ T $>$@{Tomb$<$ T $>$}!Tomb@{Tomb}|hyperpage}{38}
+\indexentry{Tomb@{Tomb}!Tomb$<$ T $>$@{Tomb$<$ T $>$}|hyperpage}{38}
+\indexentry{Tomb$<$ T $>$@{Tomb$<$ T $>$}!````~Tomb@{\texorpdfstring{$\sim$}{\string~}Tomb}|hyperpage}{38}
+\indexentry{````~Tomb@{\texorpdfstring{$\sim$}{\string~}Tomb}!Tomb$<$ T $>$@{Tomb$<$ T $>$}|hyperpage}{38}
+\indexentry{Tomb$<$ T $>$@{Tomb$<$ T $>$}!at@{at}|hyperpage}{38}
+\indexentry{at@{at}!Tomb$<$ T $>$@{Tomb$<$ T $>$}|hyperpage}{38}
+\indexentry{Tomb$<$ T $>$@{Tomb$<$ T $>$}!at@{at}|hyperpage}{39}
+\indexentry{at@{at}!Tomb$<$ T $>$@{Tomb$<$ T $>$}|hyperpage}{39}
+\indexentry{Tomb$<$ T $>$@{Tomb$<$ T $>$}!begin@{begin}|hyperpage}{39}
+\indexentry{begin@{begin}!Tomb$<$ T $>$@{Tomb$<$ T $>$}|hyperpage}{39}
+\indexentry{Tomb$<$ T $>$@{Tomb$<$ T $>$}!begin@{begin}|hyperpage}{39}
+\indexentry{begin@{begin}!Tomb$<$ T $>$@{Tomb$<$ T $>$}|hyperpage}{39}
+\indexentry{Tomb$<$ T $>$@{Tomb$<$ T $>$}!capacity@{capacity}|hyperpage}{39}
+\indexentry{capacity@{capacity}!Tomb$<$ T $>$@{Tomb$<$ T $>$}|hyperpage}{39}
+\indexentry{Tomb$<$ T $>$@{Tomb$<$ T $>$}!end@{end}|hyperpage}{39}
+\indexentry{end@{end}!Tomb$<$ T $>$@{Tomb$<$ T $>$}|hyperpage}{39}
+\indexentry{Tomb$<$ T $>$@{Tomb$<$ T $>$}!end@{end}|hyperpage}{40}
+\indexentry{end@{end}!Tomb$<$ T $>$@{Tomb$<$ T $>$}|hyperpage}{40}
+\indexentry{Tomb$<$ T $>$@{Tomb$<$ T $>$}!find@{find}|hyperpage}{40}
+\indexentry{find@{find}!Tomb$<$ T $>$@{Tomb$<$ T $>$}|hyperpage}{40}
+\indexentry{Tomb$<$ T $>$@{Tomb$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}|hyperpage}{40}
+\indexentry{operator\mbox{[}\mbox{]}@{operator[]}!Tomb$<$ T $>$@{Tomb$<$ T $>$}|hyperpage}{40}
+\indexentry{Tomb$<$ T $>$@{Tomb$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}|hyperpage}{41}
+\indexentry{operator\mbox{[}\mbox{]}@{operator[]}!Tomb$<$ T $>$@{Tomb$<$ T $>$}|hyperpage}{41}
+\indexentry{Tomb$<$ T $>$@{Tomb$<$ T $>$}!push\_back@{push\_back}|hyperpage}{41}
+\indexentry{push\_back@{push\_back}!Tomb$<$ T $>$@{Tomb$<$ T $>$}|hyperpage}{41}
+\indexentry{Tomb$<$ T $>$@{Tomb$<$ T $>$}!resize@{resize}|hyperpage}{41}
+\indexentry{resize@{resize}!Tomb$<$ T $>$@{Tomb$<$ T $>$}|hyperpage}{41}
+\indexentry{Tomb$<$ T $>$@{Tomb$<$ T $>$}!size@{size}|hyperpage}{42}
+\indexentry{size@{size}!Tomb$<$ T $>$@{Tomb$<$ T $>$}|hyperpage}{42}
+\indexentry{Tomb$<$ T $>$@{Tomb$<$ T $>$}!currentCapacity@{currentCapacity}|hyperpage}{42}
+\indexentry{currentCapacity@{currentCapacity}!Tomb$<$ T $>$@{Tomb$<$ T $>$}|hyperpage}{42}
+\indexentry{Tomb$<$ T $>$@{Tomb$<$ T $>$}!currentSize@{currentSize}|hyperpage}{42}
+\indexentry{currentSize@{currentSize}!Tomb$<$ T $>$@{Tomb$<$ T $>$}|hyperpage}{42}
+\indexentry{Tomb$<$ T $>$@{Tomb$<$ T $>$}!t@{t}|hyperpage}{42}
+\indexentry{t@{t}!Tomb$<$ T $>$@{Tomb$<$ T $>$}|hyperpage}{42}
+\indexentry{src/pont.cpp@{src/pont.cpp}|hyperpage}{43}
+\indexentry{pont.cpp@{pont.cpp}!dst@{dst}|hyperpage}{43}
+\indexentry{dst@{dst}!pont.cpp@{pont.cpp}|hyperpage}{43}
+\indexentry{pont.cpp@{pont.cpp}!operator$<$$<$@{operator$<$$<$}|hyperpage}{44}
+\indexentry{operator$<$$<$@{operator$<$$<$}!pont.cpp@{pont.cpp}|hyperpage}{44}
+\indexentry{pont.cpp@{pont.cpp}!operator$>$$>$@{operator$>$$>$}|hyperpage}{44}
+\indexentry{operator$>$$>$@{operator$>$$>$}!pont.cpp@{pont.cpp}|hyperpage}{44}
+\indexentry{src/pont.h@{src/pont.h}|hyperpage}{44}
+\indexentry{pont.h@{pont.h}!dst@{dst}|hyperpage}{45}
+\indexentry{dst@{dst}!pont.h@{pont.h}|hyperpage}{45}
+\indexentry{src/pont.h@{src/pont.h}|hyperpage}{45}
+\indexentry{src/sikidom.cpp@{src/sikidom.cpp}|hyperpage}{46}
+\indexentry{sikidom.cpp@{sikidom.cpp}!IsOnTriangle@{IsOnTriangle}|hyperpage}{46}
+\indexentry{IsOnTriangle@{IsOnTriangle}!sikidom.cpp@{sikidom.cpp}|hyperpage}{46}
+\indexentry{sikidom.cpp@{sikidom.cpp}!operator$<$$<$@{operator$<$$<$}|hyperpage}{47}
+\indexentry{operator$<$$<$@{operator$<$$<$}!sikidom.cpp@{sikidom.cpp}|hyperpage}{47}
+\indexentry{sikidom.cpp@{sikidom.cpp}!operator$>$$>$@{operator$>$$>$}|hyperpage}{47}
+\indexentry{operator$>$$>$@{operator$>$$>$}!sikidom.cpp@{sikidom.cpp}|hyperpage}{47}
+\indexentry{src/sikidom.h@{src/sikidom.h}|hyperpage}{47}
+\indexentry{sikidom.h@{sikidom.h}!IsOnTriangle@{IsOnTriangle}|hyperpage}{48}
+\indexentry{IsOnTriangle@{IsOnTriangle}!sikidom.h@{sikidom.h}|hyperpage}{48}
+\indexentry{src/sikidom.h@{src/sikidom.h}|hyperpage}{48}
+\indexentry{src/tomb.hpp@{src/tomb.hpp}|hyperpage}{50}
+\indexentry{src/tomb.hpp@{src/tomb.hpp}|hyperpage}{50}

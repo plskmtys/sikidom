@@ -1,0 +1,314 @@
+\begin{theindex}
+
+  \item {\texorpdfstring{$\sim$}{\string~}Haromszog}
+    \subitem {Haromszog}, \hyperpage{12}
+  \item {\texorpdfstring{$\sim$}{\string~}Kor}
+    \subitem {Kor}, \hyperpage{18}
+  \item {\texorpdfstring{$\sim$}{\string~}Negyzet}
+    \subitem {Negyzet}, \hyperpage{21}
+  \item {\texorpdfstring{$\sim$}{\string~}Sikidom}
+    \subitem {Sikidom}, \hyperpage{32}
+  \item {\texorpdfstring{$\sim$}{\string~}Tomb}
+    \subitem {Tomb$<$ T $>$}, \hyperpage{38}
+
+  \indexspace
+
+  \item {at}
+    \subitem {Tomb$<$ T $>$}, \hyperpage{38, 39}
+
+  \indexspace
+
+  \item {begin}
+    \subitem {Tomb$<$ T $>$}, \hyperpage{39}
+
+  \indexspace
+
+  \item {capacity}
+    \subitem {Tomb$<$ T $>$}, \hyperpage{39}
+  \item {const\_iterator}
+    \subitem {Tomb$<$ T $>$::const\_iterator}, \hyperpage{8}
+  \item {createSikidom}
+    \subitem {Sikidom}, \hyperpage{32}
+  \item {currentCapacity}
+    \subitem {Tomb$<$ T $>$}, \hyperpage{42}
+  \item {currentSize}
+    \subitem {Tomb$<$ T $>$}, \hyperpage{42}
+
+  \indexspace
+
+  \item {dst}
+    \subitem {Pont}, \hyperpage{25}
+    \subitem {pont.cpp}, \hyperpage{43}
+    \subitem {pont.h}, \hyperpage{45}
+
+  \indexspace
+
+  \item {end}
+    \subitem {Tomb$<$ T $>$}, \hyperpage{39, 40}
+
+  \indexspace
+
+  \item {find}
+    \subitem {Tomb$<$ T $>$}, \hyperpage{40}
+  \item {Forgat}
+    \subitem {Pont}, \hyperpage{25}
+    \subitem {Sikidom}, \hyperpage{32}
+
+  \indexspace
+
+  \item {getkp}
+    \subitem {Sikidom}, \hyperpage{33}
+  \item {getp}
+    \subitem {Sikidom}, \hyperpage{33}
+  \item {getx}
+    \subitem {Pont}, \hyperpage{26}
+  \item {gety}
+    \subitem {Pont}, \hyperpage{26}
+
+  \indexspace
+
+  \item {Haromszog}, \hyperpage{10}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Haromszog}, 
+		\hyperpage{12}
+    \subitem {Haromszog}, \hyperpage{12}
+    \subitem {Kivul}, \hyperpage{12}
+    \subitem {operator$<$$<$}, \hyperpage{14}
+    \subitem {Rajtavan}, \hyperpage{12}
+    \subitem {Read}, \hyperpage{13}
+    \subitem {Terulet}, \hyperpage{13}
+    \subitem {Write}, \hyperpage{13}
+
+  \indexspace
+
+  \item {idx}
+    \subitem {Tomb$<$ T $>$::const\_iterator}, \hyperpage{10}
+    \subitem {Tomb$<$ T $>$::iterator}, \hyperpage{16}
+  \item {IsOnTriangle}
+    \subitem {sikidom.cpp}, \hyperpage{46}
+    \subitem {sikidom.h}, \hyperpage{48}
+  \item {iterator}
+    \subitem {Tomb$<$ T $>$::iterator}, \hyperpage{14}
+
+  \indexspace
+
+  \item {Kivul}
+    \subitem {Haromszog}, \hyperpage{12}
+    \subitem {Kor}, \hyperpage{18}
+    \subitem {Negyzet}, \hyperpage{22}
+    \subitem {Sikidom}, \hyperpage{33}
+  \item {Kor}, \hyperpage{16}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Kor}, \hyperpage{18}
+    \subitem {Kivul}, \hyperpage{18}
+    \subitem {Kor}, \hyperpage{18}
+    \subitem {operator$<$$<$}, \hyperpage{20}
+    \subitem {Rajtavan}, \hyperpage{18}
+    \subitem {Read}, \hyperpage{19}
+    \subitem {Terulet}, \hyperpage{19}
+    \subitem {Write}, \hyperpage{19}
+  \item {kp}
+    \subitem {Sikidom}, \hyperpage{36}
+
+  \indexspace
+
+  \item {Mozgat}
+    \subitem {Pont}, \hyperpage{26}
+    \subitem {Sikidom}, \hyperpage{33}
+
+  \indexspace
+
+  \item {Negyzet}, \hyperpage{20}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Negyzet}, \hyperpage{21}
+    \subitem {Kivul}, \hyperpage{22}
+    \subitem {Negyzet}, \hyperpage{21}
+    \subitem {operator$<$$<$}, \hyperpage{23}
+    \subitem {Rajtavan}, \hyperpage{22}
+    \subitem {Read}, \hyperpage{22}
+    \subitem {Terulet}, \hyperpage{22}
+    \subitem {Write}, \hyperpage{23}
+
+  \indexspace
+
+  \item {operator!=}
+    \subitem {Pont}, \hyperpage{26}
+    \subitem {Tomb$<$ T $>$::const\_iterator}, \hyperpage{9}
+    \subitem {Tomb$<$ T $>$::iterator}, \hyperpage{15}
+  \item {operator$<$$<$}
+    \subitem {Haromszog}, \hyperpage{14}
+    \subitem {Kor}, \hyperpage{20}
+    \subitem {Negyzet}, \hyperpage{23}
+    \subitem {Pont}, \hyperpage{29}
+    \subitem {pont.cpp}, \hyperpage{44}
+    \subitem {Sikidom}, \hyperpage{35}
+    \subitem {sikidom.cpp}, \hyperpage{47}
+  \item {operator$>$$>$}
+    \subitem {Pont}, \hyperpage{29}
+    \subitem {pont.cpp}, \hyperpage{44}
+    \subitem {Sikidom}, \hyperpage{36}
+    \subitem {sikidom.cpp}, \hyperpage{47}
+  \item {operator+}
+    \subitem {Pont}, \hyperpage{27}
+  \item {operator++}
+    \subitem {Tomb$<$ T $>$::const\_iterator}, \hyperpage{9}
+    \subitem {Tomb$<$ T $>$::iterator}, \hyperpage{15}
+  \item {operator-\/}
+    \subitem {Pont}, \hyperpage{27}
+  \item {operator=}
+    \subitem {Pont}, \hyperpage{27}
+    \subitem {Sikidom}, \hyperpage{33}
+  \item {operator==}
+    \subitem {Pont}, \hyperpage{28}
+  \item {operator[]}
+    \subitem {Tomb$<$ T $>$}, \hyperpage{40, 41}
+  \item {operator\texorpdfstring{$\ast$}{*}}
+    \subitem {Tomb$<$ T $>$::const\_iterator}, \hyperpage{9}
+    \subitem {Tomb$<$ T $>$::iterator}, \hyperpage{15}
+
+  \indexspace
+
+  \item {p}
+    \subitem {Sikidom}, \hyperpage{36}
+    \subitem {Tomb$<$ T $>$::const\_iterator}, \hyperpage{10}
+    \subitem {Tomb$<$ T $>$::iterator}, \hyperpage{16}
+  \item {Pont}, \hyperpage{23}
+    \subitem {dst}, \hyperpage{25}
+    \subitem {Forgat}, \hyperpage{25}
+    \subitem {getx}, \hyperpage{26}
+    \subitem {gety}, \hyperpage{26}
+    \subitem {Mozgat}, \hyperpage{26}
+    \subitem {operator!=}, \hyperpage{26}
+    \subitem {operator$<$$<$}, \hyperpage{29}
+    \subitem {operator$>$$>$}, \hyperpage{29}
+    \subitem {operator+}, \hyperpage{27}
+    \subitem {operator-\/}, \hyperpage{27}
+    \subitem {operator=}, \hyperpage{27}
+    \subitem {operator==}, \hyperpage{28}
+    \subitem {Pont}, \hyperpage{25}
+    \subitem {setx}, \hyperpage{28}
+    \subitem {sety}, \hyperpage{28}
+    \subitem {x}, \hyperpage{30}
+    \subitem {y}, \hyperpage{30}
+  \item {pont.cpp}
+    \subitem {dst}, \hyperpage{43}
+    \subitem {operator$<$$<$}, \hyperpage{44}
+    \subitem {operator$>$$>$}, \hyperpage{44}
+  \item {pont.h}
+    \subitem {dst}, \hyperpage{45}
+  \item {push\_back}
+    \subitem {Tomb$<$ T $>$}, \hyperpage{41}
+
+  \indexspace
+
+  \item {Rajtavan}
+    \subitem {Haromszog}, \hyperpage{12}
+    \subitem {Kor}, \hyperpage{18}
+    \subitem {Negyzet}, \hyperpage{22}
+    \subitem {Sikidom}, \hyperpage{34}
+  \item {Read}
+    \subitem {Haromszog}, \hyperpage{13}
+    \subitem {Kor}, \hyperpage{19}
+    \subitem {Negyzet}, \hyperpage{22}
+    \subitem {Sikidom}, \hyperpage{34}
+  \item {resize}
+    \subitem {Tomb$<$ T $>$}, \hyperpage{41}
+
+  \indexspace
+
+  \item {setx}
+    \subitem {Pont}, \hyperpage{28}
+  \item {sety}
+    \subitem {Pont}, \hyperpage{28}
+  \item {Sikidom}, \hyperpage{30}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Sikidom}, \hyperpage{32}
+    \subitem {createSikidom}, \hyperpage{32}
+    \subitem {Forgat}, \hyperpage{32}
+    \subitem {getkp}, \hyperpage{33}
+    \subitem {getp}, \hyperpage{33}
+    \subitem {Kivul}, \hyperpage{33}
+    \subitem {kp}, \hyperpage{36}
+    \subitem {Mozgat}, \hyperpage{33}
+    \subitem {operator$<$$<$}, \hyperpage{35}
+    \subitem {operator$>$$>$}, \hyperpage{36}
+    \subitem {operator=}, \hyperpage{33}
+    \subitem {p}, \hyperpage{36}
+    \subitem {Rajtavan}, \hyperpage{34}
+    \subitem {Read}, \hyperpage{34}
+    \subitem {Sikidom}, \hyperpage{31}
+    \subitem {Tartalmazza}, \hyperpage{34}
+    \subitem {Terulet}, \hyperpage{34}
+    \subitem {Write}, \hyperpage{34}
+  \item {sikidom.cpp}
+    \subitem {IsOnTriangle}, \hyperpage{46}
+    \subitem {operator$<$$<$}, \hyperpage{47}
+    \subitem {operator$>$$>$}, \hyperpage{47}
+  \item {sikidom.h}
+    \subitem {IsOnTriangle}, \hyperpage{48}
+  \item {size}
+    \subitem {Tomb$<$ T $>$}, \hyperpage{42}
+  \item {src/pont.cpp}, \hyperpage{43}
+  \item {src/pont.h}, \hyperpage{44, 45}
+  \item {src/sikidom.cpp}, \hyperpage{46}
+  \item {src/sikidom.h}, \hyperpage{47, 48}
+  \item {src/tomb.hpp}, \hyperpage{50}
+
+  \indexspace
+
+  \item {t}
+    \subitem {Tomb$<$ T $>$}, \hyperpage{42}
+  \item {Tartalmazza}
+    \subitem {Sikidom}, \hyperpage{34}
+  \item {Terulet}
+    \subitem {Haromszog}, \hyperpage{13}
+    \subitem {Kor}, \hyperpage{19}
+    \subitem {Negyzet}, \hyperpage{22}
+    \subitem {Sikidom}, \hyperpage{34}
+  \item {Tomb}
+    \subitem {Tomb$<$ T $>$}, \hyperpage{38}
+  \item {Tomb$<$ T $>$}, \hyperpage{37}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Tomb}, \hyperpage{38}
+    \subitem {at}, \hyperpage{38, 39}
+    \subitem {begin}, \hyperpage{39}
+    \subitem {capacity}, \hyperpage{39}
+    \subitem {currentCapacity}, \hyperpage{42}
+    \subitem {currentSize}, \hyperpage{42}
+    \subitem {end}, \hyperpage{39, 40}
+    \subitem {find}, \hyperpage{40}
+    \subitem {operator[]}, \hyperpage{40, 41}
+    \subitem {push\_back}, \hyperpage{41}
+    \subitem {resize}, \hyperpage{41}
+    \subitem {size}, \hyperpage{42}
+    \subitem {t}, \hyperpage{42}
+    \subitem {Tomb}, \hyperpage{38}
+  \item {Tomb$<$ T $>$::const\_iterator}, \hyperpage{7}
+    \subitem {const\_iterator}, \hyperpage{8}
+    \subitem {idx}, \hyperpage{10}
+    \subitem {operator!=}, \hyperpage{9}
+    \subitem {operator++}, \hyperpage{9}
+    \subitem {operator\texorpdfstring{$\ast$}{*}}, \hyperpage{9}
+    \subitem {p}, \hyperpage{10}
+  \item {Tomb$<$ T $>$::iterator}, \hyperpage{14}
+    \subitem {idx}, \hyperpage{16}
+    \subitem {iterator}, \hyperpage{14}
+    \subitem {operator!=}, \hyperpage{15}
+    \subitem {operator++}, \hyperpage{15}
+    \subitem {operator\texorpdfstring{$\ast$}{*}}, \hyperpage{15}
+    \subitem {p}, \hyperpage{16}
+
+  \indexspace
+
+  \item {Write}
+    \subitem {Haromszog}, \hyperpage{13}
+    \subitem {Kor}, \hyperpage{19}
+    \subitem {Negyzet}, \hyperpage{23}
+    \subitem {Sikidom}, \hyperpage{34}
+
+  \indexspace
+
+  \item {x}
+    \subitem {Pont}, \hyperpage{30}
+
+  \indexspace
+
+  \item {y}
+    \subitem {Pont}, \hyperpage{30}
+
+\end{theindex}
