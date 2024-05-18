@@ -9,6 +9,7 @@
 
 int main(int argc, char** argv) {
 
+  //fajl beolvasas
   std::ifstream inputFile("input.txt");
   Tomb<Sikidom*> beolvasott_sikidomok;
 
@@ -19,7 +20,6 @@ int main(int argc, char** argv) {
     Sikidom* sikidom = nullptr;
     iss >> &sikidom;
     std::cout << "beolvasva: " << sikidom;
-    //assert(sikidom != nullptr);
 
     //eltaroljuk, ha az egysegkoron kivul van
     if(sikidom->Kivul(1)){
@@ -31,6 +31,7 @@ int main(int argc, char** argv) {
  
   inputFile.close();
 
+  //tesztesetek
   std::cout<<"\nKOR TESZT\n";
   TEST(Kor, masolo){
     Kor k1(Pont(0,0), Pont(1,1));
@@ -90,15 +91,15 @@ int main(int argc, char** argv) {
   //tesztesetek vege
   std::cout << "\n---TESZTESETEK VEGE---\n";
 
+  //pontok beolvasasa a felhasznalotol
   Tomb<std::size_t> megjelolt_sikidomok_i;
   line = std::string();
   std::cout << "\nAdjon meg koordinatakat! (formatum: \"x,y\")\n";
   while(std::getline(std::cin, line)){
     std::istringstream iss(line);
-    // pont formatum check
     Pont point_in;
     try{
-      iss >> point_in;
+      iss >> point_in; // pont formatum check
     } catch (std::runtime_error &e) {
       std::cout << "formatum hiba!: " << e.what() << '\n';
       continue;
@@ -118,7 +119,7 @@ int main(int argc, char** argv) {
     std::cout << "\nAdjon meg koordinatakat! (formatum: \"x,y\", vagy \"(x,y)\")\n";
   }
 
-   //eltaroltak kiirasa
+  //eltaroltak kiirasa
   std::ofstream outputFile("output.txt");
   std::cout << "\nFAJLBA KIIRVA:\n";
   for (const auto& index : megjelolt_sikidomok_i) {
