@@ -1,0 +1,345 @@
+\doxysection{Tomb\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} osztálysablon-\/referencia}
+\hypertarget{class_tomb}{}\label{class_tomb}\index{Tomb$<$ T $>$@{Tomb$<$ T $>$}}
+
+
+Generikus Dinamikus tömb osztály. A \doxylink{class_tomb}{Tomb} osztály egy dinamikus tömböt reprezentál, melynek mérete a felhasználó által nem korlátozott.  
+
+
+
+
+{\ttfamily \#include $<$tomb.\+hpp$>$}
+
+\doxysubsubsection*{Osztályok}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_tomb_1_1const__iterator}{const\+\_\+iterator}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_tomb_1_1const__iterator}{const\+\_\+iterator} osztály. Az \doxylink{class_tomb_1_1const__iterator}{const\+\_\+iterator} osztály a \doxylink{class_tomb}{Tomb} osztály const\+\_\+iteratora. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_tomb_1_1iterator}{iterator}}
+\begin{DoxyCompactList}\small\item\em iterator osztály. Az iterator osztály a \doxylink{class_tomb}{Tomb} osztály iteratora. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Publikus tagfüggvények}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tomb_ae4bf33b0697f4fe2e7702b9e53fc2bf1}{Tomb}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_tomb}{Tomb} osztály konstruktora. A konstruktor létrehoz egy üres tömböt, 1 kapacitással. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tomb_1_1iterator}{iterator}} \mbox{\hyperlink{class_tomb_a0cc09d5947061cdb6f0bda7d453d8dcf}{begin}} ()
+\begin{DoxyCompactList}\small\item\em begin iterator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tomb_1_1iterator}{iterator}} \mbox{\hyperlink{class_tomb_af6d640f751ace862d93395f0ddd563de}{end}} ()
+\begin{DoxyCompactList}\small\item\em end iterator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tomb_1_1const__iterator}{const\+\_\+iterator}} \mbox{\hyperlink{class_tomb_a83caa244035e77655c10e9e513538d4c}{begin}} () const
+\begin{DoxyCompactList}\small\item\em begin \doxylink{class_tomb_1_1const__iterator}{const\+\_\+iterator}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tomb_1_1const__iterator}{const\+\_\+iterator}} \mbox{\hyperlink{class_tomb_a5e751096467add40c338e1cebee16a99}{end}} () const
+\begin{DoxyCompactList}\small\item\em end \doxylink{class_tomb_1_1const__iterator}{const\+\_\+iterator}. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_tomb_a589e99d925aeee115bb846e572596b04}{size}} () const
+\begin{DoxyCompactList}\small\item\em \doxylink{class_tomb}{Tomb} méretét visszaado függvény. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_tomb_a32b97e02c54b63cba0c43d25eeef4fc7}{capacity}} () const
+\begin{DoxyCompactList}\small\item\em \doxylink{class_tomb}{Tomb} kapacitásat visszaado függvény. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{class_tomb_a1a8c6c4a1e45ff1086ff1ca25abe8ed5}{at}} (const size\+\_\+t i)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_tomb}{Tomb} at függvénye. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{class_tomb_a019f55737fcef24bd45b14401c8c842d}{operator\mbox{[}$\,$\mbox{]}}} (const size\+\_\+t i)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_tomb}{Tomb} operator\mbox{[}\mbox{]} függvénye. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{class_tomb_a09c83fdc40e7a047851c7554d89254b3}{at}} (const size\+\_\+t i) const
+\begin{DoxyCompactList}\small\item\em \doxylink{class_tomb}{Tomb} const at függvénye. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{class_tomb_a63cf2fffc699f582ed28a4b67436a85e}{operator\mbox{[}$\,$\mbox{]}}} (const size\+\_\+t i) const
+\begin{DoxyCompactList}\small\item\em \doxylink{class_tomb}{Tomb} const operator\mbox{[}\mbox{]} függvénye. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tomb_ae97c51ef2373b6301e03957eea14a36d}{resize}} (size\+\_\+t new\+Size)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_tomb}{Tomb} resize függvénye. A függvény a tömb méretét növeli a megadott értékkel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tomb_ac0d31f04ccdfbe9f32054411345eaf61}{push\+\_\+back}} (T value)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_tomb}{Tomb} push\+\_\+back függvénye. A függvény a tömb végére fűz egy elemet. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_tomb_a1e77c83f9e32271652f90179f6ce58ca}{find}} (const T \&value) const
+\begin{DoxyCompactList}\small\item\em \doxylink{class_tomb}{Tomb} find függvénye. A függvény megkeresi az első olyan elemet, mely megegyezik az értékkel. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_tomb_ac820e8f0194fefd554a3f55c43e7b2dc}{\texorpdfstring{$\sim$}{\string~}\+Tomb}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_tomb}{Tomb} destruktora. A destruktor felszabadítja a tömbot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Privát attribútumok}
+\begin{DoxyCompactItemize}
+\item 
+T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_tomb_af588b1f01320436f2019bc3c15fbcb50}{t}}
+\begin{DoxyCompactList}\small\item\em A dinamikusan foglalt tömb elejére mutató pointer. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_tomb_ab40caed442b0ab5633b8cfa2bd5bb77f}{current\+Size}}
+\begin{DoxyCompactList}\small\item\em A tömb aktuális mérete. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_tomb_ab3e265b9c9a56d5eca7f7d5176b20b9b}{current\+Capacity}}
+\begin{DoxyCompactList}\small\item\em A tömb aktuális kapacitása. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Részletes leírás}
+\subsubsection*{template$<$class T$>$\newline
+class Tomb$<$ T $>$}
+Generikus Dinamikus tömb osztály. A \doxylink{class_tomb}{Tomb} osztály egy dinamikus tömböt reprezentál, melynek mérete a felhasználó által nem korlátozott. 
+
+\doxysubsection{Konstruktorok és destruktorok dokumentációja}
+\Hypertarget{class_tomb_ae4bf33b0697f4fe2e7702b9e53fc2bf1}\label{class_tomb_ae4bf33b0697f4fe2e7702b9e53fc2bf1} 
+\index{Tomb$<$ T $>$@{Tomb$<$ T $>$}!Tomb@{Tomb}}
+\index{Tomb@{Tomb}!Tomb$<$ T $>$@{Tomb$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Tomb()}{Tomb()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_tomb}{Tomb}}$<$ T $>$\mbox{\hyperlink{class_tomb}{\+::\+Tomb}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{class_tomb}{Tomb} osztály konstruktora. A konstruktor létrehoz egy üres tömböt, 1 kapacitással. 
+
+\Hypertarget{class_tomb_ac820e8f0194fefd554a3f55c43e7b2dc}\label{class_tomb_ac820e8f0194fefd554a3f55c43e7b2dc} 
+\index{Tomb$<$ T $>$@{Tomb$<$ T $>$}!````~Tomb@{\texorpdfstring{$\sim$}{\string~}Tomb}}
+\index{````~Tomb@{\texorpdfstring{$\sim$}{\string~}Tomb}!Tomb$<$ T $>$@{Tomb$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Tomb()}{\string~Tomb()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+virtual \mbox{\hyperlink{class_tomb}{Tomb}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{class_tomb}{Tomb}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxylink{class_tomb}{Tomb} destruktora. A destruktor felszabadítja a tömbot. 
+
+
+
+\doxysubsection{Tagfüggvények dokumentációja}
+\Hypertarget{class_tomb_a1a8c6c4a1e45ff1086ff1ca25abe8ed5}\label{class_tomb_a1a8c6c4a1e45ff1086ff1ca25abe8ed5} 
+\index{Tomb$<$ T $>$@{Tomb$<$ T $>$}!at@{at}}
+\index{at@{at}!Tomb$<$ T $>$@{Tomb$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T \& \mbox{\hyperlink{class_tomb}{Tomb}}$<$ T $>$\+::at (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{class_tomb}{Tomb} at függvénye. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em i} & Az index, ahol lévő az elemet szeretnénk elérni. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+Az i-\/edik elem. 
+\end{DoxyReturn}
+\Hypertarget{class_tomb_a09c83fdc40e7a047851c7554d89254b3}\label{class_tomb_a09c83fdc40e7a047851c7554d89254b3} 
+\index{Tomb$<$ T $>$@{Tomb$<$ T $>$}!at@{at}}
+\index{at@{at}!Tomb$<$ T $>$@{Tomb$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+const T \& \mbox{\hyperlink{class_tomb}{Tomb}}$<$ T $>$\+::at (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{class_tomb}{Tomb} const at függvénye. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em i} & Az index, ahol lévő elemet szeretnénk elérni. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+const referencia az i-\/edik elemre. 
+\end{DoxyReturn}
+\Hypertarget{class_tomb_a0cc09d5947061cdb6f0bda7d453d8dcf}\label{class_tomb_a0cc09d5947061cdb6f0bda7d453d8dcf} 
+\index{Tomb$<$ T $>$@{Tomb$<$ T $>$}!begin@{begin}}
+\index{begin@{begin}!Tomb$<$ T $>$@{Tomb$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_tomb_1_1iterator}{iterator}} \mbox{\hyperlink{class_tomb}{Tomb}}$<$ T $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+begin iterator. 
+
+\begin{DoxyReturn}{Visszatérési érték}
+Az első elemre mutató iterator. 
+\end{DoxyReturn}
+\Hypertarget{class_tomb_a83caa244035e77655c10e9e513538d4c}\label{class_tomb_a83caa244035e77655c10e9e513538d4c} 
+\index{Tomb$<$ T $>$@{Tomb$<$ T $>$}!begin@{begin}}
+\index{begin@{begin}!Tomb$<$ T $>$@{Tomb$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_tomb_1_1const__iterator}{const\+\_\+iterator}} \mbox{\hyperlink{class_tomb}{Tomb}}$<$ T $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+begin \doxylink{class_tomb_1_1const__iterator}{const\+\_\+iterator}. 
+
+\begin{DoxyReturn}{Visszatérési érték}
+Az első elemre mutató \doxylink{class_tomb_1_1const__iterator}{const\+\_\+iterator}. 
+\end{DoxyReturn}
+\Hypertarget{class_tomb_a32b97e02c54b63cba0c43d25eeef4fc7}\label{class_tomb_a32b97e02c54b63cba0c43d25eeef4fc7} 
+\index{Tomb$<$ T $>$@{Tomb$<$ T $>$}!capacity@{capacity}}
+\index{capacity@{capacity}!Tomb$<$ T $>$@{Tomb$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{capacity()}{capacity()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+size\+\_\+t \mbox{\hyperlink{class_tomb}{Tomb}}$<$ T $>$\+::capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{class_tomb}{Tomb} kapacitásat visszaado függvény. 
+
+\begin{DoxyReturn}{Visszatérési érték}
+A tömb kapacitása. 
+\end{DoxyReturn}
+\Hypertarget{class_tomb_af6d640f751ace862d93395f0ddd563de}\label{class_tomb_af6d640f751ace862d93395f0ddd563de} 
+\index{Tomb$<$ T $>$@{Tomb$<$ T $>$}!end@{end}}
+\index{end@{end}!Tomb$<$ T $>$@{Tomb$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_tomb_1_1iterator}{iterator}} \mbox{\hyperlink{class_tomb}{Tomb}}$<$ T $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+end iterator. 
+
+\begin{DoxyReturn}{Visszatérési érték}
+Az utolsó elem után mutató iterator. 
+\end{DoxyReturn}
+\Hypertarget{class_tomb_a5e751096467add40c338e1cebee16a99}\label{class_tomb_a5e751096467add40c338e1cebee16a99} 
+\index{Tomb$<$ T $>$@{Tomb$<$ T $>$}!end@{end}}
+\index{end@{end}!Tomb$<$ T $>$@{Tomb$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_tomb_1_1const__iterator}{const\+\_\+iterator}} \mbox{\hyperlink{class_tomb}{Tomb}}$<$ T $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+end \doxylink{class_tomb_1_1const__iterator}{const\+\_\+iterator}. 
+
+\begin{DoxyReturn}{Visszatérési érték}
+Az utolsó elem után mutató \doxylink{class_tomb_1_1const__iterator}{const\+\_\+iterator}. 
+\end{DoxyReturn}
+\Hypertarget{class_tomb_a1e77c83f9e32271652f90179f6ce58ca}\label{class_tomb_a1e77c83f9e32271652f90179f6ce58ca} 
+\index{Tomb$<$ T $>$@{Tomb$<$ T $>$}!find@{find}}
+\index{find@{find}!Tomb$<$ T $>$@{Tomb$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{class_tomb}{Tomb}}$<$ T $>$\+::find (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{class_tomb}{Tomb} find függvénye. A függvény megkeresi az első olyan elemet, mely megegyezik az értékkel. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em value} & Az érték, melyet keresünk. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+Az első olyan elem indexe, mely megegyezik az értékkel, ha nincs ilyen, akkor -\/1. 
+\end{DoxyReturn}
+\Hypertarget{class_tomb_a019f55737fcef24bd45b14401c8c842d}\label{class_tomb_a019f55737fcef24bd45b14401c8c842d} 
+\index{Tomb$<$ T $>$@{Tomb$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Tomb$<$ T $>$@{Tomb$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T \& \mbox{\hyperlink{class_tomb}{Tomb}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{class_tomb}{Tomb} operator\mbox{[}\mbox{]} függvénye. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em i} & Az index, ahol lévő elemet szeretnénk elérni. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+Az i-\/edik elem. 
+\end{DoxyReturn}
+\Hypertarget{class_tomb_a63cf2fffc699f582ed28a4b67436a85e}\label{class_tomb_a63cf2fffc699f582ed28a4b67436a85e} 
+\index{Tomb$<$ T $>$@{Tomb$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Tomb$<$ T $>$@{Tomb$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+const T \& \mbox{\hyperlink{class_tomb}{Tomb}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{class_tomb}{Tomb} const operator\mbox{[}\mbox{]} függvénye. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em i} & Az index, ahol lévő elemet szeretnénk elérni. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+const referencia az i-\/edik elemre. 
+\end{DoxyReturn}
+\Hypertarget{class_tomb_ac0d31f04ccdfbe9f32054411345eaf61}\label{class_tomb_ac0d31f04ccdfbe9f32054411345eaf61} 
+\index{Tomb$<$ T $>$@{Tomb$<$ T $>$}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!Tomb$<$ T $>$@{Tomb$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_tomb}{Tomb}}$<$ T $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{class_tomb}{Tomb} push\+\_\+back függvénye. A függvény a tömb végére fűz egy elemet. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em value} & Az érték, melyet a tömb végére fűzünk. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_tomb_ae97c51ef2373b6301e03957eea14a36d}\label{class_tomb_ae97c51ef2373b6301e03957eea14a36d} 
+\index{Tomb$<$ T $>$@{Tomb$<$ T $>$}!resize@{resize}}
+\index{resize@{resize}!Tomb$<$ T $>$@{Tomb$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_tomb}{Tomb}}$<$ T $>$\+::resize (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{new\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{class_tomb}{Tomb} resize függvénye. A függvény a tömb méretét növeli a megadott értékkel. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em new\+Size} & A novelendo meret. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_tomb_a589e99d925aeee115bb846e572596b04}\label{class_tomb_a589e99d925aeee115bb846e572596b04} 
+\index{Tomb$<$ T $>$@{Tomb$<$ T $>$}!size@{size}}
+\index{size@{size}!Tomb$<$ T $>$@{Tomb$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+size\+\_\+t \mbox{\hyperlink{class_tomb}{Tomb}}$<$ T $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{class_tomb}{Tomb} méretét visszaado függvény. 
+
+\begin{DoxyReturn}{Visszatérési érték}
+A tömb mérete. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Adattagok dokumentációja}
+\Hypertarget{class_tomb_ab3e265b9c9a56d5eca7f7d5176b20b9b}\label{class_tomb_ab3e265b9c9a56d5eca7f7d5176b20b9b} 
+\index{Tomb$<$ T $>$@{Tomb$<$ T $>$}!currentCapacity@{currentCapacity}}
+\index{currentCapacity@{currentCapacity}!Tomb$<$ T $>$@{Tomb$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{currentCapacity}{currentCapacity}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+size\+\_\+t \mbox{\hyperlink{class_tomb}{Tomb}}$<$ T $>$\+::current\+Capacity\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A tömb aktuális kapacitása. 
+
+\Hypertarget{class_tomb_ab40caed442b0ab5633b8cfa2bd5bb77f}\label{class_tomb_ab40caed442b0ab5633b8cfa2bd5bb77f} 
+\index{Tomb$<$ T $>$@{Tomb$<$ T $>$}!currentSize@{currentSize}}
+\index{currentSize@{currentSize}!Tomb$<$ T $>$@{Tomb$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{currentSize}{currentSize}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+size\+\_\+t \mbox{\hyperlink{class_tomb}{Tomb}}$<$ T $>$\+::current\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A tömb aktuális mérete. 
+
+\Hypertarget{class_tomb_af588b1f01320436f2019bc3c15fbcb50}\label{class_tomb_af588b1f01320436f2019bc3c15fbcb50} 
+\index{Tomb$<$ T $>$@{Tomb$<$ T $>$}!t@{t}}
+\index{t@{t}!Tomb$<$ T $>$@{Tomb$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{t}{t}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_tomb}{Tomb}}$<$ T $>$\+::t\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A dinamikusan foglalt tömb elejére mutató pointer. 
+
+
+
+Ez a dokumentáció az osztályról a következő fájl alapján készült\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{tomb_8hpp}{tomb.\+hpp}}\end{DoxyCompactItemize}

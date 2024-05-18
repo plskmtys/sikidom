@@ -1,0 +1,646 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_pont" xml:lang="hu">
+<title>Pont osztályreferencia</title>
+<indexterm><primary>Pont</primary></indexterm>
+<para>
+
+<para><link linkend="_class_pont">Pont</link> osztály A pontokat a síkon tárolja, x és y koordinátákkal. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;pont.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Publikus tagfüggvények    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_pont_1a51a12cf04ae9729224716b6aeacc4085">Pont</link> (const double _x=0, const double _y=0)</para>
+</listitem>
+            <listitem><para><link linkend="_class_pont_1a3ba8d0324ccf49138a003e9fcd777825">Pont</link> (const <link linkend="_class_pont">Pont</link> &amp;)</para>
+
+<para><link linkend="_class_pont">Pont</link> osztály másoló konstruktora. </para>
+</listitem>
+            <listitem><para><link linkend="_class_pont">Pont</link> &amp; <link linkend="_class_pont_1a0f37a445f3ca156cc85386a9f2be2535">operator=</link> (const <link linkend="_class_pont">Pont</link> &amp;)</para>
+
+<para><link linkend="_class_pont">Pont</link> osztály értékadó operátora. </para>
+</listitem>
+            <listitem><para><link linkend="_class_pont">Pont</link> &amp; <link linkend="_class_pont_1ad0365d1e4d3487af3caee8a769a99cdf">setx</link> (double)</para>
+
+<para><link linkend="_class_pont">Pont</link> osztály x koordinátájának beállítása. </para>
+</listitem>
+            <listitem><para><link linkend="_class_pont">Pont</link> &amp; <link linkend="_class_pont_1a71633014bb7eb1eb4bc064e9fafa656a">sety</link> (double)</para>
+
+<para><link linkend="_class_pont">Pont</link> osztály y koordinátájának beállítása. </para>
+</listitem>
+            <listitem><para>double <link linkend="_class_pont_1ac29939bcb81bfe2514c9c07358aae198">getx</link> () const</para>
+
+<para><link linkend="_class_pont">Pont</link> osztály x koordinátájának lekérdezése. </para>
+</listitem>
+            <listitem><para>double <link linkend="_class_pont_1afd7e7acb77de335b8359a8c2c8ef6f8b">gety</link> () const</para>
+
+<para><link linkend="_class_pont">Pont</link> osztály y koordinátájának lekérdezése. </para>
+</listitem>
+            <listitem><para><link linkend="_class_pont">Pont</link> <link linkend="_class_pont_1a290903621d9e87a25184480b8e35fdbf">operator+</link> (const <link linkend="_class_pont">Pont</link> &amp;) const</para>
+
+<para><link linkend="_class_pont">Pont</link> osztály összeadó operátora. </para>
+</listitem>
+            <listitem><para><link linkend="_class_pont">Pont</link> <link linkend="_class_pont_1af32a654a8ef3229455bbf72766e935af">operator-</link> (const <link linkend="_class_pont">Pont</link> &amp;) const</para>
+
+<para><link linkend="_class_pont">Pont</link> osztály kivonó operátora. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_pont_1ae0f973562087a2bc676a7f9cb85c8aee">operator==</link> (const <link linkend="_class_pont">Pont</link> &amp;) const</para>
+
+<para><link linkend="_class_pont">Pont</link> osztály egyenlőség operátora. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_pont_1a1c398d6d2ac4b5edb11521980f09bc93">operator!=</link> (const <link linkend="_class_pont">Pont</link> &amp;) const</para>
+
+<para><link linkend="_class_pont">Pont</link> osztály egyenlőtlenség operátora. </para>
+</listitem>
+            <listitem><para>double <link linkend="_class_pont_1a27125c0be3500c187d2cb69212600444">dst</link> (const <link linkend="_class_pont">Pont</link> &amp;) const</para>
+
+<para><link linkend="_class_pont">Pont</link> osztály távolság számító metódusa. </para>
+</listitem>
+            <listitem><para><link linkend="_class_pont">Pont</link> &amp; <link linkend="_class_pont_1a2cc6c506454c191ed24f54c5660a15bb">Mozgat</link> (const double _x=0, const double _y=0)</para>
+
+<para><link linkend="_class_pont">Pont</link> osztály mozgató metódusa. </para>
+</listitem>
+            <listitem><para><link linkend="_class_pont">Pont</link> &amp; <link linkend="_class_pont_1a0398427978c0f4bccc6aaf28d22b20d0">Forgat</link> (const double, const <link linkend="_class_pont">Pont</link> &amp;)</para>
+
+<para><link linkend="_class_pont">Pont</link> osztály forgató metódusa. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Privát attribútumok    </title>
+        <itemizedlist>
+            <listitem><para>double <link linkend="_class_pont_1ab6e8e8d934d048496a49ce1c61e6ebaf">x</link></para>
+
+<para><link linkend="_class_pont">Pont</link> x koordinátája. </para>
+</listitem>
+            <listitem><para>double <link linkend="_class_pont_1ad94ccd66e75eeefbc1b271a1617a401b">y</link></para>
+
+<para><link linkend="_class_pont">Pont</link> y koordinátája. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Barátok    </title>
+        <itemizedlist>
+            <listitem><para>std::ostream &amp; <link linkend="_class_pont_1a0385caa4d87a0cda0609e7959061e1b3">operator&lt;&lt;</link> (std::ostream &amp;, const <link linkend="_class_pont">Pont</link> &amp;)</para>
+
+<para><link linkend="_class_pont">Pont</link> osztály kiíró operátora. </para>
+</listitem>
+            <listitem><para>std::istream &amp; <link linkend="_class_pont_1a7b20e326857f2c8dd5eccb8e6e7e8d7b">operator&gt;&gt;</link> (std::istream &amp;, <link linkend="_class_pont">Pont</link> &amp;)</para>
+
+<para><link linkend="_class_pont">Pont</link> osztály beolvasó operátora. formátumok: &quot;(x,y)&quot; vagy &quot;x,y&quot;. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Részletes leírás</title>
+
+<para><link linkend="_class_pont">Pont</link> osztály A pontokat a síkon tárolja, x és y koordinátákkal. </para>
+</section>
+<section>
+<title>Konstruktorok és destruktorok dokumentációja</title>
+<anchor xml:id="_class_pont_1a51a12cf04ae9729224716b6aeacc4085"/><section>
+    <title>Pont()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Pont</primary><secondary>Pont</secondary></indexterm>
+<indexterm><primary>Pont</primary><secondary>Pont</secondary></indexterm>
+<para><computeroutput>Pont::Pont (const double _x = <computeroutput>0</computeroutput>
+, const double _y = <computeroutput>0</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_pont_1a3ba8d0324ccf49138a003e9fcd777825"/><section>
+    <title>Pont()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Pont</primary><secondary>Pont</secondary></indexterm>
+<indexterm><primary>Pont</primary><secondary>Pont</secondary></indexterm>
+<para><computeroutput>Pont::Pont (const <link linkend="_class_pont">Pont</link> &amp; p)</computeroutput></para><para>
+
+<para><link linkend="_class_pont">Pont</link> osztály másoló konstruktora. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>p</entry><entry>
+<para>másolandó pont </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Tagfüggvények dokumentációja</title>
+<anchor xml:id="_class_pont_1a27125c0be3500c187d2cb69212600444"/><section>
+    <title>dst()</title>
+<indexterm><primary>dst</primary><secondary>Pont</secondary></indexterm>
+<indexterm><primary>Pont</primary><secondary>dst</secondary></indexterm>
+<para><computeroutput>double Pont::dst (const <link linkend="_class_pont">Pont</link> &amp; p) const</computeroutput></para><para>
+
+<para><link linkend="_class_pont">Pont</link> osztály távolság számító metódusa. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>p</entry><entry>
+<para>a másik pont </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>a két pont távolsága </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_pont_1a0398427978c0f4bccc6aaf28d22b20d0"/><section>
+    <title>Forgat()</title>
+<indexterm><primary>Forgat</primary><secondary>Pont</secondary></indexterm>
+<indexterm><primary>Pont</primary><secondary>Forgat</secondary></indexterm>
+<para><computeroutput><link linkend="_class_pont">Pont</link> &amp; Pont::Forgat (const double rad, const <link linkend="_class_pont">Pont</link> &amp; center = <computeroutput><link linkend="_class_pont">Pont</link>(0,&#160;0)</computeroutput>
+)</computeroutput></para><para>
+
+<para><link linkend="_class_pont">Pont</link> osztály forgató metódusa. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>rad</entry><entry>
+<para>forgatás szöge radiánban </para>
+</entry>
+                            </row>
+                            <row>
+<entry>center</entry><entry>
+<para>a forgatás középpontja </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>*this </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_pont_1ac29939bcb81bfe2514c9c07358aae198"/><section>
+    <title>getx()</title>
+<indexterm><primary>getx</primary><secondary>Pont</secondary></indexterm>
+<indexterm><primary>Pont</primary><secondary>getx</secondary></indexterm>
+<para><computeroutput>double Pont::getx ( ) const</computeroutput></para><para>
+
+<para><link linkend="_class_pont">Pont</link> osztály x koordinátájának lekérdezése. </para>
+</para>
+
+<para><formalpara><title>Visszatérési érték</title>
+
+<para>x koordináta értéke </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_pont_1afd7e7acb77de335b8359a8c2c8ef6f8b"/><section>
+    <title>gety()</title>
+<indexterm><primary>gety</primary><secondary>Pont</secondary></indexterm>
+<indexterm><primary>Pont</primary><secondary>gety</secondary></indexterm>
+<para><computeroutput>double Pont::gety ( ) const</computeroutput></para><para>
+
+<para><link linkend="_class_pont">Pont</link> osztály y koordinátájának lekérdezése. </para>
+</para>
+
+<para><formalpara><title>Visszatérési érték</title>
+
+<para>y koordináta értéke </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_pont_1a2cc6c506454c191ed24f54c5660a15bb"/><section>
+    <title>Mozgat()</title>
+<indexterm><primary>Mozgat</primary><secondary>Pont</secondary></indexterm>
+<indexterm><primary>Pont</primary><secondary>Mozgat</secondary></indexterm>
+<para><computeroutput><link linkend="_class_pont">Pont</link> &amp; Pont::Mozgat (const double _x = <computeroutput>0</computeroutput>
+, const double _y = <computeroutput>0</computeroutput>
+)</computeroutput></para><para>
+
+<para><link linkend="_class_pont">Pont</link> osztály mozgató metódusa. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_x</entry><entry>
+<para>x irányú elmozdulás </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_y</entry><entry>
+<para>y irányú elmozdulás </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>*this </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_pont_1a1c398d6d2ac4b5edb11521980f09bc93"/><section>
+    <title>operator!=()</title>
+<indexterm><primary>operator!=</primary><secondary>Pont</secondary></indexterm>
+<indexterm><primary>Pont</primary><secondary>operator!=</secondary></indexterm>
+<para><computeroutput>bool Pont::operator!= (const <link linkend="_class_pont">Pont</link> &amp; p) const</computeroutput></para><para>
+
+<para><link linkend="_class_pont">Pont</link> osztály egyenlőtlenség operátora. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>p</entry><entry>
+<para>a másik pont </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>igaz, ha a két pont koordinátái nem egyenlők, egyébként hamis. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_pont_1a290903621d9e87a25184480b8e35fdbf"/><section>
+    <title>operator+()</title>
+<indexterm><primary>operator+</primary><secondary>Pont</secondary></indexterm>
+<indexterm><primary>Pont</primary><secondary>operator+</secondary></indexterm>
+<para><computeroutput><link linkend="_class_pont">Pont</link> Pont::operator+ (const <link linkend="_class_pont">Pont</link> &amp; b) const</computeroutput></para><para>
+
+<para><link linkend="_class_pont">Pont</link> osztály összeadó operátora. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>b</entry><entry>
+<para>a másik pont </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>az összeg </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_pont_1af32a654a8ef3229455bbf72766e935af"/><section>
+    <title>operator-()</title>
+<indexterm><primary>operator-</primary><secondary>Pont</secondary></indexterm>
+<indexterm><primary>Pont</primary><secondary>operator-</secondary></indexterm>
+<para><computeroutput><link linkend="_class_pont">Pont</link> Pont::operator- (const <link linkend="_class_pont">Pont</link> &amp; b) const</computeroutput></para><para>
+
+<para><link linkend="_class_pont">Pont</link> osztály kivonó operátora. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>b</entry><entry>
+<para>a másik pont </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>a különbség </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_pont_1a0f37a445f3ca156cc85386a9f2be2535"/><section>
+    <title>operator=()</title>
+<indexterm><primary>operator=</primary><secondary>Pont</secondary></indexterm>
+<indexterm><primary>Pont</primary><secondary>operator=</secondary></indexterm>
+<para><computeroutput><link linkend="_class_pont">Pont</link> &amp; Pont::operator= (const <link linkend="_class_pont">Pont</link> &amp; p)</computeroutput></para><para>
+
+<para><link linkend="_class_pont">Pont</link> osztály értékadó operátora. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>p</entry><entry>
+<para>másolandó pont </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>*this </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_pont_1ae0f973562087a2bc676a7f9cb85c8aee"/><section>
+    <title>operator==()</title>
+<indexterm><primary>operator==</primary><secondary>Pont</secondary></indexterm>
+<indexterm><primary>Pont</primary><secondary>operator==</secondary></indexterm>
+<para><computeroutput>bool Pont::operator== (const <link linkend="_class_pont">Pont</link> &amp; p) const</computeroutput></para><para>
+
+<para><link linkend="_class_pont">Pont</link> osztály egyenlőség operátora. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>p</entry><entry>
+<para>a másik pont </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>igaz, ha a két pont koordinátái egyenlők, egyébként hamis. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_pont_1ad0365d1e4d3487af3caee8a769a99cdf"/><section>
+    <title>setx()</title>
+<indexterm><primary>setx</primary><secondary>Pont</secondary></indexterm>
+<indexterm><primary>Pont</primary><secondary>setx</secondary></indexterm>
+<para><computeroutput><link linkend="_class_pont">Pont</link> &amp; Pont::setx (double _x)</computeroutput></para><para>
+
+<para><link linkend="_class_pont">Pont</link> osztály x koordinátájának beállítása. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_x</entry><entry>
+<para>beállítandó x koordináta </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>*this </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_pont_1a71633014bb7eb1eb4bc064e9fafa656a"/><section>
+    <title>sety()</title>
+<indexterm><primary>sety</primary><secondary>Pont</secondary></indexterm>
+<indexterm><primary>Pont</primary><secondary>sety</secondary></indexterm>
+<para><computeroutput><link linkend="_class_pont">Pont</link> &amp; Pont::sety (double _y)</computeroutput></para><para>
+
+<para><link linkend="_class_pont">Pont</link> osztály y koordinátájának beállítása. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_y</entry><entry>
+<para>beállítandó y koordináta </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>*this </para>
+</formalpara>
+</para>
+</section>
+</section>
+<section>
+<title>Barát és kapcsolódó függvények dokumentációja</title>
+<anchor xml:id="_class_pont_1a0385caa4d87a0cda0609e7959061e1b3"/><section>
+    <title>operator&lt;&lt;</title>
+<indexterm><primary>operator&lt;&lt;</primary><secondary>Pont</secondary></indexterm>
+<indexterm><primary>Pont</primary><secondary>operator&lt;&lt;</secondary></indexterm>
+<para><computeroutput>std::ostream &amp; operator&lt;&lt; (std::ostream &amp; os, const <link linkend="_class_pont">Pont</link> &amp; p)<computeroutput>[friend]</computeroutput></computeroutput></para><para>
+
+<para><link linkend="_class_pont">Pont</link> osztály kiíró operátora. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>os</entry><entry>
+<para>output stream referencia </para>
+</entry>
+                            </row>
+                            <row>
+<entry>p</entry><entry>
+<para>a kiírandó pont </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>output stream referencia </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_pont_1a7b20e326857f2c8dd5eccb8e6e7e8d7b"/><section>
+    <title>operator&gt;&gt;</title>
+<indexterm><primary>operator&gt;&gt;</primary><secondary>Pont</secondary></indexterm>
+<indexterm><primary>Pont</primary><secondary>operator&gt;&gt;</secondary></indexterm>
+<para><computeroutput>std::istream &amp; operator&gt;&gt; (std::istream &amp; is, <link linkend="_class_pont">Pont</link> &amp; p)<computeroutput>[friend]</computeroutput></computeroutput></para><para>
+
+<para><link linkend="_class_pont">Pont</link> osztály beolvasó operátora. formátumok: &quot;(x,y)&quot; vagy &quot;x,y&quot;. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>is</entry><entry>
+<para>input stream referencia </para>
+</entry>
+                            </row>
+                            <row>
+<entry>p</entry><entry>
+<para>a beolvasandó pont </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>input stream referencia </para>
+</formalpara>
+</para>
+</section>
+</section>
+<section>
+<title>Adattagok dokumentációja</title>
+<anchor xml:id="_class_pont_1ab6e8e8d934d048496a49ce1c61e6ebaf"/><section>
+    <title>x</title>
+<indexterm><primary>x</primary><secondary>Pont</secondary></indexterm>
+<indexterm><primary>Pont</primary><secondary>x</secondary></indexterm>
+<para><computeroutput>double Pont::x<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para><link linkend="_class_pont">Pont</link> x koordinátája. </para>
+</para>
+</section>
+<anchor xml:id="_class_pont_1ad94ccd66e75eeefbc1b271a1617a401b"/><section>
+    <title>y</title>
+<indexterm><primary>y</primary><secondary>Pont</secondary></indexterm>
+<indexterm><primary>Pont</primary><secondary>y</secondary></indexterm>
+<para><computeroutput>double Pont::y<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para><link linkend="_class_pont">Pont</link> y koordinátája. </para>
+</para>
+</section>
+<para>
+Ez a dokumentáció az osztályról a következő fájlok alapján készült:</para>
+src/<link linkend="_pont_8h">pont.h</link>src/<link linkend="_pont_8cpp">pont.cpp</link></section>
+</section>

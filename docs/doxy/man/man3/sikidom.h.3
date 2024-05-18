@@ -1,0 +1,71 @@
+.TH "src/sikidom.h" 3 "Version 1.0.0" "sikidom" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/sikidom.h
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'pont\&.h'\fP
+.br
+\fR#include <cstddef>\fP
+.br
+\fR#include <iostream>\fP
+.br
+\fR#include <memory>\fP
+.br
+
+.SS "Osztályok"
+
+.in +1c
+.ti -1c
+.RI "class \fBSikidom\fP"
+.br
+.RI "\fBSikidom\fP osztály\&. A sikidom osztály egy absztrakt osztály, melynek leszármazottai a különböző (szabályos) síkidomokat reprezentálják, középpontjukkal és egy csúcsukkal\&. "
+.ti -1c
+.RI "class \fBKor\fP"
+.br
+.RI "\fBKor\fP osztály\&. A \fBKor\fP osztály a \fBSikidom\fP leszármazottja, mely egy kör síkidomot reprezentál, középpontjával és egy csúcsával\&. "
+.ti -1c
+.RI "class \fBHaromszog\fP"
+.br
+.RI "\fBHaromszog\fP osztály\&. A \fBHaromszog\fP osztály a \fBSikidom\fP leszármazottja, mely egy háromszög síkidomot reprezentál, középpontjával és egy csúcsával\&. "
+.ti -1c
+.RI "class \fBNegyzet\fP"
+.br
+.in -1c
+.SS "Függvények"
+
+.in +1c
+.ti -1c
+.RI "bool \fBIsOnTriangle\fP (const \fBPont\fP &, const \fBPont\fP &, const \fBPont\fP &, const \fBPont\fP &)"
+.br
+.RI "IsOnTriangle függvény\&. A függvény eldönti, hogy egy pont rajta van-e egy háromszögön\&. "
+.in -1c
+.SH "Függvények dokumentációja"
+.PP 
+.SS "bool IsOnTriangle (const \fBPont\fP & P, const \fBPont\fP & A, const \fBPont\fP & B, const \fBPont\fP & C)"
+
+.PP
+IsOnTriangle függvény\&. A függvény eldönti, hogy egy pont rajta van-e egy háromszögön\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIP\fP a vizsgált pont\&. 
+.br
+\fIA\fP háromszög egyik csúcsa\&. 
+.br
+\fIB\fP háromszög másik csúcsa\&. 
+.br
+\fIC\fP háromszög harmadik csúcsa\&. 
+.RE
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+true, ha a pont rajta van a háromszögön, egyébként false\&.
+.RE
+.PP
+A kiszamitas modja: https://en.wikipedia.org/wiki/Barycentric_coordinate_system#Determining_location_with_respect_to_a_triangle 
+.SH "Szerző"
+.PP 
+Ezt a dokumentációt a Doxygen készítette a sikidom projekthez a forráskódból\&.

@@ -1,0 +1,155 @@
+.TH "gtest_lite::Test" 3 "Version 1.0.0" "sikidom" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gtest_lite::Test
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <gtest_lite\&.h>\fP
+.SS "Publikus tagfüggvények"
+
+.in +1c
+.ti -1c
+.RI "void \fBbegin\fP (const char *n)"
+.br
+.RI "Teszt kezdete\&. "
+.ti -1c
+.RI "std::ostream & \fBend\fP (bool memchk=false)"
+.br
+.RI "Teszt vége\&. "
+.ti -1c
+.RI "bool \fBfail\fP ()"
+.br
+.ti -1c
+.RI "std::ostream & \fBexpect\fP (bool st, const char *file, int line, const char *expr, bool pr=false)"
+.br
+.RI "Eredményt adminisztráló tagfüggvény True a jó eset\&. "
+.ti -1c
+.RI "\fB~Test\fP ()"
+.br
+.RI "Destruktor\&. "
+.in -1c
+.SS "Statikus publikus tagfüggvények"
+
+.in +1c
+.ti -1c
+.RI "static \fBTest\fP & \fBgetTest\fP ()"
+.br
+.in -1c
+.SS "Publikus attribútumok"
+
+.in +1c
+.ti -1c
+.RI "int \fBsum\fP"
+.br
+.RI "tesztek számlálója "
+.ti -1c
+.RI "int \fBfailed\fP"
+.br
+.RI "hibás tesztek "
+.ti -1c
+.RI "int \fBablocks\fP"
+.br
+.RI "allokált blokkok száma "
+.ti -1c
+.RI "bool \fBstatus\fP"
+.br
+.RI "éppen futó teszt státusza "
+.ti -1c
+.RI "bool \fBtmp\fP"
+.br
+.RI "temp a kivételkezeléshez; "
+.ti -1c
+.RI "std::string \fBname\fP"
+.br
+.RI "éppen futó teszt neve "
+.ti -1c
+.RI "std::fstream \fBnull\fP"
+.br
+.RI "nyelő, ha nem kell kiírni semmit "
+.in -1c
+.SS "Privát tagfüggvények"
+
+.in +1c
+.ti -1c
+.RI "\fBTest\fP ()"
+.br
+.RI "singleton minta miatt "
+.ti -1c
+.RI "\fBTest\fP (const \fBTest\fP &)"
+.br
+.ti -1c
+.RI "void \fBoperator=\fP (const \fBTest\fP &)"
+.br
+.in -1c
+.SH "Részletes leírás"
+.PP 
+Tesztek állapotát tároló osztály\&. Egyetlen egy statikus példány keletkezik, aminek a destruktora a futás végén hívódik meg\&. 
+.SH "Konstruktorok és destruktorok dokumentációja"
+.PP 
+.SS "gtest_lite::Test::Test ()\fR [inline]\fP, \fR [private]\fP"
+
+.PP
+singleton minta miatt 
+.SS "gtest_lite::Test::Test (const \fBTest\fP &)\fR [private]\fP"
+
+.SS "gtest_lite::Test::~Test ()\fR [inline]\fP"
+
+.PP
+Destruktor\&. 
+.SH "Tagfüggvények dokumentációja"
+.PP 
+.SS "void gtest_lite::Test::begin (const char * n)\fR [inline]\fP"
+
+.PP
+Teszt kezdete\&. 
+.SS "std::ostream & gtest_lite::Test::end (bool memchk = \fRfalse\fP)\fR [inline]\fP"
+
+.PP
+Teszt vége\&. 
+.SS "std::ostream & gtest_lite::Test::expect (bool st, const char * file, int line, const char * expr, bool pr = \fRfalse\fP)\fR [inline]\fP"
+
+.PP
+Eredményt adminisztráló tagfüggvény True a jó eset\&. 
+.SS "bool gtest_lite::Test::fail ()\fR [inline]\fP"
+
+.SS "static \fBTest\fP & gtest_lite::Test::getTest ()\fR [inline]\fP, \fR [static]\fP"
+< egyedüli (singleton) példány
+.SS "void gtest_lite::Test::operator= (const \fBTest\fP &)\fR [private]\fP"
+
+.SH "Adattagok dokumentációja"
+.PP 
+.SS "int gtest_lite::Test::ablocks"
+
+.PP
+allokált blokkok száma 
+.SS "int gtest_lite::Test::failed"
+
+.PP
+hibás tesztek 
+.SS "std::string gtest_lite::Test::name"
+
+.PP
+éppen futó teszt neve 
+.SS "std::fstream gtest_lite::Test::null"
+
+.PP
+nyelő, ha nem kell kiírni semmit 
+.SS "bool gtest_lite::Test::status"
+
+.PP
+éppen futó teszt státusza 
+.SS "int gtest_lite::Test::sum"
+
+.PP
+tesztek számlálója 
+.SS "bool gtest_lite::Test::tmp"
+
+.PP
+temp a kivételkezeléshez; 
+
+.SH "Szerző"
+.PP 
+Ezt a dokumentációt a Doxygen készítette a sikidom projekthez a forráskódból\&.

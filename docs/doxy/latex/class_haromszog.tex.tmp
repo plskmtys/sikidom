@@ -1,0 +1,233 @@
+\doxysection{Haromszog osztályreferencia}
+\hypertarget{class_haromszog}{}\label{class_haromszog}\index{Haromszog@{Haromszog}}
+
+
+\doxylink{class_haromszog}{Haromszog} osztály. A \doxylink{class_haromszog}{Haromszog} osztály a \doxylink{class_sikidom}{Sikidom} leszármazottja, mely egy háromszög síkidomot reprezentál, középpontjával és egy csúcsával.  
+
+
+
+
+{\ttfamily \#include $<$sikidom.\+h$>$}
+
+
+
+A Haromszog osztály származási diagramja\+:
+% FIG 0
+
+
+A Haromszog osztály együttműködési diagramja\+:
+% FIG 1
+\doxysubsubsection*{Publikus tagfüggvények}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_haromszog_a7d1f6ee5fc64d915c079763998d3b1ea}{Haromszog}} (\mbox{\hyperlink{class_pont}{Pont}} \+\_\+kp=\mbox{\hyperlink{class_pont}{Pont}}(0, 0), \mbox{\hyperlink{class_pont}{Pont}} \+\_\+p=\mbox{\hyperlink{class_pont}{Pont}}(0, 0))
+\item 
+\mbox{\hyperlink{class_haromszog_a84801633c5184b20a8794ef547747ca1}{Haromszog}} (const \mbox{\hyperlink{class_haromszog}{Haromszog}} \&\+\_\+h)
+\item 
+double \mbox{\hyperlink{class_haromszog_a1909d9326f45b6358e912b8c303a67be}{Terulet}} () const override
+\begin{DoxyCompactList}\small\item\em \doxylink{class_haromszog}{Haromszog} területét számoló függvény. A kiszamitas modja\+: R\texorpdfstring{$^\wedge$}{\string^}2 \texorpdfstring{$\ast$}{*} 3 \texorpdfstring{$\ast$}{*} sqrt(3) / 4. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_haromszog_adcfb90053414b3c447f83c2c9be07f18}{Rajtavan}} (const \mbox{\hyperlink{class_pont}{Pont}} \&) const override
+\begin{DoxyCompactList}\small\item\em \doxylink{class_haromszog}{Haromszog} Rajtavan függvény. A függvény eldönti, hogy egy pont rajta van-\/e a háromszögön. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_haromszog_a10c33ed799ebac2aa0fbc37a9f6d9e88}{Write}} (std\+::ostream \&os) const override
+\begin{DoxyCompactList}\small\item\em \doxylink{class_haromszog}{Haromszog} kiíró függvény. A függvény kiírja a háromszög adatait a megadott output streambe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_haromszog_a0d329d2d30a6d3455936c85d79a6cf5e}{Read}} (std\+::istream \&is) override
+\begin{DoxyCompactList}\small\item\em \doxylink{class_haromszog}{Haromszog} beolvasó függvény. A függvény beolvassa a háromszög adatait a megadott input streamből. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_haromszog_a9ed79902d5a11c7d8d93c935ae364741}{Kivul}} (const std\+::size\+\_\+t r) const override
+\begin{DoxyCompactList}\small\item\em \doxylink{class_haromszog}{Haromszog} Kivul függvény. Eldönti, hogy a háromszög kívül van-\/e egy adott sugarú, origo középpontú körön. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_haromszog_ab13be5db54a678c839ba8dc92535ad73}{\texorpdfstring{$\sim$}{\string~}\+Haromszog}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Publikus tagfüggvények a(z) \mbox{\hyperlink{class_sikidom}{Sikidom}} osztályból származnak}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sikidom_a4dd258f18e4985aab7aa63518f4cb53c}{Sikidom}} (const \mbox{\hyperlink{class_sikidom}{Sikidom}} \&)
+\item 
+\mbox{\hyperlink{class_sikidom}{Sikidom}} \& \mbox{\hyperlink{class_sikidom_a06417917486d1d4786a7bb8a238826ba}{operator=}} (const \mbox{\hyperlink{class_sikidom}{Sikidom}} \&)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_sikidom}{Sikidom} osztaly egyenloseg operatora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pont}{Pont}} \mbox{\hyperlink{class_sikidom_a580ec59df76631c231468b6beb303865}{getkp}} () const
+\item 
+\mbox{\hyperlink{class_pont}{Pont}} \mbox{\hyperlink{class_sikidom_a4c868839f9e4051e8717ddba28fad015}{getp}} () const
+\item 
+bool \mbox{\hyperlink{class_sikidom_aa429648a709a968dacd563d52cb39e44}{Tartalmazza}} (const int) const
+\item 
+\mbox{\hyperlink{class_sikidom}{Sikidom}} \& \mbox{\hyperlink{class_sikidom_afe53eb1a8e5b36fb50b20ce6a296959c}{Mozgat}} (const int \+\_\+x, const int \+\_\+y)
+\begin{DoxyCompactList}\small\item\em Egy sokszög mozgatását teszi lehetővé. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sikidom}{Sikidom}} \& \mbox{\hyperlink{class_sikidom_a68f6ac0248b3176028002b3b45dde07b}{Forgat}} (const double, const \mbox{\hyperlink{class_pont}{Pont}} \&)
+\begin{DoxyCompactList}\small\item\em Egy sokszög forgatását teszi lehetővé. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_sikidom_addcc9cfc77c3b6617d36084a10bcf208}{\texorpdfstring{$\sim$}{\string~}\+Sikidom}} ()=0
+\begin{DoxyCompactList}\small\item\em \doxylink{class_sikidom}{Sikidom} osztály destruktora. nincs dinamikusan foglalt adattag, tehát nem kell semmit felszabadítani. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Barátok}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_haromszog_a2484b3d43039baf63db4728edb0c1245}{operator$<$$<$}} (std\+::ostream \&, const \mbox{\hyperlink{class_haromszog}{Haromszog}} \&)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{További örökölt tagok}
+\doxysubsection*{Statikus publikus tagfüggvények a(z) \mbox{\hyperlink{class_sikidom}{Sikidom}} osztályból származnak}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_sikidom}{Sikidom}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_sikidom_a34fe25b652fdf3dcd5c02256fcea31dc}{create\+Sikidom}} (const std\+::string \&type)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_sikidom}{Sikidom} osztály statikus factory függvénye. A függvény létrehoz egy új síkidomot a megadott típus alapján. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Védett tagfüggvények a(z) \mbox{\hyperlink{class_sikidom}{Sikidom}} osztályból származnak}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sikidom_a200b65570223034da8a84bca5a88f61e}{Sikidom}} (\mbox{\hyperlink{class_pont}{Pont}} \+\_\+kp=\mbox{\hyperlink{class_pont}{Pont}}(0, 0), \mbox{\hyperlink{class_pont}{Pont}} \+\_\+p=\mbox{\hyperlink{class_pont}{Pont}}(0, 0))
+\begin{DoxyCompactList}\small\item\em \doxylink{class_sikidom}{Sikidom} konstruktor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Védett attribútumok a(z) \mbox{\hyperlink{class_sikidom}{Sikidom}} osztályból származnak}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pont}{Pont}} \mbox{\hyperlink{class_sikidom_a11c6def4b07e4748bfa85947ac9f5591}{kp}}
+\begin{DoxyCompactList}\small\item\em Középpont. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pont}{Pont}} \mbox{\hyperlink{class_sikidom_a139d93aabfc8ae56a115a22343e0ffaa}{p}}
+\begin{DoxyCompactList}\small\item\em A síkidom egy csúcsa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Részletes leírás}
+\doxylink{class_haromszog}{Haromszog} osztály. A \doxylink{class_haromszog}{Haromszog} osztály a \doxylink{class_sikidom}{Sikidom} leszármazottja, mely egy háromszög síkidomot reprezentál, középpontjával és egy csúcsával. 
+
+\doxysubsection{Konstruktorok és destruktorok dokumentációja}
+\Hypertarget{class_haromszog_a7d1f6ee5fc64d915c079763998d3b1ea}\label{class_haromszog_a7d1f6ee5fc64d915c079763998d3b1ea} 
+\index{Haromszog@{Haromszog}!Haromszog@{Haromszog}}
+\index{Haromszog@{Haromszog}!Haromszog@{Haromszog}}
+\doxysubsubsection{\texorpdfstring{Haromszog()}{Haromszog()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Haromszog\+::\+Haromszog (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pont}{Pont}}}]{\+\_\+kp = {\ttfamily \mbox{\hyperlink{class_pont}{Pont}}(0,~0)},  }\item[{\mbox{\hyperlink{class_pont}{Pont}}}]{\+\_\+p = {\ttfamily \mbox{\hyperlink{class_pont}{Pont}}(0,~0)} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_haromszog_a84801633c5184b20a8794ef547747ca1}\label{class_haromszog_a84801633c5184b20a8794ef547747ca1} 
+\index{Haromszog@{Haromszog}!Haromszog@{Haromszog}}
+\index{Haromszog@{Haromszog}!Haromszog@{Haromszog}}
+\doxysubsubsection{\texorpdfstring{Haromszog()}{Haromszog()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Haromszog\+::\+Haromszog (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_haromszog}{Haromszog}} \&}]{\+\_\+h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_haromszog_ab13be5db54a678c839ba8dc92535ad73}\label{class_haromszog_ab13be5db54a678c839ba8dc92535ad73} 
+\index{Haromszog@{Haromszog}!````~Haromszog@{\texorpdfstring{$\sim$}{\string~}Haromszog}}
+\index{````~Haromszog@{\texorpdfstring{$\sim$}{\string~}Haromszog}!Haromszog@{Haromszog}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Haromszog()}{\string~Haromszog()}}
+{\footnotesize\ttfamily Haromszog\+::\texorpdfstring{$\sim$}{\string~}\+Haromszog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+\doxysubsection{Tagfüggvények dokumentációja}
+\Hypertarget{class_haromszog_a9ed79902d5a11c7d8d93c935ae364741}\label{class_haromszog_a9ed79902d5a11c7d8d93c935ae364741} 
+\index{Haromszog@{Haromszog}!Kivul@{Kivul}}
+\index{Kivul@{Kivul}!Haromszog@{Haromszog}}
+\doxysubsubsection{\texorpdfstring{Kivul()}{Kivul()}}
+{\footnotesize\ttfamily bool Haromszog\+::\+Kivul (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{r = {\ttfamily 1} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\doxylink{class_haromszog}{Haromszog} Kivul függvény. Eldönti, hogy a háromszög kívül van-\/e egy adott sugarú, origo középpontú körön. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em r} & a kör sugara. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+true, ha a háromszög kívül van a körön, egyébként false. 
+\end{DoxyReturn}
+
+
+Megvalósítja a következőket\+: \mbox{\hyperlink{class_sikidom_ac8b7bb5618747ad0e3ce258e4fa223a2}{Sikidom}}.
+
+A függvény hívási gráfja\+:
+% FIG 2
+A függvény hívó gráfja\+:
+% FIG 3
+\Hypertarget{class_haromszog_adcfb90053414b3c447f83c2c9be07f18}\label{class_haromszog_adcfb90053414b3c447f83c2c9be07f18} 
+\index{Haromszog@{Haromszog}!Rajtavan@{Rajtavan}}
+\index{Rajtavan@{Rajtavan}!Haromszog@{Haromszog}}
+\doxysubsubsection{\texorpdfstring{Rajtavan()}{Rajtavan()}}
+{\footnotesize\ttfamily bool Haromszog\+::\+Rajtavan (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_pont}{Pont}} \&}]{P }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\doxylink{class_haromszog}{Haromszog} Rajtavan függvény. A függvény eldönti, hogy egy pont rajta van-\/e a háromszögön. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em P} & a vizsgált pont. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+true, ha a pont rajta van a háromszögön, egyébként false. 
+\end{DoxyReturn}
+
+
+Megvalósítja a következőket\+: \mbox{\hyperlink{class_sikidom_af85de4b120b39e41487f4fc491857596}{Sikidom}}.
+
+A függvény hívási gráfja\+:
+% FIG 4
+A függvény hívó gráfja\+:
+% FIG 5
+\Hypertarget{class_haromszog_a0d329d2d30a6d3455936c85d79a6cf5e}\label{class_haromszog_a0d329d2d30a6d3455936c85d79a6cf5e} 
+\index{Haromszog@{Haromszog}!Read@{Read}}
+\index{Read@{Read}!Haromszog@{Haromszog}}
+\doxysubsubsection{\texorpdfstring{Read()}{Read()}}
+{\footnotesize\ttfamily void Haromszog\+::\+Read (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\doxylink{class_haromszog}{Haromszog} beolvasó függvény. A függvény beolvassa a háromszög adatait a megadott input streamből. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em is} & a bemeneti stream. \\
+\hline
+\end{DoxyParams}
+
+
+Megvalósítja a következőket\+: \mbox{\hyperlink{class_sikidom_a34ea60629f1c57a4b5afa8fdb8b38eb6}{Sikidom}}.
+
+\Hypertarget{class_haromszog_a1909d9326f45b6358e912b8c303a67be}\label{class_haromszog_a1909d9326f45b6358e912b8c303a67be} 
+\index{Haromszog@{Haromszog}!Terulet@{Terulet}}
+\index{Terulet@{Terulet}!Haromszog@{Haromszog}}
+\doxysubsubsection{\texorpdfstring{Terulet()}{Terulet()}}
+{\footnotesize\ttfamily double Haromszog\+::\+Terulet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\doxylink{class_haromszog}{Haromszog} területét számoló függvény. A kiszamitas modja\+: R\texorpdfstring{$^\wedge$}{\string^}2 \texorpdfstring{$\ast$}{*} 3 \texorpdfstring{$\ast$}{*} sqrt(3) / 4. 
+
+\begin{DoxyReturn}{Visszatérési érték}
+A háromszög területe. 
+\end{DoxyReturn}
+
+
+Megvalósítja a következőket\+: \mbox{\hyperlink{class_sikidom_a6324bee38c590b706057f1d5cc4d9a25}{Sikidom}}.
+
+A függvény hívási gráfja\+:
+% FIG 6
+A függvény hívó gráfja\+:
+% FIG 7
+\Hypertarget{class_haromszog_a10c33ed799ebac2aa0fbc37a9f6d9e88}\label{class_haromszog_a10c33ed799ebac2aa0fbc37a9f6d9e88} 
+\index{Haromszog@{Haromszog}!Write@{Write}}
+\index{Write@{Write}!Haromszog@{Haromszog}}
+\doxysubsubsection{\texorpdfstring{Write()}{Write()}}
+{\footnotesize\ttfamily void Haromszog\+::\+Write (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\doxylink{class_haromszog}{Haromszog} kiíró függvény. A függvény kiírja a háromszög adatait a megadott output streambe. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em os} & a kimeneti stream. \\
+\hline
+\end{DoxyParams}
+
+
+Megvalósítja a következőket\+: \mbox{\hyperlink{class_sikidom_aaf04b7e802aed0f201c8471cd15c75f6}{Sikidom}}.
+
+
+
+\doxysubsection{Barát és kapcsolódó függvények dokumentációja}
+\Hypertarget{class_haromszog_a2484b3d43039baf63db4728edb0c1245}\label{class_haromszog_a2484b3d43039baf63db4728edb0c1245} 
+\index{Haromszog@{Haromszog}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Haromszog@{Haromszog}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{,  }\item[{const \mbox{\hyperlink{class_haromszog}{Haromszog}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Ez a dokumentáció az osztályról a következő fájlok alapján készült\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/matyas/code/sikidom/src/\mbox{\hyperlink{sikidom_8h}{sikidom.\+h}}\item 
+C\+:/\+Users/matyas/code/sikidom/src/\mbox{\hyperlink{sikidom_8cpp}{sikidom.\+cpp}}\end{DoxyCompactItemize}

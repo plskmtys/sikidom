@@ -1,0 +1,206 @@
+.TH "Kor" 3 "Version 1.0.0" "sikidom" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Kor \- \fBKor\fP osztály\&. A \fBKor\fP osztály a \fBSikidom\fP leszármazottja, mely egy kör síkidomot reprezentál, középpontjával és egy csúcsával\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <sikidom\&.h>\fP
+.PP
+Ősök: \fBSikidom\fP\&.
+.SS "Publikus tagfüggvények"
+
+.in +1c
+.ti -1c
+.RI "\fBKor\fP (\fBPont\fP _kp=\fBPont\fP(0, 0), \fBPont\fP _p=\fBPont\fP(0, 0))"
+.br
+.ti -1c
+.RI "\fBKor\fP (const \fBKor\fP &_k)"
+.br
+.ti -1c
+.RI "double \fBTerulet\fP () const override"
+.br
+.RI "\fBKor\fP területét számoló függvény\&. A kiszamitas modja: r^2 * pi\&. "
+.ti -1c
+.RI "bool \fBRajtavan\fP (const \fBPont\fP &) const override"
+.br
+.RI "\fBKor\fP Rajtavan függvény\&. A függvény eldönti, hogy egy pont rajta van-e a körön\&. "
+.ti -1c
+.RI "void \fBWrite\fP (std::ostream &os) const override"
+.br
+.RI "\fBKor\fP kiíró függvény\&. A függvény kiírja a kör adatait a megadott output streambe\&. "
+.ti -1c
+.RI "void \fBRead\fP (std::istream &is) override"
+.br
+.RI "\fBKor\fP beolvasó függvény\&. A függvény beolvassa a kör adatait a megadott input streamből\&. "
+.ti -1c
+.RI "bool \fBKivul\fP (const std::size_t r) const override"
+.br
+.RI "\fBKor\fP kivül függvény\&. Eldönti, hogy a kör kívül van-e egy adott sugarú, origo középpontú körön\&. "
+.ti -1c
+.RI "\fB~Kor\fP () override"
+.br
+.in -1c
+
+Publikus tagfüggvények a(z) \fBSikidom\fP osztályból származnak
+.in +1c
+.ti -1c
+.RI "\fBSikidom\fP (const \fBSikidom\fP &)"
+.br
+.ti -1c
+.RI "\fBSikidom\fP & \fBoperator=\fP (const \fBSikidom\fP &)"
+.br
+.RI "\fBSikidom\fP osztaly egyenloseg operatora\&. "
+.ti -1c
+.RI "\fBPont\fP \fBgetkp\fP () const"
+.br
+.ti -1c
+.RI "\fBPont\fP \fBgetp\fP () const"
+.br
+.ti -1c
+.RI "bool \fBTartalmazza\fP (const int) const"
+.br
+.ti -1c
+.RI "\fBSikidom\fP & \fBMozgat\fP (const int _x, const int _y)"
+.br
+.RI "Egy sokszög mozgatását teszi lehetővé\&. "
+.ti -1c
+.RI "\fBSikidom\fP & \fBForgat\fP (const double, const \fBPont\fP &)"
+.br
+.RI "Egy sokszög forgatását teszi lehetővé\&. "
+.ti -1c
+.RI "virtual \fB~Sikidom\fP ()=0"
+.br
+.RI "\fBSikidom\fP osztály destruktora\&. nincs dinamikusan foglalt adattag, tehát nem kell semmit felszabadítani\&. "
+.in -1c
+.SS "Barátok"
+
+.in +1c
+.ti -1c
+.RI "std::ostream & \fBoperator<<\fP (std::ostream &, const \fBKor\fP &)"
+.br
+.in -1c
+.SS "További örökölt tagok"
+
+
+Statikus publikus tagfüggvények a(z) \fBSikidom\fP osztályból származnak
+.in +1c
+.ti -1c
+.RI "static \fBSikidom\fP * \fBcreateSikidom\fP (const std::string &type)"
+.br
+.RI "\fBSikidom\fP osztály statikus factory függvénye\&. A függvény létrehoz egy új síkidomot a megadott típus alapján\&. "
+.in -1c
+
+Védett tagfüggvények a(z) \fBSikidom\fP osztályból származnak
+.in +1c
+.ti -1c
+.RI "\fBSikidom\fP (\fBPont\fP _kp=\fBPont\fP(0, 0), \fBPont\fP _p=\fBPont\fP(0, 0))"
+.br
+.RI "\fBSikidom\fP konstruktor\&. "
+.in -1c
+
+Védett attribútumok a(z) \fBSikidom\fP osztályból származnak
+.in +1c
+.ti -1c
+.RI "\fBPont\fP \fBkp\fP"
+.br
+.RI "Középpont\&. "
+.ti -1c
+.RI "\fBPont\fP \fBp\fP"
+.br
+.RI "A síkidom egy csúcsa\&. "
+.in -1c
+.SH "Részletes leírás"
+.PP 
+\fBKor\fP osztály\&. A \fBKor\fP osztály a \fBSikidom\fP leszármazottja, mely egy kör síkidomot reprezentál, középpontjával és egy csúcsával\&. 
+.SH "Konstruktorok és destruktorok dokumentációja"
+.PP 
+.SS "Kor::Kor (\fBPont\fP _kp = \fR\fBPont\fP(0, 0)\fP, \fBPont\fP _p = \fR\fBPont\fP(0, 0)\fP)\fR [inline]\fP"
+
+.SS "Kor::Kor (const \fBKor\fP & _k)\fR [inline]\fP"
+
+.SS "Kor::~Kor ()\fR [inline]\fP, \fR [override]\fP"
+
+.SH "Tagfüggvények dokumentációja"
+.PP 
+.SS "bool Kor::Kivul (const std::size_t r) const\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+\fBKor\fP kivül függvény\&. Eldönti, hogy a kör kívül van-e egy adott sugarú, origo középpontú körön\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIr\fP a kör sugara\&. 
+.RE
+.PP
+
+.PP
+Megvalósítja a következőket: \fBSikidom\fP\&.
+.SS "bool Kor::Rajtavan (const \fBPont\fP & _p) const\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+\fBKor\fP Rajtavan függvény\&. A függvény eldönti, hogy egy pont rajta van-e a körön\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fI_p\fP a vizsgált pont\&. 
+.RE
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+true, ha a pont rajta van a körön, egyébként false\&. 
+.RE
+.PP
+
+.PP
+Megvalósítja a következőket: \fBSikidom\fP\&.
+.SS "void Kor::Read (std::istream & is)\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+\fBKor\fP beolvasó függvény\&. A függvény beolvassa a kör adatait a megadott input streamből\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIis\fP a bemeneti stream\&. 
+.RE
+.PP
+
+.PP
+Megvalósítja a következőket: \fBSikidom\fP\&.
+.SS "double Kor::Terulet () const\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+\fBKor\fP területét számoló függvény\&. A kiszamitas modja: r^2 * pi\&. 
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+A kör területe\&. 
+.RE
+.PP
+
+.PP
+Megvalósítja a következőket: \fBSikidom\fP\&.
+.SS "void Kor::Write (std::ostream & os) const\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+\fBKor\fP kiíró függvény\&. A függvény kiírja a kör adatait a megadott output streambe\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIos\fP a kimeneti stream\&. 
+.RE
+.PP
+
+.PP
+Megvalósítja a következőket: \fBSikidom\fP\&.
+.SH "Barát és kapcsolódó függvények dokumentációja"
+.PP 
+.SS "std::ostream & operator<< (std::ostream &, const \fBKor\fP &)\fR [friend]\fP"
+
+
+.SH "Szerző"
+.PP 
+Ezt a dokumentációt a Doxygen készítette a sikidom projekthez a forráskódból\&.

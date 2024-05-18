@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_68267d1309a1af8e8297ef4c3efbcdba" xml:lang="hu">
+<title>src könyvtárreferencia</title>
+<indexterm><primary>src könyvtárreferencia</primary></indexterm>
+<simplesect>
+    <title>Fájlok    </title>
+        <itemizedlist>
+            <listitem><para>fájl <link linkend="_pont_8cpp">pont.cpp</link></para>
+</listitem>
+            <listitem><para>fájl <link linkend="_pont_8h">pont.h</link></para>
+</listitem>
+            <listitem><para>fájl <link linkend="_sikidom_8cpp">sikidom.cpp</link></para>
+</listitem>
+            <listitem><para>fájl <link linkend="_sikidom_8h">sikidom.h</link></para>
+</listitem>
+            <listitem><para>fájl <link linkend="_tomb_8hpp">tomb.hpp</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

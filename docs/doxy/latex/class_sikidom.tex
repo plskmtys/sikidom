@@ -1,0 +1,349 @@
+\doxysection{Sikidom osztályreferencia}
+\hypertarget{class_sikidom}{}\label{class_sikidom}\index{Sikidom@{Sikidom}}
+
+
+\doxylink{class_sikidom}{Sikidom} osztály. A sikidom osztály egy absztrakt osztály, melynek leszármazottai a különböző (szabályos) síkidomokat reprezentálják, középpontjukkal és egy csúcsukkal.  
+
+
+
+
+{\ttfamily \#include $<$sikidom.\+h$>$}
+
+A Sikidom osztály származási diagramja\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sikidom}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Publikus tagfüggvények}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sikidom_a4dd258f18e4985aab7aa63518f4cb53c}{Sikidom}} (const \mbox{\hyperlink{class_sikidom}{Sikidom}} \&)
+\item 
+\mbox{\hyperlink{class_sikidom}{Sikidom}} \& \mbox{\hyperlink{class_sikidom_a06417917486d1d4786a7bb8a238826ba}{operator=}} (const \mbox{\hyperlink{class_sikidom}{Sikidom}} \&)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_sikidom}{Sikidom} osztaly egyenloseg operatora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pont}{Pont}} \mbox{\hyperlink{class_sikidom_a580ec59df76631c231468b6beb303865}{getkp}} () const
+\item 
+\mbox{\hyperlink{class_pont}{Pont}} \mbox{\hyperlink{class_sikidom_a4c868839f9e4051e8717ddba28fad015}{getp}} () const
+\item 
+bool \mbox{\hyperlink{class_sikidom_aa429648a709a968dacd563d52cb39e44}{Tartalmazza}} (const int) const
+\item 
+\mbox{\hyperlink{class_sikidom}{Sikidom}} \& \mbox{\hyperlink{class_sikidom_afe53eb1a8e5b36fb50b20ce6a296959c}{Mozgat}} (const int \+\_\+x, const int \+\_\+y)
+\begin{DoxyCompactList}\small\item\em Egy sokszög mozgatását teszi lehetővé. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sikidom}{Sikidom}} \& \mbox{\hyperlink{class_sikidom_a68f6ac0248b3176028002b3b45dde07b}{Forgat}} (const double, const \mbox{\hyperlink{class_pont}{Pont}} \&)
+\begin{DoxyCompactList}\small\item\em Egy sokszög forgatását teszi lehetővé. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_sikidom_a6324bee38c590b706057f1d5cc4d9a25}{Terulet}} () const =0
+\begin{DoxyCompactList}\small\item\em A sokszög területét adja vissza. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_sikidom_af85de4b120b39e41487f4fc491857596}{Rajtavan}} (const \mbox{\hyperlink{class_pont}{Pont}} \&) const =0
+\item 
+virtual void \mbox{\hyperlink{class_sikidom_aaf04b7e802aed0f201c8471cd15c75f6}{Write}} (std\+::ostream \&os) const =0
+\item 
+virtual void \mbox{\hyperlink{class_sikidom_a34ea60629f1c57a4b5afa8fdb8b38eb6}{Read}} (std\+::istream \&is)=0
+\item 
+virtual bool \mbox{\hyperlink{class_sikidom_ac8b7bb5618747ad0e3ce258e4fa223a2}{Kivul}} (const std\+::size\+\_\+t r) const =0
+\item 
+virtual \mbox{\hyperlink{class_sikidom_addcc9cfc77c3b6617d36084a10bcf208}{\texorpdfstring{$\sim$}{\string~}\+Sikidom}} ()=0
+\begin{DoxyCompactList}\small\item\em \doxylink{class_sikidom}{Sikidom} osztály destruktora. nincs dinamikusan foglalt adattag, tehát nem kell semmit felszabadítani. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statikus publikus tagfüggvények}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_sikidom}{Sikidom}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_sikidom_a34fe25b652fdf3dcd5c02256fcea31dc}{create\+Sikidom}} (const std\+::string \&type)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_sikidom}{Sikidom} osztály statikus factory függvénye. A függvény létrehoz egy új síkidomot a megadott típus alapján. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Védett tagfüggvények}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sikidom_a200b65570223034da8a84bca5a88f61e}{Sikidom}} (\mbox{\hyperlink{class_pont}{Pont}} \+\_\+kp=\mbox{\hyperlink{class_pont}{Pont}}(0, 0), \mbox{\hyperlink{class_pont}{Pont}} \+\_\+p=\mbox{\hyperlink{class_pont}{Pont}}(0, 0))
+\begin{DoxyCompactList}\small\item\em \doxylink{class_sikidom}{Sikidom} konstruktor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Védett attribútumok}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pont}{Pont}} \mbox{\hyperlink{class_sikidom_a11c6def4b07e4748bfa85947ac9f5591}{kp}}
+\begin{DoxyCompactList}\small\item\em Középpont. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pont}{Pont}} \mbox{\hyperlink{class_sikidom_a139d93aabfc8ae56a115a22343e0ffaa}{p}}
+\begin{DoxyCompactList}\small\item\em A síkidom egy csúcsa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Barátok}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_sikidom_a98b88fcd8d7cda1caccc84514046a7b0}{operator$<$$<$}} (std\+::ostream \&, const \mbox{\hyperlink{class_sikidom}{Sikidom}} \texorpdfstring{$\ast$}{*}const)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_sikidom}{Sikidom} osztály kiíró operátora. A függvény kiírja a síkidomot a megadott output streambe. \end{DoxyCompactList}\item 
+std\+::istream \& \mbox{\hyperlink{class_sikidom_a39346f937ea5f46cdd047b2afa03c34b}{operator$>$$>$}} (std\+::istream \&is, \mbox{\hyperlink{class_sikidom}{Sikidom}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}sikidom)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_sikidom}{Sikidom} osztály beolvasó operátora. A függvény beolvassa a síkidomot a megadott input streamből. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Részletes leírás}
+\doxylink{class_sikidom}{Sikidom} osztály. A sikidom osztály egy absztrakt osztály, melynek leszármazottai a különböző (szabályos) síkidomokat reprezentálják, középpontjukkal és egy csúcsukkal. 
+
+\doxysubsection{Konstruktorok és destruktorok dokumentációja}
+\Hypertarget{class_sikidom_a200b65570223034da8a84bca5a88f61e}\label{class_sikidom_a200b65570223034da8a84bca5a88f61e} 
+\index{Sikidom@{Sikidom}!Sikidom@{Sikidom}}
+\index{Sikidom@{Sikidom}!Sikidom@{Sikidom}}
+\doxysubsubsection{\texorpdfstring{Sikidom()}{Sikidom()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Sikidom\+::\+Sikidom (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pont}{Pont}}}]{\+\_\+kp = {\ttfamily \mbox{\hyperlink{class_pont}{Pont}}(0,~0)},  }\item[{\mbox{\hyperlink{class_pont}{Pont}}}]{\+\_\+p = {\ttfamily \mbox{\hyperlink{class_pont}{Pont}}(0,~0)} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\doxylink{class_sikidom}{Sikidom} konstruktor. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em \+\_\+kp} & középpont. \\
+\hline
+{\em \+\_\+p} & egy csúcs. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sikidom_a4dd258f18e4985aab7aa63518f4cb53c}\label{class_sikidom_a4dd258f18e4985aab7aa63518f4cb53c} 
+\index{Sikidom@{Sikidom}!Sikidom@{Sikidom}}
+\index{Sikidom@{Sikidom}!Sikidom@{Sikidom}}
+\doxysubsubsection{\texorpdfstring{Sikidom()}{Sikidom()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Sikidom\+::\+Sikidom (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_sikidom}{Sikidom}} \&}]{s }\end{DoxyParamCaption})}
+
+\doxylink{class_sikidom}{Sikidom} osztaly Copy konstruktora.
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em s} & Referencia a lemasolando Sikidomra \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sikidom_addcc9cfc77c3b6617d36084a10bcf208}\label{class_sikidom_addcc9cfc77c3b6617d36084a10bcf208} 
+\index{Sikidom@{Sikidom}!````~Sikidom@{\texorpdfstring{$\sim$}{\string~}Sikidom}}
+\index{````~Sikidom@{\texorpdfstring{$\sim$}{\string~}Sikidom}!Sikidom@{Sikidom}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Sikidom()}{\string~Sikidom()}}
+{\footnotesize\ttfamily Sikidom\+::\texorpdfstring{$\sim$}{\string~}\+Sikidom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\doxylink{class_sikidom}{Sikidom} osztály destruktora. nincs dinamikusan foglalt adattag, tehát nem kell semmit felszabadítani. 
+
+
+
+\doxysubsection{Tagfüggvények dokumentációja}
+\Hypertarget{class_sikidom_a34fe25b652fdf3dcd5c02256fcea31dc}\label{class_sikidom_a34fe25b652fdf3dcd5c02256fcea31dc} 
+\index{Sikidom@{Sikidom}!createSikidom@{createSikidom}}
+\index{createSikidom@{createSikidom}!Sikidom@{Sikidom}}
+\doxysubsubsection{\texorpdfstring{createSikidom()}{createSikidom()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sikidom}{Sikidom}} \texorpdfstring{$\ast$}{*} Sikidom\+::create\+Sikidom (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxylink{class_sikidom}{Sikidom} osztály statikus factory függvénye. A függvény létrehoz egy új síkidomot a megadott típus alapján. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em s} & a létrehozandó síkidom típusa szöveg formátumban. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+A létrehozott síkidomra mutató pointer. 
+\end{DoxyReturn}
+\Hypertarget{class_sikidom_a68f6ac0248b3176028002b3b45dde07b}\label{class_sikidom_a68f6ac0248b3176028002b3b45dde07b} 
+\index{Sikidom@{Sikidom}!Forgat@{Forgat}}
+\index{Forgat@{Forgat}!Sikidom@{Sikidom}}
+\doxysubsubsection{\texorpdfstring{Forgat()}{Forgat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sikidom}{Sikidom}} \& Sikidom\+::\+Forgat (\begin{DoxyParamCaption}\item[{const double}]{rad,  }\item[{const \mbox{\hyperlink{class_pont}{Pont}} \&}]{center = {\ttfamily \mbox{\hyperlink{class_pont}{Pont}}(0,~0)} }\end{DoxyParamCaption})}
+
+
+
+Egy sokszög forgatását teszi lehetővé. 
+
+\doxylink{class_sikidom}{Sikidom} osztály forgató függvénye. A függvény elforgatja a síkidomot $<$rad$>$ radiánnal.
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em deg} & forgatás mértéke, fokban.\\
+\hline
+{\em rad} & forgatás mértéke, radiánban. \\
+\hline
+{\em center} & a forgatás középpontja. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+Referencia a forgatott síkidomra. 
+\end{DoxyReturn}
+\Hypertarget{class_sikidom_a580ec59df76631c231468b6beb303865}\label{class_sikidom_a580ec59df76631c231468b6beb303865} 
+\index{Sikidom@{Sikidom}!getkp@{getkp}}
+\index{getkp@{getkp}!Sikidom@{Sikidom}}
+\doxysubsubsection{\texorpdfstring{getkp()}{getkp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pont}{Pont}} Sikidom\+::getkp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_sikidom_a4c868839f9e4051e8717ddba28fad015}\label{class_sikidom_a4c868839f9e4051e8717ddba28fad015} 
+\index{Sikidom@{Sikidom}!getp@{getp}}
+\index{getp@{getp}!Sikidom@{Sikidom}}
+\doxysubsubsection{\texorpdfstring{getp()}{getp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pont}{Pont}} Sikidom\+::getp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_sikidom_ac8b7bb5618747ad0e3ce258e4fa223a2}\label{class_sikidom_ac8b7bb5618747ad0e3ce258e4fa223a2} 
+\index{Sikidom@{Sikidom}!Kivul@{Kivul}}
+\index{Kivul@{Kivul}!Sikidom@{Sikidom}}
+\doxysubsubsection{\texorpdfstring{Kivul()}{Kivul()}}
+{\footnotesize\ttfamily virtual bool Sikidom\+::\+Kivul (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{r }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Megvalósítják a következők\+: \mbox{\hyperlink{class_kor_ad3800ae48997f4081af601a8361ebc2f}{Kor}}, \mbox{\hyperlink{class_haromszog_a9ed79902d5a11c7d8d93c935ae364741}{Haromszog}} és \mbox{\hyperlink{class_negyzet_aef68e2870b19134660c203bb71b284bb}{Negyzet}}.
+
+\Hypertarget{class_sikidom_afe53eb1a8e5b36fb50b20ce6a296959c}\label{class_sikidom_afe53eb1a8e5b36fb50b20ce6a296959c} 
+\index{Sikidom@{Sikidom}!Mozgat@{Mozgat}}
+\index{Mozgat@{Mozgat}!Sikidom@{Sikidom}}
+\doxysubsubsection{\texorpdfstring{Mozgat()}{Mozgat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sikidom}{Sikidom}} \& Sikidom\+::\+Mozgat (\begin{DoxyParamCaption}\item[{const int}]{\+\_\+x,  }\item[{const int}]{\+\_\+y }\end{DoxyParamCaption})}
+
+
+
+Egy sokszög mozgatását teszi lehetővé. 
+
+\doxylink{class_sikidom}{Sikidom} osztály mozgató függvénye. A függvény elmozgatja a síkidomot az x és y értékekkel.
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em \+\_\+x} & x tengely irányú mozgatás mértéke. \\
+\hline
+{\em \+\_\+y} & y tengely irányú mozgatás mértéke.\\
+\hline
+{\em \+\_\+x} & x tengely irányú mozgatás mértéke. \\
+\hline
+{\em \+\_\+y} & y tengely irányú mozgatás mértéke. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+Referencia a mozgatott síkidomra. 
+\end{DoxyReturn}
+\Hypertarget{class_sikidom_a06417917486d1d4786a7bb8a238826ba}\label{class_sikidom_a06417917486d1d4786a7bb8a238826ba} 
+\index{Sikidom@{Sikidom}!operator=@{operator=}}
+\index{operator=@{operator=}!Sikidom@{Sikidom}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sikidom}{Sikidom}} \& Sikidom\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_sikidom}{Sikidom}} \&}]{s }\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_sikidom}{Sikidom} osztaly egyenloseg operatora. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em s} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+Az egymásután fűzhető műveletek miatt \doxylink{class_sikidom}{Sikidom} referencia. 
+\end{DoxyReturn}
+\Hypertarget{class_sikidom_af85de4b120b39e41487f4fc491857596}\label{class_sikidom_af85de4b120b39e41487f4fc491857596} 
+\index{Sikidom@{Sikidom}!Rajtavan@{Rajtavan}}
+\index{Rajtavan@{Rajtavan}!Sikidom@{Sikidom}}
+\doxysubsubsection{\texorpdfstring{Rajtavan()}{Rajtavan()}}
+{\footnotesize\ttfamily virtual bool Sikidom\+::\+Rajtavan (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_pont}{Pont}} \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Megvalósítják a következők\+: \mbox{\hyperlink{class_kor_af617129564e4a8904676e6edccc7d18e}{Kor}}, \mbox{\hyperlink{class_haromszog_adcfb90053414b3c447f83c2c9be07f18}{Haromszog}} és \mbox{\hyperlink{class_negyzet_a1e8032e6f035f0c356f3399f16ee82d2}{Negyzet}}.
+
+\Hypertarget{class_sikidom_a34ea60629f1c57a4b5afa8fdb8b38eb6}\label{class_sikidom_a34ea60629f1c57a4b5afa8fdb8b38eb6} 
+\index{Sikidom@{Sikidom}!Read@{Read}}
+\index{Read@{Read}!Sikidom@{Sikidom}}
+\doxysubsubsection{\texorpdfstring{Read()}{Read()}}
+{\footnotesize\ttfamily virtual void Sikidom\+::\+Read (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Megvalósítják a következők\+: \mbox{\hyperlink{class_kor_a756b9b985f73fa29e598319b850630c0}{Kor}}, \mbox{\hyperlink{class_haromszog_a0d329d2d30a6d3455936c85d79a6cf5e}{Haromszog}} és \mbox{\hyperlink{class_negyzet_ad6dc4a5f2183be90c6d8be42240df025}{Negyzet}}.
+
+\Hypertarget{class_sikidom_aa429648a709a968dacd563d52cb39e44}\label{class_sikidom_aa429648a709a968dacd563d52cb39e44} 
+\index{Sikidom@{Sikidom}!Tartalmazza@{Tartalmazza}}
+\index{Tartalmazza@{Tartalmazza}!Sikidom@{Sikidom}}
+\doxysubsubsection{\texorpdfstring{Tartalmazza()}{Tartalmazza()}}
+{\footnotesize\ttfamily bool Sikidom\+::\+Tartalmazza (\begin{DoxyParamCaption}\item[{const int}]{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_sikidom_a6324bee38c590b706057f1d5cc4d9a25}\label{class_sikidom_a6324bee38c590b706057f1d5cc4d9a25} 
+\index{Sikidom@{Sikidom}!Terulet@{Terulet}}
+\index{Terulet@{Terulet}!Sikidom@{Sikidom}}
+\doxysubsubsection{\texorpdfstring{Terulet()}{Terulet()}}
+{\footnotesize\ttfamily virtual double Sikidom\+::\+Terulet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+A sokszög területét adja vissza. 
+
+
+
+Megvalósítják a következők\+: \mbox{\hyperlink{class_kor_acd284f1cc13d311534eac606a7b3c17b}{Kor}}, \mbox{\hyperlink{class_haromszog_a1909d9326f45b6358e912b8c303a67be}{Haromszog}} és \mbox{\hyperlink{class_negyzet_a1d77a4d0f43908f6169854f431d1a1aa}{Negyzet}}.
+
+\Hypertarget{class_sikidom_aaf04b7e802aed0f201c8471cd15c75f6}\label{class_sikidom_aaf04b7e802aed0f201c8471cd15c75f6} 
+\index{Sikidom@{Sikidom}!Write@{Write}}
+\index{Write@{Write}!Sikidom@{Sikidom}}
+\doxysubsubsection{\texorpdfstring{Write()}{Write()}}
+{\footnotesize\ttfamily virtual void Sikidom\+::\+Write (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Megvalósítják a következők\+: \mbox{\hyperlink{class_kor_a308f720da90acfa1e86396148f67a753}{Kor}}, \mbox{\hyperlink{class_haromszog_a10c33ed799ebac2aa0fbc37a9f6d9e88}{Haromszog}} és \mbox{\hyperlink{class_negyzet_af92d375645d8f10d2f74c7ddadf91dc9}{Negyzet}}.
+
+
+
+\doxysubsection{Barát és kapcsolódó függvények dokumentációja}
+\Hypertarget{class_sikidom_a98b88fcd8d7cda1caccc84514046a7b0}\label{class_sikidom_a98b88fcd8d7cda1caccc84514046a7b0} 
+\index{Sikidom@{Sikidom}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Sikidom@{Sikidom}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_sikidom}{Sikidom}} \texorpdfstring{$\ast$}{*} const}]{sikidom }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxylink{class_sikidom}{Sikidom} osztály kiíró operátora. A függvény kiírja a síkidomot a megadott output streambe. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em os} & a kimeneti stream. \\
+\hline
+{\em sikidom} & a kiírandó síkidomra mutató pointer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+A kimeneti stream referenciája. 
+\end{DoxyReturn}
+\Hypertarget{class_sikidom_a39346f937ea5f46cdd047b2afa03c34b}\label{class_sikidom_a39346f937ea5f46cdd047b2afa03c34b} 
+\index{Sikidom@{Sikidom}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Sikidom@{Sikidom}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily std\+::istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\mbox{\hyperlink{class_sikidom}{Sikidom}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{sikidom }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxylink{class_sikidom}{Sikidom} osztály beolvasó operátora. A függvény beolvassa a síkidomot a megadott input streamből. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em is} & a bemeneti stream. \\
+\hline
+{\em sikidom} & a beolvasott síkidomra mutató pointer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+A bemeneti stream referenciája. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Adattagok dokumentációja}
+\Hypertarget{class_sikidom_a11c6def4b07e4748bfa85947ac9f5591}\label{class_sikidom_a11c6def4b07e4748bfa85947ac9f5591} 
+\index{Sikidom@{Sikidom}!kp@{kp}}
+\index{kp@{kp}!Sikidom@{Sikidom}}
+\doxysubsubsection{\texorpdfstring{kp}{kp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pont}{Pont}} Sikidom\+::kp\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Középpont. 
+
+\Hypertarget{class_sikidom_a139d93aabfc8ae56a115a22343e0ffaa}\label{class_sikidom_a139d93aabfc8ae56a115a22343e0ffaa} 
+\index{Sikidom@{Sikidom}!p@{p}}
+\index{p@{p}!Sikidom@{Sikidom}}
+\doxysubsubsection{\texorpdfstring{p}{p}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pont}{Pont}} Sikidom\+::p\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+A síkidom egy csúcsa. 
+
+
+
+Ez a dokumentáció az osztályról a következő fájlok alapján készült\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{sikidom_8h}{sikidom.\+h}}\item 
+src/\mbox{\hyperlink{sikidom_8cpp}{sikidom.\+cpp}}\end{DoxyCompactItemize}

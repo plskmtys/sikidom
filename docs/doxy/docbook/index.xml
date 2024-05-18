@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="hu">
+    <info>
+    <title>sikidom</title>
+    </info>
+<chapter>
+    <title>Osztályok dokumentációja</title>
+    <xi:include href="class_tomb_1_1const__iterator.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_haromszog.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_tomb_1_1iterator.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_kor.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_negyzet.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_pont.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_sikidom.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_tomb.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Fájlok dokumentációja</title>
+    <xi:include href="pont_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="pont_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="pont_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="sikidom_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="sikidom_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="sikidom_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="tomb_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="tomb_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

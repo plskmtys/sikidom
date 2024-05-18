@@ -1,0 +1,241 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structgtest__lite_1_1_test" xml:lang="hu">
+<title>gtest_lite::Test struktúrareferencia</title>
+<indexterm><primary>gtest_lite::Test</primary></indexterm>
+<para>
+<computeroutput>#include &lt;gtest_lite.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Publikus tagfüggvények    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_structgtest__lite_1_1_test_1a2227b70fcc5dfb3c326bf117dd8f7e79">begin</link> (const char *n)</para>
+
+<para>Teszt kezdete. </para>
+</listitem>
+            <listitem><para>std::ostream &amp; <link linkend="_structgtest__lite_1_1_test_1a86d41ffed05f53653fb27b918764a44e">end</link> (bool memchk=false)</para>
+
+<para>Teszt vége. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_structgtest__lite_1_1_test_1aadbfd0f53c56d975f793602996631195">fail</link> ()</para>
+</listitem>
+            <listitem><para>std::ostream &amp; <link linkend="_structgtest__lite_1_1_test_1a2de71946be5b3dc7f03c99868785c1de">expect</link> (bool st, const char *file, int line, const char *expr, bool pr=false)</para>
+
+<para>Eredményt adminisztráló tagfüggvény True a jó eset. </para>
+</listitem>
+            <listitem><para><link linkend="_structgtest__lite_1_1_test_1a5a879233c2aa110626668c06140f6e71">~Test</link> ()</para>
+
+<para>Destruktor. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Statikus publikus tagfüggvények    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_structgtest__lite_1_1_test">Test</link> &amp; <link linkend="_structgtest__lite_1_1_test_1aaece9ac882e0b17b295cceb7e3ca10ce">getTest</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Publikus attribútumok    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_structgtest__lite_1_1_test_1a6da678d43b72b9e2bff1c99e1d3c48f5">sum</link></para>
+
+<para>tesztek számlálója </para>
+</listitem>
+            <listitem><para>int <link linkend="_structgtest__lite_1_1_test_1a4fb6ee7bd903717d970e3f0504cdeeab">failed</link></para>
+
+<para>hibás tesztek </para>
+</listitem>
+            <listitem><para>int <link linkend="_structgtest__lite_1_1_test_1a91d9c63794d2b9b49e0c48d897208560">ablocks</link></para>
+
+<para>allokált blokkok száma </para>
+</listitem>
+            <listitem><para>bool <link linkend="_structgtest__lite_1_1_test_1a59a9a7f0ef7867af604ce5678f7a2c13">status</link></para>
+
+<para>éppen futó teszt státusza </para>
+</listitem>
+            <listitem><para>bool <link linkend="_structgtest__lite_1_1_test_1a1145ceb335a60a808b7b4d5d1624b2a5">tmp</link></para>
+
+<para>temp a kivételkezeléshez; </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_structgtest__lite_1_1_test_1a8d495a42580e3ae337f9c4982136b700">name</link></para>
+
+<para>éppen futó teszt neve </para>
+</listitem>
+            <listitem><para>std::fstream <link linkend="_structgtest__lite_1_1_test_1af4784302d78bb004bcb20b7f75ec06c3">null</link></para>
+
+<para>nyelő, ha nem kell kiírni semmit </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Privát tagfüggvények    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_structgtest__lite_1_1_test_1a99fb3f2338e4e0512beb6e19c5409078">Test</link> ()</para>
+
+<para>singleton minta miatt </para>
+</listitem>
+            <listitem><para><link linkend="_structgtest__lite_1_1_test_1aad083ed9e389aeac2d526460ac301c7a">Test</link> (const <link linkend="_structgtest__lite_1_1_test">Test</link> &amp;)</para>
+</listitem>
+            <listitem><para>void <link linkend="_structgtest__lite_1_1_test_1a35faf2d45ab88d096f0eb25ee5b80b13">operator=</link> (const <link linkend="_structgtest__lite_1_1_test">Test</link> &amp;)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Részletes leírás</title>
+
+<para>Tesztek állapotát tároló osztály. Egyetlen egy statikus példány keletkezik, aminek a destruktora a futás végén hívódik meg. </para>
+</section>
+<section>
+<title>Konstruktorok és destruktorok dokumentációja</title>
+<anchor xml:id="_structgtest__lite_1_1_test_1a99fb3f2338e4e0512beb6e19c5409078"/><section>
+    <title>Test()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Test</primary><secondary>gtest_lite::Test</secondary></indexterm>
+<indexterm><primary>gtest_lite::Test</primary><secondary>Test</secondary></indexterm>
+<para><computeroutput>gtest_lite::Test::Test ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>singleton minta miatt </para>
+</para>
+</section>
+<anchor xml:id="_structgtest__lite_1_1_test_1aad083ed9e389aeac2d526460ac301c7a"/><section>
+    <title>Test()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Test</primary><secondary>gtest_lite::Test</secondary></indexterm>
+<indexterm><primary>gtest_lite::Test</primary><secondary>Test</secondary></indexterm>
+<para><computeroutput>gtest_lite::Test::Test (const <link linkend="_structgtest__lite_1_1_test">Test</link> &amp; )<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structgtest__lite_1_1_test_1a5a879233c2aa110626668c06140f6e71"/><section>
+    <title>~Test()</title>
+<indexterm><primary>~Test</primary><secondary>gtest_lite::Test</secondary></indexterm>
+<indexterm><primary>gtest_lite::Test</primary><secondary>~Test</secondary></indexterm>
+<para><computeroutput>gtest_lite::Test::~Test ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Destruktor. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Tagfüggvények dokumentációja</title>
+<anchor xml:id="_structgtest__lite_1_1_test_1a2227b70fcc5dfb3c326bf117dd8f7e79"/><section>
+    <title>begin()</title>
+<indexterm><primary>begin</primary><secondary>gtest_lite::Test</secondary></indexterm>
+<indexterm><primary>gtest_lite::Test</primary><secondary>begin</secondary></indexterm>
+<para><computeroutput>void gtest_lite::Test::begin (const char * n)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Teszt kezdete. </para>
+</para>
+</section>
+<anchor xml:id="_structgtest__lite_1_1_test_1a86d41ffed05f53653fb27b918764a44e"/><section>
+    <title>end()</title>
+<indexterm><primary>end</primary><secondary>gtest_lite::Test</secondary></indexterm>
+<indexterm><primary>gtest_lite::Test</primary><secondary>end</secondary></indexterm>
+<para><computeroutput>std::ostream &amp; gtest_lite::Test::end (bool memchk = <computeroutput>false</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Teszt vége. </para>
+</para>
+</section>
+<anchor xml:id="_structgtest__lite_1_1_test_1a2de71946be5b3dc7f03c99868785c1de"/><section>
+    <title>expect()</title>
+<indexterm><primary>expect</primary><secondary>gtest_lite::Test</secondary></indexterm>
+<indexterm><primary>gtest_lite::Test</primary><secondary>expect</secondary></indexterm>
+<para><computeroutput>std::ostream &amp; gtest_lite::Test::expect (bool st, const char * file, int line, const char * expr, bool pr = <computeroutput>false</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Eredményt adminisztráló tagfüggvény True a jó eset. </para>
+</para>
+A függvény hívó gráfja:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="structgtest__lite_1_1_test_a2de71946be5b3dc7f03c99868785c1de_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_structgtest__lite_1_1_test_1aadbfd0f53c56d975f793602996631195"/><section>
+    <title>fail()</title>
+<indexterm><primary>fail</primary><secondary>gtest_lite::Test</secondary></indexterm>
+<indexterm><primary>gtest_lite::Test</primary><secondary>fail</secondary></indexterm>
+<para><computeroutput>bool gtest_lite::Test::fail ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structgtest__lite_1_1_test_1aaece9ac882e0b17b295cceb7e3ca10ce"/><section>
+    <title>getTest()</title>
+<indexterm><primary>getTest</primary><secondary>gtest_lite::Test</secondary></indexterm>
+<indexterm><primary>gtest_lite::Test</primary><secondary>getTest</secondary></indexterm>
+<para><computeroutput>static <link linkend="_structgtest__lite_1_1_test">Test</link> &amp; gtest_lite::Test::getTest ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>
+<para>&lt; egyedüli (singleton) példány</para>
+</section>
+<anchor xml:id="_structgtest__lite_1_1_test_1a35faf2d45ab88d096f0eb25ee5b80b13"/><section>
+    <title>operator=()</title>
+<indexterm><primary>operator=</primary><secondary>gtest_lite::Test</secondary></indexterm>
+<indexterm><primary>gtest_lite::Test</primary><secondary>operator=</secondary></indexterm>
+<para><computeroutput>void gtest_lite::Test::operator= (const <link linkend="_structgtest__lite_1_1_test">Test</link> &amp; )<computeroutput>[private]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Adattagok dokumentációja</title>
+<anchor xml:id="_structgtest__lite_1_1_test_1a91d9c63794d2b9b49e0c48d897208560"/><section>
+    <title>ablocks</title>
+<indexterm><primary>ablocks</primary><secondary>gtest_lite::Test</secondary></indexterm>
+<indexterm><primary>gtest_lite::Test</primary><secondary>ablocks</secondary></indexterm>
+<para><computeroutput>int gtest_lite::Test::ablocks</computeroutput></para><para>
+
+<para>allokált blokkok száma </para>
+</para>
+</section>
+<anchor xml:id="_structgtest__lite_1_1_test_1a4fb6ee7bd903717d970e3f0504cdeeab"/><section>
+    <title>failed</title>
+<indexterm><primary>failed</primary><secondary>gtest_lite::Test</secondary></indexterm>
+<indexterm><primary>gtest_lite::Test</primary><secondary>failed</secondary></indexterm>
+<para><computeroutput>int gtest_lite::Test::failed</computeroutput></para><para>
+
+<para>hibás tesztek </para>
+</para>
+</section>
+<anchor xml:id="_structgtest__lite_1_1_test_1a8d495a42580e3ae337f9c4982136b700"/><section>
+    <title>name</title>
+<indexterm><primary>name</primary><secondary>gtest_lite::Test</secondary></indexterm>
+<indexterm><primary>gtest_lite::Test</primary><secondary>name</secondary></indexterm>
+<para><computeroutput>std::string gtest_lite::Test::name</computeroutput></para><para>
+
+<para>éppen futó teszt neve </para>
+</para>
+</section>
+<anchor xml:id="_structgtest__lite_1_1_test_1af4784302d78bb004bcb20b7f75ec06c3"/><section>
+    <title>null</title>
+<indexterm><primary>null</primary><secondary>gtest_lite::Test</secondary></indexterm>
+<indexterm><primary>gtest_lite::Test</primary><secondary>null</secondary></indexterm>
+<para><computeroutput>std::fstream gtest_lite::Test::null</computeroutput></para><para>
+
+<para>nyelő, ha nem kell kiírni semmit </para>
+</para>
+</section>
+<anchor xml:id="_structgtest__lite_1_1_test_1a59a9a7f0ef7867af604ce5678f7a2c13"/><section>
+    <title>status</title>
+<indexterm><primary>status</primary><secondary>gtest_lite::Test</secondary></indexterm>
+<indexterm><primary>gtest_lite::Test</primary><secondary>status</secondary></indexterm>
+<para><computeroutput>bool gtest_lite::Test::status</computeroutput></para><para>
+
+<para>éppen futó teszt státusza </para>
+</para>
+</section>
+<anchor xml:id="_structgtest__lite_1_1_test_1a6da678d43b72b9e2bff1c99e1d3c48f5"/><section>
+    <title>sum</title>
+<indexterm><primary>sum</primary><secondary>gtest_lite::Test</secondary></indexterm>
+<indexterm><primary>gtest_lite::Test</primary><secondary>sum</secondary></indexterm>
+<para><computeroutput>int gtest_lite::Test::sum</computeroutput></para><para>
+
+<para>tesztek számlálója </para>
+</para>
+</section>
+<anchor xml:id="_structgtest__lite_1_1_test_1a1145ceb335a60a808b7b4d5d1624b2a5"/><section>
+    <title>tmp</title>
+<indexterm><primary>tmp</primary><secondary>gtest_lite::Test</secondary></indexterm>
+<indexterm><primary>gtest_lite::Test</primary><secondary>tmp</secondary></indexterm>
+<para><computeroutput>bool gtest_lite::Test::tmp</computeroutput></para><para>
+
+<para>temp a kivételkezeléshez; </para>
+</para>
+</section>
+<para>
+Ez a dokumentáció a struktúráról a következő fájl alapján készült:</para>
+C:/Users/matyas/code/sikidom/src/<link linkend="_gtest__lite_8h">gtest_lite.h</link></section>
+</section>

@@ -1,0 +1,48 @@
+.TH "_Is_Types< F, T >" 3 "Version 1.0.0" "sikidom" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+_Is_Types< F, T > \- Segédsablon típuskonverzió futás közbeni ellenőrzésere\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <gtest_lite\&.h>\fP
+.SS "Statikus publikus tagfüggvények"
+
+.in +1c
+.ti -1c
+.RI "template<typename D > static char(& \fBf\fP (D))[1]"
+.br
+.ti -1c
+.RI "template<typename D > static char(& \fBf\fP (\&.\&.\&.))[2]"
+.br
+.in -1c
+.SS "Statikus publikus attribútumok"
+
+.in +1c
+.ti -1c
+.RI "\fBstatic\fP \fBbool\fP \fBconst\fP \fBconvertable\fP = \fBsizeof\fP(\fBf\fP<\fBT\fP>(\fBF\fP())) == 1"
+.br
+.in -1c
+.SH "Részletes leírás"
+.PP 
+
+.SS "template<\fBtypename\fP \fBF\fP, \fBtypename\fP \fBT\fP>
+.br
+struct _Is_Types< F, T >"Segédsablon típuskonverzió futás közbeni ellenőrzésere\&. 
+.SH "Tagfüggvények dokumentációja"
+.PP 
+.SS "template<typename F , typename T > template<typename D > static char(& \fB_Is_Types\fP< F, T >::f ( \&.\&.\&.))[2]\fR [static]\fP"
+
+.SS "template<typename F , typename T > template<typename D > static char(& \fB_Is_Types\fP< F, T >::f (D))[1]\fR [static]\fP"
+
+.SH "Adattagok dokumentációja"
+.PP 
+.SS "template<\fBtypename\fP \fBF\fP , \fBtypename\fP \fBT\fP > \fBbool\fP \fBconst\fP \fB_Is_Types\fP< \fBF\fP, \fBT\fP >::convertable = \fBsizeof\fP(\fBf\fP<\fBT\fP>(\fBF\fP())) == 1\fR [static]\fP"
+
+
+.SH "Szerző"
+.PP 
+Ezt a dokumentációt a Doxygen készítette a sikidom projekthez a forráskódból\&.

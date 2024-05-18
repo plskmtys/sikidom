@@ -1,0 +1,77 @@
+\doxysection{src/pont.cpp fájlreferencia}
+\hypertarget{pont_8cpp}{}\label{pont_8cpp}\index{src/pont.cpp@{src/pont.cpp}}
+{\ttfamily \#include "{}pont.\+h"{}}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+\doxysubsubsection*{Függvények}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{pont_8cpp_afeecd031a14fe16f1b4fbfb0e637ff90}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_pont}{Pont}} \&p)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_pont}{Pont} osztály kiíró operátora. \end{DoxyCompactList}\item 
+std\+::istream \& \mbox{\hyperlink{pont_8cpp_aedb36c869d7dc38e9e5a636ac722d207}{operator$>$$>$}} (std\+::istream \&is, \mbox{\hyperlink{class_pont}{Pont}} \&p)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_pont}{Pont} osztály beolvasó operátora. formátumok\+: "{}(x,y)"{} vagy "{}x,y"{}. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{pont_8cpp_aca2e599648455a1f472dae8888f68663}{dst}} (const \mbox{\hyperlink{class_pont}{Pont}} \&a, const \mbox{\hyperlink{class_pont}{Pont}} \&b)
+\begin{DoxyCompactList}\small\item\em két pont közötti távolság számító függvény. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Függvények dokumentációja}
+\Hypertarget{pont_8cpp_aca2e599648455a1f472dae8888f68663}\label{pont_8cpp_aca2e599648455a1f472dae8888f68663} 
+\index{pont.cpp@{pont.cpp}!dst@{dst}}
+\index{dst@{dst}!pont.cpp@{pont.cpp}}
+\doxysubsubsection{\texorpdfstring{dst()}{dst()}}
+{\footnotesize\ttfamily double dst (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_pont}{Pont}} \&}]{a,  }\item[{const \mbox{\hyperlink{class_pont}{Pont}} \&}]{b }\end{DoxyParamCaption})}
+
+
+
+két pont közötti távolság számító függvény. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em a} & egyik pont \\
+\hline
+{\em b} & másik pont \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+a két pont távolsága 
+\end{DoxyReturn}
+\Hypertarget{pont_8cpp_afeecd031a14fe16f1b4fbfb0e637ff90}\label{pont_8cpp_afeecd031a14fe16f1b4fbfb0e637ff90} 
+\index{pont.cpp@{pont.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!pont.cpp@{pont.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_pont}{Pont}} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_pont}{Pont} osztály kiíró operátora. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em os} & output stream referencia \\
+\hline
+{\em p} & a kiírandó pont \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+output stream referencia 
+\end{DoxyReturn}
+\Hypertarget{pont_8cpp_aedb36c869d7dc38e9e5a636ac722d207}\label{pont_8cpp_aedb36c869d7dc38e9e5a636ac722d207} 
+\index{pont.cpp@{pont.cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!pont.cpp@{pont.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily std\+::istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\mbox{\hyperlink{class_pont}{Pont}} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_pont}{Pont} osztály beolvasó operátora. formátumok\+: "{}(x,y)"{} vagy "{}x,y"{}. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em is} & input stream referencia \\
+\hline
+{\em p} & a beolvasandó pont \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+input stream referencia 
+\end{DoxyReturn}

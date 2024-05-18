@@ -1,0 +1,307 @@
+.TH "Tomb< T >" 3 "Version 1.0.0" "sikidom" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Tomb< T > \- Generikus Dinamikus tömb osztály\&. A \fBTomb\fP osztály egy dinamikus tömböt reprezentál, melynek mérete a felhasználó által nem korlátozott\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <tomb\&.hpp>\fP
+.SS "Osztályok"
+
+.in +1c
+.ti -1c
+.RI "class \fBconst_iterator\fP"
+.br
+.RI "\fBconst_iterator\fP osztály\&. Az \fBconst_iterator\fP osztály a \fBTomb\fP osztály const_iteratora\&. "
+.ti -1c
+.RI "class \fBiterator\fP"
+.br
+.RI "iterator osztály\&. Az iterator osztály a \fBTomb\fP osztály iteratora\&. "
+.in -1c
+.SS "Publikus tagfüggvények"
+
+.in +1c
+.ti -1c
+.RI "\fBTomb\fP ()"
+.br
+.RI "\fBTomb\fP osztály konstruktora\&. A konstruktor létrehoz egy üres tömböt, 1 kapacitással\&. "
+.ti -1c
+.RI "\fBiterator\fP \fBbegin\fP ()"
+.br
+.RI "begin iterator\&. "
+.ti -1c
+.RI "\fBiterator\fP \fBend\fP ()"
+.br
+.RI "end iterator\&. "
+.ti -1c
+.RI "\fBconst_iterator\fP \fBbegin\fP () const"
+.br
+.RI "begin \fBconst_iterator\fP\&. "
+.ti -1c
+.RI "\fBconst_iterator\fP \fBend\fP () const"
+.br
+.RI "end \fBconst_iterator\fP\&. "
+.ti -1c
+.RI "size_t \fBsize\fP () const"
+.br
+.RI "\fBTomb\fP méretét visszaado függvény\&. "
+.ti -1c
+.RI "size_t \fBcapacity\fP () const"
+.br
+.RI "\fBTomb\fP kapacitásat visszaado függvény\&. "
+.ti -1c
+.RI "T & \fBat\fP (const size_t i)"
+.br
+.RI "\fBTomb\fP at függvénye\&. "
+.ti -1c
+.RI "T & \fBoperator[]\fP (const size_t i)"
+.br
+.RI "\fBTomb\fP operator[] függvénye\&. "
+.ti -1c
+.RI "const T & \fBat\fP (const size_t i) const"
+.br
+.RI "\fBTomb\fP const at függvénye\&. "
+.ti -1c
+.RI "const T & \fBoperator[]\fP (const size_t i) const"
+.br
+.RI "\fBTomb\fP const operator[] függvénye\&. "
+.ti -1c
+.RI "void \fBresize\fP (size_t newSize)"
+.br
+.RI "\fBTomb\fP resize függvénye\&. A függvény a tömb méretét növeli a megadott értékkel\&. "
+.ti -1c
+.RI "void \fBpush_back\fP (T value)"
+.br
+.RI "\fBTomb\fP push_back függvénye\&. A függvény a tömb végére fűz egy elemet\&. "
+.ti -1c
+.RI "int \fBfind\fP (const T &value) const"
+.br
+.RI "\fBTomb\fP find függvénye\&. A függvény megkeresi az első olyan elemet, mely megegyezik az értékkel\&. "
+.ti -1c
+.RI "virtual \fB~Tomb\fP ()"
+.br
+.RI "\fBTomb\fP destruktora\&. A destruktor felszabadítja a tömbot\&. "
+.in -1c
+.SS "Privát attribútumok"
+
+.in +1c
+.ti -1c
+.RI "T * \fBt\fP"
+.br
+.RI "A dinamikusan foglalt tömb elejére mutató pointer\&. "
+.ti -1c
+.RI "size_t \fBcurrentSize\fP"
+.br
+.RI "A tömb aktuális mérete\&. "
+.ti -1c
+.RI "size_t \fBcurrentCapacity\fP"
+.br
+.RI "A tömb aktuális kapacitása\&. "
+.in -1c
+.SH "Részletes leírás"
+.PP 
+
+.SS "template<class T>
+.br
+class Tomb< T >"Generikus Dinamikus tömb osztály\&. A \fBTomb\fP osztály egy dinamikus tömböt reprezentál, melynek mérete a felhasználó által nem korlátozott\&. 
+.SH "Konstruktorok és destruktorok dokumentációja"
+.PP 
+.SS "template<class T > \fBTomb\fP< T >\fB::Tomb\fP ()\fR [inline]\fP"
+
+.PP
+\fBTomb\fP osztály konstruktora\&. A konstruktor létrehoz egy üres tömböt, 1 kapacitással\&. 
+.SS "template<class T > virtual \fBTomb\fP< T >::~\fBTomb\fP ()\fR [inline]\fP, \fR [virtual]\fP"
+
+.PP
+\fBTomb\fP destruktora\&. A destruktor felszabadítja a tömbot\&. 
+.SH "Tagfüggvények dokumentációja"
+.PP 
+.SS "template<class T > T & \fBTomb\fP< T >::at (const size_t i)\fR [inline]\fP"
+
+.PP
+\fBTomb\fP at függvénye\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIi\fP Az index, ahol lévő az elemet szeretnénk elérni\&. 
+.RE
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+Az i-edik elem\&. 
+.RE
+.PP
+
+.SS "template<class T > const T & \fBTomb\fP< T >::at (const size_t i) const\fR [inline]\fP"
+
+.PP
+\fBTomb\fP const at függvénye\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIi\fP Az index, ahol lévő elemet szeretnénk elérni\&. 
+.RE
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+const referencia az i-edik elemre\&. 
+.RE
+.PP
+
+.SS "template<class T > \fBiterator\fP \fBTomb\fP< T >::begin ()\fR [inline]\fP"
+
+.PP
+begin iterator\&. 
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+Az első elemre mutató iterator\&. 
+.RE
+.PP
+
+.SS "template<class T > \fBconst_iterator\fP \fBTomb\fP< T >::begin () const\fR [inline]\fP"
+
+.PP
+begin \fBconst_iterator\fP\&. 
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+Az első elemre mutató \fBconst_iterator\fP\&. 
+.RE
+.PP
+
+.SS "template<class T > size_t \fBTomb\fP< T >::capacity () const\fR [inline]\fP"
+
+.PP
+\fBTomb\fP kapacitásat visszaado függvény\&. 
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+A tömb kapacitása\&. 
+.RE
+.PP
+
+.SS "template<class T > \fBiterator\fP \fBTomb\fP< T >::end ()\fR [inline]\fP"
+
+.PP
+end iterator\&. 
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+Az utolsó elem után mutató iterator\&. 
+.RE
+.PP
+
+.SS "template<class T > \fBconst_iterator\fP \fBTomb\fP< T >::end () const\fR [inline]\fP"
+
+.PP
+end \fBconst_iterator\fP\&. 
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+Az utolsó elem után mutató \fBconst_iterator\fP\&. 
+.RE
+.PP
+
+.SS "template<class T > int \fBTomb\fP< T >::find (const T & value) const\fR [inline]\fP"
+
+.PP
+\fBTomb\fP find függvénye\&. A függvény megkeresi az első olyan elemet, mely megegyezik az értékkel\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIvalue\fP Az érték, melyet keresünk\&. 
+.RE
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+Az első olyan elem indexe, mely megegyezik az értékkel, ha nincs ilyen, akkor -1\&. 
+.RE
+.PP
+
+.SS "template<class T > T & \fBTomb\fP< T >::operator[] (const size_t i)\fR [inline]\fP"
+
+.PP
+\fBTomb\fP operator[] függvénye\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIi\fP Az index, ahol lévő elemet szeretnénk elérni\&. 
+.RE
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+Az i-edik elem\&. 
+.RE
+.PP
+
+.SS "template<class T > const T & \fBTomb\fP< T >::operator[] (const size_t i) const\fR [inline]\fP"
+
+.PP
+\fBTomb\fP const operator[] függvénye\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIi\fP Az index, ahol lévő elemet szeretnénk elérni\&. 
+.RE
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+const referencia az i-edik elemre\&. 
+.RE
+.PP
+
+.SS "template<class T > void \fBTomb\fP< T >::push_back (T value)\fR [inline]\fP"
+
+.PP
+\fBTomb\fP push_back függvénye\&. A függvény a tömb végére fűz egy elemet\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIvalue\fP Az érték, melyet a tömb végére fűzünk\&. 
+.RE
+.PP
+
+.SS "template<class T > void \fBTomb\fP< T >::resize (size_t newSize)\fR [inline]\fP"
+
+.PP
+\fBTomb\fP resize függvénye\&. A függvény a tömb méretét növeli a megadott értékkel\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fInewSize\fP A novelendo meret\&. 
+.RE
+.PP
+
+.SS "template<class T > size_t \fBTomb\fP< T >::size () const\fR [inline]\fP"
+
+.PP
+\fBTomb\fP méretét visszaado függvény\&. 
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+A tömb mérete\&. 
+.RE
+.PP
+
+.SH "Adattagok dokumentációja"
+.PP 
+.SS "template<class T > size_t \fBTomb\fP< T >::currentCapacity\fR [private]\fP"
+
+.PP
+A tömb aktuális kapacitása\&. 
+.SS "template<class T > size_t \fBTomb\fP< T >::currentSize\fR [private]\fP"
+
+.PP
+A tömb aktuális mérete\&. 
+.SS "template<class T > T* \fBTomb\fP< T >::t\fR [private]\fP"
+
+.PP
+A dinamikusan foglalt tömb elejére mutató pointer\&. 
+
+.SH "Szerző"
+.PP 
+Ezt a dokumentációt a Doxygen készítette a sikidom projekthez a forráskódból\&.

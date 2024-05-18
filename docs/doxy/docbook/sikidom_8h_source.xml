@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_sikidom_8h_source" xml:lang="hu">
+<title>sikidom.h</title>
+<indexterm><primary>src/sikidom.h</primary></indexterm>
+Ugrás a fájl dokumentációjához.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_pont_8h">pont.h</link>&quot;</emphasis>
+2 <emphasis role="preprocessor">#include&#32;&lt;cstddef&gt;</emphasis>
+3 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+4 <emphasis role="preprocessor">#include&#32;&lt;memory&gt;</emphasis>
+5 
+6 <emphasis role="preprocessor">#ifndef&#32;SIKIDOM_SIKIDOM_H</emphasis>
+7 <emphasis role="preprocessor">#define&#32;SIKIDOM_SIKIDOM_H</emphasis>
+8 
+9 
+15 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_sikidom">Sikidom</link>&#32;{
+16 <emphasis role="keyword">protected</emphasis>:
+19 &#32;&#32;<link linkend="_class_pont">Pont</link>&#32;<link linkend="_class_sikidom_1a11c6def4b07e4748bfa85947ac9f5591">kp</link>;
+20 
+23 &#32;&#32;<link linkend="_class_pont">Pont</link>&#32;<link linkend="_class_sikidom_1a139d93aabfc8ae56a115a22343e0ffaa">p</link>;
+24 
+29 &#32;&#32;<link linkend="_class_sikidom_1a200b65570223034da8a84bca5a88f61e">Sikidom</link>(<link linkend="_class_pont">Pont</link>&#32;_kp&#32;=&#32;<link linkend="_class_pont">Pont</link>(0,&#32;0),&#32;<link linkend="_class_pont">Pont</link>&#32;_p&#32;=&#32;<link linkend="_class_pont">Pont</link>(0,&#32;0))&#32;:&#32;<link linkend="_class_sikidom_1a11c6def4b07e4748bfa85947ac9f5591">kp</link>(_kp),&#32;<link linkend="_class_sikidom_1a139d93aabfc8ae56a115a22343e0ffaa">p</link>(_p)&#32;{}
+30 
+31 <emphasis role="keyword">public</emphasis>:
+32 &#32;&#32;<link linkend="_class_sikidom_1a200b65570223034da8a84bca5a88f61e">Sikidom</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_sikidom">Sikidom</link>&#32;&amp;);
+33 
+34 &#32;&#32;<link linkend="_class_sikidom">Sikidom</link>&#32;&amp;<link linkend="_class_sikidom_1a06417917486d1d4786a7bb8a238826ba">operator=</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_sikidom">Sikidom</link>&#32;&amp;);
+35 
+36 &#32;&#32;<link linkend="_class_pont">Pont</link>&#32;<link linkend="_class_sikidom_1a580ec59df76631c231468b6beb303865">getkp</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_sikidom_1a11c6def4b07e4748bfa85947ac9f5591">kp</link>;&#32;}
+37 
+38 &#32;&#32;<link linkend="_class_pont">Pont</link>&#32;<link linkend="_class_sikidom_1a4c868839f9e4051e8717ddba28fad015">getp</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_sikidom_1a139d93aabfc8ae56a115a22343e0ffaa">p</link>;&#32;}
+39 
+40 &#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_sikidom_1aa429648a709a968dacd563d52cb39e44">Tartalmazza</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>)&#32;<emphasis role="keyword">const</emphasis>;
+41 
+46 &#32;&#32;<link linkend="_class_sikidom">Sikidom</link>&#32;&amp;<link linkend="_class_sikidom_1afe53eb1a8e5b36fb50b20ce6a296959c">Mozgat</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;_x,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;_y);
+47 
+51 &#32;&#32;<link linkend="_class_sikidom">Sikidom</link>&#32;&amp;<link linkend="_class_sikidom_1a68f6ac0248b3176028002b3b45dde07b">Forgat</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">double</emphasis>,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_pont">Pont</link>&#32;&amp;);
+52 
+55 &#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_class_sikidom_1a6324bee38c590b706057f1d5cc4d9a25">Terulet</link>()&#32;<emphasis role="keyword">const</emphasis>&#32;=&#32;0;
+56 
+57 &#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_sikidom_1af85de4b120b39e41487f4fc491857596">Rajtavan</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_pont">Pont</link>&#32;&amp;)&#32;<emphasis role="keyword">const</emphasis>&#32;=&#32;0;
+58 
+59 &#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_sikidom_1aaf04b7e802aed0f201c8471cd15c75f6">Write</link>(std::ostream&amp;&#32;os)&#32;<emphasis role="keyword">const</emphasis>&#32;=&#32;0;
+60 
+61 &#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_sikidom_1a34ea60629f1c57a4b5afa8fdb8b38eb6">Read</link>(std::istream&amp;&#32;is)&#32;=&#32;0;
+62 
+63 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_class_sikidom">Sikidom</link>*&#32;<link linkend="_class_sikidom_1a34fe25b652fdf3dcd5c02256fcea31dc">createSikidom</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;type);
+64 
+65 &#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_sikidom_1ac8b7bb5618747ad0e3ce258e4fa223a2">Kivul</link>(<emphasis role="keyword">const</emphasis>&#32;std::size_t&#32;r)&#32;<emphasis role="keyword">const</emphasis>&#32;=&#32;0;
+66 
+67 &#32;&#32;<emphasis role="keyword">friend</emphasis>&#32;std::ostream&#32;&amp;<link linkend="_class_sikidom_1a98b88fcd8d7cda1caccc84514046a7b0">operator&lt;&lt;</link>(std::ostream&amp;,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_sikidom">Sikidom</link>&#32;*&#32;<emphasis role="keyword">const</emphasis>);
+68 
+69 &#32;&#32;<emphasis role="keyword">friend</emphasis>&#32;std::istream&amp;&#32;<link linkend="_class_sikidom_1a39346f937ea5f46cdd047b2afa03c34b">operator&gt;&gt;</link>(std::istream&amp;&#32;is,&#32;<link linkend="_class_sikidom">Sikidom</link>**&#32;sikidom);
+70 
+71 &#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<link linkend="_class_sikidom_1addcc9cfc77c3b6617d36084a10bcf208">~Sikidom</link>()&#32;=&#32;0;
+72 };
+73 
+79 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_kor">Kor</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_sikidom">Sikidom</link>&#32;{
+80 <emphasis role="keyword">public</emphasis>:
+81 &#32;&#32;<link linkend="_class_kor_1a4d13604de8c46b7458ad8e5e4f038863">Kor</link>(<link linkend="_class_pont">Pont</link>&#32;_kp&#32;=&#32;<link linkend="_class_pont">Pont</link>(0,&#32;0),&#32;<link linkend="_class_pont">Pont</link>&#32;_p&#32;=&#32;<link linkend="_class_pont">Pont</link>(0,&#32;0))&#32;:&#32;<link linkend="_class_sikidom">Sikidom</link>(_kp,&#32;_p)&#32;{}
+82 
+83 &#32;&#32;<link linkend="_class_kor_1aff1c2fc2b67d519faec1219d6509dfe1">Kor</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_kor">Kor</link>&#32;&amp;_k)&#32;:&#32;<link linkend="_class_sikidom">Sikidom</link>(_k)&#32;{}
+84 
+85 &#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_class_kor_1acd284f1cc13d311534eac606a7b3c17b">Terulet</link>()&#32;<emphasis role="keyword">const&#32;override</emphasis>;
+86 
+87 &#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_kor_1af617129564e4a8904676e6edccc7d18e">Rajtavan</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_pont">Pont</link>&#32;&amp;)&#32;<emphasis role="keyword">const&#32;override</emphasis>;
+88 
+89 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_kor_1a308f720da90acfa1e86396148f67a753">Write</link>(std::ostream&amp;&#32;os)&#32;<emphasis role="keyword">const&#32;override</emphasis>;
+90 
+91 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_kor_1a756b9b985f73fa29e598319b850630c0">Read</link>(std::istream&amp;&#32;is)&#32;<emphasis role="keyword">override</emphasis>;
+92 
+93 &#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_kor_1ad3800ae48997f4081af601a8361ebc2f">Kivul</link>(<emphasis role="keyword">const</emphasis>&#32;std::size_t&#32;r)&#32;<emphasis role="keyword">const&#32;override</emphasis>;
+94 &#32;&#32;
+95 &#32;&#32;<emphasis role="keyword">friend</emphasis>&#32;std::ostream&#32;&amp;<link linkend="_class_kor_1a72505ea07cc8a696577c090445c4e8a5">operator&lt;&lt;</link>(std::ostream&#32;&amp;,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_kor">Kor</link>&#32;&amp;);
+96 
+97 &#32;&#32;<link linkend="_class_kor_1a525b264cd874ec01a4431e9dce42bb1b">~Kor</link>()<emphasis role="keyword">&#32;override&#32;</emphasis>{}
+98 };
+99 
+105 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_haromszog">Haromszog</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_sikidom">Sikidom</link>&#32;{
+106 <emphasis role="keyword">public</emphasis>:
+107 &#32;&#32;<link linkend="_class_haromszog_1a7d1f6ee5fc64d915c079763998d3b1ea">Haromszog</link>(<link linkend="_class_pont">Pont</link>&#32;_kp&#32;=&#32;<link linkend="_class_pont">Pont</link>(0,&#32;0),&#32;<link linkend="_class_pont">Pont</link>&#32;_p&#32;=&#32;<link linkend="_class_pont">Pont</link>(0,&#32;0))&#32;:&#32;<link linkend="_class_sikidom">Sikidom</link>(_kp,&#32;_p)&#32;{}
+108 
+109 &#32;&#32;<link linkend="_class_haromszog_1a84801633c5184b20a8794ef547747ca1">Haromszog</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_haromszog">Haromszog</link>&#32;&amp;_h)&#32;:&#32;<link linkend="_class_sikidom">Sikidom</link>(_h)&#32;{}
+110 
+111 &#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_class_haromszog_1a1909d9326f45b6358e912b8c303a67be">Terulet</link>()&#32;<emphasis role="keyword">const&#32;override</emphasis>;
+112 
+113 &#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_haromszog_1adcfb90053414b3c447f83c2c9be07f18">Rajtavan</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_pont">Pont</link>&#32;&amp;)&#32;<emphasis role="keyword">const&#32;override</emphasis>;
+114 
+115 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_haromszog_1a10c33ed799ebac2aa0fbc37a9f6d9e88">Write</link>(std::ostream&amp;&#32;os)&#32;<emphasis role="keyword">const&#32;override</emphasis>;
+116 
+117 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_haromszog_1a0d329d2d30a6d3455936c85d79a6cf5e">Read</link>(std::istream&amp;&#32;is)&#32;<emphasis role="keyword">override</emphasis>;
+118 
+119 &#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_haromszog_1a9ed79902d5a11c7d8d93c935ae364741">Kivul</link>(<emphasis role="keyword">const</emphasis>&#32;std::size_t&#32;r)&#32;<emphasis role="keyword">const&#32;override</emphasis>;
+120 
+121 &#32;&#32;<emphasis role="keyword">friend</emphasis>&#32;std::ostream&#32;&amp;<link linkend="_class_haromszog_1a2484b3d43039baf63db4728edb0c1245">operator&lt;&lt;</link>(std::ostream&#32;&amp;,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_haromszog">Haromszog</link>&#32;&amp;);
+122 
+123 &#32;&#32;<link linkend="_class_haromszog_1ab13be5db54a678c839ba8dc92535ad73">~Haromszog</link>()<emphasis role="keyword">&#32;override&#32;</emphasis>{}
+124 };
+125 
+131 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_negyzet">Negyzet</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_sikidom">Sikidom</link>&#32;{
+132 <emphasis role="keyword">public</emphasis>:
+133 &#32;&#32;<link linkend="_class_negyzet_1a67129e75e6e9f8fee584b14883ffe511">Negyzet</link>(<link linkend="_class_pont">Pont</link>&#32;_kp&#32;=&#32;<link linkend="_class_pont">Pont</link>(0,&#32;0),&#32;<link linkend="_class_pont">Pont</link>&#32;_p&#32;=&#32;<link linkend="_class_pont">Pont</link>(0,&#32;0))&#32;:&#32;<link linkend="_class_sikidom">Sikidom</link>(_kp,&#32;_p)&#32;{}
+134 
+135 &#32;&#32;<link linkend="_class_negyzet_1a5779b1aa386becfb6657400abfa5a370">Negyzet</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_negyzet">Negyzet</link>&#32;&amp;_n)&#32;:&#32;<link linkend="_class_sikidom">Sikidom</link>(_n)&#32;{}
+136 
+137 &#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_class_negyzet_1a1d77a4d0f43908f6169854f431d1a1aa">Terulet</link>()&#32;<emphasis role="keyword">const&#32;override</emphasis>;
+138 
+139 &#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_negyzet_1a1e8032e6f035f0c356f3399f16ee82d2">Rajtavan</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_pont">Pont</link>&#32;&amp;)&#32;<emphasis role="keyword">const&#32;override</emphasis>;
+140 
+141 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_negyzet_1af92d375645d8f10d2f74c7ddadf91dc9">Write</link>(std::ostream&amp;&#32;os)&#32;<emphasis role="keyword">const&#32;override</emphasis>;
+142 
+143 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_negyzet_1ad6dc4a5f2183be90c6d8be42240df025">Read</link>(std::istream&amp;&#32;is)&#32;<emphasis role="keyword">override</emphasis>;
+144 
+145 &#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_negyzet_1aef68e2870b19134660c203bb71b284bb">Kivul</link>(<emphasis role="keyword">const</emphasis>&#32;std::size_t&#32;r)&#32;<emphasis role="keyword">const&#32;override</emphasis>;
+146 
+147 &#32;&#32;<emphasis role="keyword">friend</emphasis>&#32;std::ostream&#32;&amp;<link linkend="_class_negyzet_1ac1b23fa9c1c34251edd43a5fdc83318a">operator&lt;&lt;</link>(std::ostream&#32;&amp;,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_negyzet">Negyzet</link>&#32;&amp;);
+148 
+149 &#32;&#32;<link linkend="_class_negyzet_1ad05d7bc65a5a47b45c62609638b9eb67">~Negyzet</link>()<emphasis role="keyword">&#32;override&#32;</emphasis>{}
+150 };
+151 
+152 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_sikidom_8h_1a989e1b34da78d3a7a8e572c743dcd35f">IsOnTriangle</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_pont">Pont</link>&amp;,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_pont">Pont</link>&amp;,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_pont">Pont</link>&amp;,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_pont">Pont</link>&amp;);
+153 
+154 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;!SIKIDOM_SIKIDOM_H</emphasis>
+</programlisting></section>

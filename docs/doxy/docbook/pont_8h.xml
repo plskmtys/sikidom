@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_pont_8h" xml:lang="hu">
+<title>src/pont.h fájlreferencia</title>
+<indexterm><primary>src/pont.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;iostream&gt;<?linebreak?></programlisting><simplesect>
+    <title>Osztályok    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_pont">Pont</link></para>
+
+<para><link linkend="_class_pont">Pont</link> osztály A pontokat a síkon tárolja, x és y koordinátákkal. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Függvények    </title>
+        <itemizedlist>
+            <listitem><para>double <link linkend="_pont_8h_1aca2e599648455a1f472dae8888f68663">dst</link> (const <link linkend="_class_pont">Pont</link> &amp;a, const <link linkend="_class_pont">Pont</link> &amp;b)</para>
+
+<para>két pont közötti távolság számító függvény. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Függvények dokumentációja</title>
+<anchor xml:id="_pont_8h_1aca2e599648455a1f472dae8888f68663"/><section>
+    <title>dst()</title>
+<indexterm><primary>dst</primary><secondary>pont.h</secondary></indexterm>
+<indexterm><primary>pont.h</primary><secondary>dst</secondary></indexterm>
+<para><computeroutput>double dst (const <link linkend="_class_pont">Pont</link> &amp; a, const <link linkend="_class_pont">Pont</link> &amp; b)</computeroutput></para><para>
+
+<para>két pont közötti távolság számító függvény. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>a</entry><entry>
+<para>egyik pont </para>
+</entry>
+                            </row>
+                            <row>
+<entry>b</entry><entry>
+<para>másik pont </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>a két pont távolsága </para>
+</formalpara>
+</para>
+</section>
+</section>
+</section>

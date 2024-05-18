@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_tomb_8hpp_source" xml:lang="hu">
+<title>tomb.hpp</title>
+<indexterm><primary>src/tomb.hpp</primary></indexterm>
+Ugrás a fájl dokumentációjához.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;MYTOMB</emphasis>
+2 <emphasis role="preprocessor">#define&#32;MYTOMB</emphasis>
+3 
+4 <emphasis role="preprocessor">#include&#32;&lt;stdexcept&gt;</emphasis>
+5 
+10 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">class</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_tomb">Tomb</link>&#32;{
+13 &#32;&#32;T&#32;*<link linkend="_class_tomb_1af588b1f01320436f2019bc3c15fbcb50">t</link>;
+16 &#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;<link linkend="_class_tomb_1ab40caed442b0ab5633b8cfa2bd5bb77f">currentSize</link>;
+19 &#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;<link linkend="_class_tomb_1ab3e265b9c9a56d5eca7f7d5176b20b9b">currentCapacity</link>;
+20 
+21 <emphasis role="keyword">public</emphasis>:
+22 &#32;&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_tomb_1_1iterator">iterator</link>;
+23 &#32;&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_tomb_1_1const__iterator">const_iterator</link>;
+24 
+28 &#32;&#32;<link linkend="_class_tomb_1ae4bf33b0697f4fe2e7702b9e53fc2bf1">Tomb</link>()&#32;:&#32;<link linkend="_class_tomb_1af588b1f01320436f2019bc3c15fbcb50">t</link>(new&#32;T[1]),&#32;<link linkend="_class_tomb_1ab40caed442b0ab5633b8cfa2bd5bb77f">currentSize</link>(0),&#32;<link linkend="_class_tomb_1ab3e265b9c9a56d5eca7f7d5176b20b9b">currentCapacity</link>(1)&#32;{}
+29 
+34 &#32;&#32;<link linkend="_class_tomb_1_1iterator">iterator</link>&#32;<link linkend="_class_tomb_1a0cc09d5947061cdb6f0bda7d453d8dcf">begin</link>()&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_tomb_1_1iterator">iterator</link>(<link linkend="_class_tomb_1af588b1f01320436f2019bc3c15fbcb50">t</link>,&#32;0);&#32;}
+35 
+40 &#32;&#32;<link linkend="_class_tomb_1_1iterator">iterator</link>&#32;<link linkend="_class_tomb_1af6d640f751ace862d93395f0ddd563de">end</link>()&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_tomb_1_1iterator">iterator</link>(<link linkend="_class_tomb_1af588b1f01320436f2019bc3c15fbcb50">t</link>,&#32;<link linkend="_class_tomb_1ab40caed442b0ab5633b8cfa2bd5bb77f">currentSize</link>);&#32;}
+41 
+46 &#32;&#32;<link linkend="_class_tomb_1_1const__iterator">const_iterator</link>&#32;<link linkend="_class_tomb_1a83caa244035e77655c10e9e513538d4c">begin</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_tomb_1_1const__iterator">const_iterator</link>(<link linkend="_class_tomb_1af588b1f01320436f2019bc3c15fbcb50">t</link>,&#32;0);&#32;}
+47 
+52 &#32;&#32;<link linkend="_class_tomb_1_1const__iterator">const_iterator</link>&#32;<link linkend="_class_tomb_1a5e751096467add40c338e1cebee16a99">end</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_tomb_1_1const__iterator">const_iterator</link>(<link linkend="_class_tomb_1af588b1f01320436f2019bc3c15fbcb50">t</link>,&#32;<link linkend="_class_tomb_1ab40caed442b0ab5633b8cfa2bd5bb77f">currentSize</link>);&#32;}
+53 
+57 &#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;<link linkend="_class_tomb_1a589e99d925aeee115bb846e572596b04">size</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_tomb_1ab40caed442b0ab5633b8cfa2bd5bb77f">currentSize</link>;&#32;}
+58 
+62 &#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;<link linkend="_class_tomb_1a32b97e02c54b63cba0c43d25eeef4fc7">capacity</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_tomb_1ab3e265b9c9a56d5eca7f7d5176b20b9b">currentCapacity</link>;&#32;}
+63 
+68 &#32;&#32;T&#32;&amp;<link linkend="_class_tomb_1a1a8c6c4a1e45ff1086ff1ca25abe8ed5">at</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;i)&#32;{
+69 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(i&#32;&gt;=&#32;<link linkend="_class_tomb_1ab40caed442b0ab5633b8cfa2bd5bb77f">currentSize</link>)
+70 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;std::out_of_range(<emphasis role="stringliteral">&quot;Array.at():&#32;invalid&#32;index&quot;</emphasis>);
+71 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_tomb_1af588b1f01320436f2019bc3c15fbcb50">t</link>[i];
+72 &#32;&#32;}
+73 
+78 &#32;&#32;T&#32;&amp;<link linkend="_class_tomb_1a019f55737fcef24bd45b14401c8c842d">operator[]</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;i)&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_tomb_1a1a8c6c4a1e45ff1086ff1ca25abe8ed5">at</link>(i);&#32;}
+79 
+84 &#32;&#32;<emphasis role="keyword">const</emphasis>&#32;T&#32;&amp;<link linkend="_class_tomb_1a09c83fdc40e7a047851c7554d89254b3">at</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;i)<emphasis role="keyword">&#32;const&#32;</emphasis>{
+85 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(i&#32;&gt;=&#32;<link linkend="_class_tomb_1ab40caed442b0ab5633b8cfa2bd5bb77f">currentSize</link>)
+86 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;std::out_of_range(<emphasis role="stringliteral">&quot;Array.at():&#32;invalid&#32;index&quot;</emphasis>);
+87 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_tomb_1af588b1f01320436f2019bc3c15fbcb50">t</link>[i];
+88 &#32;&#32;}
+89 
+94 &#32;&#32;<emphasis role="keyword">const</emphasis>&#32;T&#32;&amp;<link linkend="_class_tomb_1a63cf2fffc699f582ed28a4b67436a85e">operator[]</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;i)<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_tomb_1a1a8c6c4a1e45ff1086ff1ca25abe8ed5">at</link>(i);&#32;}
+95 
+100 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_tomb_1ae97c51ef2373b6301e03957eea14a36d">resize</link>(<emphasis role="keywordtype">size_t</emphasis>&#32;newSize)&#32;{
+101 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(newSize&#32;&gt;&#32;<link linkend="_class_tomb_1ab3e265b9c9a56d5eca7f7d5176b20b9b">currentCapacity</link>)&#32;{
+102 &#32;&#32;&#32;&#32;&#32;&#32;T*&#32;newT&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;T[newSize&#32;*&#32;2];
+103 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;<link linkend="_class_tomb_1ab40caed442b0ab5633b8cfa2bd5bb77f">currentSize</link>;&#32;++i)&#32;{
+104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;newT[i]&#32;=&#32;<link linkend="_class_tomb_1af588b1f01320436f2019bc3c15fbcb50">t</link>[i];
+105 &#32;&#32;&#32;&#32;&#32;&#32;}
+106 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">delete</emphasis>[]&#32;<link linkend="_class_tomb_1af588b1f01320436f2019bc3c15fbcb50">t</link>;
+107 &#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_tomb_1af588b1f01320436f2019bc3c15fbcb50">t</link>&#32;=&#32;newT;
+108 &#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_tomb_1ab3e265b9c9a56d5eca7f7d5176b20b9b">currentCapacity</link>&#32;=&#32;newSize&#32;*&#32;2;
+109 &#32;&#32;&#32;&#32;}
+110 &#32;&#32;}
+111 
+116 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_tomb_1ac0d31f04ccdfbe9f32054411345eaf61">push_back</link>(T&#32;value)&#32;{
+117 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_tomb_1ab40caed442b0ab5633b8cfa2bd5bb77f">currentSize</link>&#32;==&#32;<link linkend="_class_tomb_1ab3e265b9c9a56d5eca7f7d5176b20b9b">currentCapacity</link>)&#32;{
+118 &#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_tomb_1ae97c51ef2373b6301e03957eea14a36d">resize</link>(<link linkend="_class_tomb_1ab40caed442b0ab5633b8cfa2bd5bb77f">currentSize</link>&#32;*&#32;2);
+119 &#32;&#32;&#32;&#32;}
+120 &#32;&#32;&#32;&#32;<link linkend="_class_tomb_1af588b1f01320436f2019bc3c15fbcb50">t</link>[<link linkend="_class_tomb_1ab40caed442b0ab5633b8cfa2bd5bb77f">currentSize</link>++]&#32;=&#32;value;
+121 &#32;&#32;}
+122 
+128 &#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_tomb_1a1e77c83f9e32271652f90179f6ce58ca">find</link>(<emphasis role="keyword">const</emphasis>&#32;T&amp;&#32;value)<emphasis role="keyword">&#32;const&#32;</emphasis>{
+129 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;<link linkend="_class_tomb_1ab40caed442b0ab5633b8cfa2bd5bb77f">currentSize</link>;&#32;++i)&#32;{
+130 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_tomb_1af588b1f01320436f2019bc3c15fbcb50">t</link>[i]&#32;==&#32;value)&#32;{
+131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;i;
+132 &#32;&#32;&#32;&#32;&#32;&#32;}
+133 &#32;&#32;&#32;&#32;}
+134 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;-1;
+135 &#32;&#32;}
+136 
+141 &#32;&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_tomb_1_1iterator">iterator</link>&#32;{
+145 &#32;&#32;&#32;&#32;T&#32;*<link linkend="_class_tomb_1_1iterator_1a0c06f296810154f298042b03b5838b25">p</link>;
+146 
+150 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;<link linkend="_class_tomb_1_1iterator_1aebf5889c7df6ecc7ab34015255c166ff">idx</link>;
+151 
+152 &#32;&#32;<emphasis role="keyword">public</emphasis>:
+157 &#32;&#32;&#32;&#32;<link linkend="_class_tomb_1_1iterator_1a0997c5dd2b6f10027f2cdd9a741e7229">iterator</link>(T&#32;*<link linkend="_class_tomb_1_1iterator_1a0c06f296810154f298042b03b5838b25">p</link>&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;<link linkend="_class_tomb_1_1iterator_1aebf5889c7df6ecc7ab34015255c166ff">idx</link>&#32;=&#32;0)&#32;:&#32;<link linkend="_class_tomb_1_1iterator_1a0c06f296810154f298042b03b5838b25">p</link>(<link linkend="_class_tomb_1_1iterator_1a0c06f296810154f298042b03b5838b25">p</link>),&#32;<link linkend="_class_tomb_1_1iterator_1aebf5889c7df6ecc7ab34015255c166ff">idx</link>(<link linkend="_class_tomb_1_1iterator_1aebf5889c7df6ecc7ab34015255c166ff">idx</link>)&#32;{}
+158 
+162 &#32;&#32;&#32;&#32;T&#32;&amp;<link linkend="_class_tomb_1_1iterator_1a4cdb3e9e985a793f6368d5fcc5d2d40c">operator*</link>()&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_tomb_1_1iterator_1a0c06f296810154f298042b03b5838b25">p</link>[<link linkend="_class_tomb_1_1iterator_1aebf5889c7df6ecc7ab34015255c166ff">idx</link>];&#32;}
+163 
+167 &#32;&#32;&#32;&#32;<link linkend="_class_tomb_1_1iterator">iterator</link>&#32;&amp;<link linkend="_class_tomb_1_1iterator_1a305ee2477d8b556a2bcd7b8dfa86c205">operator++</link>()&#32;{
+168 &#32;&#32;&#32;&#32;&#32;&#32;++<link linkend="_class_tomb_1_1iterator_1aebf5889c7df6ecc7ab34015255c166ff">idx</link>;
+169 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;*<emphasis role="keyword">this</emphasis>;
+170 &#32;&#32;&#32;&#32;}
+171 
+176 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_tomb_1_1iterator_1adf65e35567138e29807e9a5eda5614e9">operator!=</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_tomb_1_1iterator">iterator</link>&#32;&amp;other)<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_tomb_1_1iterator_1aebf5889c7df6ecc7ab34015255c166ff">idx</link>&#32;!=&#32;other.<link linkend="_class_tomb_1_1iterator_1aebf5889c7df6ecc7ab34015255c166ff">idx</link>;&#32;}
+177 &#32;&#32;};
+178 
+183 &#32;&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_tomb_1_1const__iterator">const_iterator</link>&#32;{
+187 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;T&#32;*<link linkend="_class_tomb_1_1const__iterator_1ac705c9a225acfc0c387a1cebfab7236b">p</link>;
+188 
+192 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;<link linkend="_class_tomb_1_1const__iterator_1a2963c322c7d33f7eedce24b0eb5a205d">idx</link>;
+193 
+194 &#32;&#32;<emphasis role="keyword">public</emphasis>:
+199 &#32;&#32;&#32;&#32;<link linkend="_class_tomb_1_1const__iterator_1a6dacdff0cdf61487516d31103e71cdc6">const_iterator</link>(<emphasis role="keyword">const</emphasis>&#32;T&#32;*<link linkend="_class_tomb_1_1const__iterator_1ac705c9a225acfc0c387a1cebfab7236b">p</link>&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;<link linkend="_class_tomb_1_1const__iterator_1a2963c322c7d33f7eedce24b0eb5a205d">idx</link>&#32;=&#32;0)&#32;:&#32;<link linkend="_class_tomb_1_1const__iterator_1ac705c9a225acfc0c387a1cebfab7236b">p</link>(<link linkend="_class_tomb_1_1const__iterator_1ac705c9a225acfc0c387a1cebfab7236b">p</link>),&#32;<link linkend="_class_tomb_1_1const__iterator_1a2963c322c7d33f7eedce24b0eb5a205d">idx</link>(<link linkend="_class_tomb_1_1const__iterator_1a2963c322c7d33f7eedce24b0eb5a205d">idx</link>)&#32;{}
+200 
+204 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;T&#32;&amp;<link linkend="_class_tomb_1_1const__iterator_1aac129c0c151c10604fe0ca115426ed93">operator*</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_tomb_1_1const__iterator_1ac705c9a225acfc0c387a1cebfab7236b">p</link>[<link linkend="_class_tomb_1_1const__iterator_1a2963c322c7d33f7eedce24b0eb5a205d">idx</link>];&#32;}
+205 
+209 &#32;&#32;&#32;&#32;<link linkend="_class_tomb_1_1const__iterator">const_iterator</link>&#32;&amp;<link linkend="_class_tomb_1_1const__iterator_1a480e94c8a98c6ff967761fb0998d14e0">operator++</link>()&#32;{
+210 &#32;&#32;&#32;&#32;&#32;&#32;++<link linkend="_class_tomb_1_1const__iterator_1a2963c322c7d33f7eedce24b0eb5a205d">idx</link>;
+211 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;*<emphasis role="keyword">this</emphasis>;
+212 &#32;&#32;&#32;&#32;}
+213 
+218 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_tomb_1_1const__iterator_1ac03c70a364ba930e9ba2abdcdb40a042">operator!=</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_tomb_1_1const__iterator">const_iterator</link>&#32;&amp;other)<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_tomb_1_1const__iterator_1a2963c322c7d33f7eedce24b0eb5a205d">idx</link>&#32;!=&#32;other.<link linkend="_class_tomb_1_1const__iterator_1a2963c322c7d33f7eedce24b0eb5a205d">idx</link>;&#32;}
+219 &#32;&#32;};
+220 
+224 &#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<link linkend="_class_tomb_1ac820e8f0194fefd554a3f55c43e7b2dc">~Tomb</link>()&#32;{
+225 &#32;&#32;&#32;&#32;<emphasis role="keyword">delete</emphasis>[]&#32;<link linkend="_class_tomb_1af588b1f01320436f2019bc3c15fbcb50">t</link>;
+226 &#32;&#32;}
+227 };
+228 
+229 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

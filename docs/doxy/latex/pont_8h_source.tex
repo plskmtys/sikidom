@@ -1,0 +1,53 @@
+\doxysection{pont.\+h}
+\hypertarget{pont_8h_source}{}\label{pont_8h_source}\index{src/pont.h@{src/pont.h}}
+\mbox{\hyperlink{pont_8h}{Ugrás a fájl dokumentációjához.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#ifndef\ SIKIDOM\_PONT\_H}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ SIKIDOM\_PONT\_H}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_pont}{Pont}}\{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_pont_ab6e8e8d934d048496a49ce1c61e6ebaf}{x}};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00020\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_pont_ad94ccd66e75eeefbc1b271a1617a401b}{y}};}
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \mbox{\hyperlink{class_pont_a51a12cf04ae9729224716b6aeacc4085}{Pont}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \_x\ =\ 0,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \_y\ =\ 0):\ \mbox{\hyperlink{class_pont_ab6e8e8d934d048496a49ce1c61e6ebaf}{x}}(\_x),\ \mbox{\hyperlink{class_pont_ad94ccd66e75eeefbc1b271a1617a401b}{y}}(\_y)\{\}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \mbox{\hyperlink{class_pont_a51a12cf04ae9729224716b6aeacc4085}{Pont}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_pont}{Pont}}\&);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \mbox{\hyperlink{class_pont}{Pont}}\&\ \mbox{\hyperlink{class_pont_a0f37a445f3ca156cc85386a9f2be2535}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_pont}{Pont}}\&);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \mbox{\hyperlink{class_pont}{Pont}}\&\ \mbox{\hyperlink{class_pont_ad0365d1e4d3487af3caee8a769a99cdf}{setx}}(\textcolor{keywordtype}{double});}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \mbox{\hyperlink{class_pont}{Pont}}\&\ \mbox{\hyperlink{class_pont_a71633014bb7eb1eb4bc064e9fafa656a}{sety}}(\textcolor{keywordtype}{double});}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_pont_ac29939bcb81bfe2514c9c07358aae198}{getx}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_pont_afd7e7acb77de335b8359a8c2c8ef6f8b}{gety}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \mbox{\hyperlink{class_pont}{Pont}}\ \mbox{\hyperlink{class_pont_a290903621d9e87a25184480b8e35fdbf}{operator+}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_pont}{Pont}}\&)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \mbox{\hyperlink{class_pont}{Pont}}\ \mbox{\hyperlink{class_pont_af32a654a8ef3229455bbf72766e935af}{operator-\/}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_pont}{Pont}}\&)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_pont_ae0f973562087a2bc676a7f9cb85c8aee}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_pont}{Pont}}\&)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_pont_a1c398d6d2ac4b5edb11521980f09bc93}{operator!=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_pont}{Pont}}\&)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_pont_a27125c0be3500c187d2cb69212600444}{dst}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_pont}{Pont}}\&)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \mbox{\hyperlink{class_pont}{Pont}}\&\ \mbox{\hyperlink{class_pont_a2cc6c506454c191ed24f54c5660a15bb}{Mozgat}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \_x\ =\ 0,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \_y\ =\ 0);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \mbox{\hyperlink{class_pont}{Pont}}\&\ \mbox{\hyperlink{class_pont_a0398427978c0f4bccc6aaf28d22b20d0}{Forgat}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_pont}{Pont}}\&);}
+\DoxyCodeLine{00049\ \ \ }
+\DoxyCodeLine{00050\ \ \ \textcolor{keyword}{friend}\ std::ostream\&\ \mbox{\hyperlink{class_pont_a0385caa4d87a0cda0609e7959061e1b3}{operator<<}}(std::ostream\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_pont}{Pont}}\&);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \textcolor{keyword}{friend}\ std::istream\&\ \mbox{\hyperlink{class_pont_a7b20e326857f2c8dd5eccb8e6e7e8d7b}{operator>>}}(std::istream\&,\ \mbox{\hyperlink{class_pont}{Pont}}\&);}
+\DoxyCodeLine{00053\ \};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{pont_8h_aca2e599648455a1f472dae8888f68663}{dst}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_pont}{Pont}}\&\ a,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_pont}{Pont}}\&\ b);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//SIKIDOM\_PONT\_H}}
+
+\end{DoxyCode}

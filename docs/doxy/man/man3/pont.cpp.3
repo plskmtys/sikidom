@@ -1,0 +1,90 @@
+.TH "src/pont.cpp" 3 "Version 1.0.0" "sikidom" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/pont.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'pont\&.h'\fP
+.br
+\fR#include <cmath>\fP
+.br
+\fR#include <stdexcept>\fP
+.br
+
+.SS "Függvények"
+
+.in +1c
+.ti -1c
+.RI "std::ostream & \fBoperator<<\fP (std::ostream &os, const \fBPont\fP &p)"
+.br
+.RI "\fBPont\fP osztály kiíró operátora\&. "
+.ti -1c
+.RI "std::istream & \fBoperator>>\fP (std::istream &is, \fBPont\fP &p)"
+.br
+.RI "\fBPont\fP osztály beolvasó operátora\&. formátumok: '(x,y)' vagy 'x,y'\&. "
+.ti -1c
+.RI "double \fBdst\fP (const \fBPont\fP &a, const \fBPont\fP &b)"
+.br
+.RI "két pont közötti távolság számító függvény\&. "
+.in -1c
+.SH "Függvények dokumentációja"
+.PP 
+.SS "double dst (const \fBPont\fP & a, const \fBPont\fP & b)"
+
+.PP
+két pont közötti távolság számító függvény\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIa\fP egyik pont 
+.br
+\fIb\fP másik pont 
+.RE
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+a két pont távolsága 
+.RE
+.PP
+
+.SS "std::ostream & operator<< (std::ostream & os, const \fBPont\fP & p)"
+
+.PP
+\fBPont\fP osztály kiíró operátora\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIos\fP output stream referencia 
+.br
+\fIp\fP a kiírandó pont 
+.RE
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+output stream referencia 
+.RE
+.PP
+
+.SS "std::istream & operator>> (std::istream & is, \fBPont\fP & p)"
+
+.PP
+\fBPont\fP osztály beolvasó operátora\&. formátumok: '(x,y)' vagy 'x,y'\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIis\fP input stream referencia 
+.br
+\fIp\fP a beolvasandó pont 
+.RE
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+input stream referencia 
+.RE
+.PP
+
+.SH "Szerző"
+.PP 
+Ezt a dokumentációt a Doxygen készítette a sikidom projekthez a forráskódból\&.

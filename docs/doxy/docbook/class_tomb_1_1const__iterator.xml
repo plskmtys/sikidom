@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_tomb_1_1const__iterator" xml:lang="hu">
+<title>Tomb&lt; T &gt;::const_iterator osztályreferencia</title>
+<indexterm><primary>Tomb&lt; T &gt;::const_iterator</primary></indexterm>
+<para>
+
+<para><link linkend="_class_tomb_1_1const__iterator">const_iterator</link> osztály. Az <link linkend="_class_tomb_1_1const__iterator">const_iterator</link> osztály a <link linkend="_class_tomb">Tomb</link> osztály const_iteratora. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;tomb.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Publikus tagfüggvények    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_tomb_1_1const__iterator_1a6dacdff0cdf61487516d31103e71cdc6">const_iterator</link> (const T *<link linkend="_class_tomb_1_1const__iterator_1ac705c9a225acfc0c387a1cebfab7236b">p</link>=nullptr, size_t <link linkend="_class_tomb_1_1const__iterator_1a2963c322c7d33f7eedce24b0eb5a205d">idx</link>=0)</para>
+
+<para><link linkend="_class_tomb_1_1const__iterator">const_iterator</link> konstruktora. </para>
+</listitem>
+            <listitem><para>const T &amp; <link linkend="_class_tomb_1_1const__iterator_1aac129c0c151c10604fe0ca115426ed93">operator*</link> () const</para>
+
+<para>operator* függvény. </para>
+</listitem>
+            <listitem><para><link linkend="_class_tomb_1_1const__iterator">const_iterator</link> &amp; <link linkend="_class_tomb_1_1const__iterator_1a480e94c8a98c6ff967761fb0998d14e0">operator++</link> ()</para>
+
+<para>operator++ függvény. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_tomb_1_1const__iterator_1ac03c70a364ba930e9ba2abdcdb40a042">operator!=</link> (const <link linkend="_class_tomb_1_1const__iterator">const_iterator</link> &amp;other) const</para>
+
+<para>operator!= függvény. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Privát attribútumok    </title>
+        <itemizedlist>
+            <listitem><para>const T * <link linkend="_class_tomb_1_1const__iterator_1ac705c9a225acfc0c387a1cebfab7236b">p</link></para>
+
+<para>Az <link linkend="_class_tomb_1_1const__iterator">const_iterator</link> aktuális elemre mutató pointere. </para>
+</listitem>
+            <listitem><para>size_t <link linkend="_class_tomb_1_1const__iterator_1a2963c322c7d33f7eedce24b0eb5a205d">idx</link></para>
+
+<para>Az <link linkend="_class_tomb_1_1const__iterator">const_iterator</link> aktuális indexe. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Részletes leírás</title>
+<simplesect><title>template&lt;class T&gt;<?linebreak?>class Tomb&lt; T &gt;::const_iterator</title></simplesect>
+
+<para><link linkend="_class_tomb_1_1const__iterator">const_iterator</link> osztály. Az <link linkend="_class_tomb_1_1const__iterator">const_iterator</link> osztály a <link linkend="_class_tomb">Tomb</link> osztály const_iteratora. </para>
+</section>
+<section>
+<title>Konstruktorok és destruktorok dokumentációja</title>
+<anchor xml:id="_class_tomb_1_1const__iterator_1a6dacdff0cdf61487516d31103e71cdc6"/><section>
+    <title>const_iterator()</title>
+<indexterm><primary>const_iterator</primary><secondary>Tomb&lt; T &gt;::const_iterator</secondary></indexterm>
+<indexterm><primary>Tomb&lt; T &gt;::const_iterator</primary><secondary>const_iterator</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput><link linkend="_class_tomb">Tomb</link>&lt; T &gt;::const_iterator::const_iterator (const T * p = <computeroutput>nullptr</computeroutput>
+, size_t idx = <computeroutput>0</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para><link linkend="_class_tomb_1_1const__iterator">const_iterator</link> konstruktora. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>p</entry><entry>
+<para>Az <link linkend="_class_tomb_1_1const__iterator">const_iterator</link> aktuális elemre mutató pointere. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>idx</entry><entry>
+<para>Az <link linkend="_class_tomb_1_1const__iterator">const_iterator</link> aktuális indexe. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Tagfüggvények dokumentációja</title>
+<anchor xml:id="_class_tomb_1_1const__iterator_1ac03c70a364ba930e9ba2abdcdb40a042"/><section>
+    <title>operator!=()</title>
+<indexterm><primary>operator!=</primary><secondary>Tomb&lt; T &gt;::const_iterator</secondary></indexterm>
+<indexterm><primary>Tomb&lt; T &gt;::const_iterator</primary><secondary>operator!=</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>bool <link linkend="_class_tomb">Tomb</link>&lt; T &gt;::const_iterator::operator!= (const <link linkend="_class_tomb_1_1const__iterator">const_iterator</link> &amp; other) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>operator!= függvény. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>other</entry><entry>
+<para>A másik <link linkend="_class_tomb_1_1const__iterator">const_iterator</link>. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>Igaz, ha a ket <link linkend="_class_tomb_1_1const__iterator">const_iterator</link> nem egyezik meg, egyébként hamis. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_tomb_1_1const__iterator_1aac129c0c151c10604fe0ca115426ed93"/><section>
+    <title>operator*()</title>
+<indexterm><primary>operator*</primary><secondary>Tomb&lt; T &gt;::const_iterator</secondary></indexterm>
+<indexterm><primary>Tomb&lt; T &gt;::const_iterator</primary><secondary>operator*</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>const T &amp; <link linkend="_class_tomb">Tomb</link>&lt; T &gt;::const_iterator::operator* ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>operator* függvény. </para>
+</para>
+
+<para><formalpara><title>Visszatérési érték</title>
+
+<para>Az <link linkend="_class_tomb_1_1const__iterator">const_iterator</link> aktuális elemre mutató referencia. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_tomb_1_1const__iterator_1a480e94c8a98c6ff967761fb0998d14e0"/><section>
+    <title>operator++()</title>
+<indexterm><primary>operator++</primary><secondary>Tomb&lt; T &gt;::const_iterator</secondary></indexterm>
+<indexterm><primary>Tomb&lt; T &gt;::const_iterator</primary><secondary>operator++</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput><link linkend="_class_tomb_1_1const__iterator">const_iterator</link> &amp; <link linkend="_class_tomb">Tomb</link>&lt; T &gt;::const_iterator::operator++ ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>operator++ függvény. </para>
+</para>
+
+<para><formalpara><title>Visszatérési érték</title>
+
+<para>Az <link linkend="_class_tomb_1_1const__iterator">const_iterator</link> az aktuális elem után mutató referencia. </para>
+</formalpara>
+</para>
+</section>
+</section>
+<section>
+<title>Adattagok dokumentációja</title>
+<anchor xml:id="_class_tomb_1_1const__iterator_1a2963c322c7d33f7eedce24b0eb5a205d"/><section>
+    <title>idx</title>
+<indexterm><primary>idx</primary><secondary>Tomb&lt; T &gt;::const_iterator</secondary></indexterm>
+<indexterm><primary>Tomb&lt; T &gt;::const_iterator</primary><secondary>idx</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>size_t <link linkend="_class_tomb">Tomb</link>&lt; T &gt;::const_iterator::idx<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>Az <link linkend="_class_tomb_1_1const__iterator">const_iterator</link> aktuális indexe. </para>
+</para>
+</section>
+<anchor xml:id="_class_tomb_1_1const__iterator_1ac705c9a225acfc0c387a1cebfab7236b"/><section>
+    <title>p</title>
+<indexterm><primary>p</primary><secondary>Tomb&lt; T &gt;::const_iterator</secondary></indexterm>
+<indexterm><primary>Tomb&lt; T &gt;::const_iterator</primary><secondary>p</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>const T* <link linkend="_class_tomb">Tomb</link>&lt; T &gt;::const_iterator::p<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>Az <link linkend="_class_tomb_1_1const__iterator">const_iterator</link> aktuális elemre mutató pointere. </para>
+</para>
+</section>
+<para>
+Ez a dokumentáció az osztályról a következő fájl alapján készült:</para>
+src/<link linkend="_tomb_8hpp">tomb.hpp</link></section>
+</section>

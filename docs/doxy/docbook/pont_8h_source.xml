@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_pont_8h_source" xml:lang="hu">
+<title>pont.h</title>
+<indexterm><primary>src/pont.h</primary></indexterm>
+Ugrás a fájl dokumentációjához.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+2 
+3 <emphasis role="preprocessor">#ifndef&#32;SIKIDOM_PONT_H</emphasis>
+4 <emphasis role="preprocessor">#define&#32;SIKIDOM_PONT_H</emphasis>
+5 
+10 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_pont">Pont</link>{
+11 <emphasis role="keyword">private</emphasis>:
+15 &#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_class_pont_1ab6e8e8d934d048496a49ce1c61e6ebaf">x</link>;
+16 
+20 &#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_class_pont_1ad94ccd66e75eeefbc1b271a1617a401b">y</link>;
+21 <emphasis role="keyword">public</emphasis>:
+22 &#32;&#32;<link linkend="_class_pont_1a51a12cf04ae9729224716b6aeacc4085">Pont</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">double</emphasis>&#32;_x&#32;=&#32;0,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">double</emphasis>&#32;_y&#32;=&#32;0):&#32;<link linkend="_class_pont_1ab6e8e8d934d048496a49ce1c61e6ebaf">x</link>(_x),&#32;<link linkend="_class_pont_1ad94ccd66e75eeefbc1b271a1617a401b">y</link>(_y){}
+23 
+24 &#32;&#32;<link linkend="_class_pont_1a51a12cf04ae9729224716b6aeacc4085">Pont</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_pont">Pont</link>&amp;);
+25 
+26 &#32;&#32;<link linkend="_class_pont">Pont</link>&amp;&#32;<link linkend="_class_pont_1a0f37a445f3ca156cc85386a9f2be2535">operator=</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_pont">Pont</link>&amp;);
+27 
+28 &#32;&#32;<link linkend="_class_pont">Pont</link>&amp;&#32;<link linkend="_class_pont_1ad0365d1e4d3487af3caee8a769a99cdf">setx</link>(<emphasis role="keywordtype">double</emphasis>);
+29 
+30 &#32;&#32;<link linkend="_class_pont">Pont</link>&amp;&#32;<link linkend="_class_pont_1a71633014bb7eb1eb4bc064e9fafa656a">sety</link>(<emphasis role="keywordtype">double</emphasis>);
+31 
+32 &#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_class_pont_1ac29939bcb81bfe2514c9c07358aae198">getx</link>()&#32;<emphasis role="keyword">const</emphasis>;
+33 
+34 &#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_class_pont_1afd7e7acb77de335b8359a8c2c8ef6f8b">gety</link>()&#32;<emphasis role="keyword">const</emphasis>;
+35 
+36 &#32;&#32;<link linkend="_class_pont">Pont</link>&#32;<link linkend="_class_pont_1a290903621d9e87a25184480b8e35fdbf">operator+</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_pont">Pont</link>&amp;)&#32;<emphasis role="keyword">const</emphasis>;
+37 
+38 &#32;&#32;<link linkend="_class_pont">Pont</link>&#32;<link linkend="_class_pont_1af32a654a8ef3229455bbf72766e935af">operator-</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_pont">Pont</link>&amp;)&#32;<emphasis role="keyword">const</emphasis>;
+39 
+40 &#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_pont_1ae0f973562087a2bc676a7f9cb85c8aee">operator==</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_pont">Pont</link>&amp;)&#32;<emphasis role="keyword">const</emphasis>;
+41 
+42 &#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_pont_1a1c398d6d2ac4b5edb11521980f09bc93">operator!=</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_pont">Pont</link>&amp;)&#32;<emphasis role="keyword">const</emphasis>;
+43 
+44 &#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_class_pont_1a27125c0be3500c187d2cb69212600444">dst</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_pont">Pont</link>&amp;)&#32;<emphasis role="keyword">const</emphasis>;
+45 
+46 &#32;&#32;<link linkend="_class_pont">Pont</link>&amp;&#32;<link linkend="_class_pont_1a2cc6c506454c191ed24f54c5660a15bb">Mozgat</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">double</emphasis>&#32;_x&#32;=&#32;0,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">double</emphasis>&#32;_y&#32;=&#32;0);
+47 
+48 &#32;&#32;<link linkend="_class_pont">Pont</link>&amp;&#32;<link linkend="_class_pont_1a0398427978c0f4bccc6aaf28d22b20d0">Forgat</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">double</emphasis>,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_pont">Pont</link>&amp;);
+49 &#32;&#32;
+50 &#32;&#32;<emphasis role="keyword">friend</emphasis>&#32;std::ostream&amp;&#32;<link linkend="_class_pont_1a0385caa4d87a0cda0609e7959061e1b3">operator&lt;&lt;</link>(std::ostream&amp;,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_pont">Pont</link>&amp;);
+51 
+52 &#32;&#32;<emphasis role="keyword">friend</emphasis>&#32;std::istream&amp;&#32;<link linkend="_class_pont_1a7b20e326857f2c8dd5eccb8e6e7e8d7b">operator&gt;&gt;</link>(std::istream&amp;,&#32;<link linkend="_class_pont">Pont</link>&amp;);
+53 };
+54 
+55 <emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_pont_8h_1aca2e599648455a1f472dae8888f68663">dst</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_pont">Pont</link>&amp;&#32;a,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_pont">Pont</link>&amp;&#32;b);
+56 
+57 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//SIKIDOM_PONT_H</emphasis>
+</programlisting></section>

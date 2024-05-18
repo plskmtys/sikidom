@@ -1,0 +1,497 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_tomb" xml:lang="hu">
+<title>Tomb&lt; T &gt; osztálysablon-referencia</title>
+<indexterm><primary>Tomb&lt; T &gt;</primary></indexterm>
+<para>
+
+<para>Generikus Dinamikus tömb osztály. A <link linkend="_class_tomb">Tomb</link> osztály egy dinamikus tömböt reprezentál, melynek mérete a felhasználó által nem korlátozott. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;tomb.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Osztályok    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_tomb_1_1const__iterator">const_iterator</link></para>
+
+<para><link linkend="_class_tomb_1_1const__iterator">const_iterator</link> osztály. Az <link linkend="_class_tomb_1_1const__iterator">const_iterator</link> osztály a <link linkend="_class_tomb">Tomb</link> osztály const_iteratora. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_tomb_1_1iterator">iterator</link></para>
+
+<para>iterator osztály. Az iterator osztály a <link linkend="_class_tomb">Tomb</link> osztály iteratora. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Publikus tagfüggvények    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_tomb_1ae4bf33b0697f4fe2e7702b9e53fc2bf1">Tomb</link> ()</para>
+
+<para><link linkend="_class_tomb">Tomb</link> osztály konstruktora. A konstruktor létrehoz egy üres tömböt, 1 kapacitással. </para>
+</listitem>
+            <listitem><para><link linkend="_class_tomb_1_1iterator">iterator</link> <link linkend="_class_tomb_1a0cc09d5947061cdb6f0bda7d453d8dcf">begin</link> ()</para>
+
+<para>begin iterator. </para>
+</listitem>
+            <listitem><para><link linkend="_class_tomb_1_1iterator">iterator</link> <link linkend="_class_tomb_1af6d640f751ace862d93395f0ddd563de">end</link> ()</para>
+
+<para>end iterator. </para>
+</listitem>
+            <listitem><para><link linkend="_class_tomb_1_1const__iterator">const_iterator</link> <link linkend="_class_tomb_1a83caa244035e77655c10e9e513538d4c">begin</link> () const</para>
+
+<para>begin <link linkend="_class_tomb_1_1const__iterator">const_iterator</link>. </para>
+</listitem>
+            <listitem><para><link linkend="_class_tomb_1_1const__iterator">const_iterator</link> <link linkend="_class_tomb_1a5e751096467add40c338e1cebee16a99">end</link> () const</para>
+
+<para>end <link linkend="_class_tomb_1_1const__iterator">const_iterator</link>. </para>
+</listitem>
+            <listitem><para>size_t <link linkend="_class_tomb_1a589e99d925aeee115bb846e572596b04">size</link> () const</para>
+
+<para><link linkend="_class_tomb">Tomb</link> méretét visszaado függvény. </para>
+</listitem>
+            <listitem><para>size_t <link linkend="_class_tomb_1a32b97e02c54b63cba0c43d25eeef4fc7">capacity</link> () const</para>
+
+<para><link linkend="_class_tomb">Tomb</link> kapacitásat visszaado függvény. </para>
+</listitem>
+            <listitem><para>T &amp; <link linkend="_class_tomb_1a1a8c6c4a1e45ff1086ff1ca25abe8ed5">at</link> (const size_t i)</para>
+
+<para><link linkend="_class_tomb">Tomb</link> at függvénye. </para>
+</listitem>
+            <listitem><para>T &amp; <link linkend="_class_tomb_1a019f55737fcef24bd45b14401c8c842d">operator[]</link> (const size_t i)</para>
+
+<para><link linkend="_class_tomb">Tomb</link> operator[] függvénye. </para>
+</listitem>
+            <listitem><para>const T &amp; <link linkend="_class_tomb_1a09c83fdc40e7a047851c7554d89254b3">at</link> (const size_t i) const</para>
+
+<para><link linkend="_class_tomb">Tomb</link> const at függvénye. </para>
+</listitem>
+            <listitem><para>const T &amp; <link linkend="_class_tomb_1a63cf2fffc699f582ed28a4b67436a85e">operator[]</link> (const size_t i) const</para>
+
+<para><link linkend="_class_tomb">Tomb</link> const operator[] függvénye. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_tomb_1ae97c51ef2373b6301e03957eea14a36d">resize</link> (size_t newSize)</para>
+
+<para><link linkend="_class_tomb">Tomb</link> resize függvénye. A függvény a tömb méretét növeli a megadott értékkel. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_tomb_1ac0d31f04ccdfbe9f32054411345eaf61">push_back</link> (T value)</para>
+
+<para><link linkend="_class_tomb">Tomb</link> push_back függvénye. A függvény a tömb végére fűz egy elemet. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_tomb_1a1e77c83f9e32271652f90179f6ce58ca">find</link> (const T &amp;value) const</para>
+
+<para><link linkend="_class_tomb">Tomb</link> find függvénye. A függvény megkeresi az első olyan elemet, mely megegyezik az értékkel. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_tomb_1ac820e8f0194fefd554a3f55c43e7b2dc">~Tomb</link> ()</para>
+
+<para><link linkend="_class_tomb">Tomb</link> destruktora. A destruktor felszabadítja a tömbot. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Privát attribútumok    </title>
+        <itemizedlist>
+            <listitem><para>T * <link linkend="_class_tomb_1af588b1f01320436f2019bc3c15fbcb50">t</link></para>
+
+<para>A dinamikusan foglalt tömb elejére mutató pointer. </para>
+</listitem>
+            <listitem><para>size_t <link linkend="_class_tomb_1ab40caed442b0ab5633b8cfa2bd5bb77f">currentSize</link></para>
+
+<para>A tömb aktuális mérete. </para>
+</listitem>
+            <listitem><para>size_t <link linkend="_class_tomb_1ab3e265b9c9a56d5eca7f7d5176b20b9b">currentCapacity</link></para>
+
+<para>A tömb aktuális kapacitása. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Részletes leírás</title>
+<simplesect><title>template&lt;class T&gt;<?linebreak?>class Tomb&lt; T &gt;</title></simplesect>
+
+<para>Generikus Dinamikus tömb osztály. A <link linkend="_class_tomb">Tomb</link> osztály egy dinamikus tömböt reprezentál, melynek mérete a felhasználó által nem korlátozott. </para>
+</section>
+<section>
+<title>Konstruktorok és destruktorok dokumentációja</title>
+<anchor xml:id="_class_tomb_1ae4bf33b0697f4fe2e7702b9e53fc2bf1"/><section>
+    <title>Tomb()</title>
+<indexterm><primary>Tomb</primary><secondary>Tomb&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Tomb&lt; T &gt;</primary><secondary>Tomb</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput><link linkend="_class_tomb">Tomb</link>&lt; T &gt;<link linkend="_class_tomb">::Tomb</link> ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para><link linkend="_class_tomb">Tomb</link> osztály konstruktora. A konstruktor létrehoz egy üres tömböt, 1 kapacitással. </para>
+</para>
+</section>
+<anchor xml:id="_class_tomb_1ac820e8f0194fefd554a3f55c43e7b2dc"/><section>
+    <title>~Tomb()</title>
+<indexterm><primary>~Tomb</primary><secondary>Tomb&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Tomb&lt; T &gt;</primary><secondary>~Tomb</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>virtual <link linkend="_class_tomb">Tomb</link>&lt; T &gt;::~<link linkend="_class_tomb">Tomb</link> ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para><link linkend="_class_tomb">Tomb</link> destruktora. A destruktor felszabadítja a tömbot. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Tagfüggvények dokumentációja</title>
+<anchor xml:id="_class_tomb_1a1a8c6c4a1e45ff1086ff1ca25abe8ed5"/><section>
+    <title>at()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>at</primary><secondary>Tomb&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Tomb&lt; T &gt;</primary><secondary>at</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>T &amp; <link linkend="_class_tomb">Tomb</link>&lt; T &gt;::at (const size_t i)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para><link linkend="_class_tomb">Tomb</link> at függvénye. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>i</entry><entry>
+<para>Az index, ahol lévő az elemet szeretnénk elérni. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>Az i-edik elem. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_tomb_1a09c83fdc40e7a047851c7554d89254b3"/><section>
+    <title>at()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>at</primary><secondary>Tomb&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Tomb&lt; T &gt;</primary><secondary>at</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>const T &amp; <link linkend="_class_tomb">Tomb</link>&lt; T &gt;::at (const size_t i) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para><link linkend="_class_tomb">Tomb</link> const at függvénye. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>i</entry><entry>
+<para>Az index, ahol lévő elemet szeretnénk elérni. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>const referencia az i-edik elemre. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_tomb_1a0cc09d5947061cdb6f0bda7d453d8dcf"/><section>
+    <title>begin()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>begin</primary><secondary>Tomb&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Tomb&lt; T &gt;</primary><secondary>begin</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput><link linkend="_class_tomb_1_1iterator">iterator</link> <link linkend="_class_tomb">Tomb</link>&lt; T &gt;::begin ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>begin iterator. </para>
+</para>
+
+<para><formalpara><title>Visszatérési érték</title>
+
+<para>Az első elemre mutató iterator. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_tomb_1a83caa244035e77655c10e9e513538d4c"/><section>
+    <title>begin()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>begin</primary><secondary>Tomb&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Tomb&lt; T &gt;</primary><secondary>begin</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput><link linkend="_class_tomb_1_1const__iterator">const_iterator</link> <link linkend="_class_tomb">Tomb</link>&lt; T &gt;::begin ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>begin <link linkend="_class_tomb_1_1const__iterator">const_iterator</link>. </para>
+</para>
+
+<para><formalpara><title>Visszatérési érték</title>
+
+<para>Az első elemre mutató <link linkend="_class_tomb_1_1const__iterator">const_iterator</link>. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_tomb_1a32b97e02c54b63cba0c43d25eeef4fc7"/><section>
+    <title>capacity()</title>
+<indexterm><primary>capacity</primary><secondary>Tomb&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Tomb&lt; T &gt;</primary><secondary>capacity</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>size_t <link linkend="_class_tomb">Tomb</link>&lt; T &gt;::capacity ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para><link linkend="_class_tomb">Tomb</link> kapacitásat visszaado függvény. </para>
+</para>
+
+<para><formalpara><title>Visszatérési érték</title>
+
+<para>A tömb kapacitása. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_tomb_1af6d640f751ace862d93395f0ddd563de"/><section>
+    <title>end()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>end</primary><secondary>Tomb&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Tomb&lt; T &gt;</primary><secondary>end</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput><link linkend="_class_tomb_1_1iterator">iterator</link> <link linkend="_class_tomb">Tomb</link>&lt; T &gt;::end ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>end iterator. </para>
+</para>
+
+<para><formalpara><title>Visszatérési érték</title>
+
+<para>Az utolsó elem után mutató iterator. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_tomb_1a5e751096467add40c338e1cebee16a99"/><section>
+    <title>end()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>end</primary><secondary>Tomb&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Tomb&lt; T &gt;</primary><secondary>end</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput><link linkend="_class_tomb_1_1const__iterator">const_iterator</link> <link linkend="_class_tomb">Tomb</link>&lt; T &gt;::end ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>end <link linkend="_class_tomb_1_1const__iterator">const_iterator</link>. </para>
+</para>
+
+<para><formalpara><title>Visszatérési érték</title>
+
+<para>Az utolsó elem után mutató <link linkend="_class_tomb_1_1const__iterator">const_iterator</link>. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_tomb_1a1e77c83f9e32271652f90179f6ce58ca"/><section>
+    <title>find()</title>
+<indexterm><primary>find</primary><secondary>Tomb&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Tomb&lt; T &gt;</primary><secondary>find</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>int <link linkend="_class_tomb">Tomb</link>&lt; T &gt;::find (const T &amp; value) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para><link linkend="_class_tomb">Tomb</link> find függvénye. A függvény megkeresi az első olyan elemet, mely megegyezik az értékkel. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>value</entry><entry>
+<para>Az érték, melyet keresünk. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>Az első olyan elem indexe, mely megegyezik az értékkel, ha nincs ilyen, akkor -1. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_tomb_1a019f55737fcef24bd45b14401c8c842d"/><section>
+    <title>operator[]()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator[]</primary><secondary>Tomb&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Tomb&lt; T &gt;</primary><secondary>operator[]</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>T &amp; <link linkend="_class_tomb">Tomb</link>&lt; T &gt;::operator[] (const size_t i)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para><link linkend="_class_tomb">Tomb</link> operator[] függvénye. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>i</entry><entry>
+<para>Az index, ahol lévő elemet szeretnénk elérni. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>Az i-edik elem. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_tomb_1a63cf2fffc699f582ed28a4b67436a85e"/><section>
+    <title>operator[]()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator[]</primary><secondary>Tomb&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Tomb&lt; T &gt;</primary><secondary>operator[]</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>const T &amp; <link linkend="_class_tomb">Tomb</link>&lt; T &gt;::operator[] (const size_t i) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para><link linkend="_class_tomb">Tomb</link> const operator[] függvénye. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>i</entry><entry>
+<para>Az index, ahol lévő elemet szeretnénk elérni. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>const referencia az i-edik elemre. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_tomb_1ac0d31f04ccdfbe9f32054411345eaf61"/><section>
+    <title>push_back()</title>
+<indexterm><primary>push_back</primary><secondary>Tomb&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Tomb&lt; T &gt;</primary><secondary>push_back</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>void <link linkend="_class_tomb">Tomb</link>&lt; T &gt;::push_back (T value)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para><link linkend="_class_tomb">Tomb</link> push_back függvénye. A függvény a tömb végére fűz egy elemet. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>value</entry><entry>
+<para>Az érték, melyet a tömb végére fűzünk. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_tomb_1ae97c51ef2373b6301e03957eea14a36d"/><section>
+    <title>resize()</title>
+<indexterm><primary>resize</primary><secondary>Tomb&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Tomb&lt; T &gt;</primary><secondary>resize</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>void <link linkend="_class_tomb">Tomb</link>&lt; T &gt;::resize (size_t newSize)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para><link linkend="_class_tomb">Tomb</link> resize függvénye. A függvény a tömb méretét növeli a megadott értékkel. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>newSize</entry><entry>
+<para>A novelendo meret. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_tomb_1a589e99d925aeee115bb846e572596b04"/><section>
+    <title>size()</title>
+<indexterm><primary>size</primary><secondary>Tomb&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Tomb&lt; T &gt;</primary><secondary>size</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>size_t <link linkend="_class_tomb">Tomb</link>&lt; T &gt;::size ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para><link linkend="_class_tomb">Tomb</link> méretét visszaado függvény. </para>
+</para>
+
+<para><formalpara><title>Visszatérési érték</title>
+
+<para>A tömb mérete. </para>
+</formalpara>
+</para>
+</section>
+</section>
+<section>
+<title>Adattagok dokumentációja</title>
+<anchor xml:id="_class_tomb_1ab3e265b9c9a56d5eca7f7d5176b20b9b"/><section>
+    <title>currentCapacity</title>
+<indexterm><primary>currentCapacity</primary><secondary>Tomb&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Tomb&lt; T &gt;</primary><secondary>currentCapacity</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>size_t <link linkend="_class_tomb">Tomb</link>&lt; T &gt;::currentCapacity<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>A tömb aktuális kapacitása. </para>
+</para>
+</section>
+<anchor xml:id="_class_tomb_1ab40caed442b0ab5633b8cfa2bd5bb77f"/><section>
+    <title>currentSize</title>
+<indexterm><primary>currentSize</primary><secondary>Tomb&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Tomb&lt; T &gt;</primary><secondary>currentSize</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>size_t <link linkend="_class_tomb">Tomb</link>&lt; T &gt;::currentSize<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>A tömb aktuális mérete. </para>
+</para>
+</section>
+<anchor xml:id="_class_tomb_1af588b1f01320436f2019bc3c15fbcb50"/><section>
+    <title>t</title>
+<indexterm><primary>t</primary><secondary>Tomb&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Tomb&lt; T &gt;</primary><secondary>t</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>T* <link linkend="_class_tomb">Tomb</link>&lt; T &gt;::t<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>A dinamikusan foglalt tömb elejére mutató pointer. </para>
+</para>
+</section>
+<para>
+Ez a dokumentáció az osztályról a következő fájl alapján készült:</para>
+src/<link linkend="_tomb_8hpp">tomb.hpp</link></section>
+</section>

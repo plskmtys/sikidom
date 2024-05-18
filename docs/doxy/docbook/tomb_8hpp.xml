@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_tomb_8hpp" xml:lang="hu">
+<title>src/tomb.hpp fájlreferencia</title>
+<indexterm><primary>src/tomb.hpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;stdexcept&gt;<?linebreak?></programlisting><simplesect>
+    <title>Osztályok    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_tomb">Tomb&lt; T &gt;</link></para>
+
+<para>Generikus Dinamikus tömb osztály. A <link linkend="_class_tomb">Tomb</link> osztály egy dinamikus tömböt reprezentál, melynek mérete a felhasználó által nem korlátozott. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_tomb_1_1iterator">Tomb&lt; T &gt;::iterator</link></para>
+
+<para>iterator osztály. Az iterator osztály a <link linkend="_class_tomb">Tomb</link> osztály iteratora. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_tomb_1_1const__iterator">Tomb&lt; T &gt;::const_iterator</link></para>
+
+<para><link linkend="_class_tomb_1_1const__iterator">const_iterator</link> osztály. Az <link linkend="_class_tomb_1_1const__iterator">const_iterator</link> osztály a <link linkend="_class_tomb">Tomb</link> osztály const_iteratora. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

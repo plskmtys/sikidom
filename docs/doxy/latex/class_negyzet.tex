@@ -1,0 +1,219 @@
+\doxysection{Negyzet osztályreferencia}
+\hypertarget{class_negyzet}{}\label{class_negyzet}\index{Negyzet@{Negyzet}}
+
+
+{\ttfamily \#include $<$sikidom.\+h$>$}
+
+A Negyzet osztály származási diagramja\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_negyzet}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Publikus tagfüggvények}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_negyzet_a67129e75e6e9f8fee584b14883ffe511}{Negyzet}} (\mbox{\hyperlink{class_pont}{Pont}} \+\_\+kp=\mbox{\hyperlink{class_pont}{Pont}}(0, 0), \mbox{\hyperlink{class_pont}{Pont}} \+\_\+p=\mbox{\hyperlink{class_pont}{Pont}}(0, 0))
+\item 
+\mbox{\hyperlink{class_negyzet_a5779b1aa386becfb6657400abfa5a370}{Negyzet}} (const \mbox{\hyperlink{class_negyzet}{Negyzet}} \&\+\_\+n)
+\item 
+double \mbox{\hyperlink{class_negyzet_a1d77a4d0f43908f6169854f431d1a1aa}{Terulet}} () const override
+\begin{DoxyCompactList}\small\item\em \doxylink{class_negyzet}{Negyzet} területét számoló függvény. A kiszamitas modja\+: R\texorpdfstring{$^\wedge$}{\string^}2 \texorpdfstring{$\ast$}{*} 2. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_negyzet_a1e8032e6f035f0c356f3399f16ee82d2}{Rajtavan}} (const \mbox{\hyperlink{class_pont}{Pont}} \&) const override
+\begin{DoxyCompactList}\small\item\em \doxylink{class_negyzet}{Negyzet} Rajtavan függvény. A függvény eldönti, hogy egy pont rajta van-\/e a négyzeten. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_negyzet_af92d375645d8f10d2f74c7ddadf91dc9}{Write}} (std\+::ostream \&os) const override
+\begin{DoxyCompactList}\small\item\em \doxylink{class_negyzet}{Negyzet} kiíró függvény. A függvény kiírja a négyzet adatait a megadott output streambe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_negyzet_ad6dc4a5f2183be90c6d8be42240df025}{Read}} (std\+::istream \&is) override
+\begin{DoxyCompactList}\small\item\em \doxylink{class_negyzet}{Negyzet} beolvasó függvény. A függvény beolvassa a négyzet adatait a megadott input streamből. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_negyzet_aef68e2870b19134660c203bb71b284bb}{Kivul}} (const std\+::size\+\_\+t r) const override
+\begin{DoxyCompactList}\small\item\em \doxylink{class_negyzet}{Negyzet} Kivul függvény. Eldönti, hogy a négyzet kívül van-\/e egy adott sugarú, origo középpontú körön. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_negyzet_ad05d7bc65a5a47b45c62609638b9eb67}{\texorpdfstring{$\sim$}{\string~}\+Negyzet}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Publikus tagfüggvények a(z) \mbox{\hyperlink{class_sikidom}{Sikidom}} osztályból származnak}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sikidom_a4dd258f18e4985aab7aa63518f4cb53c}{Sikidom}} (const \mbox{\hyperlink{class_sikidom}{Sikidom}} \&)
+\item 
+\mbox{\hyperlink{class_sikidom}{Sikidom}} \& \mbox{\hyperlink{class_sikidom_a06417917486d1d4786a7bb8a238826ba}{operator=}} (const \mbox{\hyperlink{class_sikidom}{Sikidom}} \&)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_sikidom}{Sikidom} osztaly egyenloseg operatora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pont}{Pont}} \mbox{\hyperlink{class_sikidom_a580ec59df76631c231468b6beb303865}{getkp}} () const
+\item 
+\mbox{\hyperlink{class_pont}{Pont}} \mbox{\hyperlink{class_sikidom_a4c868839f9e4051e8717ddba28fad015}{getp}} () const
+\item 
+bool \mbox{\hyperlink{class_sikidom_aa429648a709a968dacd563d52cb39e44}{Tartalmazza}} (const int) const
+\item 
+\mbox{\hyperlink{class_sikidom}{Sikidom}} \& \mbox{\hyperlink{class_sikidom_afe53eb1a8e5b36fb50b20ce6a296959c}{Mozgat}} (const int \+\_\+x, const int \+\_\+y)
+\begin{DoxyCompactList}\small\item\em Egy sokszög mozgatását teszi lehetővé. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sikidom}{Sikidom}} \& \mbox{\hyperlink{class_sikidom_a68f6ac0248b3176028002b3b45dde07b}{Forgat}} (const double, const \mbox{\hyperlink{class_pont}{Pont}} \&)
+\begin{DoxyCompactList}\small\item\em Egy sokszög forgatását teszi lehetővé. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_sikidom_addcc9cfc77c3b6617d36084a10bcf208}{\texorpdfstring{$\sim$}{\string~}\+Sikidom}} ()=0
+\begin{DoxyCompactList}\small\item\em \doxylink{class_sikidom}{Sikidom} osztály destruktora. nincs dinamikusan foglalt adattag, tehát nem kell semmit felszabadítani. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Barátok}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_negyzet_ac1b23fa9c1c34251edd43a5fdc83318a}{operator$<$$<$}} (std\+::ostream \&, const \mbox{\hyperlink{class_negyzet}{Negyzet}} \&)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{További örökölt tagok}
+\doxysubsection*{Statikus publikus tagfüggvények a(z) \mbox{\hyperlink{class_sikidom}{Sikidom}} osztályból származnak}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_sikidom}{Sikidom}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_sikidom_a34fe25b652fdf3dcd5c02256fcea31dc}{create\+Sikidom}} (const std\+::string \&type)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_sikidom}{Sikidom} osztály statikus factory függvénye. A függvény létrehoz egy új síkidomot a megadott típus alapján. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Védett tagfüggvények a(z) \mbox{\hyperlink{class_sikidom}{Sikidom}} osztályból származnak}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sikidom_a200b65570223034da8a84bca5a88f61e}{Sikidom}} (\mbox{\hyperlink{class_pont}{Pont}} \+\_\+kp=\mbox{\hyperlink{class_pont}{Pont}}(0, 0), \mbox{\hyperlink{class_pont}{Pont}} \+\_\+p=\mbox{\hyperlink{class_pont}{Pont}}(0, 0))
+\begin{DoxyCompactList}\small\item\em \doxylink{class_sikidom}{Sikidom} konstruktor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Védett attribútumok a(z) \mbox{\hyperlink{class_sikidom}{Sikidom}} osztályból származnak}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pont}{Pont}} \mbox{\hyperlink{class_sikidom_a11c6def4b07e4748bfa85947ac9f5591}{kp}}
+\begin{DoxyCompactList}\small\item\em Középpont. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pont}{Pont}} \mbox{\hyperlink{class_sikidom_a139d93aabfc8ae56a115a22343e0ffaa}{p}}
+\begin{DoxyCompactList}\small\item\em A síkidom egy csúcsa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Részletes leírás}
+
+\begin{DoxyParams}{Paraméterek}
+{\em \doxylink{class_negyzet}{Negyzet}} & osztály. A \doxylink{class_negyzet}{Negyzet} osztály a \doxylink{class_sikidom}{Sikidom} leszármazottja, mely egy négyzet síkidomot reprezentál, középpontjával és egy csúcsával. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Konstruktorok és destruktorok dokumentációja}
+\Hypertarget{class_negyzet_a67129e75e6e9f8fee584b14883ffe511}\label{class_negyzet_a67129e75e6e9f8fee584b14883ffe511} 
+\index{Negyzet@{Negyzet}!Negyzet@{Negyzet}}
+\index{Negyzet@{Negyzet}!Negyzet@{Negyzet}}
+\doxysubsubsection{\texorpdfstring{Negyzet()}{Negyzet()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Negyzet\+::\+Negyzet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pont}{Pont}}}]{\+\_\+kp = {\ttfamily \mbox{\hyperlink{class_pont}{Pont}}(0,~0)},  }\item[{\mbox{\hyperlink{class_pont}{Pont}}}]{\+\_\+p = {\ttfamily \mbox{\hyperlink{class_pont}{Pont}}(0,~0)} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_negyzet_a5779b1aa386becfb6657400abfa5a370}\label{class_negyzet_a5779b1aa386becfb6657400abfa5a370} 
+\index{Negyzet@{Negyzet}!Negyzet@{Negyzet}}
+\index{Negyzet@{Negyzet}!Negyzet@{Negyzet}}
+\doxysubsubsection{\texorpdfstring{Negyzet()}{Negyzet()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Negyzet\+::\+Negyzet (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_negyzet}{Negyzet}} \&}]{\+\_\+n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_negyzet_ad05d7bc65a5a47b45c62609638b9eb67}\label{class_negyzet_ad05d7bc65a5a47b45c62609638b9eb67} 
+\index{Negyzet@{Negyzet}!````~Negyzet@{\texorpdfstring{$\sim$}{\string~}Negyzet}}
+\index{````~Negyzet@{\texorpdfstring{$\sim$}{\string~}Negyzet}!Negyzet@{Negyzet}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Negyzet()}{\string~Negyzet()}}
+{\footnotesize\ttfamily Negyzet\+::\texorpdfstring{$\sim$}{\string~}\+Negyzet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+\doxysubsection{Tagfüggvények dokumentációja}
+\Hypertarget{class_negyzet_aef68e2870b19134660c203bb71b284bb}\label{class_negyzet_aef68e2870b19134660c203bb71b284bb} 
+\index{Negyzet@{Negyzet}!Kivul@{Kivul}}
+\index{Kivul@{Kivul}!Negyzet@{Negyzet}}
+\doxysubsubsection{\texorpdfstring{Kivul()}{Kivul()}}
+{\footnotesize\ttfamily bool Negyzet\+::\+Kivul (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{r }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\doxylink{class_negyzet}{Negyzet} Kivul függvény. Eldönti, hogy a négyzet kívül van-\/e egy adott sugarú, origo középpontú körön. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em r} & a kör sugara. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+true, ha a négyzet kívül van a körön, egyébként false. 
+\end{DoxyReturn}
+
+
+Megvalósítja a következőket\+: \mbox{\hyperlink{class_sikidom_ac8b7bb5618747ad0e3ce258e4fa223a2}{Sikidom}}.
+
+\Hypertarget{class_negyzet_a1e8032e6f035f0c356f3399f16ee82d2}\label{class_negyzet_a1e8032e6f035f0c356f3399f16ee82d2} 
+\index{Negyzet@{Negyzet}!Rajtavan@{Rajtavan}}
+\index{Rajtavan@{Rajtavan}!Negyzet@{Negyzet}}
+\doxysubsubsection{\texorpdfstring{Rajtavan()}{Rajtavan()}}
+{\footnotesize\ttfamily bool Negyzet\+::\+Rajtavan (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_pont}{Pont}} \&}]{P }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\doxylink{class_negyzet}{Negyzet} Rajtavan függvény. A függvény eldönti, hogy egy pont rajta van-\/e a négyzeten. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em P} & a vizsgált pont. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+true, ha a pont rajta van a négyzeten, egyébként false. 
+\end{DoxyReturn}
+
+
+Megvalósítja a következőket\+: \mbox{\hyperlink{class_sikidom_af85de4b120b39e41487f4fc491857596}{Sikidom}}.
+
+\Hypertarget{class_negyzet_ad6dc4a5f2183be90c6d8be42240df025}\label{class_negyzet_ad6dc4a5f2183be90c6d8be42240df025} 
+\index{Negyzet@{Negyzet}!Read@{Read}}
+\index{Read@{Read}!Negyzet@{Negyzet}}
+\doxysubsubsection{\texorpdfstring{Read()}{Read()}}
+{\footnotesize\ttfamily void Negyzet\+::\+Read (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\doxylink{class_negyzet}{Negyzet} beolvasó függvény. A függvény beolvassa a négyzet adatait a megadott input streamből. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em is} & a bemeneti stream. \\
+\hline
+\end{DoxyParams}
+
+
+Megvalósítja a következőket\+: \mbox{\hyperlink{class_sikidom_a34ea60629f1c57a4b5afa8fdb8b38eb6}{Sikidom}}.
+
+\Hypertarget{class_negyzet_a1d77a4d0f43908f6169854f431d1a1aa}\label{class_negyzet_a1d77a4d0f43908f6169854f431d1a1aa} 
+\index{Negyzet@{Negyzet}!Terulet@{Terulet}}
+\index{Terulet@{Terulet}!Negyzet@{Negyzet}}
+\doxysubsubsection{\texorpdfstring{Terulet()}{Terulet()}}
+{\footnotesize\ttfamily double Negyzet\+::\+Terulet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\doxylink{class_negyzet}{Negyzet} területét számoló függvény. A kiszamitas modja\+: R\texorpdfstring{$^\wedge$}{\string^}2 \texorpdfstring{$\ast$}{*} 2. 
+
+\begin{DoxyReturn}{Visszatérési érték}
+A négyzet területe. 
+\end{DoxyReturn}
+
+
+Megvalósítja a következőket\+: \mbox{\hyperlink{class_sikidom_a6324bee38c590b706057f1d5cc4d9a25}{Sikidom}}.
+
+\Hypertarget{class_negyzet_af92d375645d8f10d2f74c7ddadf91dc9}\label{class_negyzet_af92d375645d8f10d2f74c7ddadf91dc9} 
+\index{Negyzet@{Negyzet}!Write@{Write}}
+\index{Write@{Write}!Negyzet@{Negyzet}}
+\doxysubsubsection{\texorpdfstring{Write()}{Write()}}
+{\footnotesize\ttfamily void Negyzet\+::\+Write (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\doxylink{class_negyzet}{Negyzet} kiíró függvény. A függvény kiírja a négyzet adatait a megadott output streambe. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em os} & a kimeneti stream. \\
+\hline
+\end{DoxyParams}
+
+
+Megvalósítja a következőket\+: \mbox{\hyperlink{class_sikidom_aaf04b7e802aed0f201c8471cd15c75f6}{Sikidom}}.
+
+
+
+\doxysubsection{Barát és kapcsolódó függvények dokumentációja}
+\Hypertarget{class_negyzet_ac1b23fa9c1c34251edd43a5fdc83318a}\label{class_negyzet_ac1b23fa9c1c34251edd43a5fdc83318a} 
+\index{Negyzet@{Negyzet}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Negyzet@{Negyzet}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{,  }\item[{const \mbox{\hyperlink{class_negyzet}{Negyzet}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Ez a dokumentáció az osztályról a következő fájlok alapján készült\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{sikidom_8h}{sikidom.\+h}}\item 
+src/\mbox{\hyperlink{sikidom_8cpp}{sikidom.\+cpp}}\end{DoxyCompactItemize}

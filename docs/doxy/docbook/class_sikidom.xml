@@ -1,0 +1,523 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_sikidom" xml:lang="hu">
+<title>Sikidom osztályreferencia</title>
+<indexterm><primary>Sikidom</primary></indexterm>
+<para>
+
+<para><link linkend="_class_sikidom">Sikidom</link> osztály. A sikidom osztály egy absztrakt osztály, melynek leszármazottai a különböző (szabályos) síkidomokat reprezentálják, középpontjukkal és egy csúcsukkal. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;sikidom.h&gt;</computeroutput>
+</para>
+<para>A Sikidom osztály származási diagramja:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_sikidom.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Publikus tagfüggvények    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_sikidom_1a4dd258f18e4985aab7aa63518f4cb53c">Sikidom</link> (const <link linkend="_class_sikidom">Sikidom</link> &amp;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_sikidom">Sikidom</link> &amp; <link linkend="_class_sikidom_1a06417917486d1d4786a7bb8a238826ba">operator=</link> (const <link linkend="_class_sikidom">Sikidom</link> &amp;)</para>
+
+<para><link linkend="_class_sikidom">Sikidom</link> osztaly egyenloseg operatora. </para>
+</listitem>
+            <listitem><para><link linkend="_class_pont">Pont</link> <link linkend="_class_sikidom_1a580ec59df76631c231468b6beb303865">getkp</link> () const</para>
+</listitem>
+            <listitem><para><link linkend="_class_pont">Pont</link> <link linkend="_class_sikidom_1a4c868839f9e4051e8717ddba28fad015">getp</link> () const</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_sikidom_1aa429648a709a968dacd563d52cb39e44">Tartalmazza</link> (const int) const</para>
+</listitem>
+            <listitem><para><link linkend="_class_sikidom">Sikidom</link> &amp; <link linkend="_class_sikidom_1afe53eb1a8e5b36fb50b20ce6a296959c">Mozgat</link> (const int _x, const int _y)</para>
+
+<para>Egy sokszög mozgatását teszi lehetővé. </para>
+</listitem>
+            <listitem><para><link linkend="_class_sikidom">Sikidom</link> &amp; <link linkend="_class_sikidom_1a68f6ac0248b3176028002b3b45dde07b">Forgat</link> (const double, const <link linkend="_class_pont">Pont</link> &amp;)</para>
+
+<para>Egy sokszög forgatását teszi lehetővé. </para>
+</listitem>
+            <listitem><para>virtual double <link linkend="_class_sikidom_1a6324bee38c590b706057f1d5cc4d9a25">Terulet</link> () const =0</para>
+
+<para>A sokszög területét adja vissza. </para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_class_sikidom_1af85de4b120b39e41487f4fc491857596">Rajtavan</link> (const <link linkend="_class_pont">Pont</link> &amp;) const =0</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_sikidom_1aaf04b7e802aed0f201c8471cd15c75f6">Write</link> (std::ostream &amp;os) const =0</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_sikidom_1a34ea60629f1c57a4b5afa8fdb8b38eb6">Read</link> (std::istream &amp;is)=0</para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_class_sikidom_1ac8b7bb5618747ad0e3ce258e4fa223a2">Kivul</link> (const std::size_t r) const =0</para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_sikidom_1addcc9cfc77c3b6617d36084a10bcf208">~Sikidom</link> ()=0</para>
+
+<para><link linkend="_class_sikidom">Sikidom</link> osztály destruktora. nincs dinamikusan foglalt adattag, tehát nem kell semmit felszabadítani. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Statikus publikus tagfüggvények    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_class_sikidom">Sikidom</link> * <link linkend="_class_sikidom_1a34fe25b652fdf3dcd5c02256fcea31dc">createSikidom</link> (const std::string &amp;type)</para>
+
+<para><link linkend="_class_sikidom">Sikidom</link> osztály statikus factory függvénye. A függvény létrehoz egy új síkidomot a megadott típus alapján. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Védett tagfüggvények    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_sikidom_1a200b65570223034da8a84bca5a88f61e">Sikidom</link> (<link linkend="_class_pont">Pont</link> _kp=<link linkend="_class_pont">Pont</link>(0, 0), <link linkend="_class_pont">Pont</link> _p=<link linkend="_class_pont">Pont</link>(0, 0))</para>
+
+<para><link linkend="_class_sikidom">Sikidom</link> konstruktor. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Védett attribútumok    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_pont">Pont</link> <link linkend="_class_sikidom_1a11c6def4b07e4748bfa85947ac9f5591">kp</link></para>
+
+<para>Középpont. </para>
+</listitem>
+            <listitem><para><link linkend="_class_pont">Pont</link> <link linkend="_class_sikidom_1a139d93aabfc8ae56a115a22343e0ffaa">p</link></para>
+
+<para>A síkidom egy csúcsa. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Barátok    </title>
+        <itemizedlist>
+            <listitem><para>std::ostream &amp; <link linkend="_class_sikidom_1a98b88fcd8d7cda1caccc84514046a7b0">operator&lt;&lt;</link> (std::ostream &amp;, const <link linkend="_class_sikidom">Sikidom</link> *const)</para>
+
+<para><link linkend="_class_sikidom">Sikidom</link> osztály kiíró operátora. A függvény kiírja a síkidomot a megadott output streambe. </para>
+</listitem>
+            <listitem><para>std::istream &amp; <link linkend="_class_sikidom_1a39346f937ea5f46cdd047b2afa03c34b">operator&gt;&gt;</link> (std::istream &amp;is, <link linkend="_class_sikidom">Sikidom</link> **sikidom)</para>
+
+<para><link linkend="_class_sikidom">Sikidom</link> osztály beolvasó operátora. A függvény beolvassa a síkidomot a megadott input streamből. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Részletes leírás</title>
+
+<para><link linkend="_class_sikidom">Sikidom</link> osztály. A sikidom osztály egy absztrakt osztály, melynek leszármazottai a különböző (szabályos) síkidomokat reprezentálják, középpontjukkal és egy csúcsukkal. </para>
+</section>
+<section>
+<title>Konstruktorok és destruktorok dokumentációja</title>
+<anchor xml:id="_class_sikidom_1a200b65570223034da8a84bca5a88f61e"/><section>
+    <title>Sikidom()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Sikidom</primary><secondary>Sikidom</secondary></indexterm>
+<indexterm><primary>Sikidom</primary><secondary>Sikidom</secondary></indexterm>
+<para><computeroutput>Sikidom::Sikidom (<link linkend="_class_pont">Pont</link> _kp = <computeroutput><link linkend="_class_pont">Pont</link>(0,&#160;0)</computeroutput>
+, <link linkend="_class_pont">Pont</link> _p = <computeroutput><link linkend="_class_pont">Pont</link>(0,&#160;0)</computeroutput>
+)<computeroutput>[inline]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para><link linkend="_class_sikidom">Sikidom</link> konstruktor. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_kp</entry><entry>
+<para>középpont. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_p</entry><entry>
+<para>egy csúcs. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_sikidom_1a4dd258f18e4985aab7aa63518f4cb53c"/><section>
+    <title>Sikidom()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Sikidom</primary><secondary>Sikidom</secondary></indexterm>
+<indexterm><primary>Sikidom</primary><secondary>Sikidom</secondary></indexterm>
+<para><computeroutput>Sikidom::Sikidom (const <link linkend="_class_sikidom">Sikidom</link> &amp; s)</computeroutput></para>
+<para><link linkend="_class_sikidom">Sikidom</link> osztaly Copy konstruktora.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>s</entry><entry>
+<para>Referencia a lemasolando Sikidomra </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_sikidom_1addcc9cfc77c3b6617d36084a10bcf208"/><section>
+    <title>~Sikidom()</title>
+<indexterm><primary>~Sikidom</primary><secondary>Sikidom</secondary></indexterm>
+<indexterm><primary>Sikidom</primary><secondary>~Sikidom</secondary></indexterm>
+<para><computeroutput>Sikidom::~Sikidom ( )<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para><link linkend="_class_sikidom">Sikidom</link> osztály destruktora. nincs dinamikusan foglalt adattag, tehát nem kell semmit felszabadítani. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Tagfüggvények dokumentációja</title>
+<anchor xml:id="_class_sikidom_1a34fe25b652fdf3dcd5c02256fcea31dc"/><section>
+    <title>createSikidom()</title>
+<indexterm><primary>createSikidom</primary><secondary>Sikidom</secondary></indexterm>
+<indexterm><primary>Sikidom</primary><secondary>createSikidom</secondary></indexterm>
+<para><computeroutput><link linkend="_class_sikidom">Sikidom</link> * Sikidom::createSikidom (const std::string &amp; s)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para><link linkend="_class_sikidom">Sikidom</link> osztály statikus factory függvénye. A függvény létrehoz egy új síkidomot a megadott típus alapján. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>s</entry><entry>
+<para>a létrehozandó síkidom típusa szöveg formátumban. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>A létrehozott síkidomra mutató pointer. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_sikidom_1a68f6ac0248b3176028002b3b45dde07b"/><section>
+    <title>Forgat()</title>
+<indexterm><primary>Forgat</primary><secondary>Sikidom</secondary></indexterm>
+<indexterm><primary>Sikidom</primary><secondary>Forgat</secondary></indexterm>
+<para><computeroutput><link linkend="_class_sikidom">Sikidom</link> &amp; Sikidom::Forgat (const double rad, const <link linkend="_class_pont">Pont</link> &amp; center = <computeroutput><link linkend="_class_pont">Pont</link>(0,&#160;0)</computeroutput>
+)</computeroutput></para><para>
+
+<para>Egy sokszög forgatását teszi lehetővé. </para>
+</para>
+
+<para><link linkend="_class_sikidom">Sikidom</link> osztály forgató függvénye. A függvény elforgatja a síkidomot &lt;rad&gt; radiánnal.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>deg</entry><entry>
+<para>forgatás mértéke, fokban.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>rad</entry><entry>
+<para>forgatás mértéke, radiánban. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>center</entry><entry>
+<para>a forgatás középpontja. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>Referencia a forgatott síkidomra. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_sikidom_1a580ec59df76631c231468b6beb303865"/><section>
+    <title>getkp()</title>
+<indexterm><primary>getkp</primary><secondary>Sikidom</secondary></indexterm>
+<indexterm><primary>Sikidom</primary><secondary>getkp</secondary></indexterm>
+<para><computeroutput><link linkend="_class_pont">Pont</link> Sikidom::getkp ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_sikidom_1a4c868839f9e4051e8717ddba28fad015"/><section>
+    <title>getp()</title>
+<indexterm><primary>getp</primary><secondary>Sikidom</secondary></indexterm>
+<indexterm><primary>Sikidom</primary><secondary>getp</secondary></indexterm>
+<para><computeroutput><link linkend="_class_pont">Pont</link> Sikidom::getp ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_sikidom_1ac8b7bb5618747ad0e3ce258e4fa223a2"/><section>
+    <title>Kivul()</title>
+<indexterm><primary>Kivul</primary><secondary>Sikidom</secondary></indexterm>
+<indexterm><primary>Sikidom</primary><secondary>Kivul</secondary></indexterm>
+<para><computeroutput>virtual bool Sikidom::Kivul (const std::size_t r) const<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Megvalósítják a következők: <link linkend="_class_kor_1ad3800ae48997f4081af601a8361ebc2f">Kor</link>, <link linkend="_class_haromszog_1a9ed79902d5a11c7d8d93c935ae364741">Haromszog</link> és <link linkend="_class_negyzet_1aef68e2870b19134660c203bb71b284bb">Negyzet</link>.</para>
+</section>
+<anchor xml:id="_class_sikidom_1afe53eb1a8e5b36fb50b20ce6a296959c"/><section>
+    <title>Mozgat()</title>
+<indexterm><primary>Mozgat</primary><secondary>Sikidom</secondary></indexterm>
+<indexterm><primary>Sikidom</primary><secondary>Mozgat</secondary></indexterm>
+<para><computeroutput><link linkend="_class_sikidom">Sikidom</link> &amp; Sikidom::Mozgat (const int _x, const int _y)</computeroutput></para><para>
+
+<para>Egy sokszög mozgatását teszi lehetővé. </para>
+</para>
+
+<para><link linkend="_class_sikidom">Sikidom</link> osztály mozgató függvénye. A függvény elmozgatja a síkidomot az x és y értékekkel.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_x</entry><entry>
+<para>x tengely irányú mozgatás mértéke. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_y</entry><entry>
+<para>y tengely irányú mozgatás mértéke.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>_x</entry><entry>
+<para>x tengely irányú mozgatás mértéke. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_y</entry><entry>
+<para>y tengely irányú mozgatás mértéke. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>Referencia a mozgatott síkidomra. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_sikidom_1a06417917486d1d4786a7bb8a238826ba"/><section>
+    <title>operator=()</title>
+<indexterm><primary>operator=</primary><secondary>Sikidom</secondary></indexterm>
+<indexterm><primary>Sikidom</primary><secondary>operator=</secondary></indexterm>
+<para><computeroutput><link linkend="_class_sikidom">Sikidom</link> &amp; Sikidom::operator= (const <link linkend="_class_sikidom">Sikidom</link> &amp; s)</computeroutput></para><para>
+
+<para><link linkend="_class_sikidom">Sikidom</link> osztaly egyenloseg operatora. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>s</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>Az egymásután fűzhető műveletek miatt <link linkend="_class_sikidom">Sikidom</link> referencia. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_sikidom_1af85de4b120b39e41487f4fc491857596"/><section>
+    <title>Rajtavan()</title>
+<indexterm><primary>Rajtavan</primary><secondary>Sikidom</secondary></indexterm>
+<indexterm><primary>Sikidom</primary><secondary>Rajtavan</secondary></indexterm>
+<para><computeroutput>virtual bool Sikidom::Rajtavan (const <link linkend="_class_pont">Pont</link> &amp; ) const<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Megvalósítják a következők: <link linkend="_class_kor_1af617129564e4a8904676e6edccc7d18e">Kor</link>, <link linkend="_class_haromszog_1adcfb90053414b3c447f83c2c9be07f18">Haromszog</link> és <link linkend="_class_negyzet_1a1e8032e6f035f0c356f3399f16ee82d2">Negyzet</link>.</para>
+</section>
+<anchor xml:id="_class_sikidom_1a34ea60629f1c57a4b5afa8fdb8b38eb6"/><section>
+    <title>Read()</title>
+<indexterm><primary>Read</primary><secondary>Sikidom</secondary></indexterm>
+<indexterm><primary>Sikidom</primary><secondary>Read</secondary></indexterm>
+<para><computeroutput>virtual void Sikidom::Read (std::istream &amp; is)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Megvalósítják a következők: <link linkend="_class_kor_1a756b9b985f73fa29e598319b850630c0">Kor</link>, <link linkend="_class_haromszog_1a0d329d2d30a6d3455936c85d79a6cf5e">Haromszog</link> és <link linkend="_class_negyzet_1ad6dc4a5f2183be90c6d8be42240df025">Negyzet</link>.</para>
+</section>
+<anchor xml:id="_class_sikidom_1aa429648a709a968dacd563d52cb39e44"/><section>
+    <title>Tartalmazza()</title>
+<indexterm><primary>Tartalmazza</primary><secondary>Sikidom</secondary></indexterm>
+<indexterm><primary>Sikidom</primary><secondary>Tartalmazza</secondary></indexterm>
+<para><computeroutput>bool Sikidom::Tartalmazza (const int ) const</computeroutput></para></section>
+<anchor xml:id="_class_sikidom_1a6324bee38c590b706057f1d5cc4d9a25"/><section>
+    <title>Terulet()</title>
+<indexterm><primary>Terulet</primary><secondary>Sikidom</secondary></indexterm>
+<indexterm><primary>Sikidom</primary><secondary>Terulet</secondary></indexterm>
+<para><computeroutput>virtual double Sikidom::Terulet ( ) const<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>A sokszög területét adja vissza. </para>
+</para>
+<para>
+Megvalósítják a következők: <link linkend="_class_kor_1acd284f1cc13d311534eac606a7b3c17b">Kor</link>, <link linkend="_class_haromszog_1a1909d9326f45b6358e912b8c303a67be">Haromszog</link> és <link linkend="_class_negyzet_1a1d77a4d0f43908f6169854f431d1a1aa">Negyzet</link>.</para>
+</section>
+<anchor xml:id="_class_sikidom_1aaf04b7e802aed0f201c8471cd15c75f6"/><section>
+    <title>Write()</title>
+<indexterm><primary>Write</primary><secondary>Sikidom</secondary></indexterm>
+<indexterm><primary>Sikidom</primary><secondary>Write</secondary></indexterm>
+<para><computeroutput>virtual void Sikidom::Write (std::ostream &amp; os) const<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Megvalósítják a következők: <link linkend="_class_kor_1a308f720da90acfa1e86396148f67a753">Kor</link>, <link linkend="_class_haromszog_1a10c33ed799ebac2aa0fbc37a9f6d9e88">Haromszog</link> és <link linkend="_class_negyzet_1af92d375645d8f10d2f74c7ddadf91dc9">Negyzet</link>.</para>
+</section>
+</section>
+<section>
+<title>Barát és kapcsolódó függvények dokumentációja</title>
+<anchor xml:id="_class_sikidom_1a98b88fcd8d7cda1caccc84514046a7b0"/><section>
+    <title>operator&lt;&lt;</title>
+<indexterm><primary>operator&lt;&lt;</primary><secondary>Sikidom</secondary></indexterm>
+<indexterm><primary>Sikidom</primary><secondary>operator&lt;&lt;</secondary></indexterm>
+<para><computeroutput>std::ostream &amp; operator&lt;&lt; (std::ostream &amp; os, const <link linkend="_class_sikidom">Sikidom</link> * const sikidom)<computeroutput>[friend]</computeroutput></computeroutput></para><para>
+
+<para><link linkend="_class_sikidom">Sikidom</link> osztály kiíró operátora. A függvény kiírja a síkidomot a megadott output streambe. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>os</entry><entry>
+<para>a kimeneti stream. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>sikidom</entry><entry>
+<para>a kiírandó síkidomra mutató pointer. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>A kimeneti stream referenciája. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_sikidom_1a39346f937ea5f46cdd047b2afa03c34b"/><section>
+    <title>operator&gt;&gt;</title>
+<indexterm><primary>operator&gt;&gt;</primary><secondary>Sikidom</secondary></indexterm>
+<indexterm><primary>Sikidom</primary><secondary>operator&gt;&gt;</secondary></indexterm>
+<para><computeroutput>std::istream &amp; operator&gt;&gt; (std::istream &amp; is, <link linkend="_class_sikidom">Sikidom</link> ** sikidom)<computeroutput>[friend]</computeroutput></computeroutput></para><para>
+
+<para><link linkend="_class_sikidom">Sikidom</link> osztály beolvasó operátora. A függvény beolvassa a síkidomot a megadott input streamből. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>is</entry><entry>
+<para>a bemeneti stream. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>sikidom</entry><entry>
+<para>a beolvasott síkidomra mutató pointer. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>A bemeneti stream referenciája. </para>
+</formalpara>
+</para>
+</section>
+</section>
+<section>
+<title>Adattagok dokumentációja</title>
+<anchor xml:id="_class_sikidom_1a11c6def4b07e4748bfa85947ac9f5591"/><section>
+    <title>kp</title>
+<indexterm><primary>kp</primary><secondary>Sikidom</secondary></indexterm>
+<indexterm><primary>Sikidom</primary><secondary>kp</secondary></indexterm>
+<para><computeroutput><link linkend="_class_pont">Pont</link> Sikidom::kp<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Középpont. </para>
+</para>
+</section>
+<anchor xml:id="_class_sikidom_1a139d93aabfc8ae56a115a22343e0ffaa"/><section>
+    <title>p</title>
+<indexterm><primary>p</primary><secondary>Sikidom</secondary></indexterm>
+<indexterm><primary>Sikidom</primary><secondary>p</secondary></indexterm>
+<para><computeroutput><link linkend="_class_pont">Pont</link> Sikidom::p<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>A síkidom egy csúcsa. </para>
+</para>
+</section>
+<para>
+Ez a dokumentáció az osztályról a következő fájlok alapján készült:</para>
+src/<link linkend="_sikidom_8h">sikidom.h</link>src/<link linkend="_sikidom_8cpp">sikidom.cpp</link></section>
+</section>

@@ -1,0 +1,83 @@
+\doxysection{src/sikidom.cpp fájlreferencia}
+\hypertarget{sikidom_8cpp}{}\label{sikidom_8cpp}\index{src/sikidom.cpp@{src/sikidom.cpp}}
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$istream$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include "{}pont.\+h"{}}\newline
+{\ttfamily \#include "{}sikidom.\+h"{}}\newline
+\doxysubsubsection*{Függvények}
+\begin{DoxyCompactItemize}
+\item 
+std\+::istream \& \mbox{\hyperlink{sikidom_8cpp_a39346f937ea5f46cdd047b2afa03c34b}{operator$>$$>$}} (std\+::istream \&is, \mbox{\hyperlink{class_sikidom}{Sikidom}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}sikidom)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_sikidom}{Sikidom} osztály beolvasó operátora. A függvény beolvassa a síkidomot a megadott input streamből. \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{sikidom_8cpp_afefb6310e396c4d4ae94437eb4297008}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_sikidom}{Sikidom}} \texorpdfstring{$\ast$}{*}const sikidom)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_sikidom}{Sikidom} osztály kiíró operátora. A függvény kiírja a síkidomot a megadott output streambe. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{sikidom_8cpp_a37c73802cfd0bcaa90cb3b858d2a339a}{Is\+On\+Triangle}} (const \mbox{\hyperlink{class_pont}{Pont}} \&P, const \mbox{\hyperlink{class_pont}{Pont}} \&A, const \mbox{\hyperlink{class_pont}{Pont}} \&B, const \mbox{\hyperlink{class_pont}{Pont}} \&C)
+\begin{DoxyCompactList}\small\item\em Is\+On\+Triangle függvény. A függvény eldönti, hogy egy pont rajta van-\/e egy háromszögön. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Függvények dokumentációja}
+\Hypertarget{sikidom_8cpp_a37c73802cfd0bcaa90cb3b858d2a339a}\label{sikidom_8cpp_a37c73802cfd0bcaa90cb3b858d2a339a} 
+\index{sikidom.cpp@{sikidom.cpp}!IsOnTriangle@{IsOnTriangle}}
+\index{IsOnTriangle@{IsOnTriangle}!sikidom.cpp@{sikidom.cpp}}
+\doxysubsubsection{\texorpdfstring{IsOnTriangle()}{IsOnTriangle()}}
+{\footnotesize\ttfamily bool Is\+On\+Triangle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_pont}{Pont}} \&}]{P,  }\item[{const \mbox{\hyperlink{class_pont}{Pont}} \&}]{A,  }\item[{const \mbox{\hyperlink{class_pont}{Pont}} \&}]{B,  }\item[{const \mbox{\hyperlink{class_pont}{Pont}} \&}]{C }\end{DoxyParamCaption})}
+
+
+
+Is\+On\+Triangle függvény. A függvény eldönti, hogy egy pont rajta van-\/e egy háromszögön. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em P} & a vizsgált pont. \\
+\hline
+{\em A} & háromszög egyik csúcsa. \\
+\hline
+{\em B} & háromszög másik csúcsa. \\
+\hline
+{\em C} & háromszög harmadik csúcsa. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+true, ha a pont rajta van a háromszögön, egyébként false.
+\end{DoxyReturn}
+A kiszamitas modja\+: \href{https://en.wikipedia.org/wiki/Barycentric_coordinate_system\#Determining_location_with_respect_to_a_triangle}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Barycentric\+\_\+coordinate\+\_\+system\#\+Determining\+\_\+location\+\_\+with\+\_\+respect\+\_\+to\+\_\+a\+\_\+triangle}} \Hypertarget{sikidom_8cpp_afefb6310e396c4d4ae94437eb4297008}\label{sikidom_8cpp_afefb6310e396c4d4ae94437eb4297008} 
+\index{sikidom.cpp@{sikidom.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!sikidom.cpp@{sikidom.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_sikidom}{Sikidom}} \texorpdfstring{$\ast$}{*}const}]{sikidom }\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_sikidom}{Sikidom} osztály kiíró operátora. A függvény kiírja a síkidomot a megadott output streambe. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em os} & a kimeneti stream. \\
+\hline
+{\em sikidom} & a kiírandó síkidomra mutató pointer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+A kimeneti stream referenciája. 
+\end{DoxyReturn}
+\Hypertarget{sikidom_8cpp_a39346f937ea5f46cdd047b2afa03c34b}\label{sikidom_8cpp_a39346f937ea5f46cdd047b2afa03c34b} 
+\index{sikidom.cpp@{sikidom.cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!sikidom.cpp@{sikidom.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily std\+::istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\mbox{\hyperlink{class_sikidom}{Sikidom}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{sikidom }\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_sikidom}{Sikidom} osztály beolvasó operátora. A függvény beolvassa a síkidomot a megadott input streamből. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em is} & a bemeneti stream. \\
+\hline
+{\em sikidom} & a beolvasott síkidomra mutató pointer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+A bemeneti stream referenciája. 
+\end{DoxyReturn}

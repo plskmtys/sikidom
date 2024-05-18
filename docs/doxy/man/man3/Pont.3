@@ -1,0 +1,352 @@
+.TH "Pont" 3 "Version 1.0.0" "sikidom" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Pont \- \fBPont\fP osztály A pontokat a síkon tárolja, x és y koordinátákkal\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <pont\&.h>\fP
+.SS "Publikus tagfüggvények"
+
+.in +1c
+.ti -1c
+.RI "\fBPont\fP (const double _x=0, const double _y=0)"
+.br
+.ti -1c
+.RI "\fBPont\fP (const \fBPont\fP &)"
+.br
+.RI "\fBPont\fP osztály másoló konstruktora\&. "
+.ti -1c
+.RI "\fBPont\fP & \fBoperator=\fP (const \fBPont\fP &)"
+.br
+.RI "\fBPont\fP osztály értékadó operátora\&. "
+.ti -1c
+.RI "\fBPont\fP & \fBsetx\fP (double)"
+.br
+.RI "\fBPont\fP osztály x koordinátájának beállítása\&. "
+.ti -1c
+.RI "\fBPont\fP & \fBsety\fP (double)"
+.br
+.RI "\fBPont\fP osztály y koordinátájának beállítása\&. "
+.ti -1c
+.RI "double \fBgetx\fP () const"
+.br
+.RI "\fBPont\fP osztály x koordinátájának lekérdezése\&. "
+.ti -1c
+.RI "double \fBgety\fP () const"
+.br
+.RI "\fBPont\fP osztály y koordinátájának lekérdezése\&. "
+.ti -1c
+.RI "\fBPont\fP \fBoperator+\fP (const \fBPont\fP &) const"
+.br
+.RI "\fBPont\fP osztály összeadó operátora\&. "
+.ti -1c
+.RI "\fBPont\fP \fBoperator\-\fP (const \fBPont\fP &) const"
+.br
+.RI "\fBPont\fP osztály kivonó operátora\&. "
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBPont\fP &) const"
+.br
+.RI "\fBPont\fP osztály egyenlőség operátora\&. "
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBPont\fP &) const"
+.br
+.RI "\fBPont\fP osztály egyenlőtlenség operátora\&. "
+.ti -1c
+.RI "double \fBdst\fP (const \fBPont\fP &) const"
+.br
+.RI "\fBPont\fP osztály távolság számító metódusa\&. "
+.ti -1c
+.RI "\fBPont\fP & \fBMozgat\fP (const double _x=0, const double _y=0)"
+.br
+.RI "\fBPont\fP osztály mozgató metódusa\&. "
+.ti -1c
+.RI "\fBPont\fP & \fBForgat\fP (const double, const \fBPont\fP &)"
+.br
+.RI "\fBPont\fP osztály forgató metódusa\&. "
+.in -1c
+.SS "Privát attribútumok"
+
+.in +1c
+.ti -1c
+.RI "double \fBx\fP"
+.br
+.RI "\fBPont\fP x koordinátája\&. "
+.ti -1c
+.RI "double \fBy\fP"
+.br
+.RI "\fBPont\fP y koordinátája\&. "
+.in -1c
+.SS "Barátok"
+
+.in +1c
+.ti -1c
+.RI "std::ostream & \fBoperator<<\fP (std::ostream &, const \fBPont\fP &)"
+.br
+.RI "\fBPont\fP osztály kiíró operátora\&. "
+.ti -1c
+.RI "std::istream & \fBoperator>>\fP (std::istream &, \fBPont\fP &)"
+.br
+.RI "\fBPont\fP osztály beolvasó operátora\&. formátumok: '(x,y)' vagy 'x,y'\&. "
+.in -1c
+.SH "Részletes leírás"
+.PP 
+\fBPont\fP osztály A pontokat a síkon tárolja, x és y koordinátákkal\&. 
+.SH "Konstruktorok és destruktorok dokumentációja"
+.PP 
+.SS "Pont::Pont (const double _x = \fR0\fP, const double _y = \fR0\fP)\fR [inline]\fP"
+
+.SS "Pont::Pont (const \fBPont\fP & p)"
+
+.PP
+\fBPont\fP osztály másoló konstruktora\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIp\fP másolandó pont 
+.RE
+.PP
+
+.SH "Tagfüggvények dokumentációja"
+.PP 
+.SS "double Pont::dst (const \fBPont\fP & p) const"
+
+.PP
+\fBPont\fP osztály távolság számító metódusa\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIp\fP a másik pont 
+.RE
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+a két pont távolsága 
+.RE
+.PP
+
+.SS "\fBPont\fP & Pont::Forgat (const double rad, const \fBPont\fP & center = \fR\fBPont\fP(0, 0)\fP)"
+
+.PP
+\fBPont\fP osztály forgató metódusa\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIrad\fP forgatás szöge radiánban 
+.br
+\fIcenter\fP a forgatás középpontja 
+.RE
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+*this 
+.RE
+.PP
+
+.SS "double Pont::getx () const"
+
+.PP
+\fBPont\fP osztály x koordinátájának lekérdezése\&. 
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+x koordináta értéke 
+.RE
+.PP
+
+.SS "double Pont::gety () const"
+
+.PP
+\fBPont\fP osztály y koordinátájának lekérdezése\&. 
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+y koordináta értéke 
+.RE
+.PP
+
+.SS "\fBPont\fP & Pont::Mozgat (const double _x = \fR0\fP, const double _y = \fR0\fP)"
+
+.PP
+\fBPont\fP osztály mozgató metódusa\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fI_x\fP x irányú elmozdulás 
+.br
+\fI_y\fP y irányú elmozdulás 
+.RE
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+*this 
+.RE
+.PP
+
+.SS "bool Pont::operator!= (const \fBPont\fP & p) const"
+
+.PP
+\fBPont\fP osztály egyenlőtlenség operátora\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIp\fP a másik pont 
+.RE
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+igaz, ha a két pont koordinátái nem egyenlők, egyébként hamis\&. 
+.RE
+.PP
+
+.SS "\fBPont\fP Pont::operator+ (const \fBPont\fP & b) const"
+
+.PP
+\fBPont\fP osztály összeadó operátora\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIb\fP a másik pont 
+.RE
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+az összeg 
+.RE
+.PP
+
+.SS "\fBPont\fP Pont::operator\- (const \fBPont\fP & b) const"
+
+.PP
+\fBPont\fP osztály kivonó operátora\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIb\fP a másik pont 
+.RE
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+a különbség 
+.RE
+.PP
+
+.SS "\fBPont\fP & Pont::operator= (const \fBPont\fP & p)"
+
+.PP
+\fBPont\fP osztály értékadó operátora\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIp\fP másolandó pont 
+.RE
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+*this 
+.RE
+.PP
+
+.SS "bool Pont::operator== (const \fBPont\fP & p) const"
+
+.PP
+\fBPont\fP osztály egyenlőség operátora\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIp\fP a másik pont 
+.RE
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+igaz, ha a két pont koordinátái egyenlők, egyébként hamis\&. 
+.RE
+.PP
+
+.SS "\fBPont\fP & Pont::setx (double _x)"
+
+.PP
+\fBPont\fP osztály x koordinátájának beállítása\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fI_x\fP beállítandó x koordináta 
+.RE
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+*this 
+.RE
+.PP
+
+.SS "\fBPont\fP & Pont::sety (double _y)"
+
+.PP
+\fBPont\fP osztály y koordinátájának beállítása\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fI_y\fP beállítandó y koordináta 
+.RE
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+*this 
+.RE
+.PP
+
+.SH "Barát és kapcsolódó függvények dokumentációja"
+.PP 
+.SS "std::ostream & operator<< (std::ostream & os, const \fBPont\fP & p)\fR [friend]\fP"
+
+.PP
+\fBPont\fP osztály kiíró operátora\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIos\fP output stream referencia 
+.br
+\fIp\fP a kiírandó pont 
+.RE
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+output stream referencia 
+.RE
+.PP
+
+.SS "std::istream & operator>> (std::istream & is, \fBPont\fP & p)\fR [friend]\fP"
+
+.PP
+\fBPont\fP osztály beolvasó operátora\&. formátumok: '(x,y)' vagy 'x,y'\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIis\fP input stream referencia 
+.br
+\fIp\fP a beolvasandó pont 
+.RE
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+input stream referencia 
+.RE
+.PP
+
+.SH "Adattagok dokumentációja"
+.PP 
+.SS "double Pont::x\fR [private]\fP"
+
+.PP
+\fBPont\fP x koordinátája\&. 
+.SS "double Pont::y\fR [private]\fP"
+
+.PP
+\fBPont\fP y koordinátája\&. 
+
+.SH "Szerző"
+.PP 
+Ezt a dokumentációt a Doxygen készítette a sikidom projekthez a forráskódból\&.

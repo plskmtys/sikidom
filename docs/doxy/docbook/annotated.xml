@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_annotated" xml:lang="hu">
+<title>Osztálylista</title>
+Az összes osztály, struktúra, unió és interfész listája rövid leírásokkal:<link linkend="_class_tomb_1_1const__iterator">Tomb&lt; T &gt;::const_iterator</link>
+<para>Const_iterator osztály. Az <link linkend="_class_tomb_1_1const__iterator">const_iterator</link> osztály a <link linkend="_class_tomb">Tomb</link> osztály const_iteratora </para>
+<link linkend="_class_haromszog">Haromszog</link>
+<para><link linkend="_class_haromszog">Haromszog</link> osztály. A <link linkend="_class_haromszog">Haromszog</link> osztály a <link linkend="_class_sikidom">Sikidom</link> leszármazottja, mely egy háromszög síkidomot reprezentál, középpontjával és egy csúcsával </para>
+<link linkend="_class_tomb_1_1iterator">Tomb&lt; T &gt;::iterator</link>
+<para>Iterator osztály. Az iterator osztály a <link linkend="_class_tomb">Tomb</link> osztály iteratora </para>
+<link linkend="_class_kor">Kor</link>
+<para><link linkend="_class_kor">Kor</link> osztály. A <link linkend="_class_kor">Kor</link> osztály a <link linkend="_class_sikidom">Sikidom</link> leszármazottja, mely egy kör síkidomot reprezentál, középpontjával és egy csúcsával </para>
+<link linkend="_class_negyzet">Negyzet</link><link linkend="_class_pont">Pont</link>
+<para><link linkend="_class_pont">Pont</link> osztály A pontokat a síkon tárolja, x és y koordinátákkal </para>
+<link linkend="_class_sikidom">Sikidom</link>
+<para><link linkend="_class_sikidom">Sikidom</link> osztály. A sikidom osztály egy absztrakt osztály, melynek leszármazottai a különböző (szabályos) síkidomokat reprezentálják, középpontjukkal és egy csúcsukkal </para>
+<link linkend="_class_tomb">Tomb&lt; T &gt;</link>
+<para>Generikus Dinamikus tömb osztály. A <link linkend="_class_tomb">Tomb</link> osztály egy dinamikus tömböt reprezentál, melynek mérete a felhasználó által nem korlátozott </para>
+</section>

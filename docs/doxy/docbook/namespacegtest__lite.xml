@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacegtest__lite" xml:lang="hu">
+<title>gtest_lite névtér-referencia</title>
+<indexterm><primary>gtest_lite</primary></indexterm>
+<para>
+
+<para><link linkend="_namespacegtest__lite">gtest_lite</link>: a keretrendszer függvényinek és objektumainak névtere </para>
+ 
+</para>
+<simplesect>
+    <title>Osztályok    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structgtest__lite_1_1_test">Test</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Függvények    </title>
+        <itemizedlist>
+            <listitem><para>template&lt;typename T1 , typename T2 &gt; </para><para>std::ostream &amp; <link linkend="_namespacegtest__lite_1a08a262d95a0ec540c93b06b2aaccf34c">EXPECT_</link> (T1 exp, T2 act, bool(*pred)(T1, T2), const char *file, int line, const char *expr, const char *lhs=&quot;elvart&quot;, const char *rhs=&quot;aktual&quot;)</para>
+
+<para>általános sablon a várt értékhez. </para>
+</listitem>
+            <listitem><para>template&lt;typename T1 , typename T2 &gt; </para><para>std::ostream &amp; <link linkend="_namespacegtest__lite_1a5514f204ca041ae1a1d947a4b5d53ade">EXPECT_</link> (T1 *exp, T2 *act, bool(*pred)(T1 *, T2 *), const char *file, int line, const char *expr, const char *lhs=&quot;elvart&quot;, const char *rhs=&quot;aktual&quot;)</para>
+
+<para>pointerre specializált sablon a várt értékhez. </para>
+</listitem>
+            <listitem><para>std::ostream &amp; <link linkend="_namespacegtest__lite_1afe00777c74c96b1548747863956e20a3">EXPECTSTR</link> (const char *exp, const char *act, bool(*pred)(const char *, const char *), const char *file, int line, const char *expr, const char *lhs=&quot;elvart&quot;, const char *rhs=&quot;aktual&quot;)</para>
+</listitem>
+            <listitem><para>template&lt;typename T1 , typename T2 &gt; </para><para>bool <link linkend="_namespacegtest__lite_1a884f0c7c25d80d78a73c759a8fc43a3d">eq</link> (T1 a, T2 b)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_namespacegtest__lite_1a34055f353dabbe4ed9063f1d36af6022">eqstr</link> (const char *a, const char *b)</para>
+</listitem>
+            <listitem><para>template&lt;typename T1 , typename T2 &gt; </para><para>bool <link linkend="_namespacegtest__lite_1a2f36af995c570e62f68c148f7393eb54">ne</link> (T1 a, T2 b)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_namespacegtest__lite_1a0a34b1bb0d55bc0c6a3e878ec2bcd49f">nestr</link> (const char *a, const char *b)</para>
+</listitem>
+            <listitem><para>template&lt;typename T1 , typename T2 &gt; </para><para>bool <link linkend="_namespacegtest__lite_1a5cd2ce368021471b16b4814b179c9c34">le</link> (T1 a, T2 b)</para>
+</listitem>
+            <listitem><para>template&lt;typename T1 , typename T2 &gt; </para><para>bool <link linkend="_namespacegtest__lite_1afb471377c0d2d30aeeaf8912db72f0ff">lt</link> (T1 a, T2 b)</para>
+</listitem>
+            <listitem><para>template&lt;typename T1 , typename T2 &gt; </para><para>bool <link linkend="_namespacegtest__lite_1a77c1a7cf1d34c46c1d97ed39b9f06050">ge</link> (T1 a, T2 b)</para>
+</listitem>
+            <listitem><para>template&lt;typename T1 , typename T2 &gt; </para><para>bool <link linkend="_namespacegtest__lite_1aa0100ec9e095a9403a7b70ad4a162fdd">gt</link> (T1 a, T2 b)</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>bool <link linkend="_namespacegtest__lite_1affbf9748c4e4dec6db137f7c147fee61">almostEQ</link> (T a, T b)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Változók    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_structgtest__lite_1_1_test">Test</link> &amp; <link linkend="_namespacegtest__lite_1a819c9a4e5bf13b0f5d81734978336ca0">test</link> = <link linkend="_structgtest__lite_1_1_test_1aaece9ac882e0b17b295cceb7e3ca10ce">Test::getTest</link>()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Részletes leírás</title>
+
+<para><link linkend="_namespacegtest__lite">gtest_lite</link>: a keretrendszer függvényinek és objektumainak névtere </para>
+</section>
+<section>
+<title>Függvények dokumentációja</title>
+<anchor xml:id="_namespacegtest__lite_1affbf9748c4e4dec6db137f7c147fee61"/><section>
+    <title>almostEQ()</title>
+<indexterm><primary>almostEQ</primary><secondary>gtest_lite</secondary></indexterm>
+<indexterm><primary>gtest_lite</primary><secondary>almostEQ</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>bool gtest_lite::almostEQ (T a, T b)</computeroutput></para>
+<para>Segédsablon valós számok összehasonlításához Nem bombabiztos, de nekünk most jó lesz Elméleti hátér: <link xlink:href="http://www.cygnus-software.com/papers/comparingfloats/comparingfloats.htm">http://www.cygnus-software.com/papers/comparingfloats/comparingfloats.htm</link> </para>
+</section>
+<anchor xml:id="_namespacegtest__lite_1a884f0c7c25d80d78a73c759a8fc43a3d"/><section>
+    <title>eq()</title>
+<indexterm><primary>eq</primary><secondary>gtest_lite</secondary></indexterm>
+<indexterm><primary>gtest_lite</primary><secondary>eq</secondary></indexterm>
+<computeroutput>template&lt;typename T1 , typename T2 &gt; </computeroutput><para><computeroutput>bool gtest_lite::eq (T1 a, T2 b)</computeroutput></para>
+<para>segéd sablonok a relációkhoz. azért nem STL (algorithm), mert csak a függvény lehet, hogy menjen a deduckció </para>
+</section>
+<anchor xml:id="_namespacegtest__lite_1a34055f353dabbe4ed9063f1d36af6022"/><section>
+    <title>eqstr()</title>
+<indexterm><primary>eqstr</primary><secondary>gtest_lite</secondary></indexterm>
+<indexterm><primary>gtest_lite</primary><secondary>eqstr</secondary></indexterm>
+<para><computeroutput>bool gtest_lite::eqstr (const char * a, const char * b)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_namespacegtest__lite_1a5514f204ca041ae1a1d947a4b5d53ade"/><section>
+    <title>EXPECT_()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>EXPECT_</primary><secondary>gtest_lite</secondary></indexterm>
+<indexterm><primary>gtest_lite</primary><secondary>EXPECT_</secondary></indexterm>
+<computeroutput>template&lt;typename T1 , typename T2 &gt; </computeroutput><para><computeroutput>std::ostream &amp; gtest_lite::EXPECT_ (T1 * exp, T2 * act, bool(*)(T1 *, T2 *) pred, const char * file, int line, const char * expr, const char * lhs = <computeroutput>&quot;elvart&quot;</computeroutput>
+, const char * rhs = <computeroutput>&quot;aktual&quot;</computeroutput>
+)</computeroutput></para><para>
+
+<para>pointerre specializált sablon a várt értékhez. </para>
+</para>
+A függvény hívási gráfja:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacegtest__lite_a5514f204ca041ae1a1d947a4b5d53ade_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacegtest__lite_1a08a262d95a0ec540c93b06b2aaccf34c"/><section>
+    <title>EXPECT_()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>EXPECT_</primary><secondary>gtest_lite</secondary></indexterm>
+<indexterm><primary>gtest_lite</primary><secondary>EXPECT_</secondary></indexterm>
+<computeroutput>template&lt;typename T1 , typename T2 &gt; </computeroutput><para><computeroutput>std::ostream &amp; gtest_lite::EXPECT_ (T1 exp, T2 act, bool(*)(T1, T2) pred, const char * file, int line, const char * expr, const char * lhs = <computeroutput>&quot;elvart&quot;</computeroutput>
+, const char * rhs = <computeroutput>&quot;aktual&quot;</computeroutput>
+)</computeroutput></para><para>
+
+<para>általános sablon a várt értékhez. </para>
+</para>
+A függvény hívási gráfja:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacegtest__lite_a08a262d95a0ec540c93b06b2aaccf34c_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacegtest__lite_1afe00777c74c96b1548747863956e20a3"/><section>
+    <title>EXPECTSTR()</title>
+<indexterm><primary>EXPECTSTR</primary><secondary>gtest_lite</secondary></indexterm>
+<indexterm><primary>gtest_lite</primary><secondary>EXPECTSTR</secondary></indexterm>
+<para><computeroutput>std::ostream &amp; gtest_lite::EXPECTSTR (const char * exp, const char * act, bool(*)(const char *, const char *) pred, const char * file, int line, const char * expr, const char * lhs = <computeroutput>&quot;elvart&quot;</computeroutput>
+, const char * rhs = <computeroutput>&quot;aktual&quot;</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>stringek összehasonlításához. azért nem spec. mert a sima EQ-ra másként kell működnie. </para>
+A függvény hívási gráfja:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacegtest__lite_afe00777c74c96b1548747863956e20a3_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacegtest__lite_1a77c1a7cf1d34c46c1d97ed39b9f06050"/><section>
+    <title>ge()</title>
+<indexterm><primary>ge</primary><secondary>gtest_lite</secondary></indexterm>
+<indexterm><primary>gtest_lite</primary><secondary>ge</secondary></indexterm>
+<computeroutput>template&lt;typename T1 , typename T2 &gt; </computeroutput><para><computeroutput>bool gtest_lite::ge (T1 a, T2 b)</computeroutput></para></section>
+<anchor xml:id="_namespacegtest__lite_1aa0100ec9e095a9403a7b70ad4a162fdd"/><section>
+    <title>gt()</title>
+<indexterm><primary>gt</primary><secondary>gtest_lite</secondary></indexterm>
+<indexterm><primary>gtest_lite</primary><secondary>gt</secondary></indexterm>
+<computeroutput>template&lt;typename T1 , typename T2 &gt; </computeroutput><para><computeroutput>bool gtest_lite::gt (T1 a, T2 b)</computeroutput></para></section>
+<anchor xml:id="_namespacegtest__lite_1a5cd2ce368021471b16b4814b179c9c34"/><section>
+    <title>le()</title>
+<indexterm><primary>le</primary><secondary>gtest_lite</secondary></indexterm>
+<indexterm><primary>gtest_lite</primary><secondary>le</secondary></indexterm>
+<computeroutput>template&lt;typename T1 , typename T2 &gt; </computeroutput><para><computeroutput>bool gtest_lite::le (T1 a, T2 b)</computeroutput></para></section>
+<anchor xml:id="_namespacegtest__lite_1afb471377c0d2d30aeeaf8912db72f0ff"/><section>
+    <title>lt()</title>
+<indexterm><primary>lt</primary><secondary>gtest_lite</secondary></indexterm>
+<indexterm><primary>gtest_lite</primary><secondary>lt</secondary></indexterm>
+<computeroutput>template&lt;typename T1 , typename T2 &gt; </computeroutput><para><computeroutput>bool gtest_lite::lt (T1 a, T2 b)</computeroutput></para></section>
+<anchor xml:id="_namespacegtest__lite_1a2f36af995c570e62f68c148f7393eb54"/><section>
+    <title>ne()</title>
+<indexterm><primary>ne</primary><secondary>gtest_lite</secondary></indexterm>
+<indexterm><primary>gtest_lite</primary><secondary>ne</secondary></indexterm>
+<computeroutput>template&lt;typename T1 , typename T2 &gt; </computeroutput><para><computeroutput>bool gtest_lite::ne (T1 a, T2 b)</computeroutput></para></section>
+<anchor xml:id="_namespacegtest__lite_1a0a34b1bb0d55bc0c6a3e878ec2bcd49f"/><section>
+    <title>nestr()</title>
+<indexterm><primary>nestr</primary><secondary>gtest_lite</secondary></indexterm>
+<indexterm><primary>gtest_lite</primary><secondary>nestr</secondary></indexterm>
+<para><computeroutput>bool gtest_lite::nestr (const char * a, const char * b)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Változók dokumentációja</title>
+<anchor xml:id="_namespacegtest__lite_1a819c9a4e5bf13b0f5d81734978336ca0"/><section>
+    <title>test</title>
+<indexterm><primary>test</primary><secondary>gtest_lite</secondary></indexterm>
+<indexterm><primary>gtest_lite</primary><secondary>test</secondary></indexterm>
+<para><computeroutput><link linkend="_structgtest__lite_1_1_test">Test</link>&amp; gtest_lite::test = <link linkend="_structgtest__lite_1_1_test_1aaece9ac882e0b17b295cceb7e3ca10ce">Test::getTest</link>()<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>A statikus referencia minden fordítási egységben keletkezik, de mindegyik egyetlen példányra fog hivatkozni a singleton minta miatt </para>
+</section>
+</section>
+</section>

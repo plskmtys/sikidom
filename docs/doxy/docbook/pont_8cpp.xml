@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_pont_8cpp" xml:lang="hu">
+<title>src/pont.cpp fájlreferencia</title>
+<indexterm><primary>src/pont.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;pont.h&quot;<?linebreak?>#include &lt;cmath&gt;<?linebreak?>#include &lt;stdexcept&gt;<?linebreak?></programlisting><simplesect>
+    <title>Függvények    </title>
+        <itemizedlist>
+            <listitem><para>std::ostream &amp; <link linkend="_pont_8cpp_1afeecd031a14fe16f1b4fbfb0e637ff90">operator&lt;&lt;</link> (std::ostream &amp;os, const <link linkend="_class_pont">Pont</link> &amp;p)</para>
+
+<para><link linkend="_class_pont">Pont</link> osztály kiíró operátora. </para>
+</listitem>
+            <listitem><para>std::istream &amp; <link linkend="_pont_8cpp_1aedb36c869d7dc38e9e5a636ac722d207">operator&gt;&gt;</link> (std::istream &amp;is, <link linkend="_class_pont">Pont</link> &amp;p)</para>
+
+<para><link linkend="_class_pont">Pont</link> osztály beolvasó operátora. formátumok: &quot;(x,y)&quot; vagy &quot;x,y&quot;. </para>
+</listitem>
+            <listitem><para>double <link linkend="_pont_8cpp_1aca2e599648455a1f472dae8888f68663">dst</link> (const <link linkend="_class_pont">Pont</link> &amp;a, const <link linkend="_class_pont">Pont</link> &amp;b)</para>
+
+<para>két pont közötti távolság számító függvény. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Függvények dokumentációja</title>
+<anchor xml:id="_pont_8cpp_1aca2e599648455a1f472dae8888f68663"/><section>
+    <title>dst()</title>
+<indexterm><primary>dst</primary><secondary>pont.cpp</secondary></indexterm>
+<indexterm><primary>pont.cpp</primary><secondary>dst</secondary></indexterm>
+<para><computeroutput>double dst (const <link linkend="_class_pont">Pont</link> &amp; a, const <link linkend="_class_pont">Pont</link> &amp; b)</computeroutput></para><para>
+
+<para>két pont közötti távolság számító függvény. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>a</entry><entry>
+<para>egyik pont </para>
+</entry>
+                            </row>
+                            <row>
+<entry>b</entry><entry>
+<para>másik pont </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>a két pont távolsága </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_pont_8cpp_1afeecd031a14fe16f1b4fbfb0e637ff90"/><section>
+    <title>operator&lt;&lt;()</title>
+<indexterm><primary>operator&lt;&lt;</primary><secondary>pont.cpp</secondary></indexterm>
+<indexterm><primary>pont.cpp</primary><secondary>operator&lt;&lt;</secondary></indexterm>
+<para><computeroutput>std::ostream &amp; operator&lt;&lt; (std::ostream &amp; os, const <link linkend="_class_pont">Pont</link> &amp; p)</computeroutput></para><para>
+
+<para><link linkend="_class_pont">Pont</link> osztály kiíró operátora. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>os</entry><entry>
+<para>output stream referencia </para>
+</entry>
+                            </row>
+                            <row>
+<entry>p</entry><entry>
+<para>a kiírandó pont </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>output stream referencia </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_pont_8cpp_1aedb36c869d7dc38e9e5a636ac722d207"/><section>
+    <title>operator&gt;&gt;()</title>
+<indexterm><primary>operator&gt;&gt;</primary><secondary>pont.cpp</secondary></indexterm>
+<indexterm><primary>pont.cpp</primary><secondary>operator&gt;&gt;</secondary></indexterm>
+<para><computeroutput>std::istream &amp; operator&gt;&gt; (std::istream &amp; is, <link linkend="_class_pont">Pont</link> &amp; p)</computeroutput></para><para>
+
+<para><link linkend="_class_pont">Pont</link> osztály beolvasó operátora. formátumok: &quot;(x,y)&quot; vagy &quot;x,y&quot;. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>is</entry><entry>
+<para>input stream referencia </para>
+</entry>
+                            </row>
+                            <row>
+<entry>p</entry><entry>
+<para>a beolvasandó pont </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>input stream referencia </para>
+</formalpara>
+</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,123 @@
+\doxysection{sikidom.\+h}
+\hypertarget{sikidom_8h_source}{}\label{sikidom_8h_source}\index{src/sikidom.h@{src/sikidom.h}}
+\mbox{\hyperlink{sikidom_8h}{Ugrás a fájl dokumentációjához.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{pont_8h}{pont.h}}"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ SIKIDOM\_SIKIDOM\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ SIKIDOM\_SIKIDOM\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sikidom}{Sikidom}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00019\ \ \ \mbox{\hyperlink{class_pont}{Pont}}\ \mbox{\hyperlink{class_sikidom_a11c6def4b07e4748bfa85947ac9f5591}{kp}};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00023\ \ \ \mbox{\hyperlink{class_pont}{Pont}}\ \mbox{\hyperlink{class_sikidom_a139d93aabfc8ae56a115a22343e0ffaa}{p}};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00029\ \ \ \mbox{\hyperlink{class_sikidom_a200b65570223034da8a84bca5a88f61e}{Sikidom}}(\mbox{\hyperlink{class_pont}{Pont}}\ \_kp\ =\ \mbox{\hyperlink{class_pont}{Pont}}(0,\ 0),\ \mbox{\hyperlink{class_pont}{Pont}}\ \_p\ =\ \mbox{\hyperlink{class_pont}{Pont}}(0,\ 0))\ :\ \mbox{\hyperlink{class_sikidom_a11c6def4b07e4748bfa85947ac9f5591}{kp}}(\_kp),\ \mbox{\hyperlink{class_sikidom_a139d93aabfc8ae56a115a22343e0ffaa}{p}}(\_p)\ \{\}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \mbox{\hyperlink{class_sikidom_a200b65570223034da8a84bca5a88f61e}{Sikidom}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_sikidom}{Sikidom}}\ \&);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \mbox{\hyperlink{class_sikidom}{Sikidom}}\ \&\mbox{\hyperlink{class_sikidom_a06417917486d1d4786a7bb8a238826ba}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_sikidom}{Sikidom}}\ \&);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \mbox{\hyperlink{class_pont}{Pont}}\ \mbox{\hyperlink{class_sikidom_a580ec59df76631c231468b6beb303865}{getkp}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_sikidom_a11c6def4b07e4748bfa85947ac9f5591}{kp}};\ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \mbox{\hyperlink{class_pont}{Pont}}\ \mbox{\hyperlink{class_sikidom_a4c868839f9e4051e8717ddba28fad015}{getp}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_sikidom_a139d93aabfc8ae56a115a22343e0ffaa}{p}};\ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_sikidom_aa429648a709a968dacd563d52cb39e44}{Tartalmazza}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00046\ \ \ \mbox{\hyperlink{class_sikidom}{Sikidom}}\ \&\mbox{\hyperlink{class_sikidom_afe53eb1a8e5b36fb50b20ce6a296959c}{Mozgat}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \_x,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \_y);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00051\ \ \ \mbox{\hyperlink{class_sikidom}{Sikidom}}\ \&\mbox{\hyperlink{class_sikidom_a68f6ac0248b3176028002b3b45dde07b}{Forgat}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_pont}{Pont}}\ \&);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00055\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_sikidom_a6324bee38c590b706057f1d5cc4d9a25}{Terulet}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_sikidom_af85de4b120b39e41487f4fc491857596}{Rajtavan}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_pont}{Pont}}\ \&)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sikidom_aaf04b7e802aed0f201c8471cd15c75f6}{Write}}(std::ostream\&\ os)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sikidom_a34ea60629f1c57a4b5afa8fdb8b38eb6}{Read}}(std::istream\&\ is)\ =\ 0;}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_sikidom}{Sikidom}}*\ \mbox{\hyperlink{class_sikidom_a34fe25b652fdf3dcd5c02256fcea31dc}{createSikidom}}(\textcolor{keyword}{const}\ std::string\&\ type);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_sikidom_ac8b7bb5618747ad0e3ce258e4fa223a2}{Kivul}}(\textcolor{keyword}{const}\ std::size\_t\ r)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \textcolor{keyword}{friend}\ std::ostream\ \&\mbox{\hyperlink{class_sikidom_a98b88fcd8d7cda1caccc84514046a7b0}{operator<<}}(std::ostream\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_sikidom}{Sikidom}}\ *\ \textcolor{keyword}{const});}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \textcolor{keyword}{friend}\ std::istream\&\ \mbox{\hyperlink{class_sikidom_a39346f937ea5f46cdd047b2afa03c34b}{operator>>}}(std::istream\&\ is,\ \mbox{\hyperlink{class_sikidom}{Sikidom}}**\ sikidom);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_sikidom_addcc9cfc77c3b6617d36084a10bcf208}{\string~Sikidom}}()\ =\ 0;}
+\DoxyCodeLine{00072\ \};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00079\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_kor}{Kor}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_sikidom}{Sikidom}}\ \{}
+\DoxyCodeLine{00080\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00081\ \ \ \mbox{\hyperlink{class_kor_a4d13604de8c46b7458ad8e5e4f038863}{Kor}}(\mbox{\hyperlink{class_pont}{Pont}}\ \_kp\ =\ \mbox{\hyperlink{class_pont}{Pont}}(0,\ 0),\ \mbox{\hyperlink{class_pont}{Pont}}\ \_p\ =\ \mbox{\hyperlink{class_pont}{Pont}}(0,\ 0))\ :\ \mbox{\hyperlink{class_sikidom}{Sikidom}}(\_kp,\ \_p)\ \{\}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \mbox{\hyperlink{class_kor_aff1c2fc2b67d519faec1219d6509dfe1}{Kor}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_kor}{Kor}}\ \&\_k)\ :\ \mbox{\hyperlink{class_sikidom}{Sikidom}}(\_k)\ \{\}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_kor_acd284f1cc13d311534eac606a7b3c17b}{Terulet}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_kor_af617129564e4a8904676e6edccc7d18e}{Rajtavan}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_pont}{Pont}}\ \&)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_kor_a308f720da90acfa1e86396148f67a753}{Write}}(std::ostream\&\ os)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_kor_a756b9b985f73fa29e598319b850630c0}{Read}}(std::istream\&\ is)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_kor_ad3800ae48997f4081af601a8361ebc2f}{Kivul}}(\textcolor{keyword}{const}\ std::size\_t\ r)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00094\ \ \ }
+\DoxyCodeLine{00095\ \ \ \textcolor{keyword}{friend}\ std::ostream\ \&\mbox{\hyperlink{class_kor_a72505ea07cc8a696577c090445c4e8a5}{operator<<}}(std::ostream\ \&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_kor}{Kor}}\ \&);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \mbox{\hyperlink{class_kor_a525b264cd874ec01a4431e9dce42bb1b}{\string~Kor}}()\textcolor{keyword}{\ override\ }\{\}}
+\DoxyCodeLine{00098\ \};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00105\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_haromszog}{Haromszog}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_sikidom}{Sikidom}}\ \{}
+\DoxyCodeLine{00106\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00107\ \ \ \mbox{\hyperlink{class_haromszog_a7d1f6ee5fc64d915c079763998d3b1ea}{Haromszog}}(\mbox{\hyperlink{class_pont}{Pont}}\ \_kp\ =\ \mbox{\hyperlink{class_pont}{Pont}}(0,\ 0),\ \mbox{\hyperlink{class_pont}{Pont}}\ \_p\ =\ \mbox{\hyperlink{class_pont}{Pont}}(0,\ 0))\ :\ \mbox{\hyperlink{class_sikidom}{Sikidom}}(\_kp,\ \_p)\ \{\}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \mbox{\hyperlink{class_haromszog_a84801633c5184b20a8794ef547747ca1}{Haromszog}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_haromszog}{Haromszog}}\ \&\_h)\ :\ \mbox{\hyperlink{class_sikidom}{Sikidom}}(\_h)\ \{\}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_haromszog_a1909d9326f45b6358e912b8c303a67be}{Terulet}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_haromszog_adcfb90053414b3c447f83c2c9be07f18}{Rajtavan}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_pont}{Pont}}\ \&)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_haromszog_a10c33ed799ebac2aa0fbc37a9f6d9e88}{Write}}(std::ostream\&\ os)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_haromszog_a0d329d2d30a6d3455936c85d79a6cf5e}{Read}}(std::istream\&\ is)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_haromszog_a9ed79902d5a11c7d8d93c935ae364741}{Kivul}}(\textcolor{keyword}{const}\ std::size\_t\ r)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \textcolor{keyword}{friend}\ std::ostream\ \&\mbox{\hyperlink{class_haromszog_a2484b3d43039baf63db4728edb0c1245}{operator<<}}(std::ostream\ \&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_haromszog}{Haromszog}}\ \&);}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \mbox{\hyperlink{class_haromszog_ab13be5db54a678c839ba8dc92535ad73}{\string~Haromszog}}()\textcolor{keyword}{\ override\ }\{\}}
+\DoxyCodeLine{00124\ \};}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00131\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_negyzet}{Negyzet}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_sikidom}{Sikidom}}\ \{}
+\DoxyCodeLine{00132\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00133\ \ \ \mbox{\hyperlink{class_negyzet_a67129e75e6e9f8fee584b14883ffe511}{Negyzet}}(\mbox{\hyperlink{class_pont}{Pont}}\ \_kp\ =\ \mbox{\hyperlink{class_pont}{Pont}}(0,\ 0),\ \mbox{\hyperlink{class_pont}{Pont}}\ \_p\ =\ \mbox{\hyperlink{class_pont}{Pont}}(0,\ 0))\ :\ \mbox{\hyperlink{class_sikidom}{Sikidom}}(\_kp,\ \_p)\ \{\}}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \mbox{\hyperlink{class_negyzet_a5779b1aa386becfb6657400abfa5a370}{Negyzet}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_negyzet}{Negyzet}}\ \&\_n)\ :\ \mbox{\hyperlink{class_sikidom}{Sikidom}}(\_n)\ \{\}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_negyzet_a1d77a4d0f43908f6169854f431d1a1aa}{Terulet}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_negyzet_a1e8032e6f035f0c356f3399f16ee82d2}{Rajtavan}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_pont}{Pont}}\ \&)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_negyzet_af92d375645d8f10d2f74c7ddadf91dc9}{Write}}(std::ostream\&\ os)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_negyzet_ad6dc4a5f2183be90c6d8be42240df025}{Read}}(std::istream\&\ is)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_negyzet_aef68e2870b19134660c203bb71b284bb}{Kivul}}(\textcolor{keyword}{const}\ std::size\_t\ r)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \ \ \textcolor{keyword}{friend}\ std::ostream\ \&\mbox{\hyperlink{class_negyzet_ac1b23fa9c1c34251edd43a5fdc83318a}{operator<<}}(std::ostream\ \&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_negyzet}{Negyzet}}\ \&);}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \ \ \mbox{\hyperlink{class_negyzet_ad05d7bc65a5a47b45c62609638b9eb67}{\string~Negyzet}}()\textcolor{keyword}{\ override\ }\{\}}
+\DoxyCodeLine{00150\ \};}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{sikidom_8h_a989e1b34da78d3a7a8e572c743dcd35f}{IsOnTriangle}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_pont}{Pont}}\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_pont}{Pont}}\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_pont}{Pont}}\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_pont}{Pont}}\&);}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !SIKIDOM\_SIKIDOM\_H}}
+
+\end{DoxyCode}

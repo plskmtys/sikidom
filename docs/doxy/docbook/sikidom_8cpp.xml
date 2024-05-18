@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_sikidom_8cpp" xml:lang="hu">
+<title>src/sikidom.cpp fájlreferencia</title>
+<indexterm><primary>src/sikidom.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;cmath&gt;<?linebreak?>#include &lt;istream&gt;<?linebreak?>#include &lt;algorithm&gt;<?linebreak?>#include &quot;pont.h&quot;<?linebreak?>#include &quot;sikidom.h&quot;<?linebreak?></programlisting><simplesect>
+    <title>Függvények    </title>
+        <itemizedlist>
+            <listitem><para>std::istream &amp; <link linkend="_sikidom_8cpp_1a39346f937ea5f46cdd047b2afa03c34b">operator&gt;&gt;</link> (std::istream &amp;is, <link linkend="_class_sikidom">Sikidom</link> **sikidom)</para>
+
+<para><link linkend="_class_sikidom">Sikidom</link> osztály beolvasó operátora. A függvény beolvassa a síkidomot a megadott input streamből. </para>
+</listitem>
+            <listitem><para>std::ostream &amp; <link linkend="_sikidom_8cpp_1afefb6310e396c4d4ae94437eb4297008">operator&lt;&lt;</link> (std::ostream &amp;os, const <link linkend="_class_sikidom">Sikidom</link> *const sikidom)</para>
+
+<para><link linkend="_class_sikidom">Sikidom</link> osztály kiíró operátora. A függvény kiírja a síkidomot a megadott output streambe. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_sikidom_8cpp_1a37c73802cfd0bcaa90cb3b858d2a339a">IsOnTriangle</link> (const <link linkend="_class_pont">Pont</link> &amp;P, const <link linkend="_class_pont">Pont</link> &amp;A, const <link linkend="_class_pont">Pont</link> &amp;B, const <link linkend="_class_pont">Pont</link> &amp;C)</para>
+
+<para>IsOnTriangle függvény. A függvény eldönti, hogy egy pont rajta van-e egy háromszögön. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Függvények dokumentációja</title>
+<anchor xml:id="_sikidom_8cpp_1a37c73802cfd0bcaa90cb3b858d2a339a"/><section>
+    <title>IsOnTriangle()</title>
+<indexterm><primary>IsOnTriangle</primary><secondary>sikidom.cpp</secondary></indexterm>
+<indexterm><primary>sikidom.cpp</primary><secondary>IsOnTriangle</secondary></indexterm>
+<para><computeroutput>bool IsOnTriangle (const <link linkend="_class_pont">Pont</link> &amp; P, const <link linkend="_class_pont">Pont</link> &amp; A, const <link linkend="_class_pont">Pont</link> &amp; B, const <link linkend="_class_pont">Pont</link> &amp; C)</computeroutput></para><para>
+
+<para>IsOnTriangle függvény. A függvény eldönti, hogy egy pont rajta van-e egy háromszögön. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>P</entry><entry>
+<para>a vizsgált pont. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>A</entry><entry>
+<para>háromszög egyik csúcsa. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>B</entry><entry>
+<para>háromszög másik csúcsa. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>C</entry><entry>
+<para>háromszög harmadik csúcsa. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>true, ha a pont rajta van a háromszögön, egyébként false.</para>
+</formalpara>
+A kiszamitas modja: <link xlink:href="https://en.wikipedia.org/wiki/Barycentric_coordinate_system#Determining_location_with_respect_to_a_triangle">https://en.wikipedia.org/wiki/Barycentric_coordinate_system#Determining_location_with_respect_to_a_triangle</link> </para>
+</section>
+<anchor xml:id="_sikidom_8cpp_1afefb6310e396c4d4ae94437eb4297008"/><section>
+    <title>operator&lt;&lt;()</title>
+<indexterm><primary>operator&lt;&lt;</primary><secondary>sikidom.cpp</secondary></indexterm>
+<indexterm><primary>sikidom.cpp</primary><secondary>operator&lt;&lt;</secondary></indexterm>
+<para><computeroutput>std::ostream &amp; operator&lt;&lt; (std::ostream &amp; os, const <link linkend="_class_sikidom">Sikidom</link> *const sikidom)</computeroutput></para><para>
+
+<para><link linkend="_class_sikidom">Sikidom</link> osztály kiíró operátora. A függvény kiírja a síkidomot a megadott output streambe. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>os</entry><entry>
+<para>a kimeneti stream. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>sikidom</entry><entry>
+<para>a kiírandó síkidomra mutató pointer. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>A kimeneti stream referenciája. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_sikidom_8cpp_1a39346f937ea5f46cdd047b2afa03c34b"/><section>
+    <title>operator&gt;&gt;()</title>
+<indexterm><primary>operator&gt;&gt;</primary><secondary>sikidom.cpp</secondary></indexterm>
+<indexterm><primary>sikidom.cpp</primary><secondary>operator&gt;&gt;</secondary></indexterm>
+<para><computeroutput>std::istream &amp; operator&gt;&gt; (std::istream &amp; is, <link linkend="_class_sikidom">Sikidom</link> ** sikidom)</computeroutput></para><para>
+
+<para><link linkend="_class_sikidom">Sikidom</link> osztály beolvasó operátora. A függvény beolvassa a síkidomot a megadott input streamből. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>is</entry><entry>
+<para>a bemeneti stream. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>sikidom</entry><entry>
+<para>a beolvasott síkidomra mutató pointer. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>A bemeneti stream referenciája. </para>
+</formalpara>
+</para>
+</section>
+</section>
+</section>

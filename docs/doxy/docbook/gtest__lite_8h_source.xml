@@ -1,0 +1,281 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_gtest__lite_8h_source" xml:lang="hu">
+<title>gtest_lite.h</title>
+<indexterm><primary>C:/Users/matyas/code/sikidom/src/gtest_lite.h</primary></indexterm>
+Ugrás a fájl dokumentációjához.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;GTEST_LITE_H</emphasis>
+2 <emphasis role="preprocessor">#define&#32;GTEST_LITE_H</emphasis>
+3 
+33 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+34 <emphasis role="preprocessor">#include&#32;&lt;cassert&gt;</emphasis>
+35 <emphasis role="preprocessor">#include&#32;&lt;cmath&gt;</emphasis>
+36 <emphasis role="preprocessor">#include&#32;&lt;cstring&gt;</emphasis>
+37 <emphasis role="preprocessor">#include&#32;&lt;limits&gt;</emphasis>
+38 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+39 <emphasis role="preprocessor">#include&#32;&lt;fstream&gt;</emphasis>
+40 <emphasis role="preprocessor">#ifdef&#32;MEMTRACE</emphasis>
+41 <emphasis role="preprocessor">#include&#32;&quot;memtrace.h&quot;</emphasis>
+42 <emphasis role="preprocessor">#endif</emphasis>
+43 
+44 <emphasis role="comment">//&#32;Két&#32;makró&#32;az&#32;egyes&#32;tesztek&#32;elé&#32;és&#32;mögé:</emphasis>
+45 <emphasis role="comment">//&#32;A&#32;két&#32;makró&#32;a&#32;kapcsos&#32;zárójelekkel&#32;egy&#32;új&#32;blokkot&#32;hoz&#32;létre,&#32;amiben</emphasis>
+46 <emphasis role="comment">//&#32;a&#32;nevek&#32;lokálisak,&#32;így&#32;elkerülhető&#32;a&#32;névütközés.</emphasis>
+47 
+53 <emphasis role="preprocessor">#define&#32;TEST(C,&#32;N)&#32;{&#32;gtest_lite::test.begin(#C&quot;.&quot;#N);</emphasis>
+54 
+56 <emphasis role="preprocessor">#define&#32;END&#32;gtest_lite::test.end();&#32;}</emphasis>
+57 
+60 <emphasis role="preprocessor">#define&#32;ENDM&#32;gtest_lite::test.end(true);&#32;}</emphasis>
+61 
+65 <emphasis role="preprocessor">#define&#32;ENDMsg(t)&#32;gtest_lite::test.end(true)&#32;&lt;&lt;&#32;t&#32;&lt;&lt;&#32;std::endl;&#32;}</emphasis>
+66 
+67 <emphasis role="comment">//&#32;Eredmények&#32;vizsgálatát&#32;segítő&#32;makrók.</emphasis>
+68 <emphasis role="comment">//&#32;A&#32;paraméterek&#32;és&#32;a&#32;funkciók&#32;a&#32;gtest&#32;keretrendszerrel&#32;megegyeznek.</emphasis>
+69 
+71 <emphasis role="preprocessor">#define&#32;SUCCEED()&#32;gtest_lite::test.expect(true,&#32;__FILE__,&#32;__LINE__,&#32;&quot;SUCCEED()&quot;,&#32;true)</emphasis>
+72 
+74 <emphasis role="preprocessor">#define&#32;FAIL()&#32;gtest_lite::test.expect(false,&#32;__FILE__,&#32;__LINE__,&#32;&quot;FAIL()&quot;,&#32;true)</emphasis>
+75 
+77 
+78 <emphasis role="preprocessor">#define&#32;EXPECT_EQ(expected,&#32;actual)&#32;gtest_lite::EXPECT_(expected,&#32;actual,&#32;gtest_lite::eq,&#32;__FILE__,&#32;__LINE__,&#32;&quot;EXPECT_EQ(&quot;&#32;#expected&#32;&quot;,&#32;&quot;&#32;#actual&#32;&quot;)&quot;&#32;)</emphasis>
+79 
+81 <emphasis role="preprocessor">#define&#32;EXPECT_NE(expected,&#32;actual)&#32;gtest_lite::EXPECT_(expected,&#32;actual,&#32;gtest_lite::ne,&#32;__FILE__,&#32;__LINE__,&#32;&quot;EXPECT_NE(&quot;&#32;#expected&#32;&quot;,&#32;&quot;&#32;#actual&#32;&quot;)&quot;,&#32;&quot;etalon&quot;&#32;)</emphasis>
+82 
+84 <emphasis role="preprocessor">#define&#32;EXPECT_LE(expected,&#32;actual)&#32;gtest_lite::EXPECT_(expected,&#32;actual,&#32;gtest_lite::le,&#32;__FILE__,&#32;__LINE__,&#32;&quot;EXPECT_LE(&quot;&#32;#expected&#32;&quot;,&#32;&quot;&#32;#actual&#32;&quot;)&quot;,&#32;&quot;etalon&quot;&#32;)</emphasis>
+85 
+87 <emphasis role="preprocessor">#define&#32;EXPECT_LT(expected,&#32;actual)&#32;gtest_lite::EXPECT_(expected,&#32;actual,&#32;gtest_lite::lt,&#32;__FILE__,&#32;__LINE__,&#32;&quot;EXPECT_LT(&quot;&#32;#expected&#32;&quot;,&#32;&quot;&#32;#actual&#32;&quot;)&quot;,&#32;&quot;etalon&quot;&#32;)</emphasis>
+88 
+90 <emphasis role="preprocessor">#define&#32;EXPECT_GE(expected,&#32;actual)&#32;gtest_lite::EXPECT_(expected,&#32;actual,&#32;gtest_lite::ge,&#32;__FILE__,&#32;__LINE__,&#32;&quot;EXPECT_GE(&quot;&#32;#expected&#32;&quot;,&#32;&quot;&#32;#actual&#32;&quot;)&quot;,&#32;&quot;etalon&quot;&#32;)</emphasis>
+91 
+93 <emphasis role="preprocessor">#define&#32;EXPECT_GT(expected,&#32;actual)&#32;gtest_lite::EXPECT_(expected,&#32;actual,&#32;gtest_lite::gt,&#32;__FILE__,&#32;__LINE__,&#32;&quot;EXPECT_GT(&quot;&#32;#expected&#32;&quot;,&#32;&quot;&#32;#actual&#32;&quot;)&quot;,&#32;&quot;etalon&quot;&#32;)</emphasis>
+94 
+96 <emphasis role="preprocessor">#define&#32;EXPECT_TRUE(actual)&#32;&#32;gtest_lite::EXPECT_(true,&#32;actual,&#32;&#32;gtest_lite::eq,&#32;__FILE__,&#32;__LINE__,&#32;&quot;EXPECT_TRUE(&quot;&#32;#actual&#32;&quot;)&quot;&#32;)</emphasis>
+97 
+99 <emphasis role="preprocessor">#define&#32;EXPECT_FALSE(actual)&#32;gtest_lite::EXPECT_(false,&#32;actual,&#32;gtest_lite::eq,&#32;__FILE__,&#32;__LINE__,&#32;&quot;EXPECT_FALSE(&quot;&#32;#actual&#32;&quot;)&quot;&#32;)</emphasis>
+100 
+102 <emphasis role="preprocessor">#define&#32;EXPECT_FLOAT_EQ(expected,&#32;actual)&#32;&#32;gtest_lite::EXPECT_(expected,&#32;actual,&#32;gtest_lite::almostEQ,&#32;__FILE__,&#32;__LINE__,&#32;&quot;EXPECT_FLOAT_EQ(&quot;&#32;#expected&#32;&quot;,&#32;&quot;&#32;#actual&#32;&quot;)&quot;&#32;)</emphasis>
+103 
+105 <emphasis role="preprocessor">#define&#32;EXPECT_DOUBLE_EQ(expected,&#32;actual)&#32;gtest_lite::EXPECT_(expected,&#32;actual,&#32;gtest_lite::almostEQ,&#32;__FILE__,&#32;__LINE__,&#32;&quot;EXPECT_DOUBLE_EQ(&quot;&#32;#expected&#32;&quot;,&#32;&quot;&#32;#actual&#32;&quot;)&quot;&#32;)</emphasis>
+106 
+108 <emphasis role="preprocessor">#define&#32;EXPECT_STREQ(expected,&#32;actual)&#32;gtest_lite::EXPECTSTR(expected,&#32;actual,&#32;gtest_lite::eqstr,&#32;__FILE__,&#32;__LINE__,&#32;&quot;EXPECT_STREQ(&quot;&#32;#expected&#32;&quot;,&#32;&quot;&#32;#actual&#32;&quot;)&quot;&#32;)</emphasis>
+109 
+111 <emphasis role="preprocessor">#define&#32;EXPECT_STRNE(expected,&#32;actual)&#32;gtest_lite::EXPECTSTR(expected,&#32;actual,&#32;gtest_lite::nestr,&#32;__FILE__,&#32;__LINE__,&#32;&quot;EXPECT_STRNE(&quot;&#32;#expected&#32;&quot;,&#32;&quot;&#32;#actual&#32;&quot;)&quot;,&#32;&quot;etalon&quot;&#32;)</emphasis>
+112 
+114 <emphasis role="preprocessor">#define&#32;EXPECT_THROW(statement,&#32;exception_type)&#32;try&#32;{&#32;gtest_lite::test.tmp&#32;=&#32;false;&#32;statement;&#32;}&#32;\</emphasis>
+115 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;catch&#32;(exception_type)&#32;{&#32;gtest_lite::test.tmp&#32;=&#32;true;&#32;}&#32;\</emphasis>
+116 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;catch&#32;(...)&#32;{&#32;}&#32;\</emphasis>
+117 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;EXPECTTHROW(statement,&#32;&quot;kivetelt&#32;dob.&quot;,&#32;&quot;nem&#32;dobott&#32;&apos;&quot;#exception_type&quot;&apos;&#32;kivetelt.&quot;)</emphasis>
+118 
+120 <emphasis role="preprocessor">#define&#32;EXPECT_ANY_THROW(statement)&#32;try&#32;{&#32;gtest_lite::test.tmp&#32;=&#32;false;&#32;statement;&#32;}&#32;\</emphasis>
+121 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;catch&#32;(...)&#32;{&#32;gtest_lite::test.tmp&#32;=&#32;true;&#32;}&#32;\</emphasis>
+122 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;EXPECTTHROW(statement,&#32;&quot;kivetelt&#32;dob.&quot;,&#32;&quot;nem&#32;dobott&#32;kivetelt.&quot;)</emphasis>
+123 
+125 <emphasis role="preprocessor">#define&#32;EXPECT_NO_THROW(statement)&#32;try&#32;{&#32;gtest_lite::test.tmp&#32;=&#32;true;&#32;statement;&#32;}&#32;\</emphasis>
+126 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;catch&#32;(...)&#32;{&#32;gtest_lite::test.tmp&#32;=&#32;false;&#32;}\</emphasis>
+127 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;EXPECTTHROW(statement,&#32;&quot;nem&#32;dob&#32;kivetelt.&quot;,&#32;&quot;kivetelt&#32;dobott.&quot;)</emphasis>
+128 
+130 <emphasis role="preprocessor">#define&#32;ASSERT_NO_THROW(statement)&#32;try&#32;{&#32;gtest_lite::test.tmp&#32;=&#32;true;&#32;statement;&#32;}&#32;\</emphasis>
+131 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;catch&#32;(...)&#32;{&#32;gtest_lite::test.tmp&#32;=&#32;false;&#32;}\</emphasis>
+132 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;EXPECTTHROW(statement,&#32;&quot;nem&#32;dob&#32;kivetelt.&quot;,&#32;&quot;kivetelt&#32;dobott.&quot;)</emphasis>
+133 
+135 <emphasis role="preprocessor">#define&#32;EXPECT_THROW_THROW(statement,&#32;exception_type)&#32;try&#32;{&#32;gtest_lite::test.tmp&#32;=&#32;false;&#32;statement;&#32;}&#32;\</emphasis>
+136 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;catch&#32;(exception_type)&#32;{&#32;gtest_lite::test.tmp&#32;=&#32;true;&#32;throw;&#32;}&#32;\</emphasis>
+137 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;EXPECTTHROW(statement,&#32;&quot;kivetelt&#32;dob.&quot;,&#32;&quot;nem&#32;dobott&#32;&apos;&quot;#exception_type&quot;&apos;&#32;kivetelt.&quot;)</emphasis>
+138 
+145 <emphasis role="preprocessor">#define&#32;CREATE_Has_(X)&#32;\</emphasis>
+146 <emphasis role="preprocessor">template&lt;typename&#32;T&gt;&#32;struct&#32;_Has_##X&#32;{&#32;&#32;\</emphasis>
+147 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;struct&#32;Fallback&#32;{&#32;int&#32;X;&#32;};&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\</emphasis>
+148 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;struct&#32;Derived&#32;:&#32;T,&#32;Fallback&#32;{};&#32;&#32;&#32;&#32;\</emphasis>
+149 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;template&lt;typename&#32;C,&#32;C&gt;&#32;struct&#32;ChT;&#32;\</emphasis>
+150 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;template&lt;typename&#32;D&gt;&#32;static&#32;char&#32;(&amp;f(ChT&lt;int&#32;Fallback::*,&#32;&amp;D::X&gt;*))[1];&#32;\</emphasis>
+151 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;template&lt;typename&#32;D&gt;&#32;static&#32;char&#32;(&amp;f(...))[2];&#32;\</emphasis>
+152 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;static&#32;bool&#32;const&#32;member&#32;=&#32;sizeof(f&lt;Derived&gt;(0))&#32;==&#32;2;&#32;\</emphasis>
+153 <emphasis role="preprocessor">};</emphasis>
+154 
+157 <emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_gtest__lite_8h_1aa57e54fc7cbf742de576263d90ee1660">hasMember</link>(...)&#32;{}
+158 
+160 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;F,&#32;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+161 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct___is___types">_Is_Types</link>&#32;{
+162 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&lt;<emphasis role="keyword">typename</emphasis>&#32;D&gt;&#32;<emphasis role="keyword">static</emphasis>&#32;char&#32;(&amp;<link linkend="_struct___is___types_1a56e08a2768c571caab81e9bc47d5acc6">f</link>(D))[1];
+163 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&lt;<emphasis role="keyword">typename</emphasis>&#32;D&gt;&#32;<emphasis role="keyword">static</emphasis>&#32;char&#32;(&amp;<link linkend="_struct___is___types_1a013da65c5a92e9bd02f5d361c10d376d">f</link>(...))[2];
+164 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_struct___is___types_1aef853f15f013611d0890cb6fc408ae47">convertable</link>&#32;=&#32;<emphasis role="keyword">sizeof</emphasis>(<link linkend="_struct___is___types_1a56e08a2768c571caab81e9bc47d5acc6">f&lt;T&gt;</link>(<link linkend="_struct___is___types_1a56e08a2768c571caab81e9bc47d5acc6">F</link>()))&#32;==&#32;1;
+165 };
+166 
+171 
+173 <emphasis role="preprocessor">#define&#32;EXPECTTHROW(statement,&#32;exp,&#32;act)&#32;gtest_lite::test.expect(gtest_lite::test.tmp,&#32;__FILE__,&#32;__LINE__,&#32;#statement)&#32;\</emphasis>
+174 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&lt;&lt;&#32;&quot;**&#32;Az&#32;utasitas&#32;&quot;&#32;&lt;&lt;&#32;(act)&#32;\</emphasis>
+175 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&lt;&lt;&#32;&quot;\n**&#32;Azt&#32;vartuk,&#32;hogy&#32;&quot;&#32;&lt;&lt;&#32;(exp)&#32;&lt;&lt;&#32;std::endl</emphasis>
+176 
+177 <emphasis role="preprocessor">#ifdef&#32;CPORTA</emphasis>
+178 <emphasis role="preprocessor">#define&#32;GTINIT(is)&#32;&#32;\</emphasis>
+179 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;int&#32;magic;&#32;&#32;&#32;&#32;&#32;&#32;\</emphasis>
+180 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;is&#32;&gt;&gt;&#32;magic;</emphasis>
+181 <emphasis role="preprocessor">#else</emphasis>
+182 <emphasis role="preprocessor">#define&#32;GTINIT(IS)</emphasis>
+183 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;CPORTA</emphasis>
+184 
+185 <emphasis role="preprocessor">#ifdef&#32;CPORTA</emphasis>
+186 <emphasis role="preprocessor">#define&#32;GTEND(os)&#32;&#32;\</emphasis>
+187 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;os&#32;&lt;&lt;&#32;magic&#32;&lt;&lt;&#32;(gtest_lite::test.fail()&#32;?&#32;&quot;&#32;NO&quot;&#32;:&#32;&quot;&#32;OK?&quot;)&#32;&lt;&lt;&#32;std::endl;</emphasis>
+188 <emphasis role="preprocessor">#else</emphasis>
+189 <emphasis role="preprocessor">#define&#32;GTEND(os)</emphasis>
+190 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;CPORTA</emphasis>
+191 
+193 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacegtest__lite">gtest_lite</link>&#32;{
+194 
+198 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_structgtest__lite_1_1_test">Test</link>&#32;{
+199 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_structgtest__lite_1_1_test_1a6da678d43b72b9e2bff1c99e1d3c48f5">sum</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+200 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_structgtest__lite_1_1_test_1a4fb6ee7bd903717d970e3f0504cdeeab">failed</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+201 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_structgtest__lite_1_1_test_1a91d9c63794d2b9b49e0c48d897208560">ablocks</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+202 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_structgtest__lite_1_1_test_1a59a9a7f0ef7867af604ce5678f7a2c13">status</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+203 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_structgtest__lite_1_1_test_1a1145ceb335a60a808b7b4d5d1624b2a5">tmp</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+204 &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_structgtest__lite_1_1_test_1a8d495a42580e3ae337f9c4982136b700">name</link>;&#32;&#32;&#32;
+205 &#32;&#32;&#32;&#32;std::fstream&#32;<link linkend="_structgtest__lite_1_1_test_1af4784302d78bb004bcb20b7f75ec06c3">null</link>;&#32;&#32;
+206 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_structgtest__lite_1_1_test">Test</link>&amp;&#32;<link linkend="_structgtest__lite_1_1_test_1aaece9ac882e0b17b295cceb7e3ca10ce">getTest</link>()&#32;{
+207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_structgtest__lite_1_1_test">Test</link>&#32;instance;
+208 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;instance;
+209 &#32;&#32;&#32;&#32;}
+210 <emphasis role="keyword">private</emphasis>:&#32;&#32;&#32;&#32;
+211 &#32;&#32;&#32;&#32;<link linkend="_structgtest__lite_1_1_test_1a99fb3f2338e4e0512beb6e19c5409078">Test</link>()&#32;:<link linkend="_structgtest__lite_1_1_test_1a6da678d43b72b9e2bff1c99e1d3c48f5">sum</link>(0),&#32;<link linkend="_structgtest__lite_1_1_test_1a4fb6ee7bd903717d970e3f0504cdeeab">failed</link>(0),&#32;<link linkend="_structgtest__lite_1_1_test_1a59a9a7f0ef7867af604ce5678f7a2c13">status</link>(false),&#32;<link linkend="_structgtest__lite_1_1_test_1af4784302d78bb004bcb20b7f75ec06c3">null</link>(<emphasis role="stringliteral">&quot;/dev/null&quot;</emphasis>)&#32;{}
+212 &#32;&#32;&#32;&#32;<link linkend="_structgtest__lite_1_1_test_1aad083ed9e389aeac2d526460ac301c7a">Test</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structgtest__lite_1_1_test">Test</link>&amp;);
+213 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_structgtest__lite_1_1_test_1a35faf2d45ab88d096f0eb25ee5b80b13">operator=</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structgtest__lite_1_1_test">Test</link>&amp;);
+214 <emphasis role="keyword">public</emphasis>:
+216 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_structgtest__lite_1_1_test_1a2227b70fcc5dfb3c326bf117dd8f7e79">begin</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*n)&#32;{
+217 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structgtest__lite_1_1_test_1a8d495a42580e3ae337f9c4982136b700">name</link>&#32;=&#32;n;&#32;<link linkend="_structgtest__lite_1_1_test_1a59a9a7f0ef7867af604ce5678f7a2c13">status</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+218 <emphasis role="preprocessor">#ifdef&#32;MEMTRACE</emphasis>
+219 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structgtest__lite_1_1_test_1a91d9c63794d2b9b49e0c48d897208560">ablocks</link>&#32;=&#32;memtrace::allocated_blocks();
+220 <emphasis role="preprocessor">#endif</emphasis>
+221 <emphasis role="preprocessor">#ifndef&#32;CPORTA</emphasis>
+222 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cerr&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\n---&gt;&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_structgtest__lite_1_1_test_1a8d495a42580e3ae337f9c4982136b700">name</link>&#32;&lt;&lt;&#32;std::endl;
+223 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;CPORTA</emphasis>
+224 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;++<link linkend="_structgtest__lite_1_1_test_1a6da678d43b72b9e2bff1c99e1d3c48f5">sum</link>;
+225 &#32;&#32;&#32;&#32;}
+227 &#32;&#32;&#32;&#32;std::ostream&amp;&#32;<link linkend="_structgtest__lite_1_1_test_1a86d41ffed05f53653fb27b918764a44e">end</link>(<emphasis role="keywordtype">bool</emphasis>&#32;memchk&#32;=&#32;<emphasis role="keyword">false</emphasis>)&#32;{
+228 <emphasis role="preprocessor">#ifdef&#32;MEMTRACE</emphasis>
+229 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(memchk&#32;&amp;&amp;&#32;<link linkend="_structgtest__lite_1_1_test_1a91d9c63794d2b9b49e0c48d897208560">ablocks</link>&#32;!=&#32;memtrace::allocated_blocks())&#32;{
+230 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structgtest__lite_1_1_test_1a59a9a7f0ef7867af604ce5678f7a2c13">status</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+231 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;std::cerr&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;**&#32;Lehet,&#32;hogy&#32;nem&#32;szabaditott&#32;fel&#32;minden&#32;memoriat!&#32;**&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+232 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+233 <emphasis role="preprocessor">#endif</emphasis>
+234 <emphasis role="preprocessor">#ifdef&#32;CPORTA</emphasis>
+235 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!<link linkend="_structgtest__lite_1_1_test_1a59a9a7f0ef7867af604ce5678f7a2c13">status</link>)
+236 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;CPORTA</emphasis>
+237 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cerr&#32;&lt;&lt;&#32;(<link linkend="_structgtest__lite_1_1_test_1a59a9a7f0ef7867af604ce5678f7a2c13">status</link>&#32;?&#32;<emphasis role="stringliteral">&quot;&#32;&#32;&#32;&#32;&#32;SIKERES&quot;</emphasis>&#32;:&#32;<emphasis role="stringliteral">&quot;**&#32;HIBAS&#32;****&quot;</emphasis>)&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\t&quot;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_structgtest__lite_1_1_test_1a8d495a42580e3ae337f9c4982136b700">name</link>&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;&lt;---&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+238 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!<link linkend="_structgtest__lite_1_1_test_1a59a9a7f0ef7867af604ce5678f7a2c13">status</link>)
+239 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;std::cerr;
+240 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+241 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_structgtest__lite_1_1_test_1af4784302d78bb004bcb20b7f75ec06c3">null</link>;
+242 &#32;&#32;&#32;&#32;}
+243 
+244 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_structgtest__lite_1_1_test_1aadbfd0f53c56d975f793602996631195">fail</link>()&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_structgtest__lite_1_1_test_1a4fb6ee7bd903717d970e3f0504cdeeab">failed</link>;&#32;}
+245 
+247 &#32;&#32;&#32;&#32;std::ostream&amp;&#32;<link linkend="_structgtest__lite_1_1_test_1a2de71946be5b3dc7f03c99868785c1de">expect</link>(<emphasis role="keywordtype">bool</emphasis>&#32;st,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*file,&#32;<emphasis role="keywordtype">int</emphasis>&#32;line,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*expr,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;pr&#32;=&#32;<emphasis role="keyword">false</emphasis>)&#32;{
+248 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!st)&#32;{
+249 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;++<link linkend="_structgtest__lite_1_1_test_1a4fb6ee7bd903717d970e3f0504cdeeab">failed</link>;
+250 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structgtest__lite_1_1_test_1a59a9a7f0ef7867af604ce5678f7a2c13">status</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+251 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+252 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!st&#32;||&#32;pr)&#32;{
+253 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;str(file);
+254 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;str.rfind(<emphasis role="stringliteral">&quot;\\&quot;</emphasis>);
+255 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(i&#32;==&#32;std::string::npos)&#32;i&#32;=&#32;str.rfind(<emphasis role="stringliteral">&quot;/&quot;</emphasis>);
+256 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(i&#32;==&#32;std::string::npos)&#32;i&#32;=&#32;0;&#32;<emphasis role="keywordflow">else</emphasis>&#32;i++;
+257 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;std::cerr&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\n****&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;&amp;file[i]&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;(&quot;</emphasis>&#32;&lt;&lt;&#32;line&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;):&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;expr&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;****&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+258 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+259 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_structgtest__lite_1_1_test_1af4784302d78bb004bcb20b7f75ec06c3">null</link>;
+260 &#32;&#32;&#32;&#32;}
+261 
+263 &#32;&#32;&#32;&#32;<link linkend="_structgtest__lite_1_1_test_1a5a879233c2aa110626668c06140f6e71">~Test</link>()&#32;{
+264 <emphasis role="preprocessor">#ifdef&#32;CPORTA</emphasis>
+265 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_structgtest__lite_1_1_test_1a4fb6ee7bd903717d970e3f0504cdeeab">failed</link>)
+266 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;CPORTA</emphasis>
+267 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cerr&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\n====&#32;TESZT&#32;VEGE&#32;====&#32;HIBAS/OSSZES:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_structgtest__lite_1_1_test_1a4fb6ee7bd903717d970e3f0504cdeeab">failed</link>&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;/&quot;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_structgtest__lite_1_1_test_1a6da678d43b72b9e2bff1c99e1d3c48f5">sum</link>&#32;&lt;&lt;&#32;std::endl;
+268 &#32;&#32;&#32;&#32;}
+269 };
+270 
+273 <emphasis role="keyword">static</emphasis>&#32;<link linkend="_structgtest__lite_1_1_test">Test</link>&amp;&#32;<link linkend="_namespacegtest__lite_1a819c9a4e5bf13b0f5d81734978336ca0">test</link>&#32;=&#32;<link linkend="_structgtest__lite_1_1_test_1aaece9ac882e0b17b295cceb7e3ca10ce">Test::getTest</link>();
+274 
+276 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T1,&#32;<emphasis role="keyword">typename</emphasis>&#32;T2&gt;
+277 std::ostream&amp;&#32;<link linkend="_namespacegtest__lite_1a08a262d95a0ec540c93b06b2aaccf34c">EXPECT_</link>(T1&#32;exp,&#32;T2&#32;act,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;(*pred)(T1,&#32;T2),&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*file,&#32;<emphasis role="keywordtype">int</emphasis>&#32;line,
+278 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*expr,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*lhs&#32;=&#32;<emphasis role="stringliteral">&quot;elvart&quot;</emphasis>,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*rhs&#32;=&#32;<emphasis role="stringliteral">&quot;aktual&quot;</emphasis>)&#32;{
+279 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_namespacegtest__lite_1a819c9a4e5bf13b0f5d81734978336ca0">test</link>.<link linkend="_structgtest__lite_1_1_test_1a2de71946be5b3dc7f03c99868785c1de">expect</link>(pred(exp,&#32;act),&#32;file,&#32;line,&#32;expr)
+280 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;**&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;lhs&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;std::boolalpha&#32;&lt;&lt;&#32;exp
+281 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\n**&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;rhs&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;std::boolalpha&#32;&lt;&lt;&#32;act&#32;&lt;&lt;&#32;std::endl;
+282 }
+283 
+285 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T1,&#32;<emphasis role="keyword">typename</emphasis>&#32;T2&gt;
+286 std::ostream&amp;&#32;<link linkend="_namespacegtest__lite_1a08a262d95a0ec540c93b06b2aaccf34c">EXPECT_</link>(T1*&#32;exp,&#32;T2*&#32;act,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;(*pred)(T1*,&#32;T2*),&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*file,&#32;<emphasis role="keywordtype">int</emphasis>&#32;line,
+287 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*expr,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*lhs&#32;=&#32;<emphasis role="stringliteral">&quot;elvart&quot;</emphasis>,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*rhs&#32;=&#32;<emphasis role="stringliteral">&quot;aktual&quot;</emphasis>)&#32;{
+288 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_namespacegtest__lite_1a819c9a4e5bf13b0f5d81734978336ca0">test</link>.<link linkend="_structgtest__lite_1_1_test_1a2de71946be5b3dc7f03c99868785c1de">expect</link>(pred(exp,&#32;act),&#32;file,&#32;line,&#32;expr)
+289 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;**&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;lhs&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;(<emphasis role="keywordtype">void</emphasis>*)&#32;exp
+290 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\n**&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;rhs&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;(<emphasis role="keywordtype">void</emphasis>*)&#32;act&#32;&lt;&lt;&#32;std::endl;
+291 }
+292 
+293 <emphasis role="preprocessor">#if&#32;__cplusplus&#32;&gt;=&#32;201103L</emphasis>
+295 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T1&gt;
+296 std::ostream&amp;&#32;<link linkend="_namespacegtest__lite_1a08a262d95a0ec540c93b06b2aaccf34c">EXPECT_</link>(T1*&#32;exp,&#32;std::nullptr_t&#32;act,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;(*pred)(T1*,&#32;std::nullptr_t),&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*file,&#32;<emphasis role="keywordtype">int</emphasis>&#32;line,
+297 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*expr,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*lhs&#32;=&#32;<emphasis role="stringliteral">&quot;elvart&quot;</emphasis>,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*rhs&#32;=&#32;<emphasis role="stringliteral">&quot;aktual&quot;</emphasis>)&#32;{
+298 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_namespacegtest__lite_1a819c9a4e5bf13b0f5d81734978336ca0">test</link>.<link linkend="_structgtest__lite_1_1_test_1a2de71946be5b3dc7f03c99868785c1de">expect</link>(pred(exp,&#32;act),&#32;file,&#32;line,&#32;expr)
+299 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;**&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;lhs&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;(<emphasis role="keywordtype">void</emphasis>*)&#32;exp
+300 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\n**&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;rhs&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;(<emphasis role="keywordtype">void</emphasis>*)&#32;act&#32;&lt;&lt;&#32;std::endl;
+301 }
+302 <emphasis role="preprocessor">#endif</emphasis>
+303 
+306 <emphasis role="keyword">inline</emphasis>
+307 std::ostream&amp;&#32;<link linkend="_namespacegtest__lite_1afe00777c74c96b1548747863956e20a3">EXPECTSTR</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*exp,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*act,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;(*pred)(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*),&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*file,&#32;<emphasis role="keywordtype">int</emphasis>&#32;line,
+308 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*expr,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*lhs&#32;=&#32;<emphasis role="stringliteral">&quot;elvart&quot;</emphasis>,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*rhs&#32;=&#32;<emphasis role="stringliteral">&quot;aktual&quot;</emphasis>)&#32;{
+309 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_namespacegtest__lite_1a819c9a4e5bf13b0f5d81734978336ca0">test</link>.<link linkend="_structgtest__lite_1_1_test_1a2de71946be5b3dc7f03c99868785c1de">expect</link>(pred(exp,&#32;act),&#32;file,&#32;line,&#32;expr)
+310 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;**&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;lhs&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;(exp&#32;==&#32;NULL&#32;?&#32;<emphasis role="stringliteral">&quot;NULL&#32;pointer&quot;</emphasis>&#32;:&#32;std::string(<emphasis role="stringliteral">&quot;\&quot;&quot;</emphasis>)&#32;+&#32;exp&#32;+&#32;std::string(<emphasis role="stringliteral">&quot;\&quot;&quot;</emphasis>))
+311 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\n**&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;rhs&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;(act&#32;==&#32;NULL&#32;?&#32;<emphasis role="stringliteral">&quot;NULL&#32;pointer&quot;</emphasis>&#32;:&#32;std::string(<emphasis role="stringliteral">&quot;\&quot;&quot;</emphasis>)&#32;+&#32;act&#32;+&#32;std::string(<emphasis role="stringliteral">&quot;\&quot;&quot;</emphasis>))&#32;&lt;&lt;&#32;std::endl;
+312 }
+313 
+316 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T1,&#32;<emphasis role="keyword">typename</emphasis>&#32;T2&gt;
+317 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_namespacegtest__lite_1a884f0c7c25d80d78a73c759a8fc43a3d">eq</link>(T1&#32;a,&#32;T2&#32;b)&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;a&#32;==&#32;b;&#32;}
+318 
+319 <emphasis role="keyword">inline</emphasis>
+320 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_namespacegtest__lite_1a34055f353dabbe4ed9063f1d36af6022">eqstr</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*a,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*b)&#32;{
+321 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(a&#32;!=&#32;NULL&#32;&amp;&amp;&#32;b&#32;!=&#32;NULL)
+322 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;strcmp(a,&#32;b)&#32;==&#32;0;
+323 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+324 }
+325 
+326 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T1,&#32;<emphasis role="keyword">typename</emphasis>&#32;T2&gt;
+327 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_namespacegtest__lite_1a2f36af995c570e62f68c148f7393eb54">ne</link>(T1&#32;a,&#32;T2&#32;b)&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;a&#32;!=&#32;b;&#32;}
+328 
+329 <emphasis role="keyword">inline</emphasis>
+330 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_namespacegtest__lite_1a0a34b1bb0d55bc0c6a3e878ec2bcd49f">nestr</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*a,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*b)&#32;{
+331 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(a&#32;!=&#32;NULL&#32;&amp;&amp;&#32;b&#32;!=&#32;NULL)
+332 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;strcmp(a,&#32;b)&#32;!=&#32;0;
+333 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+334 }
+335 
+336 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T1,&#32;<emphasis role="keyword">typename</emphasis>&#32;T2&gt;
+337 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_namespacegtest__lite_1a5cd2ce368021471b16b4814b179c9c34">le</link>(T1&#32;a,&#32;T2&#32;b)&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;a&#32;&lt;=&#32;b;&#32;}
+338 
+339 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T1,&#32;<emphasis role="keyword">typename</emphasis>&#32;T2&gt;
+340 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_namespacegtest__lite_1afb471377c0d2d30aeeaf8912db72f0ff">lt</link>(T1&#32;a,&#32;T2&#32;b)&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;a&#32;&lt;&#32;b;&#32;}
+341 
+342 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T1,&#32;<emphasis role="keyword">typename</emphasis>&#32;T2&gt;
+343 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_namespacegtest__lite_1a77c1a7cf1d34c46c1d97ed39b9f06050">ge</link>(T1&#32;a,&#32;T2&#32;b)&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;a&#32;&gt;=&#32;b;&#32;}
+344 
+345 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T1,&#32;<emphasis role="keyword">typename</emphasis>&#32;T2&gt;
+346 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_namespacegtest__lite_1aa0100ec9e095a9403a7b70ad4a162fdd">gt</link>(T1&#32;a,&#32;T2&#32;b)&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;a&#32;&gt;&#32;b;&#32;}
+347 
+352 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+353 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_namespacegtest__lite_1affbf9748c4e4dec6db137f7c147fee61">almostEQ</link>(T&#32;a,&#32;T&#32;&#32;b)&#32;{
+354 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;eps:&#32;ha&#32;a&#32;relatív,&#32;vagy&#32;abszolút&#32;hiba&#32;ettől&#32;kisebb,&#32;akkor&#32;elfogadjuk</emphasis>
+355 &#32;&#32;&#32;&#32;T&#32;eps&#32;=&#32;10&#32;*&#32;std::numeric_limits&lt;T&gt;::epsilon();&#32;<emphasis role="comment">//&#32;10-szer&#32;a&#32;legkisebb&#32;érték</emphasis>
+356 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(a&#32;==&#32;b)&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+357 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(fabs(a&#32;-&#32;b)&#32;&lt;&#32;eps)
+358 &#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+359 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;aa&#32;=&#32;fabs(a);
+360 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;ba&#32;=&#32;fabs(b);
+361 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(aa&#32;&lt;&#32;ba)&#32;{
+362 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;aa&#32;=&#32;ba;
+363 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ba&#32;=&#32;fabs(a);
+364 &#32;&#32;&#32;&#32;}
+365 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(aa&#32;-&#32;ba)&#32;&lt;&#32;aa&#32;*&#32;eps;
+366 }
+367 
+368 }&#32;<emphasis role="comment">//&#32;namespace&#32;gtest_lite</emphasis>
+369 
+370 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;GTEST_LITE_H</emphasis>
+</programlisting></section>

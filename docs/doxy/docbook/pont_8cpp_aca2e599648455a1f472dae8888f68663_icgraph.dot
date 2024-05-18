@@ -1,0 +1,17 @@
+digraph "dst"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="dst",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="két pont közötti távolság számító függvény."];
+  Node1 -> Node2 [id="edge9_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Haromszog::Kivul",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_haromszog.html#a9ed79902d5a11c7d8d93c935ae364741",tooltip="Haromszog Kivul függvény. Eldönti, hogy a háromszög kívül van-e egy adott sugarú, origo középpontú kö..."];
+  Node2 -> Node3 [id="edge10_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627",tooltip=" "];
+  Node1 -> Node4 [id="edge11_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="Negyzet::Rajtavan",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_negyzet.html#a1e8032e6f035f0c356f3399f16ee82d2",tooltip="Negyzet Rajtavan függvény. A függvény eldönti, hogy egy pont rajta van-e a négyzeten."];
+  Node4 -> Node5 [id="edge12_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="Negyzet::Kivul",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_negyzet.html#aef68e2870b19134660c203bb71b284bb",tooltip="Negyzet Kivul függvény. Eldönti, hogy a négyzet kívül van-e egy adott sugarú, origo középpontú körön."];
+}

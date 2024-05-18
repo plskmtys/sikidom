@@ -1,0 +1,288 @@
+.TH "Sikidom" 3 "Version 1.0.0" "sikidom" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Sikidom \- \fBSikidom\fP osztály\&. A sikidom osztály egy absztrakt osztály, melynek leszármazottai a különböző (szabályos) síkidomokat reprezentálják, középpontjukkal és egy csúcsukkal\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <sikidom\&.h>\fP
+.PP
+Leszármazottak: \fBHaromszog\fP, \fBKor\fP és \fBNegyzet\fP\&.
+.SS "Publikus tagfüggvények"
+
+.in +1c
+.ti -1c
+.RI "\fBSikidom\fP (const \fBSikidom\fP &)"
+.br
+.ti -1c
+.RI "\fBSikidom\fP & \fBoperator=\fP (const \fBSikidom\fP &)"
+.br
+.RI "\fBSikidom\fP osztaly egyenloseg operatora\&. "
+.ti -1c
+.RI "\fBPont\fP \fBgetkp\fP () const"
+.br
+.ti -1c
+.RI "\fBPont\fP \fBgetp\fP () const"
+.br
+.ti -1c
+.RI "bool \fBTartalmazza\fP (const int) const"
+.br
+.ti -1c
+.RI "\fBSikidom\fP & \fBMozgat\fP (const int _x, const int _y)"
+.br
+.RI "Egy sokszög mozgatását teszi lehetővé\&. "
+.ti -1c
+.RI "\fBSikidom\fP & \fBForgat\fP (const double, const \fBPont\fP &)"
+.br
+.RI "Egy sokszög forgatását teszi lehetővé\&. "
+.ti -1c
+.RI "virtual double \fBTerulet\fP () const =0"
+.br
+.RI "A sokszög területét adja vissza\&. "
+.ti -1c
+.RI "virtual bool \fBRajtavan\fP (const \fBPont\fP &) const =0"
+.br
+.ti -1c
+.RI "virtual void \fBWrite\fP (std::ostream &os) const =0"
+.br
+.ti -1c
+.RI "virtual void \fBRead\fP (std::istream &is)=0"
+.br
+.ti -1c
+.RI "virtual bool \fBKivul\fP (const std::size_t r) const =0"
+.br
+.ti -1c
+.RI "virtual \fB~Sikidom\fP ()=0"
+.br
+.RI "\fBSikidom\fP osztály destruktora\&. nincs dinamikusan foglalt adattag, tehát nem kell semmit felszabadítani\&. "
+.in -1c
+.SS "Statikus publikus tagfüggvények"
+
+.in +1c
+.ti -1c
+.RI "static \fBSikidom\fP * \fBcreateSikidom\fP (const std::string &type)"
+.br
+.RI "\fBSikidom\fP osztály statikus factory függvénye\&. A függvény létrehoz egy új síkidomot a megadott típus alapján\&. "
+.in -1c
+.SS "Védett tagfüggvények"
+
+.in +1c
+.ti -1c
+.RI "\fBSikidom\fP (\fBPont\fP _kp=\fBPont\fP(0, 0), \fBPont\fP _p=\fBPont\fP(0, 0))"
+.br
+.RI "\fBSikidom\fP konstruktor\&. "
+.in -1c
+.SS "Védett attribútumok"
+
+.in +1c
+.ti -1c
+.RI "\fBPont\fP \fBkp\fP"
+.br
+.RI "Középpont\&. "
+.ti -1c
+.RI "\fBPont\fP \fBp\fP"
+.br
+.RI "A síkidom egy csúcsa\&. "
+.in -1c
+.SS "Barátok"
+
+.in +1c
+.ti -1c
+.RI "std::ostream & \fBoperator<<\fP (std::ostream &, const \fBSikidom\fP *const)"
+.br
+.RI "\fBSikidom\fP osztály kiíró operátora\&. A függvény kiírja a síkidomot a megadott output streambe\&. "
+.ti -1c
+.RI "std::istream & \fBoperator>>\fP (std::istream &is, \fBSikidom\fP **sikidom)"
+.br
+.RI "\fBSikidom\fP osztály beolvasó operátora\&. A függvény beolvassa a síkidomot a megadott input streamből\&. "
+.in -1c
+.SH "Részletes leírás"
+.PP 
+\fBSikidom\fP osztály\&. A sikidom osztály egy absztrakt osztály, melynek leszármazottai a különböző (szabályos) síkidomokat reprezentálják, középpontjukkal és egy csúcsukkal\&. 
+.SH "Konstruktorok és destruktorok dokumentációja"
+.PP 
+.SS "Sikidom::Sikidom (\fBPont\fP _kp = \fR\fBPont\fP(0, 0)\fP, \fBPont\fP _p = \fR\fBPont\fP(0, 0)\fP)\fR [inline]\fP, \fR [protected]\fP"
+
+.PP
+\fBSikidom\fP konstruktor\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fI_kp\fP középpont\&. 
+.br
+\fI_p\fP egy csúcs\&. 
+.RE
+.PP
+
+.SS "Sikidom::Sikidom (const \fBSikidom\fP & s)"
+\fBSikidom\fP osztaly Copy konstruktora\&.
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIs\fP Referencia a lemasolando Sikidomra 
+.RE
+.PP
+
+.SS "Sikidom::~Sikidom ()\fR [pure virtual]\fP"
+
+.PP
+\fBSikidom\fP osztály destruktora\&. nincs dinamikusan foglalt adattag, tehát nem kell semmit felszabadítani\&. 
+.SH "Tagfüggvények dokumentációja"
+.PP 
+.SS "\fBSikidom\fP * Sikidom::createSikidom (const std::string & s)\fR [static]\fP"
+
+.PP
+\fBSikidom\fP osztály statikus factory függvénye\&. A függvény létrehoz egy új síkidomot a megadott típus alapján\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIs\fP a létrehozandó síkidom típusa szöveg formátumban\&. 
+.RE
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+A létrehozott síkidomra mutató pointer\&. 
+.RE
+.PP
+
+.SS "\fBSikidom\fP & Sikidom::Forgat (const double rad, const \fBPont\fP & center = \fR\fBPont\fP(0, 0)\fP)"
+
+.PP
+Egy sokszög forgatását teszi lehetővé\&. \fBSikidom\fP osztály forgató függvénye\&. A függvény elforgatja a síkidomot <rad> radiánnal\&.
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIdeg\fP forgatás mértéke, fokban\&.
+.br
+\fIrad\fP forgatás mértéke, radiánban\&. 
+.br
+\fIcenter\fP a forgatás középpontja\&. 
+.RE
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+Referencia a forgatott síkidomra\&. 
+.RE
+.PP
+
+.SS "\fBPont\fP Sikidom::getkp () const\fR [inline]\fP"
+
+.SS "\fBPont\fP Sikidom::getp () const\fR [inline]\fP"
+
+.SS "virtual bool Sikidom::Kivul (const std::size_t r) const\fR [pure virtual]\fP"
+
+.PP
+Megvalósítják a következők: \fBKor\fP, \fBHaromszog\fP és \fBNegyzet\fP\&.
+.SS "\fBSikidom\fP & Sikidom::Mozgat (const int _x, const int _y)"
+
+.PP
+Egy sokszög mozgatását teszi lehetővé\&. \fBSikidom\fP osztály mozgató függvénye\&. A függvény elmozgatja a síkidomot az x és y értékekkel\&.
+.PP
+\fBParaméterek\fP
+.RS 4
+\fI_x\fP x tengely irányú mozgatás mértéke\&. 
+.br
+\fI_y\fP y tengely irányú mozgatás mértéke\&.
+.br
+\fI_x\fP x tengely irányú mozgatás mértéke\&. 
+.br
+\fI_y\fP y tengely irányú mozgatás mértéke\&. 
+.RE
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+Referencia a mozgatott síkidomra\&. 
+.RE
+.PP
+
+.SS "\fBSikidom\fP & Sikidom::operator= (const \fBSikidom\fP & s)"
+
+.PP
+\fBSikidom\fP osztaly egyenloseg operatora\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIs\fP 
+.RE
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+Az egymásután fűzhető műveletek miatt \fBSikidom\fP referencia\&. 
+.RE
+.PP
+
+.SS "virtual bool Sikidom::Rajtavan (const \fBPont\fP &) const\fR [pure virtual]\fP"
+
+.PP
+Megvalósítják a következők: \fBKor\fP, \fBHaromszog\fP és \fBNegyzet\fP\&.
+.SS "virtual void Sikidom::Read (std::istream & is)\fR [pure virtual]\fP"
+
+.PP
+Megvalósítják a következők: \fBKor\fP, \fBHaromszog\fP és \fBNegyzet\fP\&.
+.SS "bool Sikidom::Tartalmazza (const int) const"
+
+.SS "virtual double Sikidom::Terulet () const\fR [pure virtual]\fP"
+
+.PP
+A sokszög területét adja vissza\&. 
+.PP
+Megvalósítják a következők: \fBKor\fP, \fBHaromszog\fP és \fBNegyzet\fP\&.
+.SS "virtual void Sikidom::Write (std::ostream & os) const\fR [pure virtual]\fP"
+
+.PP
+Megvalósítják a következők: \fBKor\fP, \fBHaromszog\fP és \fBNegyzet\fP\&.
+.SH "Barát és kapcsolódó függvények dokumentációja"
+.PP 
+.SS "std::ostream & operator<< (std::ostream & os, const \fBSikidom\fP * const sikidom)\fR [friend]\fP"
+
+.PP
+\fBSikidom\fP osztály kiíró operátora\&. A függvény kiírja a síkidomot a megadott output streambe\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIos\fP a kimeneti stream\&. 
+.br
+\fIsikidom\fP a kiírandó síkidomra mutató pointer\&. 
+.RE
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+A kimeneti stream referenciája\&. 
+.RE
+.PP
+
+.SS "std::istream & operator>> (std::istream & is, \fBSikidom\fP ** sikidom)\fR [friend]\fP"
+
+.PP
+\fBSikidom\fP osztály beolvasó operátora\&. A függvény beolvassa a síkidomot a megadott input streamből\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIis\fP a bemeneti stream\&. 
+.br
+\fIsikidom\fP a beolvasott síkidomra mutató pointer\&. 
+.RE
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+A bemeneti stream referenciája\&. 
+.RE
+.PP
+
+.SH "Adattagok dokumentációja"
+.PP 
+.SS "\fBPont\fP Sikidom::kp\fR [protected]\fP"
+
+.PP
+Középpont\&. 
+.SS "\fBPont\fP Sikidom::p\fR [protected]\fP"
+
+.PP
+A síkidom egy csúcsa\&. 
+
+.SH "Szerző"
+.PP 
+Ezt a dokumentációt a Doxygen készítette a sikidom projekthez a forráskódból\&.

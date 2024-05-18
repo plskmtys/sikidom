@@ -1,0 +1,301 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_kor" xml:lang="hu">
+<title>Kor osztályreferencia</title>
+<indexterm><primary>Kor</primary></indexterm>
+<para>
+
+<para><link linkend="_class_kor">Kor</link> osztály. A <link linkend="_class_kor">Kor</link> osztály a <link linkend="_class_sikidom">Sikidom</link> leszármazottja, mely egy kör síkidomot reprezentál, középpontjával és egy csúcsával. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;sikidom.h&gt;</computeroutput>
+</para>
+<para>A Kor osztály származási diagramja:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_kor.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Publikus tagfüggvények    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_kor_1a4d13604de8c46b7458ad8e5e4f038863">Kor</link> (<link linkend="_class_pont">Pont</link> _kp=<link linkend="_class_pont">Pont</link>(0, 0), <link linkend="_class_pont">Pont</link> _p=<link linkend="_class_pont">Pont</link>(0, 0))</para>
+</listitem>
+            <listitem><para><link linkend="_class_kor_1aff1c2fc2b67d519faec1219d6509dfe1">Kor</link> (const <link linkend="_class_kor">Kor</link> &amp;_k)</para>
+</listitem>
+            <listitem><para>double <link linkend="_class_kor_1acd284f1cc13d311534eac606a7b3c17b">Terulet</link> () const override</para>
+
+<para><link linkend="_class_kor">Kor</link> területét számoló függvény. A kiszamitas modja: r^2 * pi. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_kor_1af617129564e4a8904676e6edccc7d18e">Rajtavan</link> (const <link linkend="_class_pont">Pont</link> &amp;) const override</para>
+
+<para><link linkend="_class_kor">Kor</link> Rajtavan függvény. A függvény eldönti, hogy egy pont rajta van-e a körön. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_kor_1a308f720da90acfa1e86396148f67a753">Write</link> (std::ostream &amp;os) const override</para>
+
+<para><link linkend="_class_kor">Kor</link> kiíró függvény. A függvény kiírja a kör adatait a megadott output streambe. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_kor_1a756b9b985f73fa29e598319b850630c0">Read</link> (std::istream &amp;is) override</para>
+
+<para><link linkend="_class_kor">Kor</link> beolvasó függvény. A függvény beolvassa a kör adatait a megadott input streamből. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_kor_1ad3800ae48997f4081af601a8361ebc2f">Kivul</link> (const std::size_t r) const override</para>
+
+<para><link linkend="_class_kor">Kor</link> kivül függvény. Eldönti, hogy a kör kívül van-e egy adott sugarú, origo középpontú körön. </para>
+</listitem>
+            <listitem><para><link linkend="_class_kor_1a525b264cd874ec01a4431e9dce42bb1b">~Kor</link> () override</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Publikus tagfüggvények a(z) <link linkend="_class_sikidom">Sikidom</link> osztályból származnak        <itemizedlist>
+            <listitem><para><link linkend="_class_sikidom_1a4dd258f18e4985aab7aa63518f4cb53c">Sikidom</link> (const <link linkend="_class_sikidom">Sikidom</link> &amp;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_sikidom">Sikidom</link> &amp; <link linkend="_class_sikidom_1a06417917486d1d4786a7bb8a238826ba">operator=</link> (const <link linkend="_class_sikidom">Sikidom</link> &amp;)</para>
+
+<para><link linkend="_class_sikidom">Sikidom</link> osztaly egyenloseg operatora. </para>
+</listitem>
+            <listitem><para><link linkend="_class_pont">Pont</link> <link linkend="_class_sikidom_1a580ec59df76631c231468b6beb303865">getkp</link> () const</para>
+</listitem>
+            <listitem><para><link linkend="_class_pont">Pont</link> <link linkend="_class_sikidom_1a4c868839f9e4051e8717ddba28fad015">getp</link> () const</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_sikidom_1aa429648a709a968dacd563d52cb39e44">Tartalmazza</link> (const int) const</para>
+</listitem>
+            <listitem><para><link linkend="_class_sikidom">Sikidom</link> &amp; <link linkend="_class_sikidom_1afe53eb1a8e5b36fb50b20ce6a296959c">Mozgat</link> (const int _x, const int _y)</para>
+
+<para>Egy sokszög mozgatását teszi lehetővé. </para>
+</listitem>
+            <listitem><para><link linkend="_class_sikidom">Sikidom</link> &amp; <link linkend="_class_sikidom_1a68f6ac0248b3176028002b3b45dde07b">Forgat</link> (const double, const <link linkend="_class_pont">Pont</link> &amp;)</para>
+
+<para>Egy sokszög forgatását teszi lehetővé. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_sikidom_1addcc9cfc77c3b6617d36084a10bcf208">~Sikidom</link> ()=0</para>
+
+<para><link linkend="_class_sikidom">Sikidom</link> osztály destruktora. nincs dinamikusan foglalt adattag, tehát nem kell semmit felszabadítani. </para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Barátok    </title>
+        <itemizedlist>
+            <listitem><para>std::ostream &amp; <link linkend="_class_kor_1a72505ea07cc8a696577c090445c4e8a5">operator&lt;&lt;</link> (std::ostream &amp;, const <link linkend="_class_kor">Kor</link> &amp;)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>További örökölt tagok    </title>
+Statikus publikus tagfüggvények a(z) <link linkend="_class_sikidom">Sikidom</link> osztályból származnak        <itemizedlist>
+            <listitem><para>static <link linkend="_class_sikidom">Sikidom</link> * <link linkend="_class_sikidom_1a34fe25b652fdf3dcd5c02256fcea31dc">createSikidom</link> (const std::string &amp;type)</para>
+
+<para><link linkend="_class_sikidom">Sikidom</link> osztály statikus factory függvénye. A függvény létrehoz egy új síkidomot a megadott típus alapján. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Védett tagfüggvények a(z) <link linkend="_class_sikidom">Sikidom</link> osztályból származnak        <itemizedlist>
+            <listitem><para><link linkend="_class_sikidom_1a200b65570223034da8a84bca5a88f61e">Sikidom</link> (<link linkend="_class_pont">Pont</link> _kp=<link linkend="_class_pont">Pont</link>(0, 0), <link linkend="_class_pont">Pont</link> _p=<link linkend="_class_pont">Pont</link>(0, 0))</para>
+
+<para><link linkend="_class_sikidom">Sikidom</link> konstruktor. </para>
+</listitem>
+        </itemizedlist>
+Védett attribútumok a(z) <link linkend="_class_sikidom">Sikidom</link> osztályból származnak        <itemizedlist>
+            <listitem><para><link linkend="_class_pont">Pont</link> <link linkend="_class_sikidom_1a11c6def4b07e4748bfa85947ac9f5591">kp</link></para>
+
+<para>Középpont. </para>
+</listitem>
+            <listitem><para><link linkend="_class_pont">Pont</link> <link linkend="_class_sikidom_1a139d93aabfc8ae56a115a22343e0ffaa">p</link></para>
+
+<para>A síkidom egy csúcsa. </para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Részletes leírás</title>
+
+<para><link linkend="_class_kor">Kor</link> osztály. A <link linkend="_class_kor">Kor</link> osztály a <link linkend="_class_sikidom">Sikidom</link> leszármazottja, mely egy kör síkidomot reprezentál, középpontjával és egy csúcsával. </para>
+</section>
+<section>
+<title>Konstruktorok és destruktorok dokumentációja</title>
+<anchor xml:id="_class_kor_1a4d13604de8c46b7458ad8e5e4f038863"/><section>
+    <title>Kor()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Kor</primary><secondary>Kor</secondary></indexterm>
+<indexterm><primary>Kor</primary><secondary>Kor</secondary></indexterm>
+<para><computeroutput>Kor::Kor (<link linkend="_class_pont">Pont</link> _kp = <computeroutput><link linkend="_class_pont">Pont</link>(0,&#160;0)</computeroutput>
+, <link linkend="_class_pont">Pont</link> _p = <computeroutput><link linkend="_class_pont">Pont</link>(0,&#160;0)</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_kor_1aff1c2fc2b67d519faec1219d6509dfe1"/><section>
+    <title>Kor()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Kor</primary><secondary>Kor</secondary></indexterm>
+<indexterm><primary>Kor</primary><secondary>Kor</secondary></indexterm>
+<para><computeroutput>Kor::Kor (const <link linkend="_class_kor">Kor</link> &amp; _k)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_kor_1a525b264cd874ec01a4431e9dce42bb1b"/><section>
+    <title>~Kor()</title>
+<indexterm><primary>~Kor</primary><secondary>Kor</secondary></indexterm>
+<indexterm><primary>Kor</primary><secondary>~Kor</secondary></indexterm>
+<para><computeroutput>Kor::~Kor ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[override]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Tagfüggvények dokumentációja</title>
+<anchor xml:id="_class_kor_1ad3800ae48997f4081af601a8361ebc2f"/><section>
+    <title>Kivul()</title>
+<indexterm><primary>Kivul</primary><secondary>Kor</secondary></indexterm>
+<indexterm><primary>Kor</primary><secondary>Kivul</secondary></indexterm>
+<para><computeroutput>bool Kor::Kivul (const std::size_t r) const<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para><link linkend="_class_kor">Kor</link> kivül függvény. Eldönti, hogy a kör kívül van-e egy adott sugarú, origo középpontú körön. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>r</entry><entry>
+<para>a kör sugara. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Megvalósítja a következőket: <link linkend="_class_sikidom_1ac8b7bb5618747ad0e3ce258e4fa223a2">Sikidom</link>.</para>
+</section>
+<anchor xml:id="_class_kor_1af617129564e4a8904676e6edccc7d18e"/><section>
+    <title>Rajtavan()</title>
+<indexterm><primary>Rajtavan</primary><secondary>Kor</secondary></indexterm>
+<indexterm><primary>Kor</primary><secondary>Rajtavan</secondary></indexterm>
+<para><computeroutput>bool Kor::Rajtavan (const <link linkend="_class_pont">Pont</link> &amp; _p) const<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para><link linkend="_class_kor">Kor</link> Rajtavan függvény. A függvény eldönti, hogy egy pont rajta van-e a körön. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_p</entry><entry>
+<para>a vizsgált pont. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>true, ha a pont rajta van a körön, egyébként false. </para>
+</formalpara>
+</para>
+<para>
+Megvalósítja a következőket: <link linkend="_class_sikidom_1af85de4b120b39e41487f4fc491857596">Sikidom</link>.</para>
+</section>
+<anchor xml:id="_class_kor_1a756b9b985f73fa29e598319b850630c0"/><section>
+    <title>Read()</title>
+<indexterm><primary>Read</primary><secondary>Kor</secondary></indexterm>
+<indexterm><primary>Kor</primary><secondary>Read</secondary></indexterm>
+<para><computeroutput>void Kor::Read (std::istream &amp; is)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para><link linkend="_class_kor">Kor</link> beolvasó függvény. A függvény beolvassa a kör adatait a megadott input streamből. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>is</entry><entry>
+<para>a bemeneti stream. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Megvalósítja a következőket: <link linkend="_class_sikidom_1a34ea60629f1c57a4b5afa8fdb8b38eb6">Sikidom</link>.</para>
+</section>
+<anchor xml:id="_class_kor_1acd284f1cc13d311534eac606a7b3c17b"/><section>
+    <title>Terulet()</title>
+<indexterm><primary>Terulet</primary><secondary>Kor</secondary></indexterm>
+<indexterm><primary>Kor</primary><secondary>Terulet</secondary></indexterm>
+<para><computeroutput>double Kor::Terulet ( ) const<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para><link linkend="_class_kor">Kor</link> területét számoló függvény. A kiszamitas modja: r^2 * pi. </para>
+</para>
+
+<para><formalpara><title>Visszatérési érték</title>
+
+<para>A kör területe. </para>
+</formalpara>
+</para>
+<para>
+Megvalósítja a következőket: <link linkend="_class_sikidom_1a6324bee38c590b706057f1d5cc4d9a25">Sikidom</link>.</para>
+</section>
+<anchor xml:id="_class_kor_1a308f720da90acfa1e86396148f67a753"/><section>
+    <title>Write()</title>
+<indexterm><primary>Write</primary><secondary>Kor</secondary></indexterm>
+<indexterm><primary>Kor</primary><secondary>Write</secondary></indexterm>
+<para><computeroutput>void Kor::Write (std::ostream &amp; os) const<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para><link linkend="_class_kor">Kor</link> kiíró függvény. A függvény kiírja a kör adatait a megadott output streambe. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>os</entry><entry>
+<para>a kimeneti stream. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Megvalósítja a következőket: <link linkend="_class_sikidom_1aaf04b7e802aed0f201c8471cd15c75f6">Sikidom</link>.</para>
+</section>
+</section>
+<section>
+<title>Barát és kapcsolódó függvények dokumentációja</title>
+<anchor xml:id="_class_kor_1a72505ea07cc8a696577c090445c4e8a5"/><section>
+    <title>operator&lt;&lt;</title>
+<indexterm><primary>operator&lt;&lt;</primary><secondary>Kor</secondary></indexterm>
+<indexterm><primary>Kor</primary><secondary>operator&lt;&lt;</secondary></indexterm>
+<para><computeroutput>std::ostream &amp; operator&lt;&lt; (std::ostream &amp; , const <link linkend="_class_kor">Kor</link> &amp; )<computeroutput>[friend]</computeroutput></computeroutput></para></section>
+<para>
+Ez a dokumentáció az osztályról a következő fájlok alapján készült:</para>
+src/<link linkend="_sikidom_8h">sikidom.h</link>src/<link linkend="_sikidom_8cpp">sikidom.cpp</link></section>
+</section>

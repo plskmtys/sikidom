@@ -1,0 +1,118 @@
+.TH "Tomb< T >::iterator" 3 "Version 1.0.0" "sikidom" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Tomb< T >::iterator \- iterator osztály\&. Az iterator osztály a \fBTomb\fP osztály iteratora\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <tomb\&.hpp>\fP
+.SS "Publikus tagfüggvények"
+
+.in +1c
+.ti -1c
+.RI "\fBiterator\fP (T *\fBp\fP=nullptr, size_t \fBidx\fP=0)"
+.br
+.RI "iterator konstruktora\&. "
+.ti -1c
+.RI "T & \fBoperator*\fP ()"
+.br
+.RI "operator* függvény\&. "
+.ti -1c
+.RI "\fBiterator\fP & \fBoperator++\fP ()"
+.br
+.RI "operator++ függvény\&. "
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBiterator\fP &other) const"
+.br
+.RI "operator!= függvény\&. "
+.in -1c
+.SS "Privát attribútumok"
+
+.in +1c
+.ti -1c
+.RI "T * \fBp\fP"
+.br
+.RI "Az iterator aktuális elemre mutató pointere\&. "
+.ti -1c
+.RI "size_t \fBidx\fP"
+.br
+.RI "Az iterator aktuális indexe\&. "
+.in -1c
+.SH "Részletes leírás"
+.PP 
+
+.SS "template<class T>
+.br
+class Tomb< T >::iterator"iterator osztály\&. Az iterator osztály a \fBTomb\fP osztály iteratora\&. 
+.SH "Konstruktorok és destruktorok dokumentációja"
+.PP 
+.SS "template<class T > \fBTomb\fP< T >::iterator::iterator (T * p = \fRnullptr\fP, size_t idx = \fR0\fP)\fR [inline]\fP"
+
+.PP
+iterator konstruktora\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIp\fP Az iterator aktuális elemre mutató pointere\&. 
+.br
+\fIidx\fP Az iterator aktuális indexe\&. 
+.RE
+.PP
+
+.SH "Tagfüggvények dokumentációja"
+.PP 
+.SS "template<class T > bool \fBTomb\fP< T >::iterator::operator!= (const \fBiterator\fP & other) const\fR [inline]\fP"
+
+.PP
+operator!= függvény\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIother\fP A másik iterator\&. 
+.RE
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+Igaz, ha a két iterator nem egyezik meg, egyébként hamis\&. 
+.RE
+.PP
+
+.SS "template<class T > T & \fBTomb\fP< T >::iterator::operator* ()\fR [inline]\fP"
+
+.PP
+operator* függvény\&. 
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+Az iterator aktuális elemre mutató referencia\&. 
+.RE
+.PP
+
+.SS "template<class T > \fBiterator\fP & \fBTomb\fP< T >::iterator::operator++ ()\fR [inline]\fP"
+
+.PP
+operator++ függvény\&. 
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+Az iterator az aktuális elem után mutató referencia\&. 
+.RE
+.PP
+
+.SH "Adattagok dokumentációja"
+.PP 
+.SS "template<class T > size_t \fBTomb\fP< T >::iterator::idx\fR [private]\fP"
+
+.PP
+Az iterator aktuális indexe\&. 
+.SS "template<class T > T* \fBTomb\fP< T >::iterator::p\fR [private]\fP"
+
+.PP
+Az iterator aktuális elemre mutató pointere\&. 
+
+.SH "Szerző"
+.PP 
+Ezt a dokumentációt a Doxygen készítette a sikidom projekthez a forráskódból\&.

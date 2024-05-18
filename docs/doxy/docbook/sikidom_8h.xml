@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_sikidom_8h" xml:lang="hu">
+<title>src/sikidom.h fájlreferencia</title>
+<indexterm><primary>src/sikidom.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;pont.h&quot;<?linebreak?>#include &lt;cstddef&gt;<?linebreak?>#include &lt;iostream&gt;<?linebreak?>#include &lt;memory&gt;<?linebreak?></programlisting><simplesect>
+    <title>Osztályok    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_sikidom">Sikidom</link></para>
+
+<para><link linkend="_class_sikidom">Sikidom</link> osztály. A sikidom osztály egy absztrakt osztály, melynek leszármazottai a különböző (szabályos) síkidomokat reprezentálják, középpontjukkal és egy csúcsukkal. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_kor">Kor</link></para>
+
+<para><link linkend="_class_kor">Kor</link> osztály. A <link linkend="_class_kor">Kor</link> osztály a <link linkend="_class_sikidom">Sikidom</link> leszármazottja, mely egy kör síkidomot reprezentál, középpontjával és egy csúcsával. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_haromszog">Haromszog</link></para>
+
+<para><link linkend="_class_haromszog">Haromszog</link> osztály. A <link linkend="_class_haromszog">Haromszog</link> osztály a <link linkend="_class_sikidom">Sikidom</link> leszármazottja, mely egy háromszög síkidomot reprezentál, középpontjával és egy csúcsával. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_negyzet">Negyzet</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Függvények    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_sikidom_8h_1a989e1b34da78d3a7a8e572c743dcd35f">IsOnTriangle</link> (const <link linkend="_class_pont">Pont</link> &amp;, const <link linkend="_class_pont">Pont</link> &amp;, const <link linkend="_class_pont">Pont</link> &amp;, const <link linkend="_class_pont">Pont</link> &amp;)</para>
+
+<para>IsOnTriangle függvény. A függvény eldönti, hogy egy pont rajta van-e egy háromszögön. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Függvények dokumentációja</title>
+<anchor xml:id="_sikidom_8h_1a989e1b34da78d3a7a8e572c743dcd35f"/><section>
+    <title>IsOnTriangle()</title>
+<indexterm><primary>IsOnTriangle</primary><secondary>sikidom.h</secondary></indexterm>
+<indexterm><primary>sikidom.h</primary><secondary>IsOnTriangle</secondary></indexterm>
+<para><computeroutput>bool IsOnTriangle (const <link linkend="_class_pont">Pont</link> &amp; P, const <link linkend="_class_pont">Pont</link> &amp; A, const <link linkend="_class_pont">Pont</link> &amp; B, const <link linkend="_class_pont">Pont</link> &amp; C)</computeroutput></para><para>
+
+<para>IsOnTriangle függvény. A függvény eldönti, hogy egy pont rajta van-e egy háromszögön. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paraméterek</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>P</entry><entry>
+<para>a vizsgált pont. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>A</entry><entry>
+<para>háromszög egyik csúcsa. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>B</entry><entry>
+<para>háromszög másik csúcsa. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>C</entry><entry>
+<para>háromszög harmadik csúcsa. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Visszatérési érték</title>
+
+<para>true, ha a pont rajta van a háromszögön, egyébként false.</para>
+</formalpara>
+A kiszamitas modja: <link xlink:href="https://en.wikipedia.org/wiki/Barycentric_coordinate_system#Determining_location_with_respect_to_a_triangle">https://en.wikipedia.org/wiki/Barycentric_coordinate_system#Determining_location_with_respect_to_a_triangle</link> </para>
+</section>
+</section>
+</section>

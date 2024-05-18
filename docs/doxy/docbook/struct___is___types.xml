@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct___is___types" xml:lang="hu">
+<title>_Is_Types&lt; F, T &gt; struktúrasablon-referencia</title>
+<indexterm><primary>_Is_Types&lt; F, T &gt;</primary></indexterm>
+<para>
+
+<para>Segédsablon típuskonverzió futás közbeni ellenőrzésere. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;gtest_lite.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Statikus publikus tagfüggvények    </title>
+        <itemizedlist>
+            <listitem><para>template&lt;typename D &gt; </para><para>static char(&amp; <link linkend="_struct___is___types_1a56e08a2768c571caab81e9bc47d5acc6">f</link> (D))[1]</para>
+</listitem>
+            <listitem><para>template&lt;typename D &gt; </para><para>static char(&amp; <link linkend="_struct___is___types_1a013da65c5a92e9bd02f5d361c10d376d">f</link> (...))[2]</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Statikus publikus attribútumok    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct___is___types_1a56e08a2768c571caab81e9bc47d5acc6">static</link> <link linkend="_struct___is___types_1a56e08a2768c571caab81e9bc47d5acc6">bool</link> <link linkend="_struct___is___types_1a56e08a2768c571caab81e9bc47d5acc6">const</link> <link linkend="_struct___is___types_1aef853f15f013611d0890cb6fc408ae47">convertable</link> = <link linkend="_struct___is___types_1a56e08a2768c571caab81e9bc47d5acc6">sizeof</link>(<link linkend="_struct___is___types_1a56e08a2768c571caab81e9bc47d5acc6">f</link>&lt;<link linkend="_struct___is___types_1a56e08a2768c571caab81e9bc47d5acc6">T</link>&gt;(<link linkend="_struct___is___types_1a56e08a2768c571caab81e9bc47d5acc6">F</link>())) == 1</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Részletes leírás</title>
+<simplesect><title>template&lt;<link linkend="_struct___is___types_1a56e08a2768c571caab81e9bc47d5acc6">typename</link> <link linkend="_struct___is___types_1a56e08a2768c571caab81e9bc47d5acc6">F</link>, <link linkend="_struct___is___types_1a56e08a2768c571caab81e9bc47d5acc6">typename</link> <link linkend="_struct___is___types_1a56e08a2768c571caab81e9bc47d5acc6">T</link>&gt;<?linebreak?>struct _Is_Types&lt; F, T &gt;</title></simplesect>
+
+<para>Segédsablon típuskonverzió futás közbeni ellenőrzésere. </para>
+</section>
+<section>
+<title>Tagfüggvények dokumentációja</title>
+<anchor xml:id="_struct___is___types_1a013da65c5a92e9bd02f5d361c10d376d"/><section>
+    <title>f()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>f</primary><secondary>_Is_Types&lt; F, T &gt;</secondary></indexterm>
+<indexterm><primary>_Is_Types&lt; F, T &gt;</primary><secondary>f</secondary></indexterm>
+<computeroutput>template&lt;typename F , typename T &gt; </computeroutput><computeroutput>template&lt;typename D &gt; </computeroutput><para><computeroutput>static char(&amp; <link linkend="_struct___is___types">_Is_Types</link>&lt; F, T &gt;::f ( ...))[2]<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct___is___types_1a56e08a2768c571caab81e9bc47d5acc6"/><section>
+    <title>f()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>f</primary><secondary>_Is_Types&lt; F, T &gt;</secondary></indexterm>
+<indexterm><primary>_Is_Types&lt; F, T &gt;</primary><secondary>f</secondary></indexterm>
+<computeroutput>template&lt;typename F , typename T &gt; </computeroutput><computeroutput>template&lt;typename D &gt; </computeroutput><para><computeroutput>static char(&amp; <link linkend="_struct___is___types">_Is_Types</link>&lt; F, T &gt;::f (D ))[1]<computeroutput>[static]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Adattagok dokumentációja</title>
+<anchor xml:id="_struct___is___types_1aef853f15f013611d0890cb6fc408ae47"/><section>
+    <title>convertable</title>
+<indexterm><primary>convertable</primary><secondary>_Is_Types&lt; F, T &gt;</secondary></indexterm>
+<indexterm><primary>_Is_Types&lt; F, T &gt;</primary><secondary>convertable</secondary></indexterm>
+<computeroutput>template&lt;<link linkend="_struct___is___types_1a56e08a2768c571caab81e9bc47d5acc6">typename</link> <link linkend="_struct___is___types_1a56e08a2768c571caab81e9bc47d5acc6">F</link> , <link linkend="_struct___is___types_1a56e08a2768c571caab81e9bc47d5acc6">typename</link> <link linkend="_struct___is___types_1a56e08a2768c571caab81e9bc47d5acc6">T</link> &gt; </computeroutput><para><computeroutput><link linkend="_struct___is___types_1a56e08a2768c571caab81e9bc47d5acc6">bool</link> <link linkend="_struct___is___types_1a56e08a2768c571caab81e9bc47d5acc6">const</link> <link linkend="_struct___is___types">_Is_Types</link>&lt; <link linkend="_struct___is___types_1a56e08a2768c571caab81e9bc47d5acc6">F</link>, <link linkend="_struct___is___types_1a56e08a2768c571caab81e9bc47d5acc6">T</link> &gt;::convertable = <link linkend="_struct___is___types_1a56e08a2768c571caab81e9bc47d5acc6">sizeof</link>(<link linkend="_struct___is___types_1a56e08a2768c571caab81e9bc47d5acc6">f</link>&lt;<link linkend="_struct___is___types_1a56e08a2768c571caab81e9bc47d5acc6">T</link>&gt;(<link linkend="_struct___is___types_1a56e08a2768c571caab81e9bc47d5acc6">F</link>())) == 1<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+Ez a dokumentáció a struktúráról a következő fájl alapján készült:</para>
+C:/Users/matyas/code/sikidom/src/<link linkend="_gtest__lite_8h">gtest_lite.h</link></section>
+</section>

@@ -1,0 +1,368 @@
+\doxysection{Pont osztályreferencia}
+\hypertarget{class_pont}{}\label{class_pont}\index{Pont@{Pont}}
+
+
+\doxylink{class_pont}{Pont} osztály A pontokat a síkon tárolja, x és y koordinátákkal.  
+
+
+
+
+{\ttfamily \#include $<$pont.\+h$>$}
+
+\doxysubsubsection*{Publikus tagfüggvények}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pont_a51a12cf04ae9729224716b6aeacc4085}{Pont}} (const double \+\_\+x=0, const double \+\_\+y=0)
+\item 
+\mbox{\hyperlink{class_pont_a3ba8d0324ccf49138a003e9fcd777825}{Pont}} (const \mbox{\hyperlink{class_pont}{Pont}} \&)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_pont}{Pont} osztály másoló konstruktora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pont}{Pont}} \& \mbox{\hyperlink{class_pont_a0f37a445f3ca156cc85386a9f2be2535}{operator=}} (const \mbox{\hyperlink{class_pont}{Pont}} \&)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_pont}{Pont} osztály értékadó operátora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pont}{Pont}} \& \mbox{\hyperlink{class_pont_ad0365d1e4d3487af3caee8a769a99cdf}{setx}} (double)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_pont}{Pont} osztály x koordinátájának beállítása. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pont}{Pont}} \& \mbox{\hyperlink{class_pont_a71633014bb7eb1eb4bc064e9fafa656a}{sety}} (double)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_pont}{Pont} osztály y koordinátájának beállítása. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_pont_ac29939bcb81bfe2514c9c07358aae198}{getx}} () const
+\begin{DoxyCompactList}\small\item\em \doxylink{class_pont}{Pont} osztály x koordinátájának lekérdezése. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_pont_afd7e7acb77de335b8359a8c2c8ef6f8b}{gety}} () const
+\begin{DoxyCompactList}\small\item\em \doxylink{class_pont}{Pont} osztály y koordinátájának lekérdezése. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pont}{Pont}} \mbox{\hyperlink{class_pont_a290903621d9e87a25184480b8e35fdbf}{operator+}} (const \mbox{\hyperlink{class_pont}{Pont}} \&) const
+\begin{DoxyCompactList}\small\item\em \doxylink{class_pont}{Pont} osztály összeadó operátora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pont}{Pont}} \mbox{\hyperlink{class_pont_af32a654a8ef3229455bbf72766e935af}{operator-\/}} (const \mbox{\hyperlink{class_pont}{Pont}} \&) const
+\begin{DoxyCompactList}\small\item\em \doxylink{class_pont}{Pont} osztály kivonó operátora. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pont_ae0f973562087a2bc676a7f9cb85c8aee}{operator==}} (const \mbox{\hyperlink{class_pont}{Pont}} \&) const
+\begin{DoxyCompactList}\small\item\em \doxylink{class_pont}{Pont} osztály egyenlőség operátora. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pont_a1c398d6d2ac4b5edb11521980f09bc93}{operator!=}} (const \mbox{\hyperlink{class_pont}{Pont}} \&) const
+\begin{DoxyCompactList}\small\item\em \doxylink{class_pont}{Pont} osztály egyenlőtlenség operátora. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_pont_a27125c0be3500c187d2cb69212600444}{dst}} (const \mbox{\hyperlink{class_pont}{Pont}} \&) const
+\begin{DoxyCompactList}\small\item\em \doxylink{class_pont}{Pont} osztály távolság számító metódusa. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pont}{Pont}} \& \mbox{\hyperlink{class_pont_a2cc6c506454c191ed24f54c5660a15bb}{Mozgat}} (const double \+\_\+x=0, const double \+\_\+y=0)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_pont}{Pont} osztály mozgató metódusa. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pont}{Pont}} \& \mbox{\hyperlink{class_pont_a0398427978c0f4bccc6aaf28d22b20d0}{Forgat}} (const double, const \mbox{\hyperlink{class_pont}{Pont}} \&)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_pont}{Pont} osztály forgató metódusa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Privát attribútumok}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_pont_ab6e8e8d934d048496a49ce1c61e6ebaf}{x}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_pont}{Pont} x koordinátája. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_pont_ad94ccd66e75eeefbc1b271a1617a401b}{y}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_pont}{Pont} y koordinátája. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Barátok}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_pont_a0385caa4d87a0cda0609e7959061e1b3}{operator$<$$<$}} (std\+::ostream \&, const \mbox{\hyperlink{class_pont}{Pont}} \&)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_pont}{Pont} osztály kiíró operátora. \end{DoxyCompactList}\item 
+std\+::istream \& \mbox{\hyperlink{class_pont_a7b20e326857f2c8dd5eccb8e6e7e8d7b}{operator$>$$>$}} (std\+::istream \&, \mbox{\hyperlink{class_pont}{Pont}} \&)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_pont}{Pont} osztály beolvasó operátora. formátumok\+: "{}(x,y)"{} vagy "{}x,y"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Részletes leírás}
+\doxylink{class_pont}{Pont} osztály A pontokat a síkon tárolja, x és y koordinátákkal. 
+
+\doxysubsection{Konstruktorok és destruktorok dokumentációja}
+\Hypertarget{class_pont_a51a12cf04ae9729224716b6aeacc4085}\label{class_pont_a51a12cf04ae9729224716b6aeacc4085} 
+\index{Pont@{Pont}!Pont@{Pont}}
+\index{Pont@{Pont}!Pont@{Pont}}
+\doxysubsubsection{\texorpdfstring{Pont()}{Pont()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Pont\+::\+Pont (\begin{DoxyParamCaption}\item[{const double}]{\+\_\+x = {\ttfamily 0},  }\item[{const double}]{\+\_\+y = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_pont_a3ba8d0324ccf49138a003e9fcd777825}\label{class_pont_a3ba8d0324ccf49138a003e9fcd777825} 
+\index{Pont@{Pont}!Pont@{Pont}}
+\index{Pont@{Pont}!Pont@{Pont}}
+\doxysubsubsection{\texorpdfstring{Pont()}{Pont()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Pont\+::\+Pont (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_pont}{Pont}} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_pont}{Pont} osztály másoló konstruktora. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em p} & másolandó pont \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Tagfüggvények dokumentációja}
+\Hypertarget{class_pont_a27125c0be3500c187d2cb69212600444}\label{class_pont_a27125c0be3500c187d2cb69212600444} 
+\index{Pont@{Pont}!dst@{dst}}
+\index{dst@{dst}!Pont@{Pont}}
+\doxysubsubsection{\texorpdfstring{dst()}{dst()}}
+{\footnotesize\ttfamily double Pont\+::dst (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_pont}{Pont}} \&}]{p }\end{DoxyParamCaption}) const}
+
+
+
+\doxylink{class_pont}{Pont} osztály távolság számító metódusa. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em p} & a másik pont \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+a két pont távolsága 
+\end{DoxyReturn}
+\Hypertarget{class_pont_a0398427978c0f4bccc6aaf28d22b20d0}\label{class_pont_a0398427978c0f4bccc6aaf28d22b20d0} 
+\index{Pont@{Pont}!Forgat@{Forgat}}
+\index{Forgat@{Forgat}!Pont@{Pont}}
+\doxysubsubsection{\texorpdfstring{Forgat()}{Forgat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pont}{Pont}} \& Pont\+::\+Forgat (\begin{DoxyParamCaption}\item[{const double}]{rad,  }\item[{const \mbox{\hyperlink{class_pont}{Pont}} \&}]{center = {\ttfamily \mbox{\hyperlink{class_pont}{Pont}}(0,~0)} }\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_pont}{Pont} osztály forgató metódusa. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em rad} & forgatás szöge radiánban \\
+\hline
+{\em center} & a forgatás középpontja \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+\texorpdfstring{$\ast$}{*}this 
+\end{DoxyReturn}
+\Hypertarget{class_pont_ac29939bcb81bfe2514c9c07358aae198}\label{class_pont_ac29939bcb81bfe2514c9c07358aae198} 
+\index{Pont@{Pont}!getx@{getx}}
+\index{getx@{getx}!Pont@{Pont}}
+\doxysubsubsection{\texorpdfstring{getx()}{getx()}}
+{\footnotesize\ttfamily double Pont\+::getx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\doxylink{class_pont}{Pont} osztály x koordinátájának lekérdezése. 
+
+\begin{DoxyReturn}{Visszatérési érték}
+x koordináta értéke 
+\end{DoxyReturn}
+\Hypertarget{class_pont_afd7e7acb77de335b8359a8c2c8ef6f8b}\label{class_pont_afd7e7acb77de335b8359a8c2c8ef6f8b} 
+\index{Pont@{Pont}!gety@{gety}}
+\index{gety@{gety}!Pont@{Pont}}
+\doxysubsubsection{\texorpdfstring{gety()}{gety()}}
+{\footnotesize\ttfamily double Pont\+::gety (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\doxylink{class_pont}{Pont} osztály y koordinátájának lekérdezése. 
+
+\begin{DoxyReturn}{Visszatérési érték}
+y koordináta értéke 
+\end{DoxyReturn}
+\Hypertarget{class_pont_a2cc6c506454c191ed24f54c5660a15bb}\label{class_pont_a2cc6c506454c191ed24f54c5660a15bb} 
+\index{Pont@{Pont}!Mozgat@{Mozgat}}
+\index{Mozgat@{Mozgat}!Pont@{Pont}}
+\doxysubsubsection{\texorpdfstring{Mozgat()}{Mozgat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pont}{Pont}} \& Pont\+::\+Mozgat (\begin{DoxyParamCaption}\item[{const double}]{\+\_\+x = {\ttfamily 0},  }\item[{const double}]{\+\_\+y = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_pont}{Pont} osztály mozgató metódusa. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em \+\_\+x} & x irányú elmozdulás \\
+\hline
+{\em \+\_\+y} & y irányú elmozdulás \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+\texorpdfstring{$\ast$}{*}this 
+\end{DoxyReturn}
+\Hypertarget{class_pont_a1c398d6d2ac4b5edb11521980f09bc93}\label{class_pont_a1c398d6d2ac4b5edb11521980f09bc93} 
+\index{Pont@{Pont}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Pont@{Pont}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Pont\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_pont}{Pont}} \&}]{p }\end{DoxyParamCaption}) const}
+
+
+
+\doxylink{class_pont}{Pont} osztály egyenlőtlenség operátora. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em p} & a másik pont \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+igaz, ha a két pont koordinátái nem egyenlők, egyébként hamis. 
+\end{DoxyReturn}
+\Hypertarget{class_pont_a290903621d9e87a25184480b8e35fdbf}\label{class_pont_a290903621d9e87a25184480b8e35fdbf} 
+\index{Pont@{Pont}!operator+@{operator+}}
+\index{operator+@{operator+}!Pont@{Pont}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pont}{Pont}} Pont\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_pont}{Pont}} \&}]{b }\end{DoxyParamCaption}) const}
+
+
+
+\doxylink{class_pont}{Pont} osztály összeadó operátora. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em b} & a másik pont \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+az összeg 
+\end{DoxyReturn}
+\Hypertarget{class_pont_af32a654a8ef3229455bbf72766e935af}\label{class_pont_af32a654a8ef3229455bbf72766e935af} 
+\index{Pont@{Pont}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Pont@{Pont}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pont}{Pont}} Pont\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_pont}{Pont}} \&}]{b }\end{DoxyParamCaption}) const}
+
+
+
+\doxylink{class_pont}{Pont} osztály kivonó operátora. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em b} & a másik pont \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+a különbség 
+\end{DoxyReturn}
+\Hypertarget{class_pont_a0f37a445f3ca156cc85386a9f2be2535}\label{class_pont_a0f37a445f3ca156cc85386a9f2be2535} 
+\index{Pont@{Pont}!operator=@{operator=}}
+\index{operator=@{operator=}!Pont@{Pont}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pont}{Pont}} \& Pont\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_pont}{Pont}} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_pont}{Pont} osztály értékadó operátora. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em p} & másolandó pont \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+\texorpdfstring{$\ast$}{*}this 
+\end{DoxyReturn}
+\Hypertarget{class_pont_ae0f973562087a2bc676a7f9cb85c8aee}\label{class_pont_ae0f973562087a2bc676a7f9cb85c8aee} 
+\index{Pont@{Pont}!operator==@{operator==}}
+\index{operator==@{operator==}!Pont@{Pont}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Pont\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_pont}{Pont}} \&}]{p }\end{DoxyParamCaption}) const}
+
+
+
+\doxylink{class_pont}{Pont} osztály egyenlőség operátora. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em p} & a másik pont \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+igaz, ha a két pont koordinátái egyenlők, egyébként hamis. 
+\end{DoxyReturn}
+\Hypertarget{class_pont_ad0365d1e4d3487af3caee8a769a99cdf}\label{class_pont_ad0365d1e4d3487af3caee8a769a99cdf} 
+\index{Pont@{Pont}!setx@{setx}}
+\index{setx@{setx}!Pont@{Pont}}
+\doxysubsubsection{\texorpdfstring{setx()}{setx()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pont}{Pont}} \& Pont\+::setx (\begin{DoxyParamCaption}\item[{double}]{\+\_\+x }\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_pont}{Pont} osztály x koordinátájának beállítása. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em \+\_\+x} & beállítandó x koordináta \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+\texorpdfstring{$\ast$}{*}this 
+\end{DoxyReturn}
+\Hypertarget{class_pont_a71633014bb7eb1eb4bc064e9fafa656a}\label{class_pont_a71633014bb7eb1eb4bc064e9fafa656a} 
+\index{Pont@{Pont}!sety@{sety}}
+\index{sety@{sety}!Pont@{Pont}}
+\doxysubsubsection{\texorpdfstring{sety()}{sety()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pont}{Pont}} \& Pont\+::sety (\begin{DoxyParamCaption}\item[{double}]{\+\_\+y }\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_pont}{Pont} osztály y koordinátájának beállítása. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em \+\_\+y} & beállítandó y koordináta \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+\texorpdfstring{$\ast$}{*}this 
+\end{DoxyReturn}
+
+
+\doxysubsection{Barát és kapcsolódó függvények dokumentációja}
+\Hypertarget{class_pont_a0385caa4d87a0cda0609e7959061e1b3}\label{class_pont_a0385caa4d87a0cda0609e7959061e1b3} 
+\index{Pont@{Pont}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Pont@{Pont}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_pont}{Pont}} \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxylink{class_pont}{Pont} osztály kiíró operátora. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em os} & output stream referencia \\
+\hline
+{\em p} & a kiírandó pont \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+output stream referencia 
+\end{DoxyReturn}
+\Hypertarget{class_pont_a7b20e326857f2c8dd5eccb8e6e7e8d7b}\label{class_pont_a7b20e326857f2c8dd5eccb8e6e7e8d7b} 
+\index{Pont@{Pont}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Pont@{Pont}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily std\+::istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\mbox{\hyperlink{class_pont}{Pont}} \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxylink{class_pont}{Pont} osztály beolvasó operátora. formátumok\+: "{}(x,y)"{} vagy "{}x,y"{}. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em is} & input stream referencia \\
+\hline
+{\em p} & a beolvasandó pont \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+input stream referencia 
+\end{DoxyReturn}
+
+
+\doxysubsection{Adattagok dokumentációja}
+\Hypertarget{class_pont_ab6e8e8d934d048496a49ce1c61e6ebaf}\label{class_pont_ab6e8e8d934d048496a49ce1c61e6ebaf} 
+\index{Pont@{Pont}!x@{x}}
+\index{x@{x}!Pont@{Pont}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily double Pont\+::x\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{class_pont}{Pont} x koordinátája. 
+
+\Hypertarget{class_pont_ad94ccd66e75eeefbc1b271a1617a401b}\label{class_pont_ad94ccd66e75eeefbc1b271a1617a401b} 
+\index{Pont@{Pont}!y@{y}}
+\index{y@{y}!Pont@{Pont}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily double Pont\+::y\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{class_pont}{Pont} y koordinátája. 
+
+
+
+Ez a dokumentáció az osztályról a következő fájlok alapján készült\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{pont_8h}{pont.\+h}}\item 
+src/\mbox{\hyperlink{pont_8cpp}{pont.\+cpp}}\end{DoxyCompactItemize}

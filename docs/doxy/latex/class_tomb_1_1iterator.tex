@@ -1,0 +1,135 @@
+\doxysection{Tomb\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+::iterator osztályreferencia}
+\hypertarget{class_tomb_1_1iterator}{}\label{class_tomb_1_1iterator}\index{Tomb$<$ T $>$::iterator@{Tomb$<$ T $>$::iterator}}
+
+
+iterator osztály. Az iterator osztály a \doxylink{class_tomb}{Tomb} osztály iteratora.  
+
+
+
+
+{\ttfamily \#include $<$tomb.\+hpp$>$}
+
+\doxysubsubsection*{Publikus tagfüggvények}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tomb_1_1iterator_a0997c5dd2b6f10027f2cdd9a741e7229}{iterator}} (T \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_tomb_1_1iterator_a0c06f296810154f298042b03b5838b25}{p}}=nullptr, size\+\_\+t \mbox{\hyperlink{class_tomb_1_1iterator_aebf5889c7df6ecc7ab34015255c166ff}{idx}}=0)
+\begin{DoxyCompactList}\small\item\em iterator konstruktora. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{class_tomb_1_1iterator_a4cdb3e9e985a793f6368d5fcc5d2d40c}{operator\texorpdfstring{$\ast$}{*}}} ()
+\begin{DoxyCompactList}\small\item\em operator\texorpdfstring{$\ast$}{*} függvény. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tomb_1_1iterator}{iterator}} \& \mbox{\hyperlink{class_tomb_1_1iterator_a305ee2477d8b556a2bcd7b8dfa86c205}{operator++}} ()
+\begin{DoxyCompactList}\small\item\em operator++ függvény. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_tomb_1_1iterator_adf65e35567138e29807e9a5eda5614e9}{operator!=}} (const \mbox{\hyperlink{class_tomb_1_1iterator}{iterator}} \&other) const
+\begin{DoxyCompactList}\small\item\em operator!= függvény. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Privát attribútumok}
+\begin{DoxyCompactItemize}
+\item 
+T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_tomb_1_1iterator_a0c06f296810154f298042b03b5838b25}{p}}
+\begin{DoxyCompactList}\small\item\em Az iterator aktuális elemre mutató pointere. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_tomb_1_1iterator_aebf5889c7df6ecc7ab34015255c166ff}{idx}}
+\begin{DoxyCompactList}\small\item\em Az iterator aktuális indexe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Részletes leírás}
+\subsubsection*{template$<$class T$>$\newline
+class Tomb$<$ T $>$\+::iterator}
+iterator osztály. Az iterator osztály a \doxylink{class_tomb}{Tomb} osztály iteratora. 
+
+\doxysubsection{Konstruktorok és destruktorok dokumentációja}
+\Hypertarget{class_tomb_1_1iterator_a0997c5dd2b6f10027f2cdd9a741e7229}\label{class_tomb_1_1iterator_a0997c5dd2b6f10027f2cdd9a741e7229} 
+\index{Tomb$<$ T $>$::iterator@{Tomb$<$ T $>$::iterator}!iterator@{iterator}}
+\index{iterator@{iterator}!Tomb$<$ T $>$::iterator@{Tomb$<$ T $>$::iterator}}
+\doxysubsubsection{\texorpdfstring{iterator()}{iterator()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_tomb}{Tomb}}$<$ T $>$\+::iterator\+::iterator (\begin{DoxyParamCaption}\item[{T \texorpdfstring{$\ast$}{*}}]{p = {\ttfamily nullptr},  }\item[{size\+\_\+t}]{idx = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+iterator konstruktora. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em p} & Az iterator aktuális elemre mutató pointere. \\
+\hline
+{\em idx} & Az iterator aktuális indexe. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Tagfüggvények dokumentációja}
+\Hypertarget{class_tomb_1_1iterator_adf65e35567138e29807e9a5eda5614e9}\label{class_tomb_1_1iterator_adf65e35567138e29807e9a5eda5614e9} 
+\index{Tomb$<$ T $>$::iterator@{Tomb$<$ T $>$::iterator}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Tomb$<$ T $>$::iterator@{Tomb$<$ T $>$::iterator}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{class_tomb}{Tomb}}$<$ T $>$\+::iterator\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_tomb_1_1iterator}{iterator}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+operator!= függvény. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em other} & A másik iterator. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+Igaz, ha a két iterator nem egyezik meg, egyébként hamis. 
+\end{DoxyReturn}
+\Hypertarget{class_tomb_1_1iterator_a4cdb3e9e985a793f6368d5fcc5d2d40c}\label{class_tomb_1_1iterator_a4cdb3e9e985a793f6368d5fcc5d2d40c} 
+\index{Tomb$<$ T $>$::iterator@{Tomb$<$ T $>$::iterator}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!Tomb$<$ T $>$::iterator@{Tomb$<$ T $>$::iterator}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T \& \mbox{\hyperlink{class_tomb}{Tomb}}$<$ T $>$\+::iterator\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+operator\texorpdfstring{$\ast$}{*} függvény. 
+
+\begin{DoxyReturn}{Visszatérési érték}
+Az iterator aktuális elemre mutató referencia. 
+\end{DoxyReturn}
+\Hypertarget{class_tomb_1_1iterator_a305ee2477d8b556a2bcd7b8dfa86c205}\label{class_tomb_1_1iterator_a305ee2477d8b556a2bcd7b8dfa86c205} 
+\index{Tomb$<$ T $>$::iterator@{Tomb$<$ T $>$::iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!Tomb$<$ T $>$::iterator@{Tomb$<$ T $>$::iterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_tomb_1_1iterator}{iterator}} \& \mbox{\hyperlink{class_tomb}{Tomb}}$<$ T $>$\+::iterator\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+operator++ függvény. 
+
+\begin{DoxyReturn}{Visszatérési érték}
+Az iterator az aktuális elem után mutató referencia. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Adattagok dokumentációja}
+\Hypertarget{class_tomb_1_1iterator_aebf5889c7df6ecc7ab34015255c166ff}\label{class_tomb_1_1iterator_aebf5889c7df6ecc7ab34015255c166ff} 
+\index{Tomb$<$ T $>$::iterator@{Tomb$<$ T $>$::iterator}!idx@{idx}}
+\index{idx@{idx}!Tomb$<$ T $>$::iterator@{Tomb$<$ T $>$::iterator}}
+\doxysubsubsection{\texorpdfstring{idx}{idx}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+size\+\_\+t \mbox{\hyperlink{class_tomb}{Tomb}}$<$ T $>$\+::iterator\+::idx\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Az iterator aktuális indexe. 
+
+\Hypertarget{class_tomb_1_1iterator_a0c06f296810154f298042b03b5838b25}\label{class_tomb_1_1iterator_a0c06f296810154f298042b03b5838b25} 
+\index{Tomb$<$ T $>$::iterator@{Tomb$<$ T $>$::iterator}!p@{p}}
+\index{p@{p}!Tomb$<$ T $>$::iterator@{Tomb$<$ T $>$::iterator}}
+\doxysubsubsection{\texorpdfstring{p}{p}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_tomb}{Tomb}}$<$ T $>$\+::iterator\+::p\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Az iterator aktuális elemre mutató pointere. 
+
+
+
+Ez a dokumentáció az osztályról a következő fájl alapján készült\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{tomb_8hpp}{tomb.\+hpp}}\end{DoxyCompactItemize}

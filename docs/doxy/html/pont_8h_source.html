@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hu">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sikidom: src/pont.h Forrásfájl</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">sikidom<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Készítette Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Keresés');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('pont_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Betöltés...</div>
+<div class="SRStatus" id="Searching">Keresés...</div>
+<div class="SRStatus" id="NoMatches">Nincs egyezés</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">pont.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="pont_8h.html">Ugrás a fájl dokumentációjához.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#ifndef SIKIDOM_PONT_H</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#define SIKIDOM_PONT_H</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_pont.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="class_pont.html">Pont</a>{</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_pont.html#ab6e8e8d934d048496a49ce1c61e6ebaf">   15</a></span>  <span class="keywordtype">double</span> <a class="code hl_variable" href="class_pont.html#ab6e8e8d934d048496a49ce1c61e6ebaf">x</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_pont.html#ad94ccd66e75eeefbc1b271a1617a401b">   20</a></span>  <span class="keywordtype">double</span> <a class="code hl_variable" href="class_pont.html#ad94ccd66e75eeefbc1b271a1617a401b">y</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_pont.html#a51a12cf04ae9729224716b6aeacc4085">   22</a></span>  <a class="code hl_function" href="class_pont.html#a51a12cf04ae9729224716b6aeacc4085">Pont</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> _x = 0, <span class="keyword">const</span> <span class="keywordtype">double</span> _y = 0): <a class="code hl_variable" href="class_pont.html#ab6e8e8d934d048496a49ce1c61e6ebaf">x</a>(_x), <a class="code hl_variable" href="class_pont.html#ad94ccd66e75eeefbc1b271a1617a401b">y</a>(_y){}</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <a class="code hl_function" href="class_pont.html#a51a12cf04ae9729224716b6aeacc4085">Pont</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_pont.html">Pont</a>&amp;);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <a class="code hl_class" href="class_pont.html">Pont</a>&amp; <a class="code hl_function" href="class_pont.html#a0f37a445f3ca156cc85386a9f2be2535">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_pont.html">Pont</a>&amp;);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <a class="code hl_class" href="class_pont.html">Pont</a>&amp; <a class="code hl_function" href="class_pont.html#ad0365d1e4d3487af3caee8a769a99cdf">setx</a>(<span class="keywordtype">double</span>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <a class="code hl_class" href="class_pont.html">Pont</a>&amp; <a class="code hl_function" href="class_pont.html#a71633014bb7eb1eb4bc064e9fafa656a">sety</a>(<span class="keywordtype">double</span>);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="keywordtype">double</span> <a class="code hl_function" href="class_pont.html#ac29939bcb81bfe2514c9c07358aae198">getx</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <span class="keywordtype">double</span> <a class="code hl_function" href="class_pont.html#afd7e7acb77de335b8359a8c2c8ef6f8b">gety</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <a class="code hl_class" href="class_pont.html">Pont</a> <a class="code hl_function" href="class_pont.html#a290903621d9e87a25184480b8e35fdbf">operator+</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_pont.html">Pont</a>&amp;) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <a class="code hl_class" href="class_pont.html">Pont</a> <a class="code hl_function" href="class_pont.html#af32a654a8ef3229455bbf72766e935af">operator-</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_pont.html">Pont</a>&amp;) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_pont.html#ae0f973562087a2bc676a7f9cb85c8aee">operator==</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_pont.html">Pont</a>&amp;) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_pont.html#a1c398d6d2ac4b5edb11521980f09bc93">operator!=</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_pont.html">Pont</a>&amp;) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="keywordtype">double</span> <a class="code hl_function" href="class_pont.html#a27125c0be3500c187d2cb69212600444">dst</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_pont.html">Pont</a>&amp;) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <a class="code hl_class" href="class_pont.html">Pont</a>&amp; <a class="code hl_function" href="class_pont.html#a2cc6c506454c191ed24f54c5660a15bb">Mozgat</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> _x = 0, <span class="keyword">const</span> <span class="keywordtype">double</span> _y = 0);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <a class="code hl_class" href="class_pont.html">Pont</a>&amp; <a class="code hl_function" href="class_pont.html#a0398427978c0f4bccc6aaf28d22b20d0">Forgat</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>, <span class="keyword">const</span> <a class="code hl_class" href="class_pont.html">Pont</a>&amp;);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keyword">friend</span> std::ostream&amp; <a class="code hl_friend" href="class_pont.html#a0385caa4d87a0cda0609e7959061e1b3">operator&lt;&lt;</a>(std::ostream&amp;, <span class="keyword">const</span> <a class="code hl_class" href="class_pont.html">Pont</a>&amp;);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keyword">friend</span> std::istream&amp; <a class="code hl_friend" href="class_pont.html#a7b20e326857f2c8dd5eccb8e6e7e8d7b">operator&gt;&gt;</a>(std::istream&amp;, <a class="code hl_class" href="class_pont.html">Pont</a>&amp;);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>};</div>
+</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keywordtype">double</span> <a class="code hl_function" href="pont_8h.html#aca2e599648455a1f472dae8888f68663">dst</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_pont.html">Pont</a>&amp; a, <span class="keyword">const</span> <a class="code hl_class" href="class_pont.html">Pont</a>&amp; b);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#endif </span><span class="comment">//SIKIDOM_PONT_H</span></div>
+<div class="ttc" id="aclass_pont_html"><div class="ttname"><a href="class_pont.html">Pont</a></div><div class="ttdoc">Pont osztály A pontokat a síkon tárolja, x és y koordinátákkal.</div><div class="ttdef"><b>Definition</b> pont.h:10</div></div>
+<div class="ttc" id="aclass_pont_html_a0385caa4d87a0cda0609e7959061e1b3"><div class="ttname"><a href="class_pont.html#a0385caa4d87a0cda0609e7959061e1b3">Pont::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;, const Pont &amp;)</div><div class="ttdoc">Pont osztály kiíró operátora.</div><div class="ttdef"><b>Definition</b> pont.cpp:123</div></div>
+<div class="ttc" id="aclass_pont_html_a0398427978c0f4bccc6aaf28d22b20d0"><div class="ttname"><a href="class_pont.html#a0398427978c0f4bccc6aaf28d22b20d0">Pont::Forgat</a></div><div class="ttdeci">Pont &amp; Forgat(const double, const Pont &amp;)</div><div class="ttdoc">Pont osztály forgató metódusa.</div><div class="ttdef"><b>Definition</b> pont.cpp:107</div></div>
+<div class="ttc" id="aclass_pont_html_a0f37a445f3ca156cc85386a9f2be2535"><div class="ttname"><a href="class_pont.html#a0f37a445f3ca156cc85386a9f2be2535">Pont::operator=</a></div><div class="ttdeci">Pont &amp; operator=(const Pont &amp;)</div><div class="ttdoc">Pont osztály értékadó operátora.</div><div class="ttdef"><b>Definition</b> pont.cpp:19</div></div>
+<div class="ttc" id="aclass_pont_html_a1c398d6d2ac4b5edb11521980f09bc93"><div class="ttname"><a href="class_pont.html#a1c398d6d2ac4b5edb11521980f09bc93">Pont::operator!=</a></div><div class="ttdeci">bool operator!=(const Pont &amp;) const</div><div class="ttdoc">Pont osztály egyenlőtlenség operátora.</div><div class="ttdef"><b>Definition</b> pont.cpp:87</div></div>
+<div class="ttc" id="aclass_pont_html_a27125c0be3500c187d2cb69212600444"><div class="ttname"><a href="class_pont.html#a27125c0be3500c187d2cb69212600444">Pont::dst</a></div><div class="ttdeci">double dst(const Pont &amp;) const</div><div class="ttdoc">Pont osztály távolság számító metódusa.</div><div class="ttdef"><b>Definition</b> pont.cpp:164</div></div>
+<div class="ttc" id="aclass_pont_html_a290903621d9e87a25184480b8e35fdbf"><div class="ttname"><a href="class_pont.html#a290903621d9e87a25184480b8e35fdbf">Pont::operator+</a></div><div class="ttdeci">Pont operator+(const Pont &amp;) const</div><div class="ttdoc">Pont osztály összeadó operátora.</div><div class="ttdef"><b>Definition</b> pont.cpp:62</div></div>
+<div class="ttc" id="aclass_pont_html_a2cc6c506454c191ed24f54c5660a15bb"><div class="ttname"><a href="class_pont.html#a2cc6c506454c191ed24f54c5660a15bb">Pont::Mozgat</a></div><div class="ttdeci">Pont &amp; Mozgat(const double _x=0, const double _y=0)</div><div class="ttdoc">Pont osztály mozgató metódusa.</div><div class="ttdef"><b>Definition</b> pont.cpp:95</div></div>
+<div class="ttc" id="aclass_pont_html_a51a12cf04ae9729224716b6aeacc4085"><div class="ttname"><a href="class_pont.html#a51a12cf04ae9729224716b6aeacc4085">Pont::Pont</a></div><div class="ttdeci">Pont(const double _x=0, const double _y=0)</div><div class="ttdef"><b>Definition</b> pont.h:22</div></div>
+<div class="ttc" id="aclass_pont_html_a71633014bb7eb1eb4bc064e9fafa656a"><div class="ttname"><a href="class_pont.html#a71633014bb7eb1eb4bc064e9fafa656a">Pont::sety</a></div><div class="ttdeci">Pont &amp; sety(double)</div><div class="ttdoc">Pont osztály y koordinátájának beállítása.</div><div class="ttdef"><b>Definition</b> pont.cpp:40</div></div>
+<div class="ttc" id="aclass_pont_html_a7b20e326857f2c8dd5eccb8e6e7e8d7b"><div class="ttname"><a href="class_pont.html#a7b20e326857f2c8dd5eccb8e6e7e8d7b">Pont::operator&gt;&gt;</a></div><div class="ttdeci">friend std::istream &amp; operator&gt;&gt;(std::istream &amp;, Pont &amp;)</div><div class="ttdoc">Pont osztály beolvasó operátora. formátumok: &quot;(x,y)&quot; vagy &quot;x,y&quot;.</div><div class="ttdef"><b>Definition</b> pont.cpp:134</div></div>
+<div class="ttc" id="aclass_pont_html_ab6e8e8d934d048496a49ce1c61e6ebaf"><div class="ttname"><a href="class_pont.html#ab6e8e8d934d048496a49ce1c61e6ebaf">Pont::x</a></div><div class="ttdeci">double x</div><div class="ttdoc">Pont x koordinátája.</div><div class="ttdef"><b>Definition</b> pont.h:15</div></div>
+<div class="ttc" id="aclass_pont_html_ac29939bcb81bfe2514c9c07358aae198"><div class="ttname"><a href="class_pont.html#ac29939bcb81bfe2514c9c07358aae198">Pont::getx</a></div><div class="ttdeci">double getx() const</div><div class="ttdoc">Pont osztály x koordinátájának lekérdezése.</div><div class="ttdef"><b>Definition</b> pont.cpp:49</div></div>
+<div class="ttc" id="aclass_pont_html_ad0365d1e4d3487af3caee8a769a99cdf"><div class="ttname"><a href="class_pont.html#ad0365d1e4d3487af3caee8a769a99cdf">Pont::setx</a></div><div class="ttdeci">Pont &amp; setx(double)</div><div class="ttdoc">Pont osztály x koordinátájának beállítása.</div><div class="ttdef"><b>Definition</b> pont.cpp:30</div></div>
+<div class="ttc" id="aclass_pont_html_ad94ccd66e75eeefbc1b271a1617a401b"><div class="ttname"><a href="class_pont.html#ad94ccd66e75eeefbc1b271a1617a401b">Pont::y</a></div><div class="ttdeci">double y</div><div class="ttdoc">Pont y koordinátája.</div><div class="ttdef"><b>Definition</b> pont.h:20</div></div>
+<div class="ttc" id="aclass_pont_html_ae0f973562087a2bc676a7f9cb85c8aee"><div class="ttname"><a href="class_pont.html#ae0f973562087a2bc676a7f9cb85c8aee">Pont::operator==</a></div><div class="ttdeci">bool operator==(const Pont &amp;) const</div><div class="ttdoc">Pont osztály egyenlőség operátora.</div><div class="ttdef"><b>Definition</b> pont.cpp:80</div></div>
+<div class="ttc" id="aclass_pont_html_af32a654a8ef3229455bbf72766e935af"><div class="ttname"><a href="class_pont.html#af32a654a8ef3229455bbf72766e935af">Pont::operator-</a></div><div class="ttdeci">Pont operator-(const Pont &amp;) const</div><div class="ttdoc">Pont osztály kivonó operátora.</div><div class="ttdef"><b>Definition</b> pont.cpp:71</div></div>
+<div class="ttc" id="aclass_pont_html_afd7e7acb77de335b8359a8c2c8ef6f8b"><div class="ttname"><a href="class_pont.html#afd7e7acb77de335b8359a8c2c8ef6f8b">Pont::gety</a></div><div class="ttdeci">double gety() const</div><div class="ttdoc">Pont osztály y koordinátájának lekérdezése.</div><div class="ttdef"><b>Definition</b> pont.cpp:55</div></div>
+<div class="ttc" id="apont_8h_html_aca2e599648455a1f472dae8888f68663"><div class="ttname"><a href="pont_8h.html#aca2e599648455a1f472dae8888f68663">dst</a></div><div class="ttdeci">double dst(const Pont &amp;a, const Pont &amp;b)</div><div class="ttdoc">két pont közötti távolság számító függvény.</div><div class="ttdef"><b>Definition</b> pont.cpp:174</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="pont_8h.html">pont.h</a></li>
+    <li class="footer">Készítette <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
+</body>
+</html>

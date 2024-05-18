@@ -1,0 +1,50 @@
+\doxysection{src/sikidom.h fájlreferencia}
+\hypertarget{sikidom_8h}{}\label{sikidom_8h}\index{src/sikidom.h@{src/sikidom.h}}
+{\ttfamily \#include "{}pont.\+h"{}}\newline
+{\ttfamily \#include $<$cstddef$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+\doxysubsubsection*{Osztályok}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_sikidom}{Sikidom}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_sikidom}{Sikidom} osztály. A sikidom osztály egy absztrakt osztály, melynek leszármazottai a különböző (szabályos) síkidomokat reprezentálják, középpontjukkal és egy csúcsukkal. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_kor}{Kor}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_kor}{Kor} osztály. A \doxylink{class_kor}{Kor} osztály a \doxylink{class_sikidom}{Sikidom} leszármazottja, mely egy kör síkidomot reprezentál, középpontjával és egy csúcsával. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_haromszog}{Haromszog}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_haromszog}{Haromszog} osztály. A \doxylink{class_haromszog}{Haromszog} osztály a \doxylink{class_sikidom}{Sikidom} leszármazottja, mely egy háromszög síkidomot reprezentál, középpontjával és egy csúcsával. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_negyzet}{Negyzet}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Függvények}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{sikidom_8h_a989e1b34da78d3a7a8e572c743dcd35f}{Is\+On\+Triangle}} (const \mbox{\hyperlink{class_pont}{Pont}} \&, const \mbox{\hyperlink{class_pont}{Pont}} \&, const \mbox{\hyperlink{class_pont}{Pont}} \&, const \mbox{\hyperlink{class_pont}{Pont}} \&)
+\begin{DoxyCompactList}\small\item\em Is\+On\+Triangle függvény. A függvény eldönti, hogy egy pont rajta van-\/e egy háromszögön. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Függvények dokumentációja}
+\Hypertarget{sikidom_8h_a989e1b34da78d3a7a8e572c743dcd35f}\label{sikidom_8h_a989e1b34da78d3a7a8e572c743dcd35f} 
+\index{sikidom.h@{sikidom.h}!IsOnTriangle@{IsOnTriangle}}
+\index{IsOnTriangle@{IsOnTriangle}!sikidom.h@{sikidom.h}}
+\doxysubsubsection{\texorpdfstring{IsOnTriangle()}{IsOnTriangle()}}
+{\footnotesize\ttfamily bool Is\+On\+Triangle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_pont}{Pont}} \&}]{P,  }\item[{const \mbox{\hyperlink{class_pont}{Pont}} \&}]{A,  }\item[{const \mbox{\hyperlink{class_pont}{Pont}} \&}]{B,  }\item[{const \mbox{\hyperlink{class_pont}{Pont}} \&}]{C }\end{DoxyParamCaption})}
+
+
+
+Is\+On\+Triangle függvény. A függvény eldönti, hogy egy pont rajta van-\/e egy háromszögön. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em P} & a vizsgált pont. \\
+\hline
+{\em A} & háromszög egyik csúcsa. \\
+\hline
+{\em B} & háromszög másik csúcsa. \\
+\hline
+{\em C} & háromszög harmadik csúcsa. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+true, ha a pont rajta van a háromszögön, egyébként false.
+\end{DoxyReturn}
+A kiszamitas modja\+: \href{https://en.wikipedia.org/wiki/Barycentric_coordinate_system\#Determining_location_with_respect_to_a_triangle}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Barycentric\+\_\+coordinate\+\_\+system\#\+Determining\+\_\+location\+\_\+with\+\_\+respect\+\_\+to\+\_\+a\+\_\+triangle}} 

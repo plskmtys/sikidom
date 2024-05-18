@@ -1,0 +1,213 @@
+\doxysection{gtest\+\_\+lite\+::Test struktúrareferencia}
+\hypertarget{structgtest__lite_1_1_test}{}\label{structgtest__lite_1_1_test}\index{gtest\_lite::Test@{gtest\_lite::Test}}
+
+
+{\ttfamily \#include $<$gtest\+\_\+lite.\+h$>$}
+
+\doxysubsubsection*{Publikus tagfüggvények}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structgtest__lite_1_1_test_a2227b70fcc5dfb3c326bf117dd8f7e79}{begin}} (const char \texorpdfstring{$\ast$}{*}n)
+\begin{DoxyCompactList}\small\item\em Teszt kezdete. \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{structgtest__lite_1_1_test_a86d41ffed05f53653fb27b918764a44e}{end}} (bool memchk=false)
+\begin{DoxyCompactList}\small\item\em Teszt vége. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structgtest__lite_1_1_test_aadbfd0f53c56d975f793602996631195}{fail}} ()
+\item 
+std\+::ostream \& \mbox{\hyperlink{structgtest__lite_1_1_test_a2de71946be5b3dc7f03c99868785c1de}{expect}} (bool st, const char \texorpdfstring{$\ast$}{*}file, int line, const char \texorpdfstring{$\ast$}{*}expr, bool pr=false)
+\begin{DoxyCompactList}\small\item\em Eredményt adminisztráló tagfüggvény True a jó eset. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structgtest__lite_1_1_test_a5a879233c2aa110626668c06140f6e71}{\texorpdfstring{$\sim$}{\string~}\+Test}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statikus publikus tagfüggvények}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structgtest__lite_1_1_test}{Test}} \& \mbox{\hyperlink{structgtest__lite_1_1_test_aaece9ac882e0b17b295cceb7e3ca10ce}{get\+Test}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Publikus attribútumok}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structgtest__lite_1_1_test_a6da678d43b72b9e2bff1c99e1d3c48f5}{sum}}
+\begin{DoxyCompactList}\small\item\em tesztek számlálója \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structgtest__lite_1_1_test_a4fb6ee7bd903717d970e3f0504cdeeab}{failed}}
+\begin{DoxyCompactList}\small\item\em hibás tesztek \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structgtest__lite_1_1_test_a91d9c63794d2b9b49e0c48d897208560}{ablocks}}
+\begin{DoxyCompactList}\small\item\em allokált blokkok száma \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structgtest__lite_1_1_test_a59a9a7f0ef7867af604ce5678f7a2c13}{status}}
+\begin{DoxyCompactList}\small\item\em éppen futó teszt státusza \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structgtest__lite_1_1_test_a1145ceb335a60a808b7b4d5d1624b2a5}{tmp}}
+\begin{DoxyCompactList}\small\item\em temp a kivételkezeléshez; \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structgtest__lite_1_1_test_a8d495a42580e3ae337f9c4982136b700}{name}}
+\begin{DoxyCompactList}\small\item\em éppen futó teszt neve \end{DoxyCompactList}\item 
+std\+::fstream \mbox{\hyperlink{structgtest__lite_1_1_test_af4784302d78bb004bcb20b7f75ec06c3}{null}}
+\begin{DoxyCompactList}\small\item\em nyelő, ha nem kell kiírni semmit \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Privát tagfüggvények}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structgtest__lite_1_1_test_a99fb3f2338e4e0512beb6e19c5409078}{Test}} ()
+\begin{DoxyCompactList}\small\item\em singleton minta miatt \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structgtest__lite_1_1_test_aad083ed9e389aeac2d526460ac301c7a}{Test}} (const \mbox{\hyperlink{structgtest__lite_1_1_test}{Test}} \&)
+\item 
+void \mbox{\hyperlink{structgtest__lite_1_1_test_a35faf2d45ab88d096f0eb25ee5b80b13}{operator=}} (const \mbox{\hyperlink{structgtest__lite_1_1_test}{Test}} \&)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Részletes leírás}
+Tesztek állapotát tároló osztály. Egyetlen egy statikus példány keletkezik, aminek a destruktora a futás végén hívódik meg. 
+
+\doxysubsection{Konstruktorok és destruktorok dokumentációja}
+\Hypertarget{structgtest__lite_1_1_test_a99fb3f2338e4e0512beb6e19c5409078}\label{structgtest__lite_1_1_test_a99fb3f2338e4e0512beb6e19c5409078} 
+\index{gtest\_lite::Test@{gtest\_lite::Test}!Test@{Test}}
+\index{Test@{Test}!gtest\_lite::Test@{gtest\_lite::Test}}
+\doxysubsubsection{\texorpdfstring{Test()}{Test()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily gtest\+\_\+lite\+::\+Test\+::\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+singleton minta miatt 
+
+\Hypertarget{structgtest__lite_1_1_test_aad083ed9e389aeac2d526460ac301c7a}\label{structgtest__lite_1_1_test_aad083ed9e389aeac2d526460ac301c7a} 
+\index{gtest\_lite::Test@{gtest\_lite::Test}!Test@{Test}}
+\index{Test@{Test}!gtest\_lite::Test@{gtest\_lite::Test}}
+\doxysubsubsection{\texorpdfstring{Test()}{Test()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily gtest\+\_\+lite\+::\+Test\+::\+Test (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structgtest__lite_1_1_test}{Test}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{structgtest__lite_1_1_test_a5a879233c2aa110626668c06140f6e71}\label{structgtest__lite_1_1_test_a5a879233c2aa110626668c06140f6e71} 
+\index{gtest\_lite::Test@{gtest\_lite::Test}!````~Test@{\texorpdfstring{$\sim$}{\string~}Test}}
+\index{````~Test@{\texorpdfstring{$\sim$}{\string~}Test}!gtest\_lite::Test@{gtest\_lite::Test}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Test()}{\string~Test()}}
+{\footnotesize\ttfamily gtest\+\_\+lite\+::\+Test\+::\texorpdfstring{$\sim$}{\string~}\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destruktor. 
+
+
+
+\doxysubsection{Tagfüggvények dokumentációja}
+\Hypertarget{structgtest__lite_1_1_test_a2227b70fcc5dfb3c326bf117dd8f7e79}\label{structgtest__lite_1_1_test_a2227b70fcc5dfb3c326bf117dd8f7e79} 
+\index{gtest\_lite::Test@{gtest\_lite::Test}!begin@{begin}}
+\index{begin@{begin}!gtest\_lite::Test@{gtest\_lite::Test}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily void gtest\+\_\+lite\+::\+Test\+::begin (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Teszt kezdete. 
+
+\Hypertarget{structgtest__lite_1_1_test_a86d41ffed05f53653fb27b918764a44e}\label{structgtest__lite_1_1_test_a86d41ffed05f53653fb27b918764a44e} 
+\index{gtest\_lite::Test@{gtest\_lite::Test}!end@{end}}
+\index{end@{end}!gtest\_lite::Test@{gtest\_lite::Test}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily std\+::ostream \& gtest\+\_\+lite\+::\+Test\+::end (\begin{DoxyParamCaption}\item[{bool}]{memchk = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Teszt vége. 
+
+\Hypertarget{structgtest__lite_1_1_test_a2de71946be5b3dc7f03c99868785c1de}\label{structgtest__lite_1_1_test_a2de71946be5b3dc7f03c99868785c1de} 
+\index{gtest\_lite::Test@{gtest\_lite::Test}!expect@{expect}}
+\index{expect@{expect}!gtest\_lite::Test@{gtest\_lite::Test}}
+\doxysubsubsection{\texorpdfstring{expect()}{expect()}}
+{\footnotesize\ttfamily std\+::ostream \& gtest\+\_\+lite\+::\+Test\+::expect (\begin{DoxyParamCaption}\item[{bool}]{st,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{file,  }\item[{int}]{line,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{expr,  }\item[{bool}]{pr = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Eredményt adminisztráló tagfüggvény True a jó eset. 
+
+A függvény hívó gráfja\+:
+% FIG 0
+\Hypertarget{structgtest__lite_1_1_test_aadbfd0f53c56d975f793602996631195}\label{structgtest__lite_1_1_test_aadbfd0f53c56d975f793602996631195} 
+\index{gtest\_lite::Test@{gtest\_lite::Test}!fail@{fail}}
+\index{fail@{fail}!gtest\_lite::Test@{gtest\_lite::Test}}
+\doxysubsubsection{\texorpdfstring{fail()}{fail()}}
+{\footnotesize\ttfamily bool gtest\+\_\+lite\+::\+Test\+::fail (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structgtest__lite_1_1_test_aaece9ac882e0b17b295cceb7e3ca10ce}\label{structgtest__lite_1_1_test_aaece9ac882e0b17b295cceb7e3ca10ce} 
+\index{gtest\_lite::Test@{gtest\_lite::Test}!getTest@{getTest}}
+\index{getTest@{getTest}!gtest\_lite::Test@{gtest\_lite::Test}}
+\doxysubsubsection{\texorpdfstring{getTest()}{getTest()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{structgtest__lite_1_1_test}{Test}} \& gtest\+\_\+lite\+::\+Test\+::get\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\texorpdfstring{$<$}{<} egyedüli (singleton) példány\Hypertarget{structgtest__lite_1_1_test_a35faf2d45ab88d096f0eb25ee5b80b13}\label{structgtest__lite_1_1_test_a35faf2d45ab88d096f0eb25ee5b80b13} 
+\index{gtest\_lite::Test@{gtest\_lite::Test}!operator=@{operator=}}
+\index{operator=@{operator=}!gtest\_lite::Test@{gtest\_lite::Test}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily void gtest\+\_\+lite\+::\+Test\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structgtest__lite_1_1_test}{Test}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Adattagok dokumentációja}
+\Hypertarget{structgtest__lite_1_1_test_a91d9c63794d2b9b49e0c48d897208560}\label{structgtest__lite_1_1_test_a91d9c63794d2b9b49e0c48d897208560} 
+\index{gtest\_lite::Test@{gtest\_lite::Test}!ablocks@{ablocks}}
+\index{ablocks@{ablocks}!gtest\_lite::Test@{gtest\_lite::Test}}
+\doxysubsubsection{\texorpdfstring{ablocks}{ablocks}}
+{\footnotesize\ttfamily int gtest\+\_\+lite\+::\+Test\+::ablocks}
+
+
+
+allokált blokkok száma 
+
+\Hypertarget{structgtest__lite_1_1_test_a4fb6ee7bd903717d970e3f0504cdeeab}\label{structgtest__lite_1_1_test_a4fb6ee7bd903717d970e3f0504cdeeab} 
+\index{gtest\_lite::Test@{gtest\_lite::Test}!failed@{failed}}
+\index{failed@{failed}!gtest\_lite::Test@{gtest\_lite::Test}}
+\doxysubsubsection{\texorpdfstring{failed}{failed}}
+{\footnotesize\ttfamily int gtest\+\_\+lite\+::\+Test\+::failed}
+
+
+
+hibás tesztek 
+
+\Hypertarget{structgtest__lite_1_1_test_a8d495a42580e3ae337f9c4982136b700}\label{structgtest__lite_1_1_test_a8d495a42580e3ae337f9c4982136b700} 
+\index{gtest\_lite::Test@{gtest\_lite::Test}!name@{name}}
+\index{name@{name}!gtest\_lite::Test@{gtest\_lite::Test}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string gtest\+\_\+lite\+::\+Test\+::name}
+
+
+
+éppen futó teszt neve 
+
+\Hypertarget{structgtest__lite_1_1_test_af4784302d78bb004bcb20b7f75ec06c3}\label{structgtest__lite_1_1_test_af4784302d78bb004bcb20b7f75ec06c3} 
+\index{gtest\_lite::Test@{gtest\_lite::Test}!null@{null}}
+\index{null@{null}!gtest\_lite::Test@{gtest\_lite::Test}}
+\doxysubsubsection{\texorpdfstring{null}{null}}
+{\footnotesize\ttfamily std\+::fstream gtest\+\_\+lite\+::\+Test\+::null}
+
+
+
+nyelő, ha nem kell kiírni semmit 
+
+\Hypertarget{structgtest__lite_1_1_test_a59a9a7f0ef7867af604ce5678f7a2c13}\label{structgtest__lite_1_1_test_a59a9a7f0ef7867af604ce5678f7a2c13} 
+\index{gtest\_lite::Test@{gtest\_lite::Test}!status@{status}}
+\index{status@{status}!gtest\_lite::Test@{gtest\_lite::Test}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily bool gtest\+\_\+lite\+::\+Test\+::status}
+
+
+
+éppen futó teszt státusza 
+
+\Hypertarget{structgtest__lite_1_1_test_a6da678d43b72b9e2bff1c99e1d3c48f5}\label{structgtest__lite_1_1_test_a6da678d43b72b9e2bff1c99e1d3c48f5} 
+\index{gtest\_lite::Test@{gtest\_lite::Test}!sum@{sum}}
+\index{sum@{sum}!gtest\_lite::Test@{gtest\_lite::Test}}
+\doxysubsubsection{\texorpdfstring{sum}{sum}}
+{\footnotesize\ttfamily int gtest\+\_\+lite\+::\+Test\+::sum}
+
+
+
+tesztek számlálója 
+
+\Hypertarget{structgtest__lite_1_1_test_a1145ceb335a60a808b7b4d5d1624b2a5}\label{structgtest__lite_1_1_test_a1145ceb335a60a808b7b4d5d1624b2a5} 
+\index{gtest\_lite::Test@{gtest\_lite::Test}!tmp@{tmp}}
+\index{tmp@{tmp}!gtest\_lite::Test@{gtest\_lite::Test}}
+\doxysubsubsection{\texorpdfstring{tmp}{tmp}}
+{\footnotesize\ttfamily bool gtest\+\_\+lite\+::\+Test\+::tmp}
+
+
+
+temp a kivételkezeléshez; 
+
+
+
+Ez a dokumentáció a struktúráról a következő fájl alapján készült\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/matyas/code/sikidom/src/\mbox{\hyperlink{gtest__lite_8h}{gtest\+\_\+lite.\+h}}\end{DoxyCompactItemize}

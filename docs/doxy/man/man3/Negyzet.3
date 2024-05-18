@@ -1,0 +1,217 @@
+.TH "Negyzet" 3 "Version 1.0.0" "sikidom" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Negyzet
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <sikidom\&.h>\fP
+.PP
+Ősök: \fBSikidom\fP\&.
+.SS "Publikus tagfüggvények"
+
+.in +1c
+.ti -1c
+.RI "\fBNegyzet\fP (\fBPont\fP _kp=\fBPont\fP(0, 0), \fBPont\fP _p=\fBPont\fP(0, 0))"
+.br
+.ti -1c
+.RI "\fBNegyzet\fP (const \fBNegyzet\fP &_n)"
+.br
+.ti -1c
+.RI "double \fBTerulet\fP () const override"
+.br
+.RI "\fBNegyzet\fP területét számoló függvény\&. A kiszamitas modja: R^2 * 2\&. "
+.ti -1c
+.RI "bool \fBRajtavan\fP (const \fBPont\fP &) const override"
+.br
+.RI "\fBNegyzet\fP Rajtavan függvény\&. A függvény eldönti, hogy egy pont rajta van-e a négyzeten\&. "
+.ti -1c
+.RI "void \fBWrite\fP (std::ostream &os) const override"
+.br
+.RI "\fBNegyzet\fP kiíró függvény\&. A függvény kiírja a négyzet adatait a megadott output streambe\&. "
+.ti -1c
+.RI "void \fBRead\fP (std::istream &is) override"
+.br
+.RI "\fBNegyzet\fP beolvasó függvény\&. A függvény beolvassa a négyzet adatait a megadott input streamből\&. "
+.ti -1c
+.RI "bool \fBKivul\fP (const std::size_t r) const override"
+.br
+.RI "\fBNegyzet\fP Kivul függvény\&. Eldönti, hogy a négyzet kívül van-e egy adott sugarú, origo középpontú körön\&. "
+.ti -1c
+.RI "\fB~Negyzet\fP () override"
+.br
+.in -1c
+
+Publikus tagfüggvények a(z) \fBSikidom\fP osztályból származnak
+.in +1c
+.ti -1c
+.RI "\fBSikidom\fP (const \fBSikidom\fP &)"
+.br
+.ti -1c
+.RI "\fBSikidom\fP & \fBoperator=\fP (const \fBSikidom\fP &)"
+.br
+.RI "\fBSikidom\fP osztaly egyenloseg operatora\&. "
+.ti -1c
+.RI "\fBPont\fP \fBgetkp\fP () const"
+.br
+.ti -1c
+.RI "\fBPont\fP \fBgetp\fP () const"
+.br
+.ti -1c
+.RI "bool \fBTartalmazza\fP (const int) const"
+.br
+.ti -1c
+.RI "\fBSikidom\fP & \fBMozgat\fP (const int _x, const int _y)"
+.br
+.RI "Egy sokszög mozgatását teszi lehetővé\&. "
+.ti -1c
+.RI "\fBSikidom\fP & \fBForgat\fP (const double, const \fBPont\fP &)"
+.br
+.RI "Egy sokszög forgatását teszi lehetővé\&. "
+.ti -1c
+.RI "virtual \fB~Sikidom\fP ()=0"
+.br
+.RI "\fBSikidom\fP osztály destruktora\&. nincs dinamikusan foglalt adattag, tehát nem kell semmit felszabadítani\&. "
+.in -1c
+.SS "Barátok"
+
+.in +1c
+.ti -1c
+.RI "std::ostream & \fBoperator<<\fP (std::ostream &, const \fBNegyzet\fP &)"
+.br
+.in -1c
+.SS "További örökölt tagok"
+
+
+Statikus publikus tagfüggvények a(z) \fBSikidom\fP osztályból származnak
+.in +1c
+.ti -1c
+.RI "static \fBSikidom\fP * \fBcreateSikidom\fP (const std::string &type)"
+.br
+.RI "\fBSikidom\fP osztály statikus factory függvénye\&. A függvény létrehoz egy új síkidomot a megadott típus alapján\&. "
+.in -1c
+
+Védett tagfüggvények a(z) \fBSikidom\fP osztályból származnak
+.in +1c
+.ti -1c
+.RI "\fBSikidom\fP (\fBPont\fP _kp=\fBPont\fP(0, 0), \fBPont\fP _p=\fBPont\fP(0, 0))"
+.br
+.RI "\fBSikidom\fP konstruktor\&. "
+.in -1c
+
+Védett attribútumok a(z) \fBSikidom\fP osztályból származnak
+.in +1c
+.ti -1c
+.RI "\fBPont\fP \fBkp\fP"
+.br
+.RI "Középpont\&. "
+.ti -1c
+.RI "\fBPont\fP \fBp\fP"
+.br
+.RI "A síkidom egy csúcsa\&. "
+.in -1c
+.SH "Részletes leírás"
+.PP 
+
+.PP
+\fBParaméterek\fP
+.RS 4
+\fI\fBNegyzet\fP\fP osztály\&. A \fBNegyzet\fP osztály a \fBSikidom\fP leszármazottja, mely egy négyzet síkidomot reprezentál, középpontjával és egy csúcsával\&. 
+.RE
+.PP
+
+.SH "Konstruktorok és destruktorok dokumentációja"
+.PP 
+.SS "Negyzet::Negyzet (\fBPont\fP _kp = \fR\fBPont\fP(0, 0)\fP, \fBPont\fP _p = \fR\fBPont\fP(0, 0)\fP)\fR [inline]\fP"
+
+.SS "Negyzet::Negyzet (const \fBNegyzet\fP & _n)\fR [inline]\fP"
+
+.SS "Negyzet::~Negyzet ()\fR [inline]\fP, \fR [override]\fP"
+
+.SH "Tagfüggvények dokumentációja"
+.PP 
+.SS "bool Negyzet::Kivul (const std::size_t r) const\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+\fBNegyzet\fP Kivul függvény\&. Eldönti, hogy a négyzet kívül van-e egy adott sugarú, origo középpontú körön\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIr\fP a kör sugara\&. 
+.RE
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+true, ha a négyzet kívül van a körön, egyébként false\&. 
+.RE
+.PP
+
+.PP
+Megvalósítja a következőket: \fBSikidom\fP\&.
+.SS "bool Negyzet::Rajtavan (const \fBPont\fP & P) const\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+\fBNegyzet\fP Rajtavan függvény\&. A függvény eldönti, hogy egy pont rajta van-e a négyzeten\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIP\fP a vizsgált pont\&. 
+.RE
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+true, ha a pont rajta van a négyzeten, egyébként false\&. 
+.RE
+.PP
+
+.PP
+Megvalósítja a következőket: \fBSikidom\fP\&.
+.SS "void Negyzet::Read (std::istream & is)\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+\fBNegyzet\fP beolvasó függvény\&. A függvény beolvassa a négyzet adatait a megadott input streamből\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIis\fP a bemeneti stream\&. 
+.RE
+.PP
+
+.PP
+Megvalósítja a következőket: \fBSikidom\fP\&.
+.SS "double Negyzet::Terulet () const\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+\fBNegyzet\fP területét számoló függvény\&. A kiszamitas modja: R^2 * 2\&. 
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+A négyzet területe\&. 
+.RE
+.PP
+
+.PP
+Megvalósítja a következőket: \fBSikidom\fP\&.
+.SS "void Negyzet::Write (std::ostream & os) const\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+\fBNegyzet\fP kiíró függvény\&. A függvény kiírja a négyzet adatait a megadott output streambe\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIos\fP a kimeneti stream\&. 
+.RE
+.PP
+
+.PP
+Megvalósítja a következőket: \fBSikidom\fP\&.
+.SH "Barát és kapcsolódó függvények dokumentációja"
+.PP 
+.SS "std::ostream & operator<< (std::ostream &, const \fBNegyzet\fP &)\fR [friend]\fP"
+
+
+.SH "Szerző"
+.PP 
+Ezt a dokumentációt a Doxygen készítette a sikidom projekthez a forráskódból\&.

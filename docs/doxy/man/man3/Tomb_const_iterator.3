@@ -1,0 +1,118 @@
+.TH "Tomb< T >::const_iterator" 3 "Version 1.0.0" "sikidom" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Tomb< T >::const_iterator \- \fBconst_iterator\fP osztály\&. Az \fBconst_iterator\fP osztály a \fBTomb\fP osztály const_iteratora\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <tomb\&.hpp>\fP
+.SS "Publikus tagfüggvények"
+
+.in +1c
+.ti -1c
+.RI "\fBconst_iterator\fP (const T *\fBp\fP=nullptr, size_t \fBidx\fP=0)"
+.br
+.RI "\fBconst_iterator\fP konstruktora\&. "
+.ti -1c
+.RI "const T & \fBoperator*\fP () const"
+.br
+.RI "operator* függvény\&. "
+.ti -1c
+.RI "\fBconst_iterator\fP & \fBoperator++\fP ()"
+.br
+.RI "operator++ függvény\&. "
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBconst_iterator\fP &other) const"
+.br
+.RI "operator!= függvény\&. "
+.in -1c
+.SS "Privát attribútumok"
+
+.in +1c
+.ti -1c
+.RI "const T * \fBp\fP"
+.br
+.RI "Az \fBconst_iterator\fP aktuális elemre mutató pointere\&. "
+.ti -1c
+.RI "size_t \fBidx\fP"
+.br
+.RI "Az \fBconst_iterator\fP aktuális indexe\&. "
+.in -1c
+.SH "Részletes leírás"
+.PP 
+
+.SS "template<class T>
+.br
+class Tomb< T >::const_iterator"\fBconst_iterator\fP osztály\&. Az \fBconst_iterator\fP osztály a \fBTomb\fP osztály const_iteratora\&. 
+.SH "Konstruktorok és destruktorok dokumentációja"
+.PP 
+.SS "template<class T > \fBTomb\fP< T >::const_iterator::const_iterator (const T * p = \fRnullptr\fP, size_t idx = \fR0\fP)\fR [inline]\fP"
+
+.PP
+\fBconst_iterator\fP konstruktora\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIp\fP Az \fBconst_iterator\fP aktuális elemre mutató pointere\&. 
+.br
+\fIidx\fP Az \fBconst_iterator\fP aktuális indexe\&. 
+.RE
+.PP
+
+.SH "Tagfüggvények dokumentációja"
+.PP 
+.SS "template<class T > bool \fBTomb\fP< T >::const_iterator::operator!= (const \fBconst_iterator\fP & other) const\fR [inline]\fP"
+
+.PP
+operator!= függvény\&. 
+.PP
+\fBParaméterek\fP
+.RS 4
+\fIother\fP A másik \fBconst_iterator\fP\&. 
+.RE
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+Igaz, ha a ket \fBconst_iterator\fP nem egyezik meg, egyébként hamis\&. 
+.RE
+.PP
+
+.SS "template<class T > const T & \fBTomb\fP< T >::const_iterator::operator* () const\fR [inline]\fP"
+
+.PP
+operator* függvény\&. 
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+Az \fBconst_iterator\fP aktuális elemre mutató referencia\&. 
+.RE
+.PP
+
+.SS "template<class T > \fBconst_iterator\fP & \fBTomb\fP< T >::const_iterator::operator++ ()\fR [inline]\fP"
+
+.PP
+operator++ függvény\&. 
+.PP
+\fBVisszatérési érték\fP
+.RS 4
+Az \fBconst_iterator\fP az aktuális elem után mutató referencia\&. 
+.RE
+.PP
+
+.SH "Adattagok dokumentációja"
+.PP 
+.SS "template<class T > size_t \fBTomb\fP< T >::const_iterator::idx\fR [private]\fP"
+
+.PP
+Az \fBconst_iterator\fP aktuális indexe\&. 
+.SS "template<class T > const T* \fBTomb\fP< T >::const_iterator::p\fR [private]\fP"
+
+.PP
+Az \fBconst_iterator\fP aktuális elemre mutató pointere\&. 
+
+.SH "Szerző"
+.PP 
+Ezt a dokumentációt a Doxygen készítette a sikidom projekthez a forráskódból\&.
